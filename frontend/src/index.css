@@ -510,6 +510,15 @@ a {
   font-size: 11px;
   color: var(--muted);
 }
+.legend-item:hover {
+  color: var(--ink);
+}
+/* Legend-hover focus dims other series; ease the change */
+.trend-chart path,
+.trend-chart circle,
+.trend-chart text {
+  transition: stroke-opacity 0.15s, fill-opacity 0.15s, opacity 0.15s;
+}
 .legend-swatch {
   display: inline-block;
   width: 16px;

@@ -93,7 +93,7 @@ function shortNum(v, kind) {
 // no data exists for that year yet.
 // size 'large' (the expanded modal / story embeds) adds value labels on the
 // primary series and roomier type; 'normal' labels only the latest point.
-export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size = 'normal', showLabels = true }) {
+export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size = 'normal', showLabels = true, focusKey = null }) {
   const { rows, seriesKeys, topicBreaks } = buildChart(topicId, seriesList)
   const large = size === 'large'
 
@@ -179,10 +179,11 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
           fontSize={large ? 11.5 : 11}
           fontWeight={600}
           fontFamily="'JetBrains Mono', monospace"
-          fill="#2C6A62"
+          fill={primaryColor}
           stroke="#FDFBF6"
           strokeWidth={3}
           paintOrder="stroke"
+          opacity={opacityOf(primaryKey)}
         >
           {shortNum(value, kind)}
         </text>
@@ -192,21 +193,25 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
   }
 
   // Soft fill under the district's line (compare mode only — group mode is
-  // multi-line and stays clean). One gradient per chart instance.
+  // multi-line and stays clean). One gradient per chart instance, tinted to
+  // the primary series color so accent-colored embeds carry through.
+  const primaryColor = seriesList[seriesList.length - 1]?.color ?? '#3A867C'
   const gradId = `tc-grad-${topicId}-${size}`
+  // Legend hover: dim everything except the focused series.
+  const opacityOf = (sKey) => (focusKey && sKey !== focusKey ? 0.22 : 1)
   const endpointDot = (sKey) => (props) => {
     const { cx, cy, index } = props
     if (cx == null || cy == null || props.value == null) return <g key={`d-${sKey}-${index}`} />
     if (showLabels && sKey === primaryKey && index === lastIdxOf[sKey]) {
       return (
-        <g key={`d-${sKey}-${index}`}>
-          <circle cx={cx} cy={cy} r={large ? 6 : 5} fill="#FDFBF6" stroke="#3A867C" strokeWidth={2} />
-          <circle cx={cx} cy={cy} r={large ? 3 : 2.4} fill="#3A867C" />
+        <g key={`d-${sKey}-${index}`} opacity={opacityOf(sKey)}>
+          <circle cx={cx} cy={cy} r={large ? 6 : 5} fill="#FDFBF6" stroke={primaryColor} strokeWidth={2} />
+          <circle cx={cx} cy={cy} r={large ? 3 : 2.4} fill={primaryColor} />
         </g>
       )
     }
     const r = large ? 2.6 : 2
-    return <circle key={`d-${sKey}-${index}`} cx={cx} cy={cy} r={r} fill={props.stroke} strokeWidth={0} />
+    return <circle key={`d-${sKey}-${index}`} cx={cx} cy={cy} r={r} fill={props.stroke} strokeWidth={0} opacity={opacityOf(sKey)} />
   }
 
   return (
@@ -218,8 +223,8 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
         >
           <defs>
             <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#3A867C" stopOpacity={0.22} />
-              <stop offset="100%" stopColor="#3A867C" stopOpacity={0.02} />
+              <stop offset="0%" stopColor={primaryColor} stopOpacity={0.22} />
+              <stop offset="100%" stopColor={primaryColor} stopOpacity={0.02} />
             </linearGradient>
           </defs>
           <CartesianGrid stroke="#E4DECF" strokeDasharray="1 3" vertical={false} />
@@ -264,6 +269,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
               dataKey={dataKey}
               stroke="none"
               fill={`url(#${gradId})`}
+              fillOpacity={opacityOf(primaryKey)}
               baseValue="dataMin"
               connectNulls={false}
               isAnimationActive={false}
@@ -278,6 +284,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
                 key={dataKey}
                 dataKey={dataKey}
                 stroke={s.color}
+                strokeOpacity={opacityOf(s.key)}
                 strokeWidth={large ? s.width + 0.4 : s.width}
                 strokeDasharray={s.dash}
                 strokeLinecap="round"

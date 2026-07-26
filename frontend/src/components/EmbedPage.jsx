@@ -1,6 +1,8 @@
 import { suppressedYears } from '../lib/chartData'
+import { ACCENTS } from '../lib/logos'
 import { COLORS, TOPICS, breaksFor, fmtYear } from '../lib/meta'
 import { buildSeriesList } from '../lib/series'
+import ChartLegend from './ChartLegend'
 import TrendChart from './TrendChart'
 
 // Story mode: one district, one topic, one chart, minimal chrome — made to
@@ -21,13 +23,19 @@ export default function EmbedPage({ code, topicId, metric, peers, index, state, 
     label: index.districts.find((d) => d.dpi_code === p).label,
   }))
 
+  // In an article, the chart is the district's — tint the primary line and
+  // fill with the district's own accent (page-chrome colors stay WPR teal
+  // inside the full tool, where series colors must mean the same thing on
+  // every page; an embed stands alone).
+  const accent = ACCENTS[code]
   const seriesList = buildSeriesList({ topic, metric: chosenMetric, doc, stateDoc: state, peerDocs, peerColorOf })
+    .map((s) => (s.key === 'district' && accent ? { ...s, color: accent } : s))
   const supYears = suppressedYears(seriesList[seriesList.length - 1].cells)
   const topicBreaks = breaksFor(topic.id)
 
   return (
     <div className="embed-page">
-      <div className="embed-head">
+      <div className="embed-head" style={accent ? { borderBottomColor: accent } : undefined}>
         <span className="masthead-kicker">Wausau Pilot &amp; Review</span>
         <h1 className="embed-title">
           {entry.label}: {topic.label} — {meta.label}
@@ -43,17 +51,7 @@ export default function EmbedPage({ code, topicId, metric, peers, index, state, 
         ariaLabel={`${topic.label} — ${meta.label} trend for ${entry.label}`}
       />
 
-      <div className="chart-legend">
-        {[...seriesList].reverse().map((s) => (
-          <span key={s.key} className="legend-item">
-            <span
-              className="legend-swatch"
-              style={{ background: s.color, height: s.dash ? 0 : undefined, borderTop: s.dash ? `2px ${s.key === 'nation' ? 'dotted' : 'dashed'} ${s.color}` : undefined }}
-            />
-            {s.label}
-          </span>
-        ))}
-      </div>
+      <ChartLegend series={[...seriesList].reverse()} />
 
       {supYears.length > 0 && (
         <p className="suppression-note">

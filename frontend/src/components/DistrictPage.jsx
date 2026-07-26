@@ -5,6 +5,7 @@ import { loadSubgroups } from '../lib/data'
 import { ACCENTS, LOGOS } from '../lib/logos'
 import { COLORS, DIMENSIONS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
 import { buildGroupSeriesList, buildSeriesList } from '../lib/series'
+import ChartLegend from './ChartLegend'
 import ChartModal from './ChartModal'
 import TrendChart from './TrendChart'
 
@@ -31,6 +32,7 @@ function StatBlock({ title, stat, kind }) {
 function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   const [metric, setMetric] = useState(topic.defaultMetric)
   const [expanded, setExpanded] = useState(false)
+  const [focusKey, setFocusKey] = useState(null)
   // null = compare-districts mode; a dimension id = student-group mode.
   const [dimension, setDimension] = useState(null)
   const [subDoc, setSubDoc] = useState(null)
@@ -134,6 +136,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
           kind={meta.kind}
           seriesList={seriesList}
           showLabels={!groupMode}
+          focusKey={focusKey}
           ariaLabel={
             groupMode
               ? `${topic.label} — ${meta.label} by ${dimLabel} for ${doc.district.dpi_name}`
@@ -150,17 +153,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
       )}
 
       <div className="chart-foot">
-        <div className="chart-legend">
-          {legendList.map((s) => (
-            <span key={s.key} className="legend-item">
-              <span
-                className="legend-swatch"
-                style={{ background: s.color, height: s.dash ? 0 : undefined, borderTop: s.dash ? `2px ${s.key === 'nation' ? 'dotted' : 'dashed'} ${s.color}` : undefined }}
-              />
-              {s.label}
-            </span>
-          ))}
-        </div>
+        <ChartLegend series={legendList} onFocus={setFocusKey} />
         <div className="chart-actions">
           <button className="csv-button" onClick={() => setExpanded(true)} aria-haspopup="dialog">
             ⤢ Expand
@@ -183,19 +176,10 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
             seriesList={seriesList}
             size="large"
             showLabels={!groupMode}
+            focusKey={focusKey}
             ariaLabel={`${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}, expanded`}
           />
-          <div className="chart-legend">
-            {legendList.map((s) => (
-              <span key={s.key} className="legend-item">
-                <span
-                  className="legend-swatch"
-                  style={{ background: s.color, height: s.dash ? 0 : undefined, borderTop: s.dash ? `2px ${s.key === 'nation' ? 'dotted' : 'dashed'} ${s.color}` : undefined }}
-                />
-                {s.label}
-              </span>
-            ))}
-          </div>
+          <ChartLegend series={legendList} onFocus={setFocusKey} />
           <p className="chart-modal-source">Source: Wisconsin DPI, WISEdash certified download files.</p>
         </ChartModal>
       )}
