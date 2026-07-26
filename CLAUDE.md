@@ -72,6 +72,27 @@ Every metric cell is `{"value": <number|null>, "suppressed": <bool>}`, with
 `value == null` iff `suppressed == true` (enforced by the validator, described
 in `schemas/district.schema.json`).
 
+Metrics per topic (chosen from the real files; see `pipeline/normalize.py`
+for exact derivations and `pipeline/sources.py` for source-file recon notes):
+
+- `act` (2014-15+, grade-11 census ACT, `TEST_GROUP == "ACT"` only):
+  `composite_avg`, `english_avg`, `math_avg`, `reading_avg`, `science_avg`
+  (per-subject `AVERAGE_SCORE`), `tested_count`, `participation_pct`
+  (from Composite `GROUP_COUNT` minus its "No Test" row).
+- `graduation` (2009-10+, 4-year cohort, regular diploma — status matched on
+  the `"Completed - Regular"` prefix because the label drifts across years):
+  `grad_rate_4yr` (computed grad/cohort), `grad_count_4yr`, `cohort_count_4yr`.
+- `dropouts` (2005-06+, grades 7-12): `dropout_rate`, `dropout_count`.
+- `absenteeism` (2005-06+): `chronic_absenteeism_rate` (ESSA/STATE
+  `ABSENCE_RATE`), `attendance_rate` (from the attendance CSV inside the
+  attendance_dropouts ZIP; `--` there means 0 possible days → metric omitted,
+  not suppressed).
+- `enrollment` (2005-06+, certified 3rd-Friday-of-September headcount):
+  `total_enrollment`.
+
+Statewide rows ride through the pipeline as DPI code `0000` and land in
+`data/state.json`.
+
 ## Refresh workflow
 
 ```powershell
@@ -114,25 +135,48 @@ React + Vite in `frontend/`, deployed to GitHub Pages, embedded via iframe.
 Windows, PowerShell 5.1. Use `python -m pip`, chain commands with semicolons.
 Repo lives at `C:\Users\rpfly\Projects\wpr-education`.
 
+## Embedding in WordPress
+
+Live URL: https://rowanflynnpilot.github.io/wpr-education/
+
+```html
+<iframe
+  src="https://rowanflynnpilot.github.io/wpr-education/"
+  title="Marathon County School Data — Wausau Pilot & Review"
+  style="width:100%; height:1400px; border:0;"
+  loading="lazy"></iframe>
+```
+
+Recommended height 1400px for the landing page; a district page runs longer —
+use `height:2400px` (or link out) when embedding `#/6223`-style deep links.
+Deep-link a district by appending `#/{dpi_code}` (codes in `data/index.json`).
+
 ## Current status & next tasks
 
-Scaffold only — no data has been pulled yet. In order:
+**v1 SHIPPED (2026-07-25).** Pipeline pulls all 88 statewide files (5 topics,
+2005-06 → 2025-26 where offered), 507 district files + state.json validate
+clean, and the frontend is live on GitHub Pages (deploy workflow green on
+push to main). Wausau + D.C. Everest spot-checked against the WISEdash portal
+UI for every topic, most recent year — all values match at portal precision
+(see the Phase 3 commit message for the full table).
 
-1. **Populate DPI district codes.** Download the current enrollment statewide
-   file from https://dpi.wi.gov/wisedash/public/download-files, then fill
-   `dpi_code` and `dpi_name` (exact string from the file) for every district
-   in `config/districts.json`. The validator refuses to run while any
-   *included* district has a null code.
-2. **Populate `pipeline/sources.py`** with direct CSV URLs for the five v1
-   topics, all available years (2005-06 forward where offered; note per-topic
-   availability in the registry comments as you go).
-3. **Implement per-topic normalization** in `pipeline/normalize.py` from the
-   actual column headers of the downloaded files. Do not guess columns —
-   download first, map second. Record each topic's chosen metrics in this
-   file's Data model section when done.
-4. Run the first full refresh; commit `data/`.
-5. Scaffold the frontend (`npm create vite@latest frontend -- --template react`)
-   and build the district page per the Frontend section.
-6. Add the GitHub Pages deploy workflow once `frontend/` builds.
-7. Editorial decision with Shereen: which cross-county districts flip to
-   `"included": true` in `config/districts.json`.
+Known state of the data:
+
+- No suppressed cells exist among the 8 included districts at the
+  all-students level (371 exist statewide; suppression rendering verified
+  against Washington Island 6069). Expect real suppression when subgroup
+  views ship.
+- 2025-26 ACT lands ~fall 2026: add it to `sources.py`, run the refresh, and
+  the two 2025-26 breaks already in `config/breaks.json` will annotate it.
+
+Next tasks, in order:
+
+1. Editorial decision with Shereen: which cross-county districts flip to
+   `"included": true` in `config/districts.json` (codes/names already filled
+   for all four candidates; flipping is purely a config edit + refresh… no
+   pipeline change).
+2. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
+   DPI errata for the spring-2026 ACT scoring-error revisions.
+3. Stretch (in order): subgroup views with suppression-aware panels;
+   school-level data; per-chart CSV download; Forward Exam v1.5 (extend the
+   2023-24 cut-score break's `topics` to include `forward`).
