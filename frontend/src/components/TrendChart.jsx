@@ -255,7 +255,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
                 stroke={s.color}
                 strokeWidth={large ? s.width + 0.4 : s.width}
                 strokeDasharray={s.dash}
-                dot={s.key === 'state' ? false : { r: large ? 2.6 : 2, fill: s.color, strokeWidth: 0 }}
+                dot={s.dash ? false : { r: large ? 2.6 : 2, fill: s.color, strokeWidth: 0 }}
                 activeDot={{ r: 4 }}
                 connectNulls={false}
                 isAnimationActive={false}

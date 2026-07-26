@@ -40,7 +40,7 @@ describe('buildSeriesList', () => {
       topic: enrollment, metric: 'enrollment_change',
       doc: districtDoc, stateDoc, peerDocs: [], peerColorOf: () => '#000',
     })
-    expect(list.map((s) => s.key)).toEqual(['state', 'district'])
+    expect(list.map((s) => s.key)).toEqual(['nation', 'state', 'district'])
     const district = list[list.length - 1]
     expect(district.cells['2005-06'].value).toBe(0)
     expect(district.cells['2006-07'].value).toBe(-10)
@@ -80,5 +80,52 @@ describe('buildGroupSeriesList', () => {
     expect(hispanic.cells['2024-25'].value).toBe(17.1)
     // late-added category simply starts when DPI's data does
     expect(Object.keys(list[1].cells)).toEqual(['2024-25'])
+  })
+})
+
+describe('national (United States) series', () => {
+  const grad = TOPICS.find((t) => t.id === 'graduation')
+  const gradDoc = doc('6223', {
+    graduation: { '2018-19': { grad_rate_4yr: cell(92.0) } },
+  })
+  const gradState = doc('0000', {
+    graduation: { '2018-19': { grad_rate_4yr: cell(90.0) } },
+  })
+
+  it('adds the U.S. line for graduation rate (comparable ACGR methodology)', () => {
+    const list = buildSeriesList({
+      topic: grad, metric: 'grad_rate_4yr',
+      doc: gradDoc, stateDoc: gradState, peerDocs: [], peerColorOf: () => '#000',
+    })
+    expect(list.map((s) => s.key)).toEqual(['nation', 'state', 'district'])
+    const nation = list[0]
+    expect(nation.label).toBe('United States')
+    expect(nation.cells['2018-19'].value).toBe(86)
+    expect(nation.cells['2021-22'].value).toBe(87)
+  })
+
+  it('adds the U.S. line to enrollment change (indexed), based to 2005-06', () => {
+    const list = buildSeriesList({
+      topic: enrollment, metric: 'enrollment_change',
+      doc: districtDoc, stateDoc, peerDocs: [], peerColorOf: () => '#000',
+    })
+    const nation = list.find((s) => s.key === 'nation')
+    expect(nation).toBeDefined()
+    expect(nation.cells['2005-06'].value).toBe(0)
+    // 49,618,000 / 49,113,000 - 1 = +1.0%
+    expect(nation.cells['2022-23'].value).toBe(1)
+  })
+
+  it('never adds a U.S. line to ACT or raw counts', () => {
+    const actList = buildSeriesList({
+      topic: act, metric: 'composite_avg',
+      doc: districtDoc, stateDoc, peerDocs: [], peerColorOf: () => '#000',
+    })
+    expect(actList.some((s) => s.key === 'nation')).toBe(false)
+    const countList = buildSeriesList({
+      topic: enrollment, metric: 'total_enrollment',
+      doc: districtDoc, stateDoc, peerDocs: [], peerColorOf: () => '#000',
+    })
+    expect(countList.some((s) => s.key === 'nation')).toBe(false)
   })
 })

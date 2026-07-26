@@ -1,0 +1,51 @@
+{
+  "_comment": "Editorial, hand-maintained U.S. national comparison series — same maintenance pattern as breaks.json. Verify against the cited NCES tables at each refresh and extend when NCES publishes new actuals (they lag DPI by 1-3 years; that gap is disclosed in the methodology footer). Only metrics with genuinely comparable national definitions belong here: graduation uses the same EDFacts 4-year ACGR methodology Wisconsin reports into, and enrollment is used only for the indexed percent-change view. ACT is deliberately absent (Wisconsin census-tests every 11th-grader; the published national ACT average covers self-selected graduating-class test-takers — not comparable). Chronic absenteeism is deliberately absent (federal CRDC counts students missing >=15 days; Wisconsin's rate is percentage-of-enrolled-days based — different definitions).",
+  "series": {
+    "graduation": {
+      "grad_rate_4yr": {
+        "source": "NCES, Digest of Education Statistics 2023, table 219.46 (U.S. public high school 4-year adjusted cohort graduation rate; 2010-11 value from the Digest 2022 edition of the same table). Values as published, whole percent. Parsed from the United States row of the published tables 2026-07-25.",
+        "url": "https://nces.ed.gov/programs/digest/d23/tables/dt23_219.46.asp",
+        "years": {
+          "2010-11": 79,
+          "2011-12": 80,
+          "2012-13": 81,
+          "2013-14": 82,
+          "2014-15": 83,
+          "2015-16": 84,
+          "2016-17": 85,
+          "2017-18": 85,
+          "2018-19": 86,
+          "2019-20": 87,
+          "2020-21": 86,
+          "2021-22": 87
+        }
+      }
+    },
+    "enrollment": {
+      "total_enrollment": {
+        "source": "NCES, Digest of Education Statistics 2023, table 203.10 (total fall enrollment in U.S. public elementary and secondary schools). Actual years only — the table's projected years (fall 2023 onward in that edition) are excluded. Published in thousands; stored here as students.",
+        "url": "https://nces.ed.gov/programs/digest/d23/tables/dt23_203.10.asp",
+        "years": {
+          "2005-06": 49113000,
+          "2006-07": 49316000,
+          "2007-08": 49291000,
+          "2008-09": 49266000,
+          "2009-10": 49361000,
+          "2010-11": 49484000,
+          "2011-12": 49522000,
+          "2012-13": 49771000,
+          "2013-14": 50045000,
+          "2014-15": 50313000,
+          "2015-16": 50438000,
+          "2016-17": 50615000,
+          "2017-18": 50686000,
+          "2018-19": 50694000,
+          "2019-20": 50796000,
+          "2020-21": 49375000,
+          "2021-22": 49433000,
+          "2022-23": 49618000
+        }
+      }
+    }
+  }
+}

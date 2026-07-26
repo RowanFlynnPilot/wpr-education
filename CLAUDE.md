@@ -122,7 +122,10 @@ resulting `data/` diff — the diff itself is the editorial review surface
 
 Before each refresh, check DPI's master errata page and the per-topic "About
 the Data" pages for definition changes; record any new break in
-`config/breaks.json`.
+`config/breaks.json`. Also check whether NCES has published new actual years
+for the two national series in `config/national.json` (4-year ACGR, table
+219.46; fall enrollment actuals, table 203.10 — never include its projected
+years) and extend that file by hand, keeping the per-series citations.
 
 ## v1 scope
 

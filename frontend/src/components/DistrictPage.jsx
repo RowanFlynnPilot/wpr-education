@@ -155,7 +155,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
             <span key={s.key} className="legend-item">
               <span
                 className="legend-swatch"
-                style={{ background: s.color, height: s.key === 'state' ? 0 : undefined, borderTop: s.key === 'state' ? `2px dashed ${s.color}` : undefined }}
+                style={{ background: s.color, height: s.dash ? 0 : undefined, borderTop: s.dash ? `2px ${s.key === 'nation' ? 'dotted' : 'dashed'} ${s.color}` : undefined }}
               />
               {s.label}
             </span>
@@ -190,7 +190,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
               <span key={s.key} className="legend-item">
                 <span
                   className="legend-swatch"
-                  style={{ background: s.color, height: s.key === 'state' ? 0 : undefined, borderTop: s.key === 'state' ? `2px dashed ${s.color}` : undefined }}
+                  style={{ background: s.color, height: s.dash ? 0 : undefined, borderTop: s.dash ? `2px ${s.key === 'nation' ? 'dotted' : 'dashed'} ${s.color}` : undefined }}
                 />
                 {s.label}
               </span>

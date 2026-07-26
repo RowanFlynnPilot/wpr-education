@@ -1,6 +1,31 @@
 // Series assembly shared by the district page and the story-mode embed.
+import nationalConfig from '../../../config/national.json'
 import { pctChangeSeries, seriesFromDoc } from './chartData'
 import { COLORS, groupLabel } from './meta'
+
+// U.S. national comparison, curated in config/national.json for the few
+// metrics with genuinely comparable national definitions (see the file's
+// _comment for why ACT and absenteeism are deliberately absent). Reshaped
+// once into the same doc shape as a district so metricSeries/derived
+// views work on it unchanged.
+const NATIONAL_DOC = {
+  district: { dpi_code: 'us', dpi_name: 'United States' },
+  topics: Object.fromEntries(
+    Object.entries(nationalConfig.series).map(([topicId, metrics]) => [
+      topicId,
+      (() => {
+        const byYear = {}
+        for (const [metric, def] of Object.entries(metrics)) {
+          for (const [year, value] of Object.entries(def.years)) {
+            byYear[year] = byYear[year] ?? {}
+            byYear[year][metric] = { value, suppressed: false }
+          }
+        }
+        return byYear
+      })(),
+    ]),
+  ),
+}
 
 export function metricSeries(doc, topicId, metric, meta) {
   const cells = seriesFromDoc(doc, topicId, meta.derivedFrom ?? metric)
@@ -44,6 +69,19 @@ export function buildGroupSeriesList({ topic, metric, subDoc, dimension }) {
 
 export function buildSeriesList({ topic, metric, doc, stateDoc, peerDocs, peerColorOf }) {
   const meta = topic.metrics[metric]
+  // National line only where curated data exists AND the metric isn't a
+  // raw count (49M students would flatten any district line).
+  const nationCells = meta.kind === 'count' ? {} : metricSeries(NATIONAL_DOC, topic.id, metric, meta)
+  const nationSeries = Object.keys(nationCells).length ? [
+    {
+      key: 'nation',
+      label: 'United States',
+      color: '#55524A',
+      dash: '2 4',
+      width: 1.5,
+      cells: nationCells,
+    },
+  ] : []
   const stateSeries = meta.kind === 'count' ? [] : [
     {
       key: 'state',
@@ -55,6 +93,7 @@ export function buildSeriesList({ topic, metric, doc, stateDoc, peerDocs, peerCo
     },
   ]
   return [
+    ...nationSeries,
     ...stateSeries,
     ...peerDocs.map((p) => ({
       key: p.doc.district.dpi_code,

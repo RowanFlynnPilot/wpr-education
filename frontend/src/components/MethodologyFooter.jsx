@@ -43,6 +43,25 @@ export default function MethodologyFooter({ generated }) {
         averages). Enrollment is the certified third-Friday-of-September headcount.
       </p>
       <p>
+        <strong>The U.S. line.</strong> Some charts carry a dotted "United States"
+        line; most deliberately don't. Graduation gets one because the national
+        figure (
+        <a href="https://nces.ed.gov/programs/digest/d23/tables/dt23_219.46.asp" target="_blank" rel="noreferrer">
+          NCES, 4-year adjusted cohort graduation rate
+        </a>
+        ) uses the same federal methodology Wisconsin reports into, and enrollment's
+        percent-change view gets one (
+        <a href="https://nces.ed.gov/programs/digest/d23/tables/dt23_203.10.asp" target="_blank" rel="noreferrer">
+          NCES fall enrollment, actual years only
+        </a>
+        ). ACT gets none: Wisconsin tests <em>every</em> 11th-grader, while the
+        widely quoted national ACT average covers only students who chose to take
+        the test — the populations aren't comparable. Chronic absenteeism gets none
+        because the federal count (15+ days missed) uses a different definition
+        than Wisconsin's percentage-based rate. National data also runs one to
+        three years behind DPI's, so the U.S. line ends earlier.
+      </p>
+      <p>
         <strong>Student groups.</strong> Group breakdowns use DPI's own categories,
         which changed over time: "Two or more races" and "Pacific Islander" were
         added as separate categories in later years, so those lines start when DPI's
