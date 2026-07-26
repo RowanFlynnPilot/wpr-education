@@ -2,6 +2,8 @@
 
 **Live: https://rowanflynnpilot.github.io/wpr-education/**
 
+![Marathon County School Data — Wausau Pilot & Review](frontend/src/assets/og-image.png)
+
 Wisconsin education data tracker for [Wausau Pilot & Review](https://wausaupilotandreview.com)
 — ACT results, graduation, dropouts, chronic absenteeism, and enrollment for
 Marathon County school districts, with statewide and peer-district
@@ -47,7 +49,16 @@ python pipeline/refresh.py
 Fall: assessments. Spring: enrollment, attendance, graduation, dropouts.
 Check DPI's errata and "About the Data" pages first; record new breaks in
 `config/breaks.json`. Commit the `data/` diff. Pushing to `main` rebuilds
-and redeploys the site automatically.
+and redeploys the site automatically (unit tests gate the deploy).
+
+## Frontend dev
+
+```bash
+cd frontend
+npm install
+npm run dev    # local dev server
+npm test       # unit tests (break segmentation, suppression, CSV, series rules)
+```
 
 See `CLAUDE.md` for the full architecture, invariants, data model, and
 embed instructions.

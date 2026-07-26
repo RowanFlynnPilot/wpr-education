@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from 'react'
-import DistrictPage from './components/DistrictPage'
-import EmbedPage from './components/EmbedPage'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import Landing from './components/Landing'
 import MethodologyFooter from './components/MethodologyFooter'
-import { loadAll } from './lib/data'
+import { loadCore, loadDocs } from './lib/data'
+
+// The chart-bearing pages pull in recharts (~2/3 of the bundle); loading
+// them lazily keeps the landing page on the small chunk.
+const DistrictPage = lazy(() => import('./components/DistrictPage'))
+const EmbedPage = lazy(() => import('./components/EmbedPage'))
 
 // Routes:
 //   #/6223?peers=4970,0196          district page, peers preselected
@@ -50,46 +53,81 @@ function useHeightReporter() {
   }, [])
 }
 
+const Loading = () => <div className="loading">Loading district data…</div>
+
+function ErrorPanel({ error }) {
+  console.error(error)
+  return (
+    <div className="error-panel" role="alert">
+      <h2>Couldn't load the data</h2>
+      <p>
+        Something interrupted the connection while fetching district data
+        ({error.message}). This is usually temporary.
+      </p>
+      <button className="pill" onClick={() => window.location.reload()}>
+        Try again
+      </button>
+    </div>
+  )
+}
+
 export default function App() {
-  const [data, setData] = useState(null)
+  const [core, setCore] = useState(null)
+  const [docs, setDocs] = useState({})
   const [error, setError] = useState(null)
   const route = useHashRoute()
   useHeightReporter()
 
   useEffect(() => {
-    loadAll().then(setData, setError)
+    loadCore().then(setCore, setError)
   }, [])
 
   const segments = route.path.split('/')
   const isEmbed = segments[0] === 'embed'
   const districtCode = isEmbed ? segments[1] : route.path
-  const entry = data?.index.districts.find((d) => d.dpi_code === districtCode)
+  const entry = core?.index.districts.find((d) => d.dpi_code === districtCode)
+
+  // Which docs this route draws: the district + its peers, or every
+  // included district for the landing cards.
+  const included = core?.index.districts.map((d) => d.dpi_code) ?? []
+  const needed = entry
+    ? [districtCode, ...route.peers.filter((p) => p !== districtCode && included.includes(p))]
+    : included
+  const neededKey = needed.join(',')
+
+  useEffect(() => {
+    if (!core) return
+    loadDocs(needed).then((loaded) => setDocs((prev) => ({ ...prev, ...loaded })), setError)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [core, neededKey])
+
   useEffect(() => {
     document.title = entry
       ? `${entry.label} — Marathon County School Data`
       : 'Marathon County School Data — Wausau Pilot & Review'
   }, [entry])
 
-  if (error) throw error
-  if (!data) {
-    return <div className="loading">Loading district data…</div>
-  }
+  if (error) return <div className="app"><ErrorPanel error={error} /></div>
+  const ready = core && needed.every((code) => docs[code])
+  if (!ready) return <Loading />
 
-  const { index, state, docs } = data
+  const { index, state } = core
   const validPeers = route.peers.filter((p) => p !== districtCode && docs[p])
 
-  if (isEmbed && entry && docs[districtCode]) {
+  if (isEmbed && entry) {
     return (
       <div className="app app-embed">
-        <EmbedPage
-          code={districtCode}
-          topicId={segments[2]}
-          metric={route.metric}
-          peers={validPeers}
-          index={index}
-          state={state}
-          docs={docs}
-        />
+        <Suspense fallback={<Loading />}>
+          <EmbedPage
+            code={districtCode}
+            topicId={segments[2]}
+            metric={route.metric}
+            peers={validPeers}
+            index={index}
+            state={state}
+            docs={docs}
+          />
+        </Suspense>
       </div>
     )
   }
@@ -101,14 +139,16 @@ export default function App() {
         <h1>Marathon County School Data</h1>
       </header>
       <main>
-        {entry && !isEmbed && docs[route.path] ? (
-          <DistrictPage
-            code={route.path}
-            peers={validPeers}
-            index={index}
-            state={state}
-            docs={docs}
-          />
+        {entry && !isEmbed ? (
+          <Suspense fallback={<Loading />}>
+            <DistrictPage
+              code={route.path}
+              peers={validPeers}
+              index={index}
+              state={state}
+              docs={docs}
+            />
+          </Suspense>
         ) : (
           <Landing index={index} state={state} docs={docs} />
         )}

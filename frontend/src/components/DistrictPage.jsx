@@ -131,6 +131,40 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
         </ChartModal>
       )}
 
+      <details className="data-table">
+        <summary>View the numbers</summary>
+        <div className="data-table-scroll">
+          <table>
+            <caption className="visually-hidden">
+              {topic.label} — {meta.label} by school year
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">School year</th>
+                {[...seriesList].reverse().map((s) => (
+                  <th key={s.key} scope="col">{s.label}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[...new Set(seriesList.flatMap((s) => Object.keys(s.cells)))].sort().map((year) => (
+                <tr key={year}>
+                  <th scope="row">{fmtYear(year)}</th>
+                  {[...seriesList].reverse().map((s) => {
+                    const cell = s.cells[year]
+                    return (
+                      <td key={s.key} className={cell?.suppressed ? 'cell-suppressed' : ''}>
+                        {!cell ? '—' : cell.suppressed ? 'Suppressed' : fmtValue(cell.value, meta.kind)}
+                      </td>
+                    )
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
+
       {meta.derivedFrom && (
         <p className="derived-note">
           Percent change is computed against each district's own first year of

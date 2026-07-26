@@ -12,17 +12,28 @@ async function loadJSON(path) {
   return res.json()
 }
 
-// index.json (included districts + generated stamp), state.json, and one
-// doc per included district, loaded up front — nine small fetches.
-export async function loadAll() {
-  const index = await loadJSON('index.json')
-  const [state, ...districts] = await Promise.all([
+// index.json (included districts + generated stamp) and state.json — always
+// needed, fetched once.
+export async function loadCore() {
+  const [index, state] = await Promise.all([
+    loadJSON('index.json'),
     loadJSON('state.json'),
-    ...index.districts.map((d) => loadJSON(`districts/${d.dpi_code}.json`)),
   ])
-  const docs = {}
-  index.districts.forEach((d, i) => {
-    docs[d.dpi_code] = districts[i]
-  })
-  return { index, state, docs }
+  return { index, state }
+}
+
+// District docs are fetched per route and cached, so a story-mode embed of
+// one chart pulls only the districts it draws instead of all eight. The
+// cache holds promises, so concurrent requests for the same code share one
+// fetch.
+const docCache = new Map()
+
+export async function loadDocs(codes) {
+  const unique = [...new Set(codes)]
+  for (const code of unique) {
+    if (!docCache.has(code)) docCache.set(code, loadJSON(`districts/${code}.json`))
+  }
+  const out = {}
+  for (const code of unique) out[code] = await docCache.get(code)
+  return out
 }
