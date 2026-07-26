@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { pctChangeSeries, seriesFromDoc, suppressedYears } from '../lib/chartData'
 import { chartCSV, downloadCSV } from '../lib/csv'
+import { LOGOS } from '../lib/logos'
 import { COLORS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
 import TrendChart from './TrendChart'
 
@@ -190,7 +191,28 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
   return (
     <div className="district-page">
       <a className="back-link" href="#/">← All districts</a>
-      <h2 className="district-title">{entry.label} School District</h2>
+      <div className="district-header">
+        {LOGOS[code] && (
+          <span className="logo-chip logo-chip-lg">
+            <img src={LOGOS[code]} alt={`${entry.label} School District logo`} />
+          </span>
+        )}
+        <h2 className="district-title">{entry.label} School District</h2>
+      </div>
+      <nav className="topic-nav" aria-label="Jump to topic">
+        {TOPICS.map((t) => (
+          <button
+            key={t.id}
+            className="pill topic-chip"
+            onClick={() => document.getElementById(t.id)?.scrollIntoView({
+              behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+              block: 'start',
+            })}
+          >
+            {t.label}
+          </button>
+        ))}
+      </nav>
       <div className="peer-select">
         <span className="peer-select-label">Compare with:</span>
         {others.map((d) => (

@@ -1,4 +1,6 @@
 import { fmtValue, fmtYear } from '../lib/meta'
+import { LOGOS } from '../lib/logos'
+import Sparkline from './Sparkline'
 
 function latest(doc, topicId, metric) {
   const years = doc.topics[topicId] ?? {}
@@ -25,11 +27,32 @@ function countyRange(docs, topicId, metric) {
   return { year, min: Math.min(...values), max: Math.max(...values) }
 }
 
-function HeadlineCard({ title, big, sub }) {
+// Statewide history for a metric, for the headline sparklines.
+function stateTrend(state, topicId, metric) {
+  const years = state.topics[topicId] ?? {}
+  return Object.keys(years)
+    .sort()
+    .map((y) => (years[y][metric]?.suppressed ? null : years[y][metric]?.value ?? null))
+}
+
+// County combined enrollment per year (sum of included districts).
+function countyEnrollmentTrend(docs) {
+  const perYear = {}
+  for (const doc of Object.values(docs)) {
+    for (const [y, m] of Object.entries(doc.topics.enrollment ?? {})) {
+      if (!m.total_enrollment || m.total_enrollment.suppressed) continue
+      perYear[y] = (perYear[y] ?? 0) + m.total_enrollment.value
+    }
+  }
+  return Object.keys(perYear).sort().map((y) => perYear[y])
+}
+
+function HeadlineCard({ title, big, sub, spark }) {
   return (
     <div className="headline-card">
       <div className="headline-title">{title}</div>
       <div className="headline-big">{big}</div>
+      {spark && <Sparkline values={spark} />}
       <div className="headline-sub">{sub}</div>
     </div>
   )
@@ -66,12 +89,14 @@ export default function Landing({ index, state, docs }) {
           title={`Students enrolled (${fmtYear(enrollYear)})`}
           big={combined.toLocaleString('en-US')}
           sub={`across ${index.districts.length} county districts`}
+          spark={countyEnrollmentTrend(docs)}
         />
         {act && (
           <HeadlineCard
             title={`ACT composite (${fmtYear(act.year)})`}
             big={`${fmtValue(act.min, 'score')}–${fmtValue(act.max, 'score')}`}
             sub={`county range · statewide ${fmtCell(stateAct, 'score')}`}
+            spark={stateTrend(state, 'act', 'composite_avg')}
           />
         )}
         {grad && (
@@ -79,6 +104,7 @@ export default function Landing({ index, state, docs }) {
             title={`4-year graduation (${fmtYear(grad.year)})`}
             big={`${fmtValue(grad.min, 'percent')}–${fmtValue(grad.max, 'percent')}`}
             sub={`county range · statewide ${fmtCell(stateGrad, 'percent')}`}
+            spark={stateTrend(state, 'graduation', 'grad_rate_4yr')}
           />
         )}
         {abs && (
@@ -86,9 +112,11 @@ export default function Landing({ index, state, docs }) {
             title={`Chronically absent (${fmtYear(abs.year)})`}
             big={`${fmtValue(abs.min, 'percent')}–${fmtValue(abs.max, 'percent')}`}
             sub={`county range · statewide ${fmtCell(stateAbs, 'percent')}`}
+            spark={stateTrend(state, 'absenteeism', 'chronic_absenteeism_rate')}
           />
         )}
       </div>
+      <p className="spark-note">Small lines show the statewide trend (county total for enrollment).</p>
 
       <h2 className="section-heading">Pick a district</h2>
       <div className="district-grid">
@@ -99,7 +127,14 @@ export default function Landing({ index, state, docs }) {
           const gradR = latest(doc, 'graduation', 'grad_rate_4yr')
           return (
             <a key={d.dpi_code} className="district-card" href={`#/${d.dpi_code}`}>
-              <div className="district-card-name">{d.label}</div>
+              <div className="district-card-head">
+                {LOGOS[d.dpi_code] && (
+                  <span className="logo-chip">
+                    <img src={LOGOS[d.dpi_code]} alt="" />
+                  </span>
+                )}
+                <div className="district-card-name">{d.label}</div>
+              </div>
               <dl className="district-card-stats">
                 <div><dt>Enrollment</dt><dd>{fmtCell(enroll, 'count')}</dd></div>
                 <div><dt>ACT</dt><dd>{fmtCell(actC, 'score')}</dd></div>
