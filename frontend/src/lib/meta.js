@@ -57,6 +57,15 @@ export const TOPICS = [
     defaultMetric: 'total_enrollment',
     metrics: {
       total_enrollment: { label: 'Students enrolled', kind: 'count' },
+      // Derived client-side from total_enrollment: percent change vs the
+      // series' first non-suppressed year (2005-06 for every district and
+      // the state). Raw statewide counts can't share an axis with district
+      // counts; indexed change can, so this view gets the statewide overlay.
+      enrollment_change: {
+        label: 'Change since 2005-06',
+        kind: 'percent-change',
+        derivedFrom: 'total_enrollment',
+      },
     },
   },
 ]
@@ -70,6 +79,10 @@ export function fmtYear(year) {
 export function fmtValue(value, kind) {
   if (value == null) return '—'
   if (kind === 'percent') return `${value.toLocaleString('en-US', { maximumFractionDigits: 1 })}%`
+  if (kind === 'percent-change') {
+    const s = value.toLocaleString('en-US', { maximumFractionDigits: 1 })
+    return `${value > 0 ? '+' : ''}${s}%`
+  }
   if (kind === 'score') return value.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 2 })
   return value.toLocaleString('en-US', { maximumFractionDigits: 0 })
 }

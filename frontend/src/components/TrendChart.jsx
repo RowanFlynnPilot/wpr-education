@@ -75,7 +75,7 @@ function ChartTooltip({ active, label, payload, seriesMeta, kind }) {
 // Comparability breaks split lines into separate segments — no line is ever
 // drawn across a break. Annotation years render a numbered badge even when
 // no data exists for that year yet.
-export default function TrendChart({ topicId, kind, seriesList }) {
+export default function TrendChart({ topicId, kind, seriesList, ariaLabel }) {
   const { rows, seriesKeys, topicBreaks } = buildChart(topicId, seriesList)
 
   // Breaks sharing a school year (e.g. both 2025-26 ACT annotations) stack
@@ -87,7 +87,7 @@ export default function TrendChart({ topicId, kind, seriesList }) {
   const topMargin = 26 + Math.max(0, ...stackOf) * 20
 
   return (
-    <div className="trend-chart">
+    <div className="trend-chart" role="img" aria-label={ariaLabel}>
       <ResponsiveContainer width="100%" height={260 + topMargin - 26}>
         <LineChart data={rows} margin={{ top: topMargin, right: 12, bottom: 4, left: 0 }}>
           <CartesianGrid stroke="#E4DECF" strokeDasharray="1 3" vertical={false} />

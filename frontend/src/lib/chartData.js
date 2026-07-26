@@ -11,6 +11,22 @@ export function seriesFromDoc(doc, topicId, metric) {
   return out
 }
 
+// Derived view: percent change vs the series' first non-suppressed year.
+// Suppressed cells stay suppressed; the base year itself reads 0%.
+export function pctChangeSeries(cells) {
+  const years = Object.keys(cells).sort()
+  const baseYear = years.find((y) => !cells[y].suppressed)
+  if (!baseYear) return { ...cells }
+  const base = cells[baseYear].value
+  const out = {}
+  for (const y of years) {
+    out[y] = cells[y].suppressed
+      ? cells[y]
+      : { value: Math.round((cells[y].value / base - 1) * 1000) / 10, suppressed: false }
+  }
+  return out
+}
+
 // Comparability breaks split every series into visually separate segments:
 // the break's school_year is the FIRST year of the new regime. Returns the
 // segment index for a year given the sorted break years of the topic.

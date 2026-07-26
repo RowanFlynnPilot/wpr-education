@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { seriesFromDoc, suppressedYears } from '../lib/chartData'
+import { pctChangeSeries, seriesFromDoc, suppressedYears } from '../lib/chartData'
+import { chartCSV, downloadCSV } from '../lib/csv'
 import { COLORS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
 import TrendChart from './TrendChart'
 
@@ -23,13 +24,19 @@ function StatBlock({ title, stat, kind }) {
   )
 }
 
+function metricSeries(doc, topicId, metric, meta) {
+  const cells = seriesFromDoc(doc, topicId, meta.derivedFrom ?? metric)
+  return meta.derivedFrom ? pctChangeSeries(cells) : cells
+}
+
 function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   const [metric, setMetric] = useState(topic.defaultMetric)
   const meta = topic.metrics[metric]
 
-  const districtCells = seriesFromDoc(doc, topic.id, metric)
+  const districtCells = metricSeries(doc, topic.id, metric, meta)
   // Raw statewide counts (~800k students) would flatten every district
-  // line to zero; the statewide overlay only makes sense for rates/scores.
+  // line to zero; the statewide overlay only makes sense for rates/scores
+  // (and derived indexed views).
   const stateSeries = meta.kind === 'count' ? [] : [
     {
       key: 'state',
@@ -37,7 +44,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
       color: COLORS.state,
       dash: '6 4',
       width: 1.6,
-      cells: seriesFromDoc(stateDoc, topic.id, metric),
+      cells: metricSeries(stateDoc, topic.id, metric, meta),
     },
   ]
   const seriesList = [
@@ -48,7 +55,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
       color: peerColorOf(p.doc.district.dpi_code),
       dash: undefined,
       width: 1.6,
-      cells: seriesFromDoc(p.doc, topic.id, metric),
+      cells: metricSeries(p.doc, topic.id, metric, meta),
     })),
     {
       key: 'district',
@@ -66,6 +73,11 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   const stateStat = latestCell(stateDoc, topic.id, topic.defaultMetric)
   const defaultMeta = topic.metrics[topic.defaultMetric]
 
+  const exportCSV = () => {
+    const slug = doc.district.dpi_name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    downloadCSV(`wpr-${slug}-${topic.id}-${metric}.csv`, chartCSV([...seriesList].reverse()))
+  }
+
   return (
     <section className="topic-section" id={topic.id}>
       <div className="topic-head">
@@ -80,11 +92,12 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
       </div>
 
       {Object.keys(topic.metrics).length > 1 && (
-        <div className="pill-row" role="tablist" aria-label={`${topic.label} metrics`}>
+        <div className="pill-row" role="group" aria-label={`${topic.label} metrics`}>
           {Object.entries(topic.metrics).map(([key, m]) => (
             <button
               key={key}
               className={`pill${key === metric ? ' active' : ''}`}
+              aria-pressed={key === metric}
               onClick={() => setMetric(key)}
             >
               {m.label}
@@ -93,19 +106,36 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
         </div>
       )}
 
-      <TrendChart topicId={topic.id} kind={meta.kind} seriesList={seriesList} />
+      <TrendChart
+        topicId={topic.id}
+        kind={meta.kind}
+        seriesList={seriesList}
+        ariaLabel={`${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}`}
+      />
 
-      <div className="chart-legend">
-        {[...seriesList].reverse().map((s) => (
-          <span key={s.key} className="legend-item">
-            <span
-              className="legend-swatch"
-              style={{ background: s.color, height: s.key === 'state' ? 0 : undefined, borderTop: s.key === 'state' ? `2px dashed ${s.color}` : undefined }}
-            />
-            {s.label}
-          </span>
-        ))}
+      <div className="chart-foot">
+        <div className="chart-legend">
+          {[...seriesList].reverse().map((s) => (
+            <span key={s.key} className="legend-item">
+              <span
+                className="legend-swatch"
+                style={{ background: s.color, height: s.key === 'state' ? 0 : undefined, borderTop: s.key === 'state' ? `2px dashed ${s.color}` : undefined }}
+              />
+              {s.label}
+            </span>
+          ))}
+        </div>
+        <button className="csv-button" onClick={exportCSV}>
+          ↓ CSV
+        </button>
       </div>
+
+      {meta.derivedFrom && (
+        <p className="derived-note">
+          Percent change is computed against each district's own first year of
+          data ({fmtYear('2005-06')} for every district shown and the state).
+        </p>
+      )}
 
       {supYears.length > 0 && (
         <p className="suppression-note">
@@ -134,14 +164,19 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   )
 }
 
-export default function DistrictPage({ code, index, state, docs }) {
+export default function DistrictPage({ code, peers, index, state, docs }) {
   const doc = docs[code]
   const entry = index.districts.find((d) => d.dpi_code === code)
   const others = index.districts.filter((d) => d.dpi_code !== code)
-  const [peers, setPeers] = useState([])
 
+  // Peer selection lives in the hash (#/6223?peers=4970,0196) so a specific
+  // comparison is shareable and embeddable. Assigning location.hash fires
+  // hashchange; App preserves scroll when only the query part changes.
+  const setPeers = (list) => {
+    window.location.hash = `#/${code}${list.length ? `?peers=${list.join(',')}` : ''}`
+  }
   const togglePeer = (peerCode) =>
-    setPeers((p) => (p.includes(peerCode) ? p.filter((x) => x !== peerCode) : [...p, peerCode]))
+    setPeers(peers.includes(peerCode) ? peers.filter((x) => x !== peerCode) : [...peers, peerCode])
 
   // Stable color per peer district regardless of toggle order.
   const peerColorOf = (peerCode) =>
@@ -162,6 +197,7 @@ export default function DistrictPage({ code, index, state, docs }) {
           <button
             key={d.dpi_code}
             className={`pill peer-pill${peers.includes(d.dpi_code) ? ' active' : ''}`}
+            aria-pressed={peers.includes(d.dpi_code)}
             style={peers.includes(d.dpi_code) ? { background: peerColorOf(d.dpi_code), borderColor: peerColorOf(d.dpi_code) } : undefined}
             onClick={() => togglePeer(d.dpi_code)}
           >

@@ -139,17 +139,33 @@ Repo lives at `C:\Users\rpfly\Projects\wpr-education`.
 
 Live URL: https://rowanflynnpilot.github.io/wpr-education/
 
+The app posts its content height to the parent page
+(`{type: "wpr-education:height", height}`), so the recommended embed
+auto-sizes — no double scrollbar:
+
 ```html
-<iframe
+<iframe id="wpr-education-embed"
   src="https://rowanflynnpilot.github.io/wpr-education/"
   title="Marathon County School Data — Wausau Pilot & Review"
   style="width:100%; height:1400px; border:0;"
   loading="lazy"></iframe>
+<script>
+  window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://rowanflynnpilot.github.io') return;
+    if (e.data && e.data.type === 'wpr-education:height') {
+      document.getElementById('wpr-education-embed').style.height =
+        e.data.height + 'px';
+    }
+  });
+</script>
 ```
 
-Recommended height 1400px for the landing page; a district page runs longer —
-use `height:2400px` (or link out) when embedding `#/6223`-style deep links.
-Deep-link a district by appending `#/{dpi_code}` (codes in `data/index.json`).
+If the script can't be used (some WordPress configs strip it), the static
+fallback heights are 1400px for the landing page and 2400px for district
+pages. Deep-link a district with `#/{dpi_code}` (codes in
+`data/index.json`); preselect comparison districts with
+`#/{dpi_code}?peers={code},{code}` — e.g. `#/6223?peers=4970` embeds
+Wausau vs. D.C. Everest.
 
 ## Current status & next tasks
 
