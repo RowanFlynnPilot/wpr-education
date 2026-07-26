@@ -127,17 +127,53 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
   const fmtTick = (v) =>
     kind === 'count' ? v.toLocaleString('en-US') : kind === 'score' ? v : `${v}%`
 
+  // Value labels for the primary (district) series. Labeling all ~21 points
+  // of a long series collides badly on narrow screens, so large mode labels
+  // a thinned subset — roughly every Nth point, always keeping the first and
+  // newest — and drops each label below the line at local dips so labels
+  // stop crossing the line they describe. Normal mode: newest point only.
+  const primaryVals = rows.map((r) => {
+    for (const k of seriesKeys[primaryKey] ?? []) if (r[k] != null) return r[k]
+    return null
+  })
+  const nonNull = primaryVals.map((v, i) => (v == null ? null : i)).filter((i) => i != null)
+  const labelSet = new Set()
+  if (large && nonNull.length) {
+    const step = Math.max(1, Math.ceil(nonNull.length / 9))
+    nonNull.forEach((idx, j) => {
+      if (j % step === 0) labelSet.add(idx)
+    })
+    labelSet.add(nonNull[0])
+    const lastIdx = nonNull[nonNull.length - 1]
+    if (step > 1) {
+      // Keep the newest label from crowding its stepped neighbor.
+      for (const idx of [...labelSet]) {
+        if (idx !== lastIdx && Math.abs(idx - lastIdx) < Math.ceil(step / 2)) labelSet.delete(idx)
+      }
+    }
+    labelSet.add(lastIdx)
+  } else if (nonNull.length) {
+    labelSet.add(nonNull[nonNull.length - 1])
+  }
+  const isLocalDip = (i) => {
+    const before = nonNull.filter((j) => j < i)
+    const after = nonNull.filter((j) => j > i)
+    const prev = before.length ? primaryVals[before[before.length - 1]] : null
+    const next = after.length ? primaryVals[after[0]] : null
+    const v = primaryVals[i]
+    return (prev == null || v <= prev) && (next == null || v <= next) && !(prev == null && next == null)
+  }
+
   const valueLabel = (sKey, dataKey) => {
-    // large: every point of the primary series; normal: just its newest point.
     if (sKey !== primaryKey) return null
     const render = (props) => {
       const { x, y, value, index } = props
-      if (value == null) return null
-      if (!large && index !== lastIdxOf[sKey]) return null
+      if (value == null || !labelSet.has(index)) return null
+      const below = isLocalDip(index)
       return (
         <text
           x={x}
-          y={y - 9}
+          y={below ? y + 18 : y - 9}
           textAnchor="middle"
           fontSize={large ? 11.5 : 11}
           fontWeight={600}
@@ -217,7 +253,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
                 stroke={s.color}
                 strokeWidth={large ? s.width + 0.4 : s.width}
                 strokeDasharray={s.dash}
-                dot={{ r: large ? 2.6 : 2, fill: s.color, strokeWidth: 0 }}
+                dot={s.key === 'state' ? false : { r: large ? 2.6 : 2, fill: s.color, strokeWidth: 0 }}
                 activeDot={{ r: 4 }}
                 connectNulls={false}
                 isAnimationActive={false}
