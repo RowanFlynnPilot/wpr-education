@@ -1,8 +1,9 @@
 import {
+  Area,
   CartesianGrid,
+  ComposedChart,
   LabelList,
   Line,
-  LineChart,
   ReferenceLine,
   ResponsiveContainer,
   Tooltip,
@@ -11,13 +12,6 @@ import {
 } from 'recharts'
 import { buildChart } from '../lib/chartData'
 import { fmtValue } from '../lib/meta'
-
-const UNIT_LABEL = {
-  percent: 'Percent of students',
-  'percent-change': 'Percent change',
-  score: 'Average score',
-  count: 'Students',
-}
 
 function BreakBadge({ viewBox, n, kind, stack }) {
   const x = viewBox?.x ?? 0
@@ -172,13 +166,16 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
       const { x, y, value, index } = props
       if (value == null || !labelSet.has(index)) return null
       // Dips get their label below the line — unless that would collide
-      // with the x-axis at the bottom of the plot.
+      // with the x-axis at the bottom of the plot. The newest point sits at
+      // the right edge, so its label anchors to the left of the dot instead
+      // of centering (which would clip).
       const below = isLocalDip(index) && y < height - 64
+      const isNewest = index === nonNull[nonNull.length - 1]
       return (
         <text
-          x={x}
+          x={isNewest ? x - 8 : x}
           y={below ? y + 18 : y - 9}
-          textAnchor="middle"
+          textAnchor={isNewest ? 'end' : 'middle'}
           fontSize={large ? 11.5 : 11}
           fontWeight={600}
           fontFamily="'JetBrains Mono', monospace"
@@ -194,13 +191,37 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
     return <LabelList key={`lbl-${dataKey}`} dataKey={dataKey} content={render} />
   }
 
+  // Soft fill under the district's line (compare mode only — group mode is
+  // multi-line and stays clean). One gradient per chart instance.
+  const gradId = `tc-grad-${topicId}-${size}`
+  const endpointDot = (sKey) => (props) => {
+    const { cx, cy, index } = props
+    if (cx == null || cy == null || props.value == null) return <g key={`d-${sKey}-${index}`} />
+    if (showLabels && sKey === primaryKey && index === lastIdxOf[sKey]) {
+      return (
+        <g key={`d-${sKey}-${index}`}>
+          <circle cx={cx} cy={cy} r={large ? 6 : 5} fill="#FDFBF6" stroke="#3A867C" strokeWidth={2} />
+          <circle cx={cx} cy={cy} r={large ? 3 : 2.4} fill="#3A867C" />
+        </g>
+      )
+    }
+    const r = large ? 2.6 : 2
+    return <circle key={`d-${sKey}-${index}`} cx={cx} cy={cy} r={r} fill={props.stroke} strokeWidth={0} />
+  }
+
   return (
     <div className="trend-chart" role="img" aria-label={ariaLabel}>
       <ResponsiveContainer width="100%" height={height}>
-        <LineChart
+        <ComposedChart
           data={rows}
           margin={{ top: topMargin, right: large ? 22 : 14, bottom: large ? 18 : 4, left: large ? 10 : 0 }}
         >
+          <defs>
+            <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#3A867C" stopOpacity={0.22} />
+              <stop offset="100%" stopColor="#3A867C" stopOpacity={0.02} />
+            </linearGradient>
+          </defs>
           <CartesianGrid stroke="#E4DECF" strokeDasharray="1 3" vertical={false} />
           <XAxis
             dataKey="year"
@@ -216,24 +237,12 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
             label={large ? { value: 'School year', position: 'insideBottom', offset: -4, style: { fontSize: 12, fill: '#6B675C', fontFamily: "'Public Sans', sans-serif" } } : undefined}
           />
           <YAxis
-            width={large ? 58 : 50}
+            width={large ? 54 : 44}
             tick={tickStyle}
             tickFormatter={fmtTick}
             tickLine={false}
             axisLine={false}
             domain={['auto', 'auto']}
-            label={{
-              value: UNIT_LABEL[kind] ?? '',
-              angle: -90,
-              position: 'insideLeft',
-              offset: large ? 2 : 0,
-              style: {
-                textAnchor: 'middle',
-                fontSize: large ? 12 : 10.5,
-                fill: '#8A8578',
-                fontFamily: "'Public Sans', sans-serif",
-              },
-            }}
           />
           <Tooltip
             content={<ChartTooltip seriesMeta={seriesList} kind={kind} />}
@@ -249,6 +258,20 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
               label={<BreakBadge n={i + 1} kind={b.type} stack={stackOf[i]} />}
             />
           ))}
+          {showLabels && primaryKey && seriesKeys[primaryKey]?.map((dataKey) => (
+            <Area
+              key={`area-${dataKey}`}
+              dataKey={dataKey}
+              stroke="none"
+              fill={`url(#${gradId})`}
+              baseValue="dataMin"
+              connectNulls={false}
+              isAnimationActive={false}
+              activeDot={false}
+              tooltipType="none"
+              legendType="none"
+            />
+          ))}
           {seriesList.flatMap((s) =>
             seriesKeys[s.key].map((dataKey) => (
               <Line
@@ -257,7 +280,8 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
                 stroke={s.color}
                 strokeWidth={large ? s.width + 0.4 : s.width}
                 strokeDasharray={s.dash}
-                dot={s.dash ? false : { r: large ? 2.6 : 2, fill: s.color, strokeWidth: 0 }}
+                strokeLinecap="round"
+                dot={s.dash ? false : endpointDot(s.key)}
                 activeDot={{ r: 4 }}
                 connectNulls={false}
                 isAnimationActive={false}
@@ -266,7 +290,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
               </Line>
             )),
           )}
-        </LineChart>
+        </ComposedChart>
       </ResponsiveContainer>
     </div>
   )
