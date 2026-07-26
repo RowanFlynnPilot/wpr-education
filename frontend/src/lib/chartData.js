@@ -48,7 +48,15 @@ function segmentIndex(year, breakYears) {
 // annotation year for the topic, so annotations for years with no data yet
 // (e.g. the 2025-26 Enhanced ACT notes) still render.
 export function buildChart(topicId, seriesList) {
-  const topicBreaks = breaksFor(topicId)
+  return buildChartWithBreaks(breaksFor(topicId), seriesList)
+}
+
+// Split out so the segmentation mechanism stays testable even when no
+// configured break currently uses type comparability_break (none does
+// today — the 2023-24 cut-score entry became an annotation because the
+// charted ACT metrics are averages — but Forward Exam proficiency
+// metrics would revive it).
+export function buildChartWithBreaks(topicBreaks, seriesList) {
   const breakYears = topicBreaks
     .filter((b) => b.type === 'comparability_break')
     .map((b) => b.school_year)

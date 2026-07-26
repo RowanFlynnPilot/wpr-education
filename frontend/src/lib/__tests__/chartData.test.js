@@ -1,16 +1,21 @@
 import { describe, expect, it } from 'vitest'
-import { buildChart, pctChangeSeries, suppressedYears } from '../chartData'
+import { buildChart, buildChartWithBreaks, pctChangeSeries, suppressedYears } from '../chartData'
 
 const cell = (v) => ({ value: v, suppressed: false })
 const SUP = { value: null, suppressed: true }
 
 describe('buildChart', () => {
-  it('splits ACT series at the 2023-24 comparability break — no key spans it', () => {
+  it('splits series at a comparability break — no key spans it', () => {
+    // Mechanism test with a synthetic break: no configured break currently
+    // uses comparability_break (the 2023-24 ACT cut-score entry is an
+    // annotation because charted ACT metrics are averages), but Forward
+    // proficiency metrics would revive it.
     const cells = {}
     for (const y of ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25']) {
       cells[y] = cell(19)
     }
-    const { rows, seriesKeys } = buildChart('act', [{ key: 'd', cells }])
+    const breaks = [{ id: 'x', school_year: '2023-24', type: 'comparability_break' }]
+    const { rows, seriesKeys } = buildChartWithBreaks(breaks, [{ key: 'd', cells }])
     expect(seriesKeys.d).toHaveLength(2)
     const [seg0, seg1] = seriesKeys.d
     const rowFor = (y) => rows.find((r) => r.year === y)
@@ -18,6 +23,14 @@ describe('buildChart', () => {
     expect(rowFor('2022-23')[seg1]).toBeUndefined()
     expect(rowFor('2023-24')[seg1]).toBe(19)
     expect(rowFor('2023-24')[seg0]).toBeUndefined()
+  })
+
+  it('keeps the ACT line continuous across 2023-24 (cut-score entry is an annotation)', () => {
+    const cells = {}
+    for (const y of ['2022-23', '2023-24', '2024-25']) cells[y] = cell(19)
+    const { seriesKeys, topicBreaks } = buildChart('act', [{ key: 'd', cells }])
+    expect(seriesKeys.d).toHaveLength(1)
+    expect(topicBreaks.find((b) => b.id === 'cutscores-2023-24').type).toBe('annotation')
   })
 
   it('extends the x-domain to annotation years with no data (2025-26 ACT)', () => {

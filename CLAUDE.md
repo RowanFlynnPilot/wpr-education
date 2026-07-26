@@ -233,5 +233,9 @@ Next tasks, in order:
 2. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
    DPI errata for the spring-2026 ACT scoring-error revisions.
 3. Stretch (in order): school-level data beneath each district; Forward
-   Exam v1.5 (extend the 2023-24 cut-score break's `topics` to include
-   `forward`). Subgroup views and per-chart CSV download shipped.
+   Exam v1.5 (extend the 2023-24 cut-score entry's `topics` to include
+   `forward` AND re-type it as a `comparability_break` for the
+   proficiency-category metrics Forward would add — it is currently an
+   `annotation` because the charted ACT metrics are score averages, which
+   the cut-score change does not affect). Subgroup views and per-chart
+   CSV download shipped.

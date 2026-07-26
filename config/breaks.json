@@ -1,13 +1,13 @@
 {
-  "_comment": "Methodology breaks and annotations, rendered on every trend chart whose topic matches. type 'comparability_break' = values before/after are not directly comparable (chart draws a hard visual break). type 'annotation' = context the reader needs but the series continues. Add an entry every time DPI changes a definition, cut score, or vendor — check the About the Data pages and master errata before each refresh.",
+  "_comment": "Methodology breaks and annotations, rendered on every trend chart whose topic matches. type 'comparability_break' = values before/after are not directly comparable (chart draws a hard visual break). type 'annotation' = context the reader needs but the series continues. Classify against the metrics actually charted: cutscores-2023-24 is an annotation because we chart score averages (comparable across a cut-score change), but it MUST become a comparability_break for proficiency-category metrics if those ever ship (Forward Exam v1.5). Add an entry every time DPI changes a definition, cut score, or vendor — check the About the Data pages and master errata before each refresh.",
   "breaks": [
     {
       "id": "cutscores-2023-24",
       "school_year": "2023-24",
       "topics": ["act"],
-      "type": "comparability_break",
+      "type": "annotation",
       "label": "DPI changed performance cut scores",
-      "detail": "Starting with 2023-24 results, DPI changed how ACT (and Forward) performance categories are set. Proficiency-category results from 2023-24 onward are not directly comparable to earlier years. Extend topics to include 'forward' when the Forward Exam ships in v1.5."
+      "detail": "Starting with 2023-24 results, DPI changed how ACT (and Forward) performance categories are set — which scores count as 'Meeting' or 'Advanced.' Proficiency-category rates are not comparable across this line, but the ACT score scale itself did not change, so the score averages and participation shown here remain comparable."
     },
     {
       "id": "enhanced-act-2025-26",
