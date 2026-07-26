@@ -62,12 +62,6 @@ export default function MethodologyFooter({ generated }) {
         than Wisconsin's percentage-based rate. National data also runs one to
         three years behind DPI's, so the U.S. line ends earlier.
       </p>
-      <p>
-        <strong>Student groups.</strong> Group breakdowns use DPI's own categories
-        (here, economically disadvantaged students and their peers). Small groups
-        are heavily redacted; expect gaps labeled "suppressed for student privacy,"
-        especially in smaller districts.
-      </p>
       <p className="credit">
         <img className="credit-badge" src={wprBadge} alt="" />
         <span>

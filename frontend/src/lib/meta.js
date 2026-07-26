@@ -126,15 +126,14 @@ export const COLORS = {
 }
 
 // Student-group dimensions offered in the UI. Editorial decision
-// 2026-07-26: present economic status only. The pipeline still emits
-// race_ethnicity, disability and el_status into data/subgroups/*.json,
-// so re-adding one here is a one-line change:
+// 2026-07-26: none for now — the whole "Break out by" row is hidden when
+// this list is empty. The pipeline still emits all four dimensions into
+// data/subgroups/*.json, so re-enabling any of them is a one-line change:
+//   { id: 'econ_status', label: 'Economic status' },
 //   { id: 'race_ethnicity', label: 'Race & ethnicity' },
 //   { id: 'disability', label: 'Disability' },
 //   { id: 'el_status', label: 'English learners' },
-export const DIMENSIONS = [
-  { id: 'econ_status', label: 'Economic status' },
-]
+export const DIMENSIONS = []
 
 // DPI's abbreviations, spelled out for readers.
 export const GROUP_LABELS = {

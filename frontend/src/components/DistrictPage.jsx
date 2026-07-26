@@ -112,26 +112,28 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
         </div>
       )}
 
-      <div className="pill-row dim-row" role="group" aria-label={`${topic.label} student groups`}>
-        <span className="dim-row-label">Break out by:</span>
-        <button
-          className={`pill${dimension === null ? ' active' : ''}`}
-          aria-pressed={dimension === null}
-          onClick={() => setDimension(null)}
-        >
-          All students
-        </button>
-        {DIMENSIONS.map((d) => (
+      {DIMENSIONS.length > 0 && (
+        <div className="pill-row dim-row" role="group" aria-label={`${topic.label} student groups`}>
+          <span className="dim-row-label">Break out by:</span>
           <button
-            key={d.id}
-            className={`pill${dimension === d.id ? ' active' : ''}`}
-            aria-pressed={dimension === d.id}
-            onClick={() => setDimension(d.id)}
+            className={`pill${dimension === null ? ' active' : ''}`}
+            aria-pressed={dimension === null}
+            onClick={() => setDimension(null)}
           >
-            {d.label}
+            All students
           </button>
-        ))}
-      </div>
+          {DIMENSIONS.map((d) => (
+            <button
+              key={d.id}
+              className={`pill${dimension === d.id ? ' active' : ''}`}
+              aria-pressed={dimension === d.id}
+              onClick={() => setDimension(d.id)}
+            >
+              {d.label}
+            </button>
+          ))}
+        </div>
+      )}
 
       {subError && (
         <p className="derived-note" role="alert">
