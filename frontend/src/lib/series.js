@@ -8,7 +8,7 @@ import { COLORS, groupLabel } from './meta'
 // _comment for why ACT and absenteeism are deliberately absent). Reshaped
 // once into the same doc shape as a district so metricSeries/derived
 // views work on it unchanged.
-const NATIONAL_DOC = {
+export const NATIONAL_DOC = {
   district: { dpi_code: 'us', dpi_name: 'United States' },
   topics: Object.fromEntries(
     Object.entries(nationalConfig.series).map(([topicId, metrics]) => [

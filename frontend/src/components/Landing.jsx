@@ -1,6 +1,12 @@
-import { fmtValue, fmtYear } from '../lib/meta'
+import { Suspense, lazy, useState } from 'react'
+import { COLORS, TOPICS, fmtValue, fmtYear } from '../lib/meta'
 import { ACCENTS, LOGOS } from '../lib/logos'
+import { NATIONAL_DOC, metricSeries } from '../lib/series'
+import { seriesFromDoc } from '../lib/chartData'
 import Sparkline from './Sparkline'
+
+// Pulls the recharts chunk — loaded only when a KPI card is opened.
+const KpiModal = lazy(() => import('./KpiModal'))
 
 // The landing renders entirely from index.json summaries + state.json —
 // district files load only when a district page opens.
@@ -38,24 +44,32 @@ function stateLatest(state, topicId, metric) {
 }
 
 // Combined regional enrollment per year (sum across included districts).
-function regionEnrollmentTrend(districts) {
+function regionEnrollmentCells(districts) {
   const perYear = {}
   for (const d of districts) {
     for (const [y, v] of Object.entries(d.summary.enrollment_trend)) {
       if (v != null) perYear[y] = (perYear[y] ?? 0) + v
     }
   }
-  return Object.keys(perYear).sort().map((y) => perYear[y])
+  const cells = {}
+  for (const y of Object.keys(perYear).sort()) {
+    cells[y] = { value: perYear[y], suppressed: false }
+  }
+  return cells
 }
 
-function HeadlineCard({ title, big, sub, spark }) {
+const cellValues = (cells) =>
+  Object.keys(cells).sort().map((y) => (cells[y].suppressed ? null : cells[y].value))
+
+function HeadlineCard({ title, big, sub, spark, onExpand }) {
   return (
-    <div className="headline-card">
+    <button type="button" className="headline-card" onClick={onExpand} aria-haspopup="dialog">
+      <span className="headline-expand" aria-hidden="true">⤢</span>
       <div className="headline-title">{title}</div>
       <div className="headline-big">{big}</div>
       {spark && <Sparkline values={spark} />}
       <div className="headline-sub">{sub}</div>
-    </div>
+    </button>
   )
 }
 
@@ -67,6 +81,17 @@ const scrollToCounty = (county) =>
 
 export default function Landing({ index, state }) {
   const districts = index.districts
+  const [expanded, setExpanded] = useState(null)
+
+  const wiSeries = (topicId, metric) => ({
+    key: 'state',
+    label: 'Wisconsin',
+    color: COLORS.district,
+    width: 2.8,
+    cells: seriesFromDoc(state, topicId, metric),
+  })
+  const gradMeta = TOPICS.find((t) => t.id === 'graduation').metrics.grad_rate_4yr
+  const nationCells = metricSeries(NATIONAL_DOC, 'graduation', 'grad_rate_4yr', gradMeta)
 
   // Marathon leads (the flagship county), the rest alphabetical.
   const counties = [...new Set(districts.map((d) => d.county))]
@@ -96,7 +121,18 @@ export default function Landing({ index, state }) {
           title={`Students enrolled (${fmtYear(enrollYear)})`}
           big={combined.toLocaleString('en-US')}
           sub={`across ${districts.length} districts in 9 counties`}
-          spark={regionEnrollmentTrend(districts)}
+          spark={cellValues(regionEnrollmentCells(districts))}
+          onExpand={() => setExpanded({
+            title: 'Students enrolled — regional total',
+            subtitle: `Combined enrollment across all ${districts.length} districts`,
+            topicId: 'enrollment',
+            kind: 'count',
+            seriesList: [{
+              key: 'region', label: `Region (${districts.length} districts)`,
+              color: COLORS.district, width: 2.8,
+              cells: regionEnrollmentCells(districts),
+            }],
+          })}
         />
         {act && (
           <HeadlineCard
@@ -104,6 +140,13 @@ export default function Landing({ index, state }) {
             big={`${fmtValue(act.min, 'score')}–${fmtValue(act.max, 'score')}`}
             sub={`regional range · statewide ${fmtLatest(stateLatest(state, 'act', 'composite_avg'), 'score')}`}
             spark={stateTrend(state, 'act', 'composite_avg')}
+            onExpand={() => setExpanded({
+              title: 'ACT composite — Wisconsin',
+              subtitle: 'Statewide average, grade-11 census ACT',
+              topicId: 'act',
+              kind: 'score',
+              seriesList: [wiSeries('act', 'composite_avg')],
+            })}
           />
         )}
         {grad && (
@@ -112,6 +155,16 @@ export default function Landing({ index, state }) {
             big={`${fmtValue(grad.min, 'percent')}–${fmtValue(grad.max, 'percent')}`}
             sub={`regional range · statewide ${fmtLatest(stateLatest(state, 'graduation', 'grad_rate_4yr'), 'percent')}`}
             spark={stateTrend(state, 'graduation', 'grad_rate_4yr')}
+            onExpand={() => setExpanded({
+              title: '4-year graduation — Wisconsin & U.S.',
+              subtitle: 'Regular diploma, 4-year adjusted cohort rate',
+              topicId: 'graduation',
+              kind: 'percent',
+              seriesList: [
+                { key: 'nation', label: 'United States', color: '#55524A', dash: '2 4', width: 1.5, cells: nationCells },
+                wiSeries('graduation', 'grad_rate_4yr'),
+              ],
+            })}
           />
         )}
         {abs && (
@@ -120,10 +173,23 @@ export default function Landing({ index, state }) {
             big={`${fmtValue(abs.min, 'percent')}–${fmtValue(abs.max, 'percent')}`}
             sub={`regional range · statewide ${fmtLatest(stateLatest(state, 'absenteeism', 'chronic_absenteeism_rate'), 'percent')}`}
             spark={stateTrend(state, 'absenteeism', 'chronic_absenteeism_rate')}
+            onExpand={() => setExpanded({
+              title: 'Chronic absenteeism — Wisconsin',
+              subtitle: 'Students absent more than 10% of enrolled days',
+              topicId: 'absenteeism',
+              kind: 'percent',
+              seriesList: [wiSeries('absenteeism', 'chronic_absenteeism_rate')],
+            })}
           />
         )}
       </div>
-      <p className="spark-note">Small lines show the statewide trend (regional total for enrollment).</p>
+      <p className="spark-note">Small lines show the statewide trend (regional total for enrollment) — tap a card for the full chart.</p>
+
+      {expanded && (
+        <Suspense fallback={<div className="loading">Loading chart…</div>}>
+          <KpiModal {...expanded} onClose={() => setExpanded(null)} />
+        </Suspense>
+      )}
 
       <h2 className="section-heading">Pick a district</h2>
       <nav className="county-nav" aria-label="Jump to county">
