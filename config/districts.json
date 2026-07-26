@@ -1,17 +1,381 @@
 {
-  "_comment": "Editorial, hand-maintained. Never derived from a DPI county field. dpi_code and dpi_name filled 2026-07-25 from enrollment_certified_2025-26.csv (DISTRICT_CODE / DISTRICT_NAME, exact strings — note DPI spells it 'D C Everest Area' with no periods). Codes keep their leading zeros and are strings everywhere. The validator throws if any included district has a null dpi_code.",
+  "_comment": "Editorial, hand-maintained. Never derived programmatically at refresh time — this roster was DRAFTED from enrollment_certified_2025-26 (DISTRICT_CODE/DISTRICT_NAME/COUNTY, AGENCY_TYPE 'School District' only, main-office county per DPI) and then adopted as the editorial list for the regional expansion approved by Rowan 2026-07-26 (Marathon + the 8 surrounding counties). dpi_name must match the source file exactly; codes keep leading zeros; labels are editorial and may differ from dpi_name. county drives landing-page grouping and peer-picker grouping only — inclusion stays a hand decision. Districts whose boundaries straddle county lines are listed under DPI's main-office county.",
   "districts": [
-    { "dpi_code": "6223", "dpi_name": "Wausau", "label": "Wausau", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "4970", "dpi_name": "D C Everest Area", "label": "D.C. Everest Area", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "3787", "dpi_name": "Mosinee", "label": "Mosinee", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "3304", "dpi_name": "Marathon City", "label": "Marathon City", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "1561", "dpi_name": "Edgar", "label": "Edgar", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "0196", "dpi_name": "Athens", "label": "Athens", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "5467", "dpi_name": "Spencer", "label": "Spencer", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "5628", "dpi_name": "Stratford", "label": "Stratford", "included": true, "note": "core Marathon County" },
-    { "dpi_code": "0007", "dpi_name": "Abbotsford", "label": "Abbotsford", "included": false, "note": "cross-county candidate (Clark Co.) — editorial decision pending" },
-    { "dpi_code": "1162", "dpi_name": "Colby", "label": "Colby", "included": false, "note": "cross-county candidate (Clark Co.) — editorial decision pending" },
-    { "dpi_code": "0203", "dpi_name": "Auburndale", "label": "Auburndale", "included": false, "note": "cross-county candidate (Wood Co.) — editorial decision pending" },
-    { "dpi_code": "6692", "dpi_name": "Wittenberg-Birnamwood", "label": "Wittenberg-Birnamwood", "included": false, "note": "cross-county candidate (Shawano Co.) — editorial decision pending" }
+    {
+      "dpi_code": "0196",
+      "dpi_name": "Athens",
+      "label": "Athens",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "4970",
+      "dpi_name": "D C Everest Area",
+      "label": "D.C. Everest Area",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "1561",
+      "dpi_name": "Edgar",
+      "label": "Edgar",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "3304",
+      "dpi_name": "Marathon City",
+      "label": "Marathon City",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "3787",
+      "dpi_name": "Mosinee",
+      "label": "Mosinee",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "5467",
+      "dpi_name": "Spencer",
+      "label": "Spencer",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "5628",
+      "dpi_name": "Stratford",
+      "label": "Stratford",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "6223",
+      "dpi_name": "Wausau",
+      "label": "Wausau",
+      "county": "Marathon",
+      "included": true,
+      "note": "core Marathon County"
+    },
+    {
+      "dpi_code": "0007",
+      "dpi_name": "Abbotsford",
+      "label": "Abbotsford",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26 (was cross-county candidate)"
+    },
+    {
+      "dpi_code": "1162",
+      "dpi_name": "Colby",
+      "label": "Colby",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26 (was cross-county candidate)"
+    },
+    {
+      "dpi_code": "2226",
+      "dpi_name": "Granton Area",
+      "label": "Granton Area",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "2394",
+      "dpi_name": "Greenwood",
+      "label": "Greenwood",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3206",
+      "dpi_name": "Loyal",
+      "label": "Loyal",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3899",
+      "dpi_name": "Neillsville",
+      "label": "Neillsville",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "4207",
+      "dpi_name": "Owen-Withee",
+      "label": "Owen-Withee",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "5726",
+      "dpi_name": "Thorp",
+      "label": "Thorp",
+      "county": "Clark",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "0140",
+      "dpi_name": "Antigo Unified",
+      "label": "Antigo Unified",
+      "county": "Langlade",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "1582",
+      "dpi_name": "Elcho",
+      "label": "Elcho",
+      "county": "Langlade",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "6440",
+      "dpi_name": "White Lake",
+      "label": "White Lake",
+      "county": "Langlade",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3500",
+      "dpi_name": "Merrill Area",
+      "label": "Merrill Area",
+      "county": "Lincoln",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "5754",
+      "dpi_name": "Tomahawk",
+      "label": "Tomahawk",
+      "county": "Lincoln",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "0105",
+      "dpi_name": "Almond-Bancroft",
+      "label": "Almond-Bancroft",
+      "county": "Portage",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "4963",
+      "dpi_name": "Rosholt",
+      "label": "Rosholt",
+      "county": "Portage",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "5607",
+      "dpi_name": "Stevens Point Area Public",
+      "label": "Stevens Point Area Public",
+      "county": "Portage",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "0126",
+      "dpi_name": "Tomorrow River",
+      "label": "Tomorrow River",
+      "county": "Portage",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "0602",
+      "dpi_name": "Bonduel",
+      "label": "Bonduel",
+      "county": "Shawano",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "0623",
+      "dpi_name": "Bowler",
+      "label": "Bowler",
+      "county": "Shawano",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "2415",
+      "dpi_name": "Gresham",
+      "label": "Gresham",
+      "county": "Shawano",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "5264",
+      "dpi_name": "Shawano",
+      "label": "Shawano",
+      "county": "Shawano",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "5740",
+      "dpi_name": "Tigerton",
+      "label": "Tigerton",
+      "county": "Shawano",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "6692",
+      "dpi_name": "Wittenberg-Birnamwood",
+      "label": "Wittenberg-Birnamwood",
+      "county": "Shawano",
+      "included": true,
+      "note": "regional expansion 2026-07-26 (was cross-county candidate)"
+    },
+    {
+      "dpi_code": "2135",
+      "dpi_name": "Gilman",
+      "label": "Gilman",
+      "county": "Taylor",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3409",
+      "dpi_name": "Medford Area Public",
+      "label": "Medford Area Public",
+      "county": "Taylor",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "4795",
+      "dpi_name": "Rib Lake",
+      "label": "Rib Lake",
+      "county": "Taylor",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "1141",
+      "dpi_name": "Clintonville",
+      "label": "Clintonville",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "2639",
+      "dpi_name": "Iola-Scandinavia",
+      "label": "Iola-Scandinavia",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3276",
+      "dpi_name": "Manawa",
+      "label": "Manawa",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3318",
+      "dpi_name": "Marion",
+      "label": "Marion",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3955",
+      "dpi_name": "New London",
+      "label": "New London",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "6195",
+      "dpi_name": "Waupaca",
+      "label": "Waupaca",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "6384",
+      "dpi_name": "Weyauwega-Fremont",
+      "label": "Weyauwega-Fremont",
+      "county": "Waupaca",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "0203",
+      "dpi_name": "Auburndale",
+      "label": "Auburndale",
+      "county": "Wood",
+      "included": true,
+      "note": "regional expansion 2026-07-26 (was cross-county candidate)"
+    },
+    {
+      "dpi_code": "3339",
+      "dpi_name": "Marshfield Unified",
+      "label": "Marshfield Unified",
+      "county": "Wood",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "3906",
+      "dpi_name": "Nekoosa",
+      "label": "Nekoosa",
+      "county": "Wood",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "4368",
+      "dpi_name": "Pittsville",
+      "label": "Pittsville",
+      "county": "Wood",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "4508",
+      "dpi_name": "Port Edwards",
+      "label": "Port Edwards",
+      "county": "Wood",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    },
+    {
+      "dpi_code": "6685",
+      "dpi_name": "Wisconsin Rapids",
+      "label": "Wisconsin Rapids",
+      "county": "Wood",
+      "included": true,
+      "note": "regional expansion 2026-07-26"
+    }
   ]
 }

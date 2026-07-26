@@ -87,12 +87,12 @@ export default function App() {
   const districtCode = isEmbed ? segments[1] : route.path
   const entry = core?.index.districts.find((d) => d.dpi_code === districtCode)
 
-  // Which docs this route draws: the district + its peers, or every
-  // included district for the landing cards.
+  // Which docs this route draws: the district + its peers. The landing
+  // renders from index.json summaries alone — no district fetches.
   const included = core?.index.districts.map((d) => d.dpi_code) ?? []
   const needed = entry
     ? [districtCode, ...route.peers.filter((p) => p !== districtCode && included.includes(p))]
-    : included
+    : []
   const neededKey = needed.join(',')
 
   useEffect(() => {
@@ -103,8 +103,8 @@ export default function App() {
 
   useEffect(() => {
     document.title = entry
-      ? `${entry.label} — Marathon County School Data`
-      : 'Marathon County School Data — Wausau Pilot & Review'
+      ? `${entry.label} — Central Wisconsin School Data`
+      : 'Central Wisconsin School Data — Wausau Pilot & Review'
   }, [entry])
 
   if (error) return <div className="app"><ErrorPanel error={error} /></div>
@@ -136,7 +136,7 @@ export default function App() {
     <div className="app">
       <header className="masthead">
         <div className="masthead-kicker">Wausau Pilot &amp; Review</div>
-        <h1>Marathon County School Data</h1>
+        <h1>Central Wisconsin School Data</h1>
       </header>
       <main>
         {entry && !isEmbed ? (
@@ -150,7 +150,7 @@ export default function App() {
             />
           </Suspense>
         ) : (
-          <Landing index={index} state={state} docs={docs} />
+          <Landing index={index} state={state} />
         )}
       </main>
       <MethodologyFooter generated={index.generated} />

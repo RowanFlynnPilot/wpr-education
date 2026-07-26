@@ -232,10 +232,45 @@ def main() -> None:
     missing_docs = [d["label"] for d in included if d["dpi_code"] not in by_district]
     if missing_docs:
         raise ValueError(f"Included districts produced no data: {missing_docs}")
+
+    def latest_cell(code: str, topic: str, metric: str):
+        """Newest {year, value, suppressed} for one metric, or None."""
+        years = by_topic[topic].get(code, {})
+        have = sorted(y for y in years if metric in years[y])
+        if not have:
+            return None
+        year = have[-1]
+        cell = years[year][metric]
+        return {"year": year, "value": cell["value"], "suppressed": cell["suppressed"]}
+
+    def summarize(code: str) -> dict:
+        """Landing-page summary so the frontend can render district cards
+        without fetching every district file (47 districts would be ~1.5MB
+        up front; this keeps the landing to index.json + state.json)."""
+        enroll_years = by_topic["enrollment"].get(code, {})
+        trend = {
+            y: (None if m["total_enrollment"]["suppressed"] else m["total_enrollment"]["value"])
+            for y, m in sorted(enroll_years.items()) if "total_enrollment" in m
+        }
+        return {
+            "enrollment_trend": trend,
+            "latest": {
+                metric: latest_cell(code, topic, metric)
+                for topic, metric in [
+                    ("enrollment", "total_enrollment"),
+                    ("act", "composite_avg"),
+                    ("graduation", "grad_rate_4yr"),
+                    ("absenteeism", "chronic_absenteeism_rate"),
+                ]
+            },
+        }
+
     index = {
         "generated": generated,
         "districts": [
-            {"dpi_code": d["dpi_code"], "dpi_name": d["dpi_name"], "label": d["label"]}
+            {"dpi_code": d["dpi_code"], "dpi_name": d["dpi_name"],
+             "label": d["label"], "county": d["county"],
+             "summary": summarize(d["dpi_code"])}
             for d in included
         ],
     }

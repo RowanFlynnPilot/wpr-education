@@ -6,8 +6,8 @@
 
 Wisconsin education data tracker for [Wausau Pilot & Review](https://wausaupilotandreview.com)
 — ACT results, graduation, dropouts, chronic absenteeism, and enrollment for
-Marathon County school districts, with statewide and peer-district
-comparison. Every number comes from Wisconsin DPI's certified
+47 school districts across Marathon County and its eight neighbors, with
+statewide, national and peer-district comparison. Every number comes from Wisconsin DPI's certified
 [WISEdash download files](https://dpi.wi.gov/wisedash/public/download-files).
 
 ## How it works

@@ -329,8 +329,8 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
         ))}
       </nav>
       <div className="peer-select">
-        <span className="peer-select-label">Compare with:</span>
-        {others.map((d) => (
+        <span className="peer-select-label">Compare with {entry.county} County:</span>
+        {others.filter((d) => d.county === entry.county).map((d) => (
           <button
             key={d.dpi_code}
             className={`pill peer-pill${peers.includes(d.dpi_code) ? ' active' : ''}`}
@@ -342,6 +342,30 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
           </button>
         ))}
       </div>
+      <details
+        className="peer-more"
+        open={peers.some((p) => index.districts.find((d) => d.dpi_code === p)?.county !== entry.county)}
+      >
+        <summary>Compare across the region</summary>
+        {[...new Set(others.filter((d) => d.county !== entry.county).map((d) => d.county))]
+          .sort()
+          .map((county) => (
+            <div key={county} className="peer-select peer-select-county">
+              <span className="peer-select-label">{county}:</span>
+              {others.filter((d) => d.county === county).map((d) => (
+                <button
+                  key={d.dpi_code}
+                  className={`pill peer-pill${peers.includes(d.dpi_code) ? ' active' : ''}`}
+                  aria-pressed={peers.includes(d.dpi_code)}
+                  style={peers.includes(d.dpi_code) ? { background: peerColorOf(d.dpi_code), borderColor: peerColorOf(d.dpi_code) } : undefined}
+                  onClick={() => togglePeer(d.dpi_code)}
+                >
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          ))}
+      </details>
       <p className="overlay-note">Rate and score charts show Wisconsin statewide as a dashed line; raw-count charts stay district-scale.</p>
 
       {TOPICS.map((topic) => (

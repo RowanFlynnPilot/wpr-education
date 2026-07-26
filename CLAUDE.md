@@ -1,16 +1,20 @@
 # wpr-education
 
 Wisconsin education data tracker for Wausau Pilot & Review (WPR).
-**Marathon County-first, statewide-ready:** the pipeline ingests statewide DPI
-files; the frontend presents only the districts listed in `config/districts.json`.
-Expanding coverage later is a config change, never a pipeline change.
+**Region-first, statewide-ready:** the pipeline ingests statewide DPI files;
+the frontend presents only the districts listed in `config/districts.json` —
+currently 47 districts across Marathon County and its eight neighbors
+(Clark, Langlade, Lincoln, Portage, Shawano, Taylor, Waupaca, Wood; regional
+expansion approved 2026-07-26). Expanding coverage further is a config
+change, never a pipeline change.
 
 ## What this is
 
 Public-facing tracker of ACT results, graduation/high-school completion,
-dropouts, chronic absenteeism, and enrollment for Marathon County school
-districts, with statewide and peer-district comparison, embedded on
-wausaupilotandreview.com via iframe.
+dropouts, chronic absenteeism, and enrollment for central Wisconsin school
+districts (branded "Central Wisconsin School Data"), with statewide,
+national and peer-district comparison, embedded on wausaupilotandreview.com
+via iframe.
 
 This is also the third reference implementation for the OEC Ledger Framework —
 the **bulk-file ingestion variant** (vs. the scraper variant proven by the Care
@@ -62,7 +66,9 @@ preserve corrected errors. There is no incremental mode.
 
 Pipeline output, all committed:
 
-- `data/index.json` — presented districts (from config) + statewide entry;
+- `data/index.json` — presented districts (from config, with `county` and
+  a landing summary: enrollment trend + latest headline metrics per
+  district, so the landing page renders without fetching district files);
   the frontend's routing source.
 - `data/districts/{dpi_code}.json` — one file per district (ALL Wisconsin
   districts, not just presented ones), all topics, all years.
@@ -101,9 +107,9 @@ cell`. Dimensions: `race_ethnicity`, `econ_status`, `disability`
 ingested), `el_status` ("ELL Status"/"ELL/LEP" harmonized to "EL" across
 DPI's rename). Group labels are otherwise DPI's verbatim
 (`GROUP_BY_VALUE`); `[Data Suppressed]` bucket rows are skipped. Subgroup
-files exist only for the 12 config districts + statewide (all 507 would
-grow the repo ~10x for districts nobody can route to); flipping a
-candidate to included still needs no pipeline change. ACT participation
+files exist only for the config districts + statewide (48 files; all 507
+would grow the repo substantially for districts nobody can route to);
+adding a district still needs no pipeline change. ACT participation
 for a group is suppressed when every Composite result row is redacted —
 a missing "No Test" row only means zero non-testers when results are
 actually enumerated.
@@ -169,7 +175,7 @@ auto-sizes — no double scrollbar:
 ```html
 <iframe id="wpr-education-embed"
   src="https://rowanflynnpilot.github.io/wpr-education/"
-  title="Marathon County School Data — Wausau Pilot & Review"
+  title="Central Wisconsin School Data — Wausau Pilot & Review"
   style="width:100%; height:1400px; border:0;"
   loading="lazy"></iframe>
 <script>
@@ -219,28 +225,38 @@ push to main). Wausau + D.C. Everest spot-checked against the WISEdash portal
 UI for every topic, most recent year — all values match at portal precision
 (see the Phase 3 commit message for the full table).
 
+**REGIONAL EXPANSION SHIPPED (2026-07-26).** Coverage grew from 8 Marathon
+County districts to 47 districts across 9 counties (approved by Rowan;
+roster drafted from the enrollment file's COUNTY column, then adopted as
+the editorial list). Branding is now "Central Wisconsin School Data";
+landing page groups districts by county (Marathon first) and renders from
+index.json summaries alone; peer picker shows same-county districts inline
+with the rest of the region behind a disclosure. Logos/accents exist for
+the original 12 districts only — the other 35 degrade gracefully (no logo
+chip, teal accent); collecting them is an open cosmetic task.
+
 Known state of the data:
 
-- No suppressed cells exist among the 8 included districts at the
-  all-students level (371 exist statewide). Subgroup views shipped
-  2026-07-25 ("Break out by" pills on every topic chart) and carry heavy
-  genuine suppression in the small districts — Athens' ACT race view is
-  the reference case.
+- Small new districts (White Lake, Tigerton, Bowler, Gresham…) carry real
+  all-students suppression in some years — the UI's suppression handling
+  now shows up outside subgroup views too. Subgroup views ("Break out by"
+  pills) carry heavy suppression everywhere small; Athens' ACT race view
+  is the reference case.
 - 2025-26 ACT lands ~fall 2026: add it to `sources.py`, run the refresh, and
   the two 2025-26 breaks already in `config/breaks.json` will annotate it.
 
 Next tasks, in order:
 
-1. Editorial decision with Shereen: which cross-county districts flip to
-   `"included": true` in `config/districts.json` (codes/names already filled
-   for all four candidates; flipping is purely a config edit + refresh… no
-   pipeline change).
-2. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
+1. Newsroom review of the expanded roster with Shereen (any districts to
+   drop or relabel — the config is the editorial surface; also whether
+   "Central Wisconsin School Data" is the right name).
+2. Logos + accent colors for the 35 new districts (frontend/src/lib/
+   logos.js documents the pattern; code handles missing entries).
+3. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
    DPI errata for the spring-2026 ACT scoring-error revisions.
-3. Stretch (in order): school-level data beneath each district; Forward
+4. Stretch (in order): school-level data beneath each district; Forward
    Exam v1.5 (extend the 2023-24 cut-score entry's `topics` to include
    `forward` AND re-type it as a `comparability_break` for the
    proficiency-category metrics Forward would add — it is currently an
    `annotation` because the charted ACT metrics are score averages, which
-   the cut-score change does not affect). Subgroup views and per-chart
-   CSV download shipped.
+   the cut-score change does not affect).
