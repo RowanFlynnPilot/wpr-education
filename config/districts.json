@@ -1,17 +1,17 @@
 {
-  "_comment": "Editorial, hand-maintained. Never derived from a DPI county field. dpi_code and dpi_name must be filled from the DPI enrollment statewide file before the first refresh; the validator throws if any included district has a null dpi_code. dpi_name must match the source file string exactly (a mismatch after codes are filled means the code is wrong).",
+  "_comment": "Editorial, hand-maintained. Never derived from a DPI county field. dpi_code and dpi_name filled 2026-07-25 from enrollment_certified_2025-26.csv (DISTRICT_CODE / DISTRICT_NAME, exact strings — note DPI spells it 'D C Everest Area' with no periods). Codes keep their leading zeros and are strings everywhere. The validator throws if any included district has a null dpi_code.",
   "districts": [
-    { "dpi_code": null, "dpi_name": null, "label": "Wausau", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "D.C. Everest Area", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Mosinee", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Marathon City", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Edgar", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Athens", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Spencer", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Stratford", "included": true, "note": "core Marathon County" },
-    { "dpi_code": null, "dpi_name": null, "label": "Abbotsford", "included": false, "note": "cross-county candidate — editorial decision pending" },
-    { "dpi_code": null, "dpi_name": null, "label": "Colby", "included": false, "note": "cross-county candidate — editorial decision pending" },
-    { "dpi_code": null, "dpi_name": null, "label": "Auburndale", "included": false, "note": "cross-county candidate — editorial decision pending" },
-    { "dpi_code": null, "dpi_name": null, "label": "Wittenberg-Birnamwood", "included": false, "note": "cross-county candidate — editorial decision pending" }
+    { "dpi_code": "6223", "dpi_name": "Wausau", "label": "Wausau", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "4970", "dpi_name": "D C Everest Area", "label": "D.C. Everest Area", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "3787", "dpi_name": "Mosinee", "label": "Mosinee", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "3304", "dpi_name": "Marathon City", "label": "Marathon City", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "1561", "dpi_name": "Edgar", "label": "Edgar", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "0196", "dpi_name": "Athens", "label": "Athens", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "5467", "dpi_name": "Spencer", "label": "Spencer", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "5628", "dpi_name": "Stratford", "label": "Stratford", "included": true, "note": "core Marathon County" },
+    { "dpi_code": "0007", "dpi_name": "Abbotsford", "label": "Abbotsford", "included": false, "note": "cross-county candidate (Clark Co.) — editorial decision pending" },
+    { "dpi_code": "1162", "dpi_name": "Colby", "label": "Colby", "included": false, "note": "cross-county candidate (Clark Co.) — editorial decision pending" },
+    { "dpi_code": "0203", "dpi_name": "Auburndale", "label": "Auburndale", "included": false, "note": "cross-county candidate (Wood Co.) — editorial decision pending" },
+    { "dpi_code": "6692", "dpi_name": "Wittenberg-Birnamwood", "label": "Wittenberg-Birnamwood", "included": false, "note": "cross-county candidate (Shawano Co.) — editorial decision pending" }
   ]
 }
