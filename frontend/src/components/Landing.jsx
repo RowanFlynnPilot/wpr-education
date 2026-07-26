@@ -129,7 +129,7 @@ export default function Landing({ index, state }) {
       <nav className="county-nav" aria-label="Jump to county">
         {counties.map((c) => (
           <button key={c} className="pill topic-chip" onClick={() => scrollToCounty(c)}>
-            {c} Co.
+            {c}
           </button>
         ))}
       </nav>
