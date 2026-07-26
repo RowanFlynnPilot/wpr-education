@@ -284,6 +284,9 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
   const doc = docs[code]
   const entry = index.districts.find((d) => d.dpi_code === code)
   const others = index.districts.filter((d) => d.dpi_code !== code)
+  // Only topics this district has data for: many small districts offer no
+  // AP exams, and K-8 districts have no PreACT/graduation rows at all.
+  const visibleTopics = TOPICS.filter((t) => Object.keys(doc.topics[t.id] ?? {}).length > 0)
 
   // Peer selection lives in the hash (#/6223?peers=4970,0196) so a specific
   // comparison is shareable and embeddable. Assigning location.hash fires
@@ -315,7 +318,7 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
         <h2 className="district-title">{entry.label} School District</h2>
       </div>
       <nav className="topic-nav" aria-label="Jump to topic">
-        {TOPICS.map((t) => (
+        {visibleTopics.map((t) => (
           <button
             key={t.id}
             className="pill topic-chip"
@@ -368,7 +371,7 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
       </details>
       <p className="overlay-note">Rate and score charts show Wisconsin statewide as a dashed line; raw-count charts stay district-scale.</p>
 
-      {TOPICS.map((topic) => (
+      {visibleTopics.map((topic) => (
         <TopicSection
           key={topic.id}
           topic={topic}

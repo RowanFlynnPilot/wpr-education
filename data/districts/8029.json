@@ -3,7 +3,7 @@
     "dpi_code": "8029",
     "dpi_name": "Kenosha Schools of Technology Enhanced Curriculum Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2023-24": {
@@ -63,6 +63,38 @@
         },
         "participation_pct": {
           "value": 88.5,
+          "suppressed": false
+        }
+      }
+    },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 14.39,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.56,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 13.56,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 15.09,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 14.0,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 15.11,
           "suppressed": false
         }
       }

@@ -3,7 +3,7 @@
     "dpi_code": "8021",
     "dpi_name": "Lake Country Classical Academy Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2023-24": {
@@ -67,6 +67,54 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 19.72,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 20.26,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 20.71,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 22.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 19.5,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 23.76,
+          "suppressed": false
+        }
+      }
+    },
+    "ap": {
+      "2024-25": {
+        "students_tested": {
+          "value": 9.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 20.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 60.0,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2023-24": {
         "cohort_count_4yr": {
@@ -94,6 +142,10 @@
         "grad_rate_4yr": {
           "value": 81.2,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
         }
       }
     },

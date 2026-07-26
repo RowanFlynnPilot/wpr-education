@@ -3,7 +3,7 @@
     "dpi_code": "8124",
     "dpi_name": "Veritas High"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -67,6 +67,92 @@
         }
       }
     },
+    "ap": {
+      "2010-11": {
+        "students_tested": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 52.38,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "students_tested": {
+          "value": 52.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 63.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 53.97,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "students_tested": {
+          "value": 36.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 46.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 8.7,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "students_tested": {
+          "value": 68.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 85.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 72.94,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "students_tested": {
+          "value": 18.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 18.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 94.44,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "students_tested": {
+          "value": 58.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 67.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 53.73,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2010-11": {
         "cohort_count_4yr": {
@@ -94,6 +180,10 @@
         "grad_rate_4yr": {
           "value": 91.3,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2012-13": {
@@ -107,6 +197,14 @@
         },
         "grad_rate_4yr": {
           "value": 95.5,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 97.7,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
           "suppressed": false
         }
       },
@@ -122,6 +220,14 @@
         "grad_rate_4yr": {
           "value": 97.1,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 97.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 97.7,
+          "suppressed": false
         }
       },
       "2014-15": {
@@ -135,6 +241,14 @@
         },
         "grad_rate_4yr": {
           "value": 98.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 98.6,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 97.0,
           "suppressed": false
         }
       }

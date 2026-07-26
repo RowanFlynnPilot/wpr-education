@@ -3,7 +3,7 @@
     "dpi_code": "8115",
     "dpi_name": "Tenor High School"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -94,6 +94,10 @@
         "grad_rate_4yr": {
           "value": 88.9,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 75.7,
+          "suppressed": false
         }
       },
       "2011-12": {
@@ -107,6 +111,14 @@
         },
         "grad_rate_4yr": {
           "value": 96.1,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 92.6,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 75.7,
           "suppressed": false
         }
       },
@@ -122,6 +134,14 @@
         "grad_rate_4yr": {
           "value": 97.1,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 98.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 92.6,
+          "suppressed": false
         }
       },
       "2013-14": {
@@ -136,6 +156,14 @@
         "grad_rate_4yr": {
           "value": 96.9,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 97.1,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 98.0,
+          "suppressed": false
         }
       },
       "2014-15": {
@@ -149,6 +177,14 @@
         },
         "grad_rate_4yr": {
           "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 97.1,
           "suppressed": false
         }
       }

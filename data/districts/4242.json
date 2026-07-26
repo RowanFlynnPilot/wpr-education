@@ -3,8 +3,52 @@
     "dpi_code": "4242",
     "dpi_name": "Park Falls"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
+    "ap": {
+      "2006-07": {
+        "students_tested": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 57.89,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "students_tested": {
+          "value": 29.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 30.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 40.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "students_tested": {
+          "value": 23.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 64.0,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2005-06": {
         "dropout_rate": {

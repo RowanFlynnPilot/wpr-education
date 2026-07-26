@@ -3,8 +3,24 @@
     "dpi_code": "3640",
     "dpi_name": "Minocqua J1"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
+    "ap": {
+      "2007-08": {
+        "students_tested": {
+          "value": null,
+          "suppressed": true
+        },
+        "exam_count": {
+          "value": 2.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
     "dropouts": {
       "2005-06": {
         "dropout_rate": {

@@ -3,7 +3,7 @@
     "dpi_code": "4529",
     "dpi_name": "Potosi"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -337,6 +337,180 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 17.33,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 19.25,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 16.3,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 18.82,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 17.67,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 17.93,
+          "suppressed": false
+        }
+      }
+    },
+    "ap": {
+      "2007-08": {
+        "students_tested": {
+          "value": null,
+          "suppressed": true
+        },
+        "exam_count": {
+          "value": 3.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2016-17": {
+        "students_tested": {
+          "value": 11.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 11.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 27.27,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "students_tested": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 6.25,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "students_tested": {
+          "value": 12.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 31.58,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "students_tested": {
+          "value": 10.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 11.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 27.27,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "students_tested": {
+          "value": 12.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 17.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 35.29,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "students_tested": {
+          "value": 9.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 12.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 50.0,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "students_tested": {
+          "value": 10.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 38.1,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "students_tested": {
+          "value": 11.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 62.5,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "students_tested": {
+          "value": 14.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 23.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 69.57,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2009-10": {
         "cohort_count_4yr": {
@@ -364,6 +538,10 @@
         "grad_rate_4yr": {
           "value": 100.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 90.7,
+          "suppressed": false
         }
       },
       "2011-12": {
@@ -378,6 +556,14 @@
         "grad_rate_4yr": {
           "value": 92.6,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 90.7,
+          "suppressed": false
         }
       },
       "2012-13": {
@@ -390,6 +576,14 @@
           "suppressed": false
         },
         "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
           "value": 100.0,
           "suppressed": false
         }
@@ -406,6 +600,14 @@
         "grad_rate_4yr": {
           "value": 100.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2014-15": {
@@ -418,6 +620,14 @@
           "suppressed": false
         },
         "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
           "value": 100.0,
           "suppressed": false
         }
@@ -434,6 +644,14 @@
         "grad_rate_4yr": {
           "value": 100.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2016-17": {
@@ -446,6 +664,14 @@
           "suppressed": false
         },
         "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
           "value": 100.0,
           "suppressed": false
         }
@@ -462,6 +688,14 @@
         "grad_rate_4yr": {
           "value": 97.1,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2018-19": {
@@ -474,6 +708,14 @@
           "suppressed": false
         },
         "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
           "value": 100.0,
           "suppressed": false
         }
@@ -490,6 +732,14 @@
         "grad_rate_4yr": {
           "value": 100.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2020-21": {
@@ -503,6 +753,14 @@
         },
         "grad_rate_4yr": {
           "value": 96.2,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
           "suppressed": false
         }
       },
@@ -518,6 +776,14 @@
         "grad_rate_4yr": {
           "value": 96.2,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2022-23": {
@@ -530,6 +796,14 @@
           "suppressed": false
         },
         "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
           "value": 100.0,
           "suppressed": false
         }
@@ -546,6 +820,14 @@
         "grad_rate_4yr": {
           "value": 100.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2024-25": {
@@ -558,6 +840,14 @@
           "suppressed": false
         },
         "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
           "value": 100.0,
           "suppressed": false
         }

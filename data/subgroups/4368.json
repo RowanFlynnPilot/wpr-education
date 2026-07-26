@@ -3,7 +3,7 @@
     "dpi_code": "4368",
     "dpi_name": "Pittsville"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2577,6 +2577,1994 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "race_ethnicity": {
+          "Hispanic": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Two or More": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "composite_avg_gr9": {
+              "value": 15.93,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": 16.5,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "composite_avg_gr9": {
+              "value": 16.6,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": 19.89,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "composite_avg_gr9": {
+              "value": 13.86,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "composite_avg_gr9": {
+              "value": 16.88,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "EL": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Eng Prof": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": 18.66,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2023-24": {
+        "race_ethnicity": {
+          "Amer Indian": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Two or More": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "composite_avg_gr9": {
+              "value": 14.92,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": 16.0,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "composite_avg_gr9": {
+              "value": 17.77,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": 17.38,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "EL": {
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Eng Prof": {
+            "composite_avg_gr9": {
+              "value": 16.91,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        }
+      },
+      "2024-25": {
+        "race_ethnicity": {
+          "Amer Indian": {
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Two or More": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": 19.11,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "composite_avg_gr9": {
+              "value": 16.25,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": 16.64,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "composite_avg_gr9": {
+              "value": 17.19,
+              "suppressed": false
+            },
+            "composite_avg_gr10": {
+              "value": 19.26,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "EL": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Eng Prof": {
+            "composite_avg_gr9": {
+              "value": null,
+              "suppressed": true
+            },
+            "composite_avg_gr10": {
+              "value": 18.57,
+              "suppressed": false
+            }
+          }
+        }
+      }
+    },
+    "ap": {
+      "2006-07": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 14.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 42.86,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 14.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 42.86,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 14.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 42.86,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 14.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 42.86,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2007-08": {
+        "race_ethnicity": {
+          "Amer Indian": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 12.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 17.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 11.76,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 12.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 17.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 11.76,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 12.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 17.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 11.76,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2008-09": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 7.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 9.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 33.33,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 6.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 8.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 7.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 9.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 33.33,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 7.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 9.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 33.33,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2009-10": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 29.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 37.93,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 3.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 8.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 13.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 21.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 3.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "students_tested": {
+              "value": 15.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 26.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 29.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 37.93,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2010-11": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 9.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 24.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 70.83,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 3.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 8.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 21.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 9.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 24.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 70.83,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 9.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 24.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 70.83,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2011-12": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 27.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 51.85,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 14.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 27.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 51.85,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 27.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 51.85,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2012-13": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 22.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 37.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 54.05,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 4.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 5.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 18.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 32.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 22.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 37.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 54.05,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 22.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 37.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 54.05,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2013-14": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 18.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 33.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 60.61,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 4.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 28.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Unknown": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 0.0,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 17.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 32.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 62.5,
+              "suppressed": false
+            }
+          },
+          "Unknown": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 0.0,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 17.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 32.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 62.5,
+              "suppressed": false
+            }
+          },
+          "Unknown": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 0.0,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2014-15": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 30.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 55.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 45.45,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 5.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 6.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 24.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 48.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 45.83,
+              "suppressed": false
+            }
+          },
+          "Unknown": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 29.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 54.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 46.3,
+              "suppressed": false
+            }
+          },
+          "Unknown": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 0.0,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 29.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 54.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 46.3,
+              "suppressed": false
+            }
+          },
+          "Unknown": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 0.0,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2015-16": {
+        "race_ethnicity": {
+          "Asian": {
+            "students_tested": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "students_tested": {
+              "value": 47.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 65.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 5.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 8.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 44.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 59.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 49.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 67.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 50.75,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 49.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 67.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 50.75,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2016-17": {
+        "race_ethnicity": {
+          "Asian": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "students_tested": {
+              "value": 43.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 64.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 31.25,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 33.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 49.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 42.86,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "students_tested": {
+              "value": 43.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 64.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 44.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 65.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 40.0,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2017-18": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 49.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 56.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 48.21,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 9.09,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 38.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 45.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 57.78,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "students_tested": {
+              "value": 48.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 55.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 49.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 56.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 48.21,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2018-19": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 48.57,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 7.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 8.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 12.5,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 18.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 27.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 59.26,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 48.57,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 48.57,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2019-20": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 44.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 43.18,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 12.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 13.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 46.15,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 23.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 31.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 41.94,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 44.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 43.18,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 44.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 43.18,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2020-21": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 30.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 31.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 38.71,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 7.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 8.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 12.5,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 23.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 23.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 47.83,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 30.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 31.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 38.71,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 30.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 31.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 38.71,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2021-22": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 39.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 46.15,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 10.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 18.18,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 28.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 57.14,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 39.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 46.15,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 39.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 46.15,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2022-23": {
+        "race_ethnicity": {
+          "White": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 23.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 65.22,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 5.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 7.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 11.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 23.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 65.22,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 16.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 23.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 65.22,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2023-24": {
+        "race_ethnicity": {
+          "Hispanic": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "students_tested": {
+              "value": 21.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 32.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 3.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 3.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 19.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 31.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 22.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 34.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 70.59,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 22.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 34.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 70.59,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2024-25": {
+        "race_ethnicity": {
+          "Hispanic": {
+            "students_tested": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 1.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "students_tested": {
+              "value": 20.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 26.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "students_tested": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 2.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "students_tested": {
+              "value": 19.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwoD": {
+            "students_tested": {
+              "value": 21.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 27.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 62.96,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "students_tested": {
+              "value": 21.0,
+              "suppressed": false
+            },
+            "exam_count": {
+              "value": 27.0,
+              "suppressed": false
+            },
+            "pct_3_or_above": {
+              "value": 62.96,
+              "suppressed": false
+            }
+          }
+        }
+      }
+    },
     "graduation": {
       "2009-10": {
         "race_ethnicity": {
@@ -2756,6 +4744,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "White": {
@@ -2768,6 +4760,28 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Asian": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Black": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "grad_rate_5yr": {
               "value": null,
               "suppressed": true
             }
@@ -2786,6 +4800,10 @@
             "grad_rate_4yr": {
               "value": 85.7,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 91.7,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -2799,6 +4817,10 @@
             },
             "grad_rate_4yr": {
               "value": 93.9,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 91.1,
               "suppressed": false
             }
           }
@@ -2816,6 +4838,10 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -2830,6 +4856,10 @@
             "grad_rate_4yr": {
               "value": 91.7,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -2846,6 +4876,16 @@
             "grad_rate_4yr": {
               "value": 92.9,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "EL": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         }
@@ -2864,6 +4904,42 @@
             "grad_rate_4yr": {
               "value": 93.5,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Amer Indian": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Asian": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Black": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -2880,6 +4956,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 91.7,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -2893,6 +4977,14 @@
             },
             "grad_rate_4yr": {
               "value": 91.7,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.9,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 91.1,
               "suppressed": false
             }
           }
@@ -2910,6 +5002,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -2922,6 +5022,14 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 97.8,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -2940,6 +5048,20 @@
             "grad_rate_4yr": {
               "value": 93.5,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 98.1,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "EL": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         }
@@ -2958,6 +5080,20 @@
             "grad_rate_4yr": {
               "value": 96.4,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 93.5,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Amer Indian": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -2974,6 +5110,14 @@
             "grad_rate_4yr": {
               "value": 92.3,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -2987,6 +5131,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.6,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 91.7,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 97.9,
               "suppressed": false
             }
           }
@@ -3004,6 +5156,14 @@
             "grad_rate_4yr": {
               "value": 75.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "SwoD": {
@@ -3017,6 +5177,14 @@
             },
             "grad_rate_4yr": {
               "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 97.8,
               "suppressed": false
             }
           }
@@ -3033,6 +5201,14 @@
             },
             "grad_rate_4yr": {
               "value": 96.4,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 93.5,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 98.1,
               "suppressed": false
             }
           }
@@ -3066,6 +5242,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 98.1,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 93.5,
+              "suppressed": false
             }
           }
         },
@@ -3082,6 +5266,14 @@
             "grad_rate_4yr": {
               "value": 83.3,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3095,6 +5287,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.4,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.6,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 91.7,
               "suppressed": false
             }
           }
@@ -3112,6 +5312,14 @@
             "grad_rate_4yr": {
               "value": 85.7,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 85.7,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -3126,6 +5334,14 @@
             "grad_rate_4yr": {
               "value": 95.3,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3141,6 +5357,14 @@
             },
             "grad_rate_4yr": {
               "value": 94.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 98.1,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 93.5,
               "suppressed": false
             }
           }
@@ -3174,6 +5398,20 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 98.1,
+              "suppressed": false
+            }
+          },
+          "Asian": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3190,6 +5428,14 @@
             "grad_rate_4yr": {
               "value": 76.9,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 90.9,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3203,6 +5449,14 @@
             },
             "grad_rate_4yr": {
               "value": 85.3,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 97.6,
               "suppressed": false
             }
           }
@@ -3220,6 +5474,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 85.7,
+              "suppressed": false
             }
           },
           "SwoD": {
@@ -3234,6 +5496,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 97.6,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           }
         },
@@ -3249,6 +5519,14 @@
             },
             "grad_rate_4yr": {
               "value": 83.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.9,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 98.1,
               "suppressed": false
             }
           }
@@ -3266,6 +5544,10 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -3296,6 +5578,20 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Amer Indian": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3312,6 +5608,14 @@
             "grad_rate_4yr": {
               "value": 75.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 78.6,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 90.9,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3325,6 +5629,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.8,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 93.8,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -3342,6 +5654,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "SwoD": {
@@ -3356,6 +5676,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 97.6,
+              "suppressed": false
             }
           }
         },
@@ -3371,6 +5699,14 @@
             },
             "grad_rate_4yr": {
               "value": 94.3,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 89.1,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 97.9,
               "suppressed": false
             }
           }
@@ -3388,6 +5724,10 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
               "value": null,
               "suppressed": true
             }
@@ -3418,6 +5758,26 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Black": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Amer Indian": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3434,6 +5794,14 @@
             "grad_rate_4yr": {
               "value": 86.7,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 87.5,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 78.6,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3447,6 +5815,14 @@
             },
             "grad_rate_4yr": {
               "value": 88.5,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.8,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 93.9,
               "suppressed": false
             }
           }
@@ -3464,6 +5840,14 @@
             "grad_rate_4yr": {
               "value": 50.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -3478,6 +5862,14 @@
             "grad_rate_4yr": {
               "value": 94.3,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3493,6 +5885,14 @@
             },
             "grad_rate_4yr": {
               "value": 87.8,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 96.2,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 89.4,
               "suppressed": false
             }
           }
@@ -3512,6 +5912,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "White": {
@@ -3524,6 +5928,30 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Asian": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Black": {
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -3542,6 +5970,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 93.3,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 87.5,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3555,6 +5991,14 @@
             },
             "grad_rate_4yr": {
               "value": 96.6,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 95.8,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 97.8,
               "suppressed": false
             }
           }
@@ -3572,6 +6016,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -3586,6 +6038,14 @@
             "grad_rate_4yr": {
               "value": 97.7,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3601,6 +6061,14 @@
             },
             "grad_rate_4yr": {
               "value": 98.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 94.9,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 96.2,
               "suppressed": false
             }
           }
@@ -3648,6 +6116,30 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Asian": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -3664,6 +6156,14 @@
             "grad_rate_4yr": {
               "value": 93.8,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 93.3,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3677,6 +6177,14 @@
             },
             "grad_rate_4yr": {
               "value": 96.7,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 92.0,
               "suppressed": false
             }
           }
@@ -3694,6 +6202,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 50.0,
+              "suppressed": false
             }
           },
           "SwoD": {
@@ -3707,6 +6223,14 @@
             },
             "grad_rate_4yr": {
               "value": 95.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -3723,6 +6247,14 @@
             },
             "grad_rate_4yr": {
               "value": 95.7,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 92.5,
               "suppressed": false
             }
           }
@@ -3742,6 +6274,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "Two or More": {
@@ -3756,6 +6292,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "White": {
@@ -3768,6 +6308,14 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -3786,6 +6334,14 @@
             "grad_rate_4yr": {
               "value": 93.8,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3798,6 +6354,14 @@
               "suppressed": false
             },
             "grad_rate_4yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
               "value": 100.0,
               "suppressed": false
             }
@@ -3816,6 +6380,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "SwoD": {
@@ -3830,6 +6402,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           }
         },
@@ -3845,6 +6425,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.8,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -3878,6 +6466,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "White": {
@@ -3890,6 +6486,20 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "grad_rate_5yr": {
               "value": null,
               "suppressed": true
             }
@@ -3908,6 +6518,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -3921,6 +6539,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.1,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -3938,6 +6564,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "SwoD": {
@@ -3952,6 +6586,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           }
         },
@@ -3967,6 +6609,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.7,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -3986,6 +6636,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "Hispanic": {
@@ -4000,6 +6654,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "White": {
@@ -4012,6 +6670,24 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Two or More": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -4030,6 +6706,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -4043,6 +6727,14 @@
             },
             "grad_rate_4yr": {
               "value": 92.9,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -4060,6 +6752,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -4072,6 +6772,14 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -4089,6 +6797,14 @@
             },
             "grad_rate_4yr": {
               "value": 95.3,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -4108,6 +6824,36 @@
             "grad_rate_4yr": {
               "value": 97.8,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Amer Indian": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Two or More": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -4124,6 +6870,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -4137,6 +6891,14 @@
             },
             "grad_rate_4yr": {
               "value": 96.7,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 96.4,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
               "suppressed": false
             }
           }
@@ -4154,6 +6916,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -4166,6 +6936,14 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -4184,6 +6962,14 @@
             "grad_rate_4yr": {
               "value": 97.8,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.7,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           }
         }
@@ -4200,6 +6986,10 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -4230,6 +7020,20 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": 97.8,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Amer Indian": {
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           }
         },
@@ -4246,6 +7050,14 @@
             "grad_rate_4yr": {
               "value": 93.3,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -4259,6 +7071,14 @@
             },
             "grad_rate_4yr": {
               "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 96.7,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 96.4,
               "suppressed": false
             }
           }
@@ -4276,6 +7096,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -4288,6 +7116,14 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -4305,6 +7141,14 @@
             },
             "grad_rate_4yr": {
               "value": 97.5,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.8,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 97.7,
               "suppressed": false
             }
           }
@@ -4324,6 +7168,10 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "White": {
@@ -4336,6 +7184,20 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": 97.8,
+              "suppressed": false
+            }
+          },
+          "Two or More": {
+            "grad_rate_5yr": {
               "value": null,
               "suppressed": true
             }
@@ -4354,6 +7216,14 @@
             "grad_rate_4yr": {
               "value": 100.0,
               "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 100.0,
+              "suppressed": false
             }
           },
           "Not Econ Disadv": {
@@ -4367,6 +7237,14 @@
             },
             "grad_rate_4yr": {
               "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 96.2,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 96.7,
               "suppressed": false
             }
           }
@@ -4384,6 +7262,14 @@
             "grad_rate_4yr": {
               "value": null,
               "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
+              "value": null,
+              "suppressed": true
             }
           },
           "SwoD": {
@@ -4396,6 +7282,14 @@
               "suppressed": true
             },
             "grad_rate_4yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_5yr": {
+              "value": null,
+              "suppressed": true
+            },
+            "grad_rate_6yr": {
               "value": null,
               "suppressed": true
             }
@@ -4413,6 +7307,14 @@
             },
             "grad_rate_4yr": {
               "value": 100.0,
+              "suppressed": false
+            },
+            "grad_rate_5yr": {
+              "value": 97.5,
+              "suppressed": false
+            },
+            "grad_rate_6yr": {
+              "value": 97.8,
               "suppressed": false
             }
           }

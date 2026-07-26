@@ -3,7 +3,7 @@
     "dpi_code": "8028",
     "dpi_name": "Central Sands Community High School Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -97,6 +97,38 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": null,
+          "suppressed": true
+        },
+        "composite_avg_gr10": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 19.33,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 16.83,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 19.36,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2022-23": {
         "cohort_count_4yr": {
@@ -124,6 +156,10 @@
         "grad_rate_4yr": {
           "value": null,
           "suppressed": true
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
         }
       },
       "2024-25": {
@@ -138,6 +174,14 @@
         "grad_rate_4yr": {
           "value": 81.8,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_6yr": {
+          "value": null,
+          "suppressed": true
         }
       }
     },

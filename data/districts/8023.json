@@ -3,7 +3,7 @@
     "dpi_code": "8023",
     "dpi_name": "The Lincoln Academy Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2023-24": {
@@ -67,6 +67,82 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 14.86,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 16.53,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 14.9,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 15.33,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 14.63,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 16.35,
+          "suppressed": false
+        }
+      }
+    },
+    "ap": {
+      "2022-23": {
+        "students_tested": {
+          "value": 15.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 15.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 26.67,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "students_tested": {
+          "value": 18.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 28.57,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "students_tested": {
+          "value": 10.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 10.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 50.0,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2023-24": {
         "cohort_count_4yr": {
@@ -94,6 +170,10 @@
         "grad_rate_4yr": {
           "value": 100.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
         }
       }
     },

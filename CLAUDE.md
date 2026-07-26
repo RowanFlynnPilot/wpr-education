@@ -85,9 +85,17 @@ for exact derivations and `pipeline/sources.py` for source-file recon notes):
   `composite_avg`, `english_avg`, `math_avg`, `reading_avg`, `science_avg`
   (per-subject `AVERAGE_SCORE`), `tested_count`, `participation_pct`
   (from Composite `GROUP_COUNT` minus its "No Test" row).
-- `graduation` (2009-10+, 4-year cohort, regular diploma — status matched on
-  the `"Completed - Regular"` prefix because the label drifts across years):
-  `grad_rate_4yr` (computed grad/cohort), `grad_count_4yr`, `cohort_count_4yr`.
+- `preact` (2022-23+, grades 9-10 PreACT Secure, `TEST_GROUP == "PreACT"`):
+  `composite_avg_gr9`, `composite_avg_gr10`.
+- `ap` (2006-07+, Advanced Placement, `AP_EXAM == "[All]"` rollup only —
+  per-exam detail deliberately not ingested): `students_tested`,
+  `exam_count`, `pct_3_or_above`.
+- `graduation` (2009-10+, cohort completion, regular diploma — status
+  matched on the `"Completed - Regular"` prefix because the label drifts
+  across years): `grad_rate_4yr` (computed grad/cohort), `grad_count_4yr`,
+  `cohort_count_4yr`; plus `grad_rate_5yr`/`grad_rate_6yr` where the
+  TIMEFRAME rows exist (a file year's 5-year rate belongs to the cohort
+  that was five years out as of that year — DPI's own presentation).
 - `dropouts` (2005-06+, grades 7-12): `dropout_rate`, `dropout_count`.
 - `absenteeism` (2005-06+): `chronic_absenteeism_rate` (ESSA/STATE
   `ABSENCE_RATE`), `attendance_rate` (from the attendance CSV inside the
@@ -138,12 +146,21 @@ for the two national series in `config/national.json` (4-year ACGR, table
 219.46; fall enrollment actuals, table 203.10 — never include its projected
 years) and extend that file by hand, keeping the per-series citations.
 
-## v1 scope
+## Scope
 
-Five topics: `act`, `graduation`, `dropouts`, `absenteeism`, `enrollment`.
+Seven topics: `act`, `preact`, `ap`, `graduation`, `dropouts`,
+`absenteeism`, `enrollment` (AP + PreACT added 2026-07-26).
 
 - v1.5: Forward Exam (grades 3-8) — pulls in the elementary-parent audience.
-- Later: discipline, truancy, postsecondary enrollment, AP.
+- Next data candidate: postsecondary enrollment (20 years of files exist,
+  but the file has no rate/denominator — GROUP_COUNT is the count of
+  ENROLLED graduates, verified 2026-07-26 — so the rate needs a careful
+  join against hs_completion completer counts with class-year alignment
+  from the About the Data page; treat as its own project).
+- Not worth it / stale: habitual_truancy downloads end at 2016-17;
+  retention rates are ~0.2% everywhere; postgrad_plans is self-reported
+  intent; act_graduates is a different population than the census ACT.
+- Later: discipline (3 file families).
 
 ## Frontend
 

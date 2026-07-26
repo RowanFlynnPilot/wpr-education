@@ -3,7 +3,7 @@
     "dpi_code": "8019",
     "dpi_name": "Milestone Democratic School Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -47,6 +47,28 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 18.0,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 20.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 18.2,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
     "graduation": {
       "2022-23": {
         "cohort_count_4yr": {
@@ -58,6 +80,14 @@
           "suppressed": true
         },
         "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_6yr": {
           "value": null,
           "suppressed": true
         }
@@ -74,6 +104,14 @@
         "grad_rate_4yr": {
           "value": 10.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_6yr": {
+          "value": null,
+          "suppressed": true
         }
       }
     },

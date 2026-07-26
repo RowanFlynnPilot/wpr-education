@@ -20,12 +20,37 @@ export const TOPICS = [
     },
   },
   {
+    id: 'preact',
+    label: 'PreACT',
+    sublabel: 'Grades 9–10, first offered 2022-23',
+    defaultMetric: 'composite_avg_gr10',
+    metrics: {
+      composite_avg_gr10: { label: 'Grade 10 composite', kind: 'score' },
+      composite_avg_gr9: { label: 'Grade 9 composite', kind: 'score' },
+    },
+  },
+  {
+    id: 'ap',
+    label: 'AP exams',
+    sublabel: 'Advanced Placement, all exams combined',
+    defaultMetric: 'pct_3_or_above',
+    metrics: {
+      pct_3_or_above: { label: 'Exams scoring 3+', kind: 'percent' },
+      students_tested: { label: 'Students tested', kind: 'count' },
+      exam_count: { label: 'Exams taken', kind: 'count' },
+    },
+  },
+  {
     id: 'graduation',
     label: 'Graduation',
     sublabel: '4-year cohort, regular diploma',
     defaultMetric: 'grad_rate_4yr',
     metrics: {
       grad_rate_4yr: { label: 'Graduation rate', kind: 'percent' },
+      // 5-/6-year rates: the cohort that was five/six years out as of that
+      // school year (DPI's own presentation) — the late-completers story.
+      grad_rate_5yr: { label: '5-year rate', kind: 'percent' },
+      grad_rate_6yr: { label: '6-year rate', kind: 'percent' },
       grad_count_4yr: { label: 'Graduates', kind: 'count' },
       cohort_count_4yr: { label: 'Cohort size', kind: 'count' },
     },

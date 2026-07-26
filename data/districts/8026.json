@@ -3,7 +3,7 @@
     "dpi_code": "8026",
     "dpi_name": "Trans Center for Youth Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -97,6 +97,38 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 13.03,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.1,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 12.93,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.34,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 13.41,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.74,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2022-23": {
         "cohort_count_4yr": {
@@ -109,6 +141,14 @@
         },
         "grad_rate_4yr": {
           "value": 76.7,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 95.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 90.3,
           "suppressed": false
         }
       },
@@ -124,6 +164,14 @@
         "grad_rate_4yr": {
           "value": 95.7,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 80.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 95.0,
+          "suppressed": false
         }
       },
       "2024-25": {
@@ -137,6 +185,14 @@
         },
         "grad_rate_4yr": {
           "value": 73.1,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 83.3,
           "suppressed": false
         }
       }

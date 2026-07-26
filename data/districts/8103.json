@@ -3,7 +3,7 @@
     "dpi_code": "8103",
     "dpi_name": "Milwaukee College Preparatory School --"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "graduation": {
       "2012-13": {
@@ -16,6 +16,12 @@
           "suppressed": true
         },
         "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2013-14": {
+        "grad_rate_5yr": {
           "value": null,
           "suppressed": true
         }

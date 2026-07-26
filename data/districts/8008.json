@@ -3,7 +3,7 @@
     "dpi_code": "8008",
     "dpi_name": "Milwaukee Science Education Consortium Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -97,6 +97,82 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 12.35,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.29,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 12.73,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.64,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 12.71,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 12.86,
+          "suppressed": false
+        }
+      }
+    },
+    "ap": {
+      "2022-23": {
+        "students_tested": {
+          "value": 24.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 24.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "students_tested": {
+          "value": 40.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 47.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 2.13,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "students_tested": {
+          "value": 34.0,
+          "suppressed": false
+        },
+        "exam_count": {
+          "value": 40.0,
+          "suppressed": false
+        },
+        "pct_3_or_above": {
+          "value": 5.0,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2022-23": {
         "cohort_count_4yr": {
@@ -109,6 +185,14 @@
         },
         "grad_rate_4yr": {
           "value": 86.6,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 93.9,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 90.2,
           "suppressed": false
         }
       },
@@ -124,6 +208,14 @@
         "grad_rate_4yr": {
           "value": 86.6,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 87.8,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 93.9,
+          "suppressed": false
         }
       },
       "2024-25": {
@@ -137,6 +229,14 @@
         },
         "grad_rate_4yr": {
           "value": 93.5,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 92.3,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 87.8,
           "suppressed": false
         }
       }

@@ -166,42 +166,89 @@ def _attendance_metrics(grp, ctx, strict):
 _REGULAR_PREFIX = "Completed - Regular"
 
 
-def _graduation_metrics(grp, ctx, strict):
-    if grp["COHORT"].nunique() > 1:
-        raise ValueError(f"{ctx}: multiple 4-year cohorts "
-                         f"{sorted(grp['COHORT'].unique())}")
-    cohort_raws = grp["COHORT_COUNT"].unique()
-    if len(cohort_raws) != 1:
-        raise ValueError(f"{ctx}: conflicting COHORT_COUNT values {cohort_raws}")
-    cohort_raw = cohort_raws[0]
+def _graduation_metrics_for(suffix: str, include_counts: bool):
+    """Regular-diploma completion metrics for one TIMEFRAME. The 4-year
+    view keeps grad/cohort counts; the 5-/6-year views carry the rate only
+    (the extra counts add little and would triple the metric pills). Note
+    the year semantics match DPI's presentation: a file year's 5-year rate
+    belongs to the cohort that was five years out as of that year."""
+    def fn(grp, ctx, strict):
+        if grp["COHORT"].nunique() > 1:
+            raise ValueError(f"{ctx}: multiple {suffix} cohorts "
+                             f"{sorted(grp['COHORT'].unique())}")
+        cohort_raws = grp["COHORT_COUNT"].unique()
+        if len(cohort_raws) != 1:
+            raise ValueError(f"{ctx}: conflicting COHORT_COUNT values {cohort_raws}")
+        cohort_raw = cohort_raws[0]
 
-    regular = grp[grp["COMPLETION_STATUS"].str.startswith(_REGULAR_PREFIX)]
-    if len(regular) > 1:
-        raise ValueError(f"{ctx}: multiple regular-diploma rows")
-    statuses_suppressed = bool((grp["COMPLETION_STATUS"] == "*").any())
+        regular = grp[grp["COMPLETION_STATUS"].str.startswith(_REGULAR_PREFIX)]
+        if len(regular) > 1:
+            raise ValueError(f"{ctx}: multiple regular-diploma rows")
+        statuses_suppressed = bool((grp["COMPLETION_STATUS"] == "*").any())
 
-    metrics: dict[str, Cell] = {"cohort_count_4yr": to_cell(cohort_raw)}
-    if len(regular) == 1:
-        grad_raw = regular.iloc[0]["STUDENT_COUNT"]
-        metrics["grad_count_4yr"] = to_cell(grad_raw)
-        if _is_suppressed(grad_raw) or _is_suppressed(cohort_raw):
-            metrics["grad_rate_4yr"] = dict(SUPPRESSED)
+        metrics: dict[str, Cell] = {}
+        if include_counts:
+            metrics[f"cohort_count_{suffix}"] = to_cell(cohort_raw)
+        if len(regular) == 1:
+            grad_raw = regular.iloc[0]["STUDENT_COUNT"]
+            if include_counts:
+                metrics[f"grad_count_{suffix}"] = to_cell(grad_raw)
+            if _is_suppressed(grad_raw) or _is_suppressed(cohort_raw):
+                metrics[f"grad_rate_{suffix}"] = dict(SUPPRESSED)
+            else:
+                rate = 100.0 * _num(grad_raw, ctx) / _num(cohort_raw, ctx)
+                metrics[f"grad_rate_{suffix}"] = {"value": round(rate, 1),
+                                                  "suppressed": False}
+        elif statuses_suppressed:
+            # Status breakdown redacted for privacy: rate unknowable.
+            if include_counts:
+                metrics[f"grad_count_{suffix}"] = dict(SUPPRESSED)
+            metrics[f"grad_rate_{suffix}"] = dict(SUPPRESSED)
         else:
-            rate = 100.0 * _num(grad_raw, ctx) / _num(cohort_raw, ctx)
-            metrics["grad_rate_4yr"] = {"value": round(rate, 1), "suppressed": False}
-    elif statuses_suppressed:
-        # Status breakdown redacted for privacy: rate unknowable.
-        metrics["grad_count_4yr"] = dict(SUPPRESSED)
-        metrics["grad_rate_4yr"] = dict(SUPPRESSED)
-    else:
-        # Statuses enumerated, none of them regular-diploma: a real zero
-        # (tiny cohorts), not missing data.
-        metrics["grad_count_4yr"] = {"value": 0.0, "suppressed": False}
-        if _is_suppressed(cohort_raw):
-            metrics["grad_rate_4yr"] = dict(SUPPRESSED)
-        else:
-            metrics["grad_rate_4yr"] = {"value": 0.0, "suppressed": False}
-    return metrics
+            # Statuses enumerated, none of them regular-diploma: a real zero
+            # (tiny cohorts), not missing data.
+            if include_counts:
+                metrics[f"grad_count_{suffix}"] = {"value": 0.0, "suppressed": False}
+            if _is_suppressed(cohort_raw):
+                metrics[f"grad_rate_{suffix}"] = dict(SUPPRESSED)
+            else:
+                metrics[f"grad_rate_{suffix}"] = {"value": 0.0, "suppressed": False}
+        return metrics
+    return fn
+
+
+def _ap_metrics(grp, ctx, strict):
+    """AP participation and results from the AP_EXAM == '[All]' rollup
+    (per-exam detail rows are deliberately not ingested)."""
+    row = _one_row(grp, ctx)
+    for col in ("STUDENTS_TESTED", "EXAM_COUNT", "PERCENT_3_OR_ABOVE"):
+        if pd.isna(row[col]):
+            raise ValueError(f"{ctx}: empty {col}")
+    return {
+        "students_tested": to_cell(row["STUDENTS_TESTED"]),
+        "exam_count": to_cell(row["EXAM_COUNT"]),
+        "pct_3_or_above": to_cell(row["PERCENT_3_OR_ABOVE"]),
+    }
+
+
+def _preact_metrics(grp, ctx, strict):
+    """PreACT Secure composite averages, one metric per grade level (9/10).
+    Same AVERAGE_SCORE semantics as the ACT files."""
+    metrics: dict[str, Cell] = {}
+    for grade in ("9", "10"):
+        rows = grp[(grp["TEST_SUBJECT"] == "Composite") & (grp["GRADE_LEVEL"] == grade)]
+        if rows.empty:
+            continue  # a district without that grade simply lacks the metric
+        numeric = {v for v in rows["AVERAGE_SCORE"].dropna() if not _is_suppressed(v)}
+        if len(numeric) > 1:
+            raise ValueError(f"{ctx} grade {grade}: conflicting AVERAGE_SCORE "
+                             f"{sorted(numeric)}")
+        metric = f"composite_avg_gr{grade}"
+        if numeric:
+            metrics[metric] = to_cell(numeric.pop())
+        elif rows["AVERAGE_SCORE"].map(_is_suppressed).any():
+            metrics[metric] = dict(SUPPRESSED)
+    return metrics or None
 
 
 # TEST_SUBJECT -> metric name. "Composite" exists in every year 2014-15
@@ -279,25 +326,48 @@ _TOPIC_SOURCES = {
         ("absenteeism", "absenteeism", None, _chronic_absenteeism_metrics),
         ("dropouts", "attendance", None, _attendance_metrics),
     ],
-    "graduation": [(
-        "graduation", "hs_completion",
-        lambda df: df[df["TIMEFRAME"] == "4-Year rate"],
-        _graduation_metrics,
-    )],
+    "graduation": [
+        ("graduation", "hs_completion",
+         lambda df: df[df["TIMEFRAME"] == "4-Year rate"],
+         _graduation_metrics_for("4yr", include_counts=True)),
+        # 5-/6-year rows exist 2013-14 onward; earlier years just lack them
+        # (the trailing True marks the source optional for empty years).
+        ("graduation", "hs_completion",
+         lambda df: df[df["TIMEFRAME"] == "5-Year rate"],
+         _graduation_metrics_for("5yr", include_counts=False), True),
+        ("graduation", "hs_completion",
+         lambda df: df[df["TIMEFRAME"] == "6-Year rate"],
+         _graduation_metrics_for("6yr", include_counts=False), True),
+    ],
     "act": [(
         "act", "act_statewide",
         lambda df: df[df["TEST_GROUP"] == "ACT"],
         _act_metrics,
+    )],
+    "preact": [(
+        "preact", "preact_secure_statewide",
+        lambda df: df[df["TEST_GROUP"] == "PreACT"],
+        _preact_metrics,
+    )],
+    "ap": [(
+        "ap", "ap",
+        lambda df: df[df["AP_EXAM"] == "[All]"],
+        _ap_metrics,
     )],
 }
 
 
 def _build_all_students(topic: str, frames: dict) -> dict:
     out: dict[str, dict] = {}
-    for src_topic, member, prep, metrics_fn in _TOPIC_SOURCES[topic]:
+    for src_topic, member, prep, metrics_fn, *rest in _TOPIC_SOURCES[topic]:
+        optional = rest[0] if rest else False
         for year, df in _get_member(frames, src_topic, member).items():
             sel = _select(prep(df) if prep else df, year, topic, "All Students")
             if sel.empty:
+                # Optional sources legitimately have no rows in some years
+                # (e.g. 5-/6-year graduation timeframes before 2013-14).
+                if optional:
+                    continue
                 raise ValueError(f"{topic} {year}: row selection returned nothing")
             for code, grp in sel.groupby("DISTRICT_CODE"):
                 ctx = f"{topic} {year} district {code}"
@@ -309,7 +379,7 @@ def _build_all_students(topic: str, frames: dict) -> dict:
 
 def _build_subgroups(topic: str, frames: dict, codes: set[str]) -> dict:
     out: dict[str, dict] = {}
-    for src_topic, member, prep, metrics_fn in _TOPIC_SOURCES[topic]:
+    for src_topic, member, prep, metrics_fn, *rest in _TOPIC_SOURCES[topic]:
         for year, df in _get_member(frames, src_topic, member).items():
             narrowed = prep(df) if prep else df
             for dim, labels in DIMENSIONS.items():
@@ -362,8 +432,20 @@ def build_act(frames):
     return _build_all_students("act", frames)
 
 
+def build_preact(frames):
+    """Grades 9-10 PreACT Secure composite averages (TEST_GROUP == 'PreACT')."""
+    return _build_all_students("preact", frames)
+
+
+def build_ap(frames):
+    """AP participation and results from the AP_EXAM == '[All]' rollup."""
+    return _build_all_students("ap", frames)
+
+
 BUILDERS = {
     "act": build_act,
+    "preact": build_preact,
+    "ap": build_ap,
     "graduation": build_graduation,
     "dropouts": build_dropouts,
     "absenteeism": build_absenteeism,

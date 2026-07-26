@@ -45,7 +45,9 @@ Year coverage per topic (all years registered below):
   graduation  2009-10 .. 2024-25  (16; hs_completion files. Earlier years
                                    exist only as hs_completion_legacy_rates
                                    with a different, non-cohort methodology
-                                   -- deliberately not ingested)
+                                   -- deliberately not ingested. 5-Year and
+                                   6-Year TIMEFRAME rows exist 2013-14
+                                   onward; earlier files carry 4-Year only)
   act         2014-15 .. 2024-25  (11; act_statewide = grade 11 census ACT.
                                    The separate act_graduates files cover a
                                    different population -- graduating
@@ -54,13 +56,27 @@ Year coverage per topic (all years registered below):
                                    file yet as of 2026-07-25; expect it at
                                    the fall 2026 refresh, covered by the two
                                    2025-26 entries in config/breaks.json.)
+  preact      2022-23 .. 2024-25  (3; preact_secure_statewide = grades 9-10
+                                   census PreACT Secure, first offered
+                                   2022-23. Same shape as the ACT files
+                                   including DLM alternate-assessment rows
+                                   to filter out.)
+  ap          2006-07 .. 2024-25  (19; headers identical across the sampled
+                                   2006-07 / 2011-12 / 2024-25 files, and
+                                   every year carries an AP_EXAM == "[All]"
+                                   district rollup. Per-exam detail rows
+                                   (Biology, Calculus AB, ...) are
+                                   deliberately not ingested. Hosting
+                                   anomaly like ACT 2018-19: the 2011-12 and
+                                   2014-15 files live under
+                                   /sites/default/files/imce/zip/.)
 
 refresh.py throws if any topic in TOPICS has an empty registry. There is
 no partial refresh: either every topic downloads and validates, or the
 run fails and data/ is untouched.
 """
 
-TOPICS: list[str] = ["act", "graduation", "dropouts", "absenteeism", "enrollment"]
+TOPICS: list[str] = ["act", "preact", "ap", "graduation", "dropouts", "absenteeism", "enrollment"]
 
 _BASE = "https://dpi.wi.gov/sites/default/files/wise/downloads"
 _IMCE = "https://dpi.wi.gov/sites/default/files/imce/zip"
@@ -77,6 +93,15 @@ FILES: dict[str, dict[str, str]] = {
         y: (f"{_IMCE}/act_statewide_certified_{y}.zip" if y == "2018-19"
             else f"{_BASE}/act_statewide_certified_{y}.zip")
         for y in _years(2014, 2024)
+    },
+    "preact": {
+        y: f"{_BASE}/preact_secure_statewide_certified_{y}.zip"
+        for y in _years(2022, 2024)
+    },
+    "ap": {
+        y: (f"{_IMCE}/ap_certified_{y}.zip" if y in ("2011-12", "2014-15")
+            else f"{_BASE}/ap_certified_{y}.zip")
+        for y in _years(2006, 2024)
     },
     "graduation": {
         y: f"{_BASE}/hs_completion_certified_{y}.zip" for y in _years(2009, 2024)

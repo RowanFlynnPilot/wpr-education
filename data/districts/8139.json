@@ -3,7 +3,7 @@
     "dpi_code": "8139",
     "dpi_name": "Pathways High"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2017-18": {
@@ -184,6 +184,10 @@
         "grad_rate_4yr": {
           "value": 50.0,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": null,
+          "suppressed": true
         }
       },
       "2019-20": {
@@ -198,6 +202,14 @@
         "grad_rate_4yr": {
           "value": 26.7,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 100.0,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": null,
+          "suppressed": true
         }
       },
       "2020-21": {
@@ -212,6 +224,14 @@
         "grad_rate_4yr": {
           "value": 38.2,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 93.8,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 100.0,
+          "suppressed": false
         }
       },
       "2021-22": {
@@ -225,6 +245,14 @@
         },
         "grad_rate_4yr": {
           "value": 40.7,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 93.9,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 93.8,
           "suppressed": false
         }
       }

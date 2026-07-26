@@ -3,7 +3,7 @@
     "dpi_code": "8011",
     "dpi_name": "Dr Howard Fuller Collegiate Academy Inc"
   },
-  "generated": "2026-07-26T14:42:22.427429+00:00",
+  "generated": "2026-07-26T16:09:02.063817+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -97,6 +97,38 @@
         }
       }
     },
+    "preact": {
+      "2022-23": {
+        "composite_avg_gr9": {
+          "value": 12.99,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.26,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg_gr9": {
+          "value": 12.21,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 13.68,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg_gr9": {
+          "value": 12.66,
+          "suppressed": false
+        },
+        "composite_avg_gr10": {
+          "value": 12.78,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2022-23": {
         "cohort_count_4yr": {
@@ -109,6 +141,14 @@
         },
         "grad_rate_4yr": {
           "value": 90.3,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 67.7,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 93.3,
           "suppressed": false
         }
       },
@@ -124,6 +164,14 @@
         "grad_rate_4yr": {
           "value": 92.2,
           "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 90.3,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 67.7,
+          "suppressed": false
         }
       },
       "2024-25": {
@@ -137,6 +185,14 @@
         },
         "grad_rate_4yr": {
           "value": 91.2,
+          "suppressed": false
+        },
+        "grad_rate_5yr": {
+          "value": 93.7,
+          "suppressed": false
+        },
+        "grad_rate_6yr": {
+          "value": 90.3,
           "suppressed": false
         }
       }
