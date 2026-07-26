@@ -125,6 +125,10 @@ export default function Landing({ index, state, docs }) {
           const enroll = latest(doc, 'enrollment', 'total_enrollment')
           const actC = latest(doc, 'act', 'composite_avg')
           const gradR = latest(doc, 'graduation', 'grad_rate_4yr')
+          const enrollTrend = Object.keys(doc.topics.enrollment ?? {})
+            .sort()
+            .map((y) => doc.topics.enrollment[y].total_enrollment)
+            .map((c) => (c.suppressed ? null : c.value))
           return (
             <a
               key={d.dpi_code}
@@ -145,6 +149,10 @@ export default function Landing({ index, state, docs }) {
                 <div><dt>ACT</dt><dd>{fmtCell(actC, 'score')}</dd></div>
                 <div><dt>Grad rate</dt><dd>{fmtCell(gradR, 'percent')}</dd></div>
               </dl>
+              <div className="district-card-spark">
+                <Sparkline values={enrollTrend} color={ACCENTS[d.dpi_code] ?? '#3A867C'} />
+                <span className="spark-caption">enrollment since ’05</span>
+              </div>
             </a>
           )
         })}

@@ -120,6 +120,11 @@ python pipeline/refresh.py
 resulting `data/` diff — the diff itself is the editorial review surface
 (unexpected changes to prior years = errata worth a story).
 
+Dev only: `python pipeline/refresh.py --reuse-raw` rebuilds from the previous
+run's `pipeline/raw/` cache without downloading — for iterating on
+`normalize.py`. Never use it for a real refresh (it can ship stale data; the
+flag prints a warning for exactly that reason).
+
 Before each refresh, check DPI's master errata page and the per-topic "About
 the Data" pages for definition changes; record any new break in
 `config/breaks.json`. Also check whether NCES has published new actual years

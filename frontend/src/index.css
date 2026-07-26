@@ -1,6 +1,52 @@
 /* WPR design system: teal #3A867C, cream #F6F2E9, Fraunces (display),
    Public Sans (body), JetBrains Mono (every number & data label).
-   Mobile-first: designed at 360px, embedded in a WordPress iframe. */
+   Mobile-first: designed at 360px, embedded in a WordPress iframe.
+
+   Fonts are self-hosted (latin subsets, ~122KB total) so the embed has no
+   third-party requests — no Google Fonts dependency inside the iframe. */
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/fraunces-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/public-sans-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/public-sans-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/public-sans-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/jetbrains-mono-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/jetbrains-mono-600.woff2') format('woff2');
+}
 
 :root {
   --teal: #3a867c;
@@ -234,6 +280,16 @@ a {
   font-family: var(--mono);
   font-size: 14px;
   font-weight: 600;
+}
+.district-card-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+.spark-caption {
+  font-size: 10.5px;
+  color: var(--muted);
 }
 
 /* District page */

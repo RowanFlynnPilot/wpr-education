@@ -36,17 +36,22 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   // null = compare-districts mode; a dimension id = student-group mode.
   const [dimension, setDimension] = useState(null)
   const [subDoc, setSubDoc] = useState(null)
+  const [subError, setSubError] = useState(false)
   const meta = topic.metrics[metric]
   const code = doc.district.dpi_code
 
   useEffect(() => {
     if (!dimension || subDoc) return
+    setSubError(false)
     let alive = true
     loadSubgroups(code).then(
       (d) => alive && setSubDoc(d),
       (err) => {
         console.error(err)
-        if (alive) setDimension(null)
+        if (alive) {
+          setSubError(true)
+          setDimension(null)
+        }
       },
     )
     return () => { alive = false }
@@ -127,6 +132,13 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
           </button>
         ))}
       </div>
+
+      {subError && (
+        <p className="derived-note" role="alert">
+          Couldn't load the student-group data just now — check your connection
+          and try the group buttons again.
+        </p>
+      )}
 
       {dimension && !subDoc ? (
         <div className="loading loading-inline">Loading student groups…</div>

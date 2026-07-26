@@ -7,8 +7,15 @@ are errata, and possibly a story.
 
 Usage (from repo root):
     python pipeline/refresh.py
+
+Development only: --reuse-raw rebuilds data/ from the previous run's
+pipeline/raw/ download cache without re-downloading. NEVER use it for a
+real refresh — the point of a refresh is picking up DPI's errata, and a
+cached build can silently ship stale data. The flag exists for iterating
+on normalize.py.
 """
 
+import argparse
 import datetime
 import io
 import json
@@ -68,6 +75,23 @@ def download_all() -> dict[str, dict[str, dict[str, Path]]]:
     return out
 
 
+def load_from_raw() -> dict[str, dict[str, dict[str, Path]]]:
+    """Dev-only: reuse the previous run's extracted CSVs instead of
+    downloading. Fails fast if the cache is missing any registered file."""
+    out: dict[str, dict[str, dict[str, Path]]] = {}
+    for topic, years in sources.FILES.items():
+        out[topic] = {}
+        for year in years:
+            year_dir = RAW / topic / year
+            members = {p.name.split("_certified")[0]: p for p in year_dir.glob("*.csv")}
+            if not members:
+                raise ValueError(
+                    f"--reuse-raw: no cached CSVs for {topic} {year} under {year_dir}. "
+                    "Run a real refresh first.")
+            out[topic][year] = members
+    return out
+
+
 def load_districts() -> list[dict]:
     return json.loads((CONFIG / "districts.json").read_text(encoding="utf-8"))["districts"]
 
@@ -120,12 +144,22 @@ def write_output(by_district: dict[str, dict], index: dict, state: dict,
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reuse-raw", action="store_true",
+                        help="DEV ONLY: rebuild from pipeline/raw/ without downloading")
+    args = parser.parse_args()
+
     validate.check_sources_populated(sources.TOPICS, sources.FILES)
     districts = load_districts()
     validate.check_district_config(districts)
 
-    print("Downloading", sum(len(y) for y in sources.FILES.values()), "files...")
-    paths = download_all()
+    if args.reuse_raw:
+        print("WARNING: --reuse-raw rebuilds from the cached download — this is "
+              "NOT a refresh and can ship stale data. Dev use only.")
+        paths = load_from_raw()
+    else:
+        print("Downloading", sum(len(y) for y in sources.FILES.values()), "files...")
+        paths = download_all()
     frames = {
         topic: {year: {m: pd.read_csv(p, dtype=str) for m, p in members.items()}
                 for year, members in years.items()}
