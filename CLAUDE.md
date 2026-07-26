@@ -254,8 +254,13 @@ default; selection lives in the hash as `?county=`, so it survives
 back-navigation and deep-links; `all` shows every county) and renders
 from index.json summaries alone; peer picker shows same-county districts inline
 with the rest of the region behind a disclosure. Logos/accents exist for
-the original 12 districts only — the other 35 degrade gracefully (no logo
-chip, teal accent); collecting them is an open cosmetic task.
+46 of 47 districts (collected 2026-07-26 from official district sites;
+Elcho and Nekoosa from their official athletics sites because the district
+sites only offer white-knockout marks). The one exception is White Lake
+(6440): Google Sites, no downloadable logo asset — it degrades gracefully
+(no logo chip, teal accent). Adding a logo is file-only: drop
+`{dpi_code}.png/.svg/.jpg` into `frontend/src/assets/logos/` (LOGOS is
+glob-derived) and add an ACCENTS entry in `frontend/src/lib/logos.js`.
 
 Known state of the data:
 
@@ -272,11 +277,9 @@ Next tasks, in order:
 1. Newsroom review of the expanded roster with Shereen (any districts to
    drop or relabel — the config is the editorial surface; also whether
    "Central Wisconsin School Data" is the right name).
-2. Logos + accent colors for the 35 new districts (frontend/src/lib/
-   logos.js documents the pattern; code handles missing entries).
-3. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
+2. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
    DPI errata for the spring-2026 ACT scoring-error revisions.
-4. Stretch (in order): school-level data beneath each district; Forward
+3. Stretch (in order): school-level data beneath each district; Forward
    Exam v1.5 (extend the 2023-24 cut-score entry's `topics` to include
    `forward` AND re-type it as a `comparability_break` for the
    proficiency-category metrics Forward would add — it is currently an
