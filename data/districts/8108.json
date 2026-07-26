@@ -1,0 +1,171 @@
+{
+  "district": {
+    "dpi_code": "8108",
+    "dpi_name": "Business and Economics Academy"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2005-06": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "dropout_rate": {
+          "value": 6.62,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 9.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 48.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 85.99,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "chronic_absenteeism_rate": {
+          "value": 40.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.91,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 44.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.44,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 45.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.22,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "chronic_absenteeism_rate": {
+          "value": 46.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.16,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "chronic_absenteeism_rate": {
+          "value": 45.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.28,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2005-06": {
+        "total_enrollment": {
+          "value": 761.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "total_enrollment": {
+          "value": 645.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "total_enrollment": {
+          "value": 686.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 566.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 613.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "total_enrollment": {
+          "value": 590.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

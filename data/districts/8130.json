@@ -1,0 +1,89 @@
+{
+  "district": {
+    "dpi_code": "8130",
+    "dpi_name": "North Point Lighthouse Charter School"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2015-16": {
+        "dropout_rate": {
+          "value": null,
+          "suppressed": true
+        },
+        "dropout_count": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "absenteeism": {
+      "2012-13": {
+        "chronic_absenteeism_rate": {
+          "value": 41.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.11,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "chronic_absenteeism_rate": {
+          "value": 44.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.71,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "chronic_absenteeism_rate": {
+          "value": 41.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.54,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "chronic_absenteeism_rate": {
+          "value": 36.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.73,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2012-13": {
+        "total_enrollment": {
+          "value": 173.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "total_enrollment": {
+          "value": 277.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "total_enrollment": {
+          "value": 290.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 341.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

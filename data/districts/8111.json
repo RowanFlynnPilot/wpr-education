@@ -1,0 +1,249 @@
+{
+  "district": {
+    "dpi_code": "8111",
+    "dpi_name": "YMCA Young Leaders Academy"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2005-06": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "dropout_rate": {
+          "value": 2.13,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "dropout_rate": {
+          "value": 18.18,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 18.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "dropout_rate": {
+          "value": 1.11,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "dropout_rate": {
+          "value": 27.63,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 21.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 17.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.86,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "chronic_absenteeism_rate": {
+          "value": 16.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.75,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 20.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.31,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 30.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 82.05,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "chronic_absenteeism_rate": {
+          "value": 25.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.91,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "chronic_absenteeism_rate": {
+          "value": 13.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.67,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "chronic_absenteeism_rate": {
+          "value": 11.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.86,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "chronic_absenteeism_rate": {
+          "value": 14.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.14,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "chronic_absenteeism_rate": {
+          "value": 17.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.54,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2005-06": {
+        "total_enrollment": {
+          "value": 521.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "total_enrollment": {
+          "value": 679.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "total_enrollment": {
+          "value": 652.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 597.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 504.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "total_enrollment": {
+          "value": 505.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "total_enrollment": {
+          "value": 524.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "total_enrollment": {
+          "value": 526.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "total_enrollment": {
+          "value": 453.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

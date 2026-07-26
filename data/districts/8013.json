@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "8013",
+    "dpi_name": "Milwaukee Scholars Charter School Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 5.71,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 0.9,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 2.83,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 44.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.81,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 41.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.11,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 38.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.4,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 670.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 769.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 696.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 672.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

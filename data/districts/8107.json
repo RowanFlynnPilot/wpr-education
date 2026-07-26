@@ -1,0 +1,237 @@
+{
+  "district": {
+    "dpi_code": "8107",
+    "dpi_name": "School for Early Development and"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 51.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "chronic_absenteeism_rate": {
+          "value": 79.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 78.69,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 38.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.09,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 15.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.09,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "chronic_absenteeism_rate": {
+          "value": 46.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.62,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "chronic_absenteeism_rate": {
+          "value": 30.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.4,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "chronic_absenteeism_rate": {
+          "value": 27.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.09,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "chronic_absenteeism_rate": {
+          "value": 33.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.5,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "chronic_absenteeism_rate": {
+          "value": 38.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.33,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "chronic_absenteeism_rate": {
+          "value": 46.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 85.31,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "chronic_absenteeism_rate": {
+          "value": 52.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.56,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "chronic_absenteeism_rate": {
+          "value": 36.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.66,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "chronic_absenteeism_rate": {
+          "value": 55.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 85.79,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 68.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.91,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2005-06": {
+        "total_enrollment": {
+          "value": 65.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "total_enrollment": {
+          "value": 82.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "total_enrollment": {
+          "value": 77.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 66.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 88.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "total_enrollment": {
+          "value": 63.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "total_enrollment": {
+          "value": 25.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "total_enrollment": {
+          "value": 75.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "total_enrollment": {
+          "value": 81.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "total_enrollment": {
+          "value": 29.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 97.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "total_enrollment": {
+          "value": 45.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 81.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 69.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

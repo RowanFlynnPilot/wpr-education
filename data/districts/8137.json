@@ -1,0 +1,121 @@
+{
+  "district": {
+    "dpi_code": "8137",
+    "dpi_name": "United Community Center Acosta Middle"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2017-18": {
+        "dropout_rate": {
+          "value": 3.45,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "dropout_rate": {
+          "value": 5.08,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "dropout_rate": {
+          "value": 4.44,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2016-17": {
+        "attendance_rate": {
+          "value": 89.81,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "attendance_rate": {
+          "value": 93.64,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "attendance_rate": {
+          "value": 92.82,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "attendance_rate": {
+          "value": 94.45,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "attendance_rate": {
+          "value": 93.59,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2016-17": {
+        "total_enrollment": {
+          "value": 53.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 113.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 168.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 178.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 211.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 209.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

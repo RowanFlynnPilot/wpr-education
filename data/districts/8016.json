@@ -1,0 +1,29 @@
+{
+  "district": {
+    "dpi_code": "8016",
+    "dpi_name": "Penfield Montessori Academy, Inc."
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 38.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.54,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 121.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "district": {
+    "dpi_code": "8136",
+    "dpi_name": "Stellar Collegiate Charter School"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2021-22": {
+        "dropout_rate": {
+          "value": 0.81,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2016-17": {
+        "chronic_absenteeism_rate": {
+          "value": 32.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.5,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "chronic_absenteeism_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 99.93,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 0.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.75,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 5.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 96.18,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 33.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.52,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 33.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.33,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2016-17": {
+        "total_enrollment": {
+          "value": 95.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 120.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 148.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 190.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 239.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 260.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

@@ -72,15 +72,21 @@ def load_districts() -> list[dict]:
     return json.loads((CONFIG / "districts.json").read_text(encoding="utf-8"))["districts"]
 
 
-def build_name_map(enrollment_frames: dict[str, dict[str, pd.DataFrame]]) -> dict[str, str]:
-    """dpi_code -> most recent DISTRICT_NAME, from every enrollment year in
-    chronological order (later years win, so renamed/closed districts keep
-    their last known name)."""
+def build_name_map(frames: dict[str, dict[str, dict[str, pd.DataFrame]]]) -> dict[str, str]:
+    """dpi_code -> most recent DISTRICT_NAME. Every DPI file carries
+    DISTRICT_CODE/DISTRICT_NAME, so learn names from every topic's files
+    (chronological order, later years win), with enrollment processed last
+    so its naming wins where topics disagree. Non-enrollment topics matter
+    for real: a few non-district charter agencies (e.g. Tenor High School
+    8115, Rocketship Southside 8133) appear in absenteeism/ACT files but
+    never have a districtwide enrollment row."""
     names: dict[str, str] = {}
-    for year in sorted(enrollment_frames):
-        df = enrollment_frames[year]["enrollment"]
-        dw = df[df["SCHOOL_NAME"] == "[Districtwide]"]
-        names.update(zip(dw["DISTRICT_CODE"], dw["DISTRICT_NAME"]))
+    topics = sorted(frames, key=lambda t: (t == "enrollment", t))
+    for topic in topics:
+        for year in sorted(frames[topic]):
+            for df in frames[topic][year].values():
+                dw = df[df["SCHOOL_NAME"] == "[Districtwide]"]
+                names.update(zip(dw["DISTRICT_CODE"], dw["DISTRICT_NAME"]))
     return names
 
 
@@ -127,14 +133,14 @@ def main() -> None:
     generated = datetime.datetime.now(datetime.timezone.utc).isoformat()
     by_topic = {topic: normalize.BUILDERS[topic](frames) for topic in sources.TOPICS}
 
-    names = build_name_map(frames["enrollment"])
+    names = build_name_map(frames)
     all_codes = sorted({code for result in by_topic.values() for code in result}
                        - {STATEWIDE_CODE})
     missing_names = [c for c in all_codes if c not in names]
     if missing_names:
         raise ValueError(
-            f"Districts present in topic data but never in enrollment files "
-            f"(no name available): {missing_names}")
+            f"Districts present in topic data with no districtwide name row "
+            f"in any file: {missing_names}")
 
     def assemble(code: str, name: str) -> dict:
         topics = {}

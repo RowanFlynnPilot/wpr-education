@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "8003",
+    "dpi_name": "United Community Center Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 8.23,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 32.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 5.04,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 18.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 0.9,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 24.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.69,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 22.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.13,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 16.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.0,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 1548.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 1590.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 1552.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 1609.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

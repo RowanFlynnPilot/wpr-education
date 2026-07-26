@@ -1,0 +1,147 @@
+{
+  "district": {
+    "dpi_code": "8132",
+    "dpi_name": "Woodlands School - State Street Campus"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2018-19": {
+        "dropout_rate": {
+          "value": 3.85,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "dropout_rate": {
+          "value": 4.84,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "dropout_rate": {
+          "value": 7.25,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 5.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2013-14": {
+        "attendance_rate": {
+          "value": 94.8,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "attendance_rate": {
+          "value": 94.14,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "attendance_rate": {
+          "value": 93.98,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "attendance_rate": {
+          "value": 93.63,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "attendance_rate": {
+          "value": 94.63,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "attendance_rate": {
+          "value": 93.95,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "attendance_rate": {
+          "value": 93.2,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "attendance_rate": {
+          "value": 88.47,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2013-14": {
+        "total_enrollment": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "total_enrollment": {
+          "value": 156.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 214.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "total_enrollment": {
+          "value": 247.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 282.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 312.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 345.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 273.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 254.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "district": {
+    "dpi_code": "8119",
+    "dpi_name": "Inland Seas School of Expeditionary Lrng"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "graduation": {
+      "2009-10": {
+        "cohort_count_4yr": {
+          "value": 27.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2005-06": {
+        "dropout_rate": {
+          "value": 4.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "dropout_rate": {
+          "value": 4.49,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 45.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.62,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "chronic_absenteeism_rate": {
+          "value": 64.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 72.66,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 59.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 58.99,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 37.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.52,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2006-07": {
+        "total_enrollment": {
+          "value": 42.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "total_enrollment": {
+          "value": 119.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 113.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 96.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

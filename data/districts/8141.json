@@ -1,0 +1,197 @@
+{
+  "district": {
+    "dpi_code": "8141",
+    "dpi_name": "Isthmus Montessori Academy Public"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2020-21": {
+        "composite_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "english_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "reading_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "participation_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "tested_count": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2021-22": {
+        "composite_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "english_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "reading_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "participation_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "tested_count": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "graduation": {
+      "2021-22": {
+        "cohort_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "dropouts": {
+      "2018-19": {
+        "dropout_rate": {
+          "value": 4.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "dropout_rate": {
+          "value": 4.35,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 99.97,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.86,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 24.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 74.05,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 20.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.18,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2018-19": {
+        "total_enrollment": {
+          "value": 214.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 229.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 240.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 203.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

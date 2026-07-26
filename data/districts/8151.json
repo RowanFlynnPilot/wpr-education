@@ -1,0 +1,57 @@
+{
+  "district": {
+    "dpi_code": "8151",
+    "dpi_name": "UpGrade Media Arts Schools"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "graduation": {
+      "2021-22": {
+        "cohort_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "dropouts": {
+      "2021-22": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 33.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 85.49,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2021-22": {
+        "total_enrollment": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

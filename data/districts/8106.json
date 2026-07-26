@@ -1,0 +1,883 @@
+{
+  "district": {
+    "dpi_code": "8106",
+    "dpi_name": "Milwaukee Academy of Science"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2014-15": {
+        "composite_avg": {
+          "value": 17.92,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 17.08,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 17.54,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 17.15,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 19.69,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 26.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "composite_avg": {
+          "value": 16.57,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 14.61,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 17.04,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 16.18,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 17.79,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 28.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "composite_avg": {
+          "value": 17.26,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 16.14,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 17.6,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 16.93,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 17.74,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 42.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "composite_avg": {
+          "value": 15.73,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 14.95,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 16.27,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 14.84,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 16.51,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 37.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 97.4,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "composite_avg": {
+          "value": 15.38,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 14.55,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 16.93,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 14.17,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.48,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 42.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "composite_avg": {
+          "value": 15.24,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 13.69,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 15.55,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.62,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 29.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 78.4,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "composite_avg": {
+          "value": 15.02,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 14.07,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 15.11,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 14.45,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.89,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 56.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 91.8,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "composite_avg": {
+          "value": 14.29,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 13.07,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 14.53,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 13.64,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.58,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 72.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 98.6,
+          "suppressed": false
+        }
+      }
+    },
+    "graduation": {
+      "2009-10": {
+        "cohort_count_4yr": {
+          "value": 22.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 95.5,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "cohort_count_4yr": {
+          "value": 34.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 31.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 91.2,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "cohort_count_4yr": {
+          "value": 20.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 17.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 85.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "cohort_count_4yr": {
+          "value": 39.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 38.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 97.4,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "cohort_count_4yr": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 84.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "cohort_count_4yr": {
+          "value": 34.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 28.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 82.4,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "cohort_count_4yr": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 22.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 88.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "cohort_count_4yr": {
+          "value": 29.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 86.2,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "cohort_count_4yr": {
+          "value": 41.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 39.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 95.1,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "cohort_count_4yr": {
+          "value": 35.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 30.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 85.7,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "cohort_count_4yr": {
+          "value": 46.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 40.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 87.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "cohort_count_4yr": {
+          "value": 42.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 36.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 85.7,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "cohort_count_4yr": {
+          "value": 67.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 60.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 89.6,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2005-06": {
+        "dropout_rate": {
+          "value": 0.44,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "dropout_rate": {
+          "value": 0.68,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "dropout_rate": {
+          "value": 0.99,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "dropout_rate": {
+          "value": 1.67,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 5.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "dropout_rate": {
+          "value": 4.5,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 14.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "dropout_rate": {
+          "value": 1.28,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "dropout_rate": {
+          "value": 2.08,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 7.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "dropout_rate": {
+          "value": 3.27,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 12.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "dropout_rate": {
+          "value": 1.66,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "dropout_rate": {
+          "value": 1.93,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 8.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "dropout_rate": {
+          "value": 3.14,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 15.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "dropout_rate": {
+          "value": 3.26,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 16.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 0.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 99.67,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "chronic_absenteeism_rate": {
+          "value": 45.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.44,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 52.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.91,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 48.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.12,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "chronic_absenteeism_rate": {
+          "value": 36.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.25,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "chronic_absenteeism_rate": {
+          "value": 34.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.11,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "chronic_absenteeism_rate": {
+          "value": 40.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 76.63,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "chronic_absenteeism_rate": {
+          "value": 27.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.78,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "chronic_absenteeism_rate": {
+          "value": 20.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.57,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "chronic_absenteeism_rate": {
+          "value": 32.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.88,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "chronic_absenteeism_rate": {
+          "value": 20.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.54,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "chronic_absenteeism_rate": {
+          "value": 19.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.12,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "chronic_absenteeism_rate": {
+          "value": 28.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.86,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 31.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.58,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 30.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.93,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 42.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 85.47,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 54.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.01,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2005-06": {
+        "total_enrollment": {
+          "value": 958.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "total_enrollment": {
+          "value": 967.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "total_enrollment": {
+          "value": 994.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 951.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 948.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "total_enrollment": {
+          "value": 1057.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "total_enrollment": {
+          "value": 1038.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "total_enrollment": {
+          "value": 967.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "total_enrollment": {
+          "value": 961.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "total_enrollment": {
+          "value": 1026.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 1042.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "total_enrollment": {
+          "value": 1057.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 1064.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 1132.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 1220.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 1266.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 1349.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

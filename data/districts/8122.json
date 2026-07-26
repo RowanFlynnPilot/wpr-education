@@ -1,0 +1,89 @@
+{
+  "district": {
+    "dpi_code": "8122",
+    "dpi_name": "Milwaukee Renaissance Academy"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2008-09": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "dropout_rate": {
+          "value": 7.89,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 31.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.12,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 40.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.48,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "chronic_absenteeism_rate": {
+          "value": 44.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 85.99,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2007-08": {
+        "total_enrollment": {
+          "value": 59.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 88.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 125.0,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "total_enrollment": {
+          "value": 80.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

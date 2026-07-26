@@ -1,0 +1,171 @@
+{
+  "district": {
+    "dpi_code": "8126",
+    "dpi_name": "King's Academy"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2010-11": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "dropout_rate": {
+          "value": 2.56,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "dropout_rate": {
+          "value": 9.3,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "dropout_rate": {
+          "value": 23.4,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 11.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "dropout_rate": {
+          "value": 26.09,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 12.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2010-11": {
+        "chronic_absenteeism_rate": {
+          "value": 13.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.39,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "chronic_absenteeism_rate": {
+          "value": 27.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.48,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "chronic_absenteeism_rate": {
+          "value": 20.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.01,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "chronic_absenteeism_rate": {
+          "value": 14.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.59,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "chronic_absenteeism_rate": {
+          "value": 26.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.65,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "chronic_absenteeism_rate": {
+          "value": 25.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.92,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2010-11": {
+        "total_enrollment": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "total_enrollment": {
+          "value": 215.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "total_enrollment": {
+          "value": 182.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "total_enrollment": {
+          "value": 193.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "total_enrollment": {
+          "value": 199.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 211.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

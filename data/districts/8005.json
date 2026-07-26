@@ -1,0 +1,115 @@
+{
+  "district": {
+    "dpi_code": "8005",
+    "dpi_name": "One City Schools Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "graduation": {
+      "2024-25": {
+        "cohort_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": null,
+          "suppressed": true
+        },
+        "dropout_count": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 5.56,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 1.72,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 41.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 39.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.34,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 42.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 89.53,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 455.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 336.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 427.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 418.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

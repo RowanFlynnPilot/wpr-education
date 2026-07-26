@@ -1,0 +1,67 @@
+{
+  "district": {
+    "dpi_code": "8134",
+    "dpi_name": "Milwaukee College Preparatory School:"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2014-15": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "dropout_rate": {
+          "value": 2.67,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2014-15": {
+        "chronic_absenteeism_rate": {
+          "value": 13.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.45,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "chronic_absenteeism_rate": {
+          "value": 9.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 96.03,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2014-15": {
+        "total_enrollment": {
+          "value": 450.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 472.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

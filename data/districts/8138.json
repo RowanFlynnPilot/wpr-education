@@ -1,0 +1,109 @@
+{
+  "district": {
+    "dpi_code": "8138",
+    "dpi_name": "Penfield Montessori Academy"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2016-17": {
+        "chronic_absenteeism_rate": {
+          "value": 33.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.87,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "chronic_absenteeism_rate": {
+          "value": 30.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.77,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 29.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.96,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 16.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.72,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 20.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.45,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 44.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.93,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2016-17": {
+        "total_enrollment": {
+          "value": 46.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 107.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 113.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 120.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 130.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 132.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

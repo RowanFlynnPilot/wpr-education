@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "8004",
+    "dpi_name": "Woodlands School Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 5.69,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 7.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 5.83,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 7.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 6.25,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 7.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 24.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.34,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 20.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.33,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 20.9,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.56,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 632.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 568.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 488.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 370.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

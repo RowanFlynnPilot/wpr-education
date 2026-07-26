@@ -1,0 +1,41 @@
+{
+  "district": {
+    "dpi_code": "8149",
+    "dpi_name": "The Lincoln Academy"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2021-22": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 13.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.09,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2021-22": {
+        "total_enrollment": {
+          "value": 410.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "district": {
+    "dpi_code": "8002",
+    "dpi_name": "Rocketship Education Wisconsin Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2017-18": {
+        "attendance_rate": {
+          "value": 93.74,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 20.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.35,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 22.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 92.47,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 58.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 77.92,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 46.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.4,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 49.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.4,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 50.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 86.05,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 34.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.86,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2013-14": {
+        "total_enrollment": {
+          "value": 305.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "total_enrollment": {
+          "value": 406.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "total_enrollment": {
+          "value": 425.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "total_enrollment": {
+          "value": 509.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 531.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 572.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 669.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 711.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 725.0,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "total_enrollment": {
+          "value": 713.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 629.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 731.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 978.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

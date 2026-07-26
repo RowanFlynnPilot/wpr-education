@@ -1,0 +1,229 @@
+{
+  "district": {
+    "dpi_code": "8007",
+    "dpi_name": "Central City Cyberschool of Milwaukee Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2022-23": {
+        "composite_avg": {
+          "value": 12.56,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 10.44,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 12.78,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 12.56,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 13.44,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 9.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 90.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg": {
+          "value": 12.33,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 10.07,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 13.93,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 10.93,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 13.6,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 15.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg": {
+          "value": 12.8,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 10.67,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 13.8,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 12.13,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 14.13,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 15.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 83.3,
+          "suppressed": false
+        }
+      }
+    },
+    "graduation": {
+      "2022-23": {
+        "cohort_count_4yr": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 5.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 23.8,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "cohort_count_4yr": {
+          "value": 9.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 8.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 88.9,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "cohort_count_4yr": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 14.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 73.7,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 3.73,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 7.38,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 11.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 4.72,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 6.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 55.5,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.99,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 45.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.19,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 34.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.29,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 389.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 378.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 343.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

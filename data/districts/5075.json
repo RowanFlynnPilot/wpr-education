@@ -1,0 +1,41 @@
+{
+  "district": {
+    "dpi_code": "5075",
+    "dpi_name": "Wilmot Grade"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2005-06": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 9.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.81,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2005-06": {
+        "total_enrollment": {
+          "value": 158.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

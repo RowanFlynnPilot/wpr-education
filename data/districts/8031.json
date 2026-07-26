@@ -1,0 +1,51 @@
+{
+  "district": {
+    "dpi_code": "8031",
+    "dpi_name": "Mill Creek Academy Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 24.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.61,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 14.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.32,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2023-24": {
+        "total_enrollment": {
+          "value": 187.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 324.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 397.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

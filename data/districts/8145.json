@@ -1,0 +1,159 @@
+{
+  "district": {
+    "dpi_code": "8145",
+    "dpi_name": "Milestone Democratic School"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2020-21": {
+        "composite_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "english_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "reading_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "participation_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "tested_count": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2021-22": {
+        "composite_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "english_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "reading_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_avg": {
+          "value": null,
+          "suppressed": true
+        },
+        "participation_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "tested_count": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "graduation": {
+      "2020-21": {
+        "cohort_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2021-22": {
+        "cohort_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
+    "dropouts": {
+      "2020-21": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "dropout_rate": {
+          "value": 8.82,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 4.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 98.12,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 18.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.24,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2020-21": {
+        "total_enrollment": {
+          "value": 21.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 44.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

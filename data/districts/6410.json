@@ -1,0 +1,161 @@
+{
+  "district": {
+    "dpi_code": "6410",
+    "dpi_name": "Weyerhaeuser Area"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "graduation": {
+      "2009-10": {
+        "cohort_count_4yr": {
+          "value": 20.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 18.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 90.0,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2005-06": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "dropout_rate": {
+          "value": 1.72,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2005-06": {
+        "chronic_absenteeism_rate": {
+          "value": 7.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "chronic_absenteeism_rate": {
+          "value": 13.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.73,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "chronic_absenteeism_rate": {
+          "value": 14.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.69,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "chronic_absenteeism_rate": {
+          "value": 12.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.43,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "chronic_absenteeism_rate": {
+          "value": 13.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.8,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2005-06": {
+        "total_enrollment": {
+          "value": 194.0,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "total_enrollment": {
+          "value": 177.0,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "total_enrollment": {
+          "value": 190.0,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "total_enrollment": {
+          "value": 156.0,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "total_enrollment": {
+          "value": 131.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

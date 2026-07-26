@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "8006",
+    "dpi_name": "Downtown Montessori Academy Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 9.3,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 6.25,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 17.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.22,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 9.8,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.18,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 8.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 94.56,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 240.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 239.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 218.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 235.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

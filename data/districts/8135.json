@@ -1,0 +1,125 @@
+{
+  "district": {
+    "dpi_code": "8135",
+    "dpi_name": "La Casa de Esperanza Charter School"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2015-16": {
+        "chronic_absenteeism_rate": {
+          "value": 5.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 93.37,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "chronic_absenteeism_rate": {
+          "value": 35.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.72,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "chronic_absenteeism_rate": {
+          "value": 33.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.41,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 26.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.29,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 4.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.6,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 35.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.55,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 40.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 88.57,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2015-16": {
+        "total_enrollment": {
+          "value": 82.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "total_enrollment": {
+          "value": 118.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "total_enrollment": {
+          "value": 146.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "total_enrollment": {
+          "value": 154.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 150.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 197.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 200.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

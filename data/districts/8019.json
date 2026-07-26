@@ -1,0 +1,139 @@
+{
+  "district": {
+    "dpi_code": "8019",
+    "dpi_name": "Milestone Democratic School Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2022-23": {
+        "tested_count": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg": {
+          "value": 23.0,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 23.14,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 20.57,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 26.0,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 21.57,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 7.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 33.3,
+          "suppressed": false
+        }
+      }
+    },
+    "graduation": {
+      "2022-23": {
+        "cohort_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_count_4yr": {
+          "value": null,
+          "suppressed": true
+        },
+        "grad_rate_4yr": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2023-24": {
+        "cohort_count_4yr": {
+          "value": 10.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 1.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 10.0,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 6.06,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 5.06,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 4.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 8.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.32,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 72.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 73.41,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 42.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 84.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

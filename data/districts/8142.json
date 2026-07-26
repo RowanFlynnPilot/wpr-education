@@ -1,0 +1,77 @@
+{
+  "district": {
+    "dpi_code": "8142",
+    "dpi_name": "One City Expeditionary Elementary School"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "absenteeism": {
+      "2018-19": {
+        "chronic_absenteeism_rate": {
+          "value": 33.3,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 91.99,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "chronic_absenteeism_rate": {
+          "value": 5.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 95.12,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "chronic_absenteeism_rate": {
+          "value": 38.4,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 68.75,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "chronic_absenteeism_rate": {
+          "value": 28.6,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 90.61,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2018-19": {
+        "total_enrollment": {
+          "value": 61.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "total_enrollment": {
+          "value": 96.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "total_enrollment": {
+          "value": 134.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "total_enrollment": {
+          "value": 227.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

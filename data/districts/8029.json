@@ -1,0 +1,177 @@
+{
+  "district": {
+    "dpi_code": "8029",
+    "dpi_name": "Kenosha Schools of Technology Enhanced Curriculum Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2023-24": {
+        "composite_avg": {
+          "value": 14.27,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 12.09,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 13.82,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 15.55,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.36,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 11.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg": {
+          "value": 15.22,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 12.3,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 15.96,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 15.96,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 16.3,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 23.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 88.5,
+          "suppressed": false
+        }
+      }
+    },
+    "graduation": {
+      "2024-25": {
+        "cohort_count_4yr": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 14.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 87.5,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 2.63,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 1.69,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 4.05,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 51.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.81,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 49.1,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.41,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 50.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.57,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 41.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 61.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 80.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 317.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

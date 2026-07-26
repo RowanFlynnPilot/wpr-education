@@ -1,0 +1,235 @@
+{
+  "district": {
+    "dpi_code": "8026",
+    "dpi_name": "Trans Center for Youth Inc"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2022-23": {
+        "composite_avg": {
+          "value": 14.6,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 12.9,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 14.65,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 14.9,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.35,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 20.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 80.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "composite_avg": {
+          "value": 14.59,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 12.65,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 14.41,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 15.0,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.59,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 17.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "composite_avg": {
+          "value": 14.68,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 12.88,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 14.36,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 14.8,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 15.76,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 80.6,
+          "suppressed": false
+        }
+      }
+    },
+    "graduation": {
+      "2022-23": {
+        "cohort_count_4yr": {
+          "value": 30.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 23.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 76.7,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "cohort_count_4yr": {
+          "value": 23.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 22.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 95.7,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "cohort_count_4yr": {
+          "value": 26.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 73.1,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2022-23": {
+        "dropout_rate": {
+          "value": 5.65,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 7.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "dropout_rate": {
+          "value": 0.89,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "dropout_rate": {
+          "value": 1.72,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2022-23": {
+        "chronic_absenteeism_rate": {
+          "value": 54.2,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 84.96,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "chronic_absenteeism_rate": {
+          "value": 50.0,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 87.8,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "chronic_absenteeism_rate": {
+          "value": 70.7,
+          "suppressed": false
+        },
+        "attendance_rate": {
+          "value": 81.99,
+          "suppressed": false
+        }
+      }
+    },
+    "enrollment": {
+      "2022-23": {
+        "total_enrollment": {
+          "value": 121.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "total_enrollment": {
+          "value": 120.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "total_enrollment": {
+          "value": 121.0,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "total_enrollment": {
+          "value": 118.0,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}

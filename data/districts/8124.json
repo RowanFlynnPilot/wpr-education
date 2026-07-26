@@ -1,0 +1,243 @@
+{
+  "district": {
+    "dpi_code": "8124",
+    "dpi_name": "Veritas High"
+  },
+  "generated": "2026-07-26T01:39:47.691870+00:00",
+  "topics": {
+    "act": {
+      "2014-15": {
+        "composite_avg": {
+          "value": 17.85,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 16.96,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 18.53,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 17.3,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 18.0,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 53.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "composite_avg": {
+          "value": 18.81,
+          "suppressed": false
+        },
+        "english_avg": {
+          "value": 17.41,
+          "suppressed": false
+        },
+        "math_avg": {
+          "value": 19.64,
+          "suppressed": false
+        },
+        "reading_avg": {
+          "value": 18.64,
+          "suppressed": false
+        },
+        "science_avg": {
+          "value": 19.01,
+          "suppressed": false
+        },
+        "tested_count": {
+          "value": 69.0,
+          "suppressed": false
+        },
+        "participation_pct": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      }
+    },
+    "graduation": {
+      "2010-11": {
+        "cohort_count_4yr": {
+          "value": 43.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 43.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 100.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "cohort_count_4yr": {
+          "value": 46.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 42.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 91.3,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "cohort_count_4yr": {
+          "value": 67.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 64.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 95.5,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "cohort_count_4yr": {
+          "value": 69.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 67.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 97.1,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "cohort_count_4yr": {
+          "value": 49.0,
+          "suppressed": false
+        },
+        "grad_count_4yr": {
+          "value": 48.0,
+          "suppressed": false
+        },
+        "grad_rate_4yr": {
+          "value": 98.0,
+          "suppressed": false
+        }
+      }
+    },
+    "dropouts": {
+      "2010-11": {
+        "dropout_rate": {
+          "value": 0.88,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 2.0,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "dropout_rate": {
+          "value": 0.44,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "dropout_rate": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "dropout_rate": {
+          "value": 0.41,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "dropout_rate": {
+          "value": 0.4,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "dropout_rate": {
+          "value": 0.4,
+          "suppressed": false
+        },
+        "dropout_count": {
+          "value": 1.0,
+          "suppressed": false
+        }
+      }
+    },
+    "absenteeism": {
+      "2010-11": {
+        "attendance_rate": {
+          "value": 95.54,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "attendance_rate": {
+          "value": 95.59,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "attendance_rate": {
+          "value": 95.06,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "attendance_rate": {
+          "value": 95.55,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "attendance_rate": {
+          "value": 95.97,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "attendance_rate": {
+          "value": 96.18,
+          "suppressed": false
+        }
+      }
+    }
+  }
+}
