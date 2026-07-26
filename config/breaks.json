@@ -1,0 +1,29 @@
+{
+  "_comment": "Methodology breaks and annotations, rendered on every trend chart whose topic matches. type 'comparability_break' = values before/after are not directly comparable (chart draws a hard visual break). type 'annotation' = context the reader needs but the series continues. Add an entry every time DPI changes a definition, cut score, or vendor — check the About the Data pages and master errata before each refresh.",
+  "breaks": [
+    {
+      "id": "cutscores-2023-24",
+      "school_year": "2023-24",
+      "topics": ["act"],
+      "type": "comparability_break",
+      "label": "DPI changed performance cut scores",
+      "detail": "Starting with 2023-24 results, DPI changed how ACT (and Forward) performance categories are set. Proficiency-category results from 2023-24 onward are not directly comparable to earlier years. Extend topics to include 'forward' when the Forward Exam ships in v1.5."
+    },
+    {
+      "id": "enhanced-act-2025-26",
+      "school_year": "2025-26",
+      "topics": ["act"],
+      "type": "annotation",
+      "label": "First statewide Enhanced ACT",
+      "detail": "Spring 2026 was the first statewide administration of the Enhanced ACT. Wisconsin kept science and writing as required sections even though ACT made science optional nationally. ACT states Enhanced and legacy scores are comparable; treat that claim as ACT's, not ours."
+    },
+    {
+      "id": "act-scoring-error-2025-26",
+      "school_year": "2025-26",
+      "topics": ["act"],
+      "type": "annotation",
+      "label": "ACT scoring error, scores revised May 2026",
+      "detail": "A vendor scoring error affected spring 2026 online administrations; revised scores were issued in late May 2026. Verify published district values against DPI errata at each refresh until this cohort's data is certified."
+    }
+  ]
+}
