@@ -1,5 +1,6 @@
 import {
   CartesianGrid,
+  LabelList,
   Line,
   LineChart,
   ReferenceLine,
@@ -10,6 +11,13 @@ import {
 } from 'recharts'
 import { buildChart } from '../lib/chartData'
 import { fmtValue } from '../lib/meta'
+
+const UNIT_LABEL = {
+  percent: 'Percent of students',
+  'percent-change': 'Percent change',
+  score: 'Average score',
+  count: 'Students',
+}
 
 function BreakBadge({ viewBox, n, kind, stack }) {
   const x = viewBox?.x ?? 0
@@ -71,42 +79,121 @@ function ChartTooltip({ active, label, payload, seriesMeta, kind }) {
   )
 }
 
+// Compact numeric label for on-chart value annotations: unit lives on the
+// axis, so points carry just the number.
+function shortNum(v, kind) {
+  if (v == null) return ''
+  if (kind === 'count') return v.toLocaleString('en-US')
+  if (kind === 'score') {
+    // ACT averages are published to 2 decimals; rounding 18.95 to "19"
+    // on the chart would misstate the source.
+    return v.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 2 })
+  }
+  const s = v.toLocaleString('en-US', { maximumFractionDigits: 1 })
+  return kind === 'percent-change' && v > 0 ? `+${s}` : s
+}
+
 // One trend chart. seriesList: [{key, label, color, dash, width, cells}].
 // Comparability breaks split lines into separate segments — no line is ever
 // drawn across a break. Annotation years render a numbered badge even when
 // no data exists for that year yet.
-export default function TrendChart({ topicId, kind, seriesList, ariaLabel }) {
+// size 'large' (the expanded modal / story embeds) adds value labels on the
+// primary series and roomier type; 'normal' labels only the latest point.
+export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size = 'normal' }) {
   const { rows, seriesKeys, topicBreaks } = buildChart(topicId, seriesList)
+  const large = size === 'large'
 
-  // Breaks sharing a school year (e.g. both 2025-26 ACT annotations) stack
-  // their badges vertically instead of drawing on top of each other; the
-  // chart's top margin grows to make room.
   const stackOf = topicBreaks.map((b, i) =>
     topicBreaks.slice(0, i).filter((o) => o.school_year === b.school_year).length,
   )
   const topMargin = 26 + Math.max(0, ...stackOf) * 20
+  const height = (large ? Math.max(340, Math.min(560, window.innerHeight * 0.55)) : 260) + topMargin - 26
+
+  const primaryKey = seriesList[seriesList.length - 1]?.key
+  const lastIdxOf = {}
+  for (const s of seriesList) {
+    for (let i = rows.length - 1; i >= 0; i--) {
+      if (seriesKeys[s.key].some((k) => rows[i][k] != null)) {
+        lastIdxOf[s.key] = i
+        break
+      }
+    }
+  }
+  const tickStyle = {
+    fontSize: large ? 12 : 10.5,
+    fontFamily: "'JetBrains Mono', monospace",
+    fill: '#6B675C',
+  }
+  const fmtTick = (v) =>
+    kind === 'count' ? v.toLocaleString('en-US') : kind === 'score' ? v : `${v}%`
+
+  const valueLabel = (sKey, dataKey) => {
+    // large: every point of the primary series; normal: just its newest point.
+    if (sKey !== primaryKey) return null
+    const render = (props) => {
+      const { x, y, value, index } = props
+      if (value == null) return null
+      if (!large && index !== lastIdxOf[sKey]) return null
+      return (
+        <text
+          x={x}
+          y={y - 9}
+          textAnchor="middle"
+          fontSize={large ? 11.5 : 11}
+          fontWeight={600}
+          fontFamily="'JetBrains Mono', monospace"
+          fill="#2C6A62"
+          stroke="#FDFBF6"
+          strokeWidth={3}
+          paintOrder="stroke"
+        >
+          {shortNum(value, kind)}
+        </text>
+      )
+    }
+    return <LabelList key={`lbl-${dataKey}`} dataKey={dataKey} content={render} />
+  }
 
   return (
     <div className="trend-chart" role="img" aria-label={ariaLabel}>
-      <ResponsiveContainer width="100%" height={260 + topMargin - 26}>
-        <LineChart data={rows} margin={{ top: topMargin, right: 12, bottom: 4, left: 0 }}>
+      <ResponsiveContainer width="100%" height={height}>
+        <LineChart
+          data={rows}
+          margin={{ top: topMargin, right: large ? 22 : 14, bottom: large ? 18 : 4, left: large ? 10 : 0 }}
+        >
           <CartesianGrid stroke="#E4DECF" strokeDasharray="1 3" vertical={false} />
           <XAxis
             dataKey="year"
-            tickFormatter={(y) => `’${y.slice(2, 4)}`}
-            tick={{ fontSize: 10.5, fontFamily: "'JetBrains Mono', monospace", fill: '#6B675C' }}
+            tickFormatter={(y) => (large ? y : `’${y.slice(2, 4)}`)}
+            tick={tickStyle}
             tickLine={false}
             axisLine={{ stroke: '#C9C2AE' }}
             interval="preserveStartEnd"
-            minTickGap={18}
+            minTickGap={large ? 34 : 18}
+            angle={large ? -35 : 0}
+            textAnchor={large ? 'end' : 'middle'}
+            height={large ? 52 : 30}
+            label={large ? { value: 'School year', position: 'insideBottom', offset: -4, style: { fontSize: 12, fill: '#6B675C', fontFamily: "'Public Sans', sans-serif" } } : undefined}
           />
           <YAxis
-            width={40}
-            tick={{ fontSize: 10.5, fontFamily: "'JetBrains Mono', monospace", fill: '#6B675C' }}
-            tickFormatter={(v) => (kind === 'count' ? v.toLocaleString('en-US') : v)}
+            width={large ? 58 : 44}
+            tick={tickStyle}
+            tickFormatter={fmtTick}
             tickLine={false}
             axisLine={false}
             domain={['auto', 'auto']}
+            label={{
+              value: UNIT_LABEL[kind] ?? '',
+              angle: -90,
+              position: 'insideLeft',
+              offset: large ? 2 : 8,
+              style: {
+                textAnchor: 'middle',
+                fontSize: large ? 12 : 10.5,
+                fill: '#8A8578',
+                fontFamily: "'Public Sans', sans-serif",
+              },
+            }}
           />
           <Tooltip
             content={<ChartTooltip seriesMeta={seriesList} kind={kind} />}
@@ -128,13 +215,15 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel }) {
                 key={dataKey}
                 dataKey={dataKey}
                 stroke={s.color}
-                strokeWidth={s.width}
+                strokeWidth={large ? s.width + 0.4 : s.width}
                 strokeDasharray={s.dash}
-                dot={{ r: 2, fill: s.color, strokeWidth: 0 }}
+                dot={{ r: large ? 2.6 : 2, fill: s.color, strokeWidth: 0 }}
                 activeDot={{ r: 4 }}
                 connectNulls={false}
                 isAnimationActive={false}
-              />
+              >
+                {valueLabel(s.key, dataKey)}
+              </Line>
             )),
           )}
         </LineChart>

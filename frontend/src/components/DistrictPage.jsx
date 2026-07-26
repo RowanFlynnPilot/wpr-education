@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import { pctChangeSeries, seriesFromDoc, suppressedYears } from '../lib/chartData'
+import { suppressedYears } from '../lib/chartData'
 import { chartCSV, downloadCSV } from '../lib/csv'
-import { LOGOS } from '../lib/logos'
+import { ACCENTS, LOGOS } from '../lib/logos'
 import { COLORS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
+import { buildSeriesList } from '../lib/series'
+import ChartModal from './ChartModal'
 import TrendChart from './TrendChart'
 
 function latestCell(doc, topicId, metric) {
@@ -25,48 +27,13 @@ function StatBlock({ title, stat, kind }) {
   )
 }
 
-function metricSeries(doc, topicId, metric, meta) {
-  const cells = seriesFromDoc(doc, topicId, meta.derivedFrom ?? metric)
-  return meta.derivedFrom ? pctChangeSeries(cells) : cells
-}
-
 function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   const [metric, setMetric] = useState(topic.defaultMetric)
+  const [expanded, setExpanded] = useState(false)
   const meta = topic.metrics[metric]
 
-  const districtCells = metricSeries(doc, topic.id, metric, meta)
-  // Raw statewide counts (~800k students) would flatten every district
-  // line to zero; the statewide overlay only makes sense for rates/scores
-  // (and derived indexed views).
-  const stateSeries = meta.kind === 'count' ? [] : [
-    {
-      key: 'state',
-      label: 'Wisconsin',
-      color: COLORS.state,
-      dash: '6 4',
-      width: 1.6,
-      cells: metricSeries(stateDoc, topic.id, metric, meta),
-    },
-  ]
-  const seriesList = [
-    ...stateSeries,
-    ...peerDocs.map((p) => ({
-      key: p.doc.district.dpi_code,
-      label: p.label,
-      color: peerColorOf(p.doc.district.dpi_code),
-      dash: undefined,
-      width: 1.6,
-      cells: metricSeries(p.doc, topic.id, metric, meta),
-    })),
-    {
-      key: 'district',
-      label: doc.district.dpi_name,
-      color: COLORS.district,
-      dash: undefined,
-      width: 2.8,
-      cells: districtCells,
-    },
-  ]
+  const seriesList = buildSeriesList({ topic, metric, doc, stateDoc, peerDocs, peerColorOf })
+  const districtCells = seriesList[seriesList.length - 1].cells
 
   const supYears = suppressedYears(districtCells)
   const topicBreaks = breaksFor(topic.id)
@@ -126,10 +93,43 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
             </span>
           ))}
         </div>
-        <button className="csv-button" onClick={exportCSV}>
-          ↓ CSV
-        </button>
+        <div className="chart-actions">
+          <button className="csv-button" onClick={() => setExpanded(true)} aria-haspopup="dialog">
+            ⤢ Expand
+          </button>
+          <button className="csv-button" onClick={exportCSV}>
+            ↓ CSV
+          </button>
+        </div>
       </div>
+
+      {expanded && (
+        <ChartModal
+          title={`${topic.label} — ${meta.label}`}
+          subtitle={`${doc.district.dpi_name} School District · ${topic.sublabel}`}
+          onClose={() => setExpanded(false)}
+        >
+          <TrendChart
+            topicId={topic.id}
+            kind={meta.kind}
+            seriesList={seriesList}
+            size="large"
+            ariaLabel={`${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}, expanded`}
+          />
+          <div className="chart-legend">
+            {[...seriesList].reverse().map((s) => (
+              <span key={s.key} className="legend-item">
+                <span
+                  className="legend-swatch"
+                  style={{ background: s.color, height: s.key === 'state' ? 0 : undefined, borderTop: s.key === 'state' ? `2px dashed ${s.color}` : undefined }}
+                />
+                {s.label}
+              </span>
+            ))}
+          </div>
+          <p className="chart-modal-source">Source: Wisconsin DPI, WISEdash certified download files.</p>
+        </ChartModal>
+      )}
 
       {meta.derivedFrom && (
         <p className="derived-note">
@@ -191,7 +191,7 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
   return (
     <div className="district-page">
       <a className="back-link" href="#/">← All districts</a>
-      <div className="district-header">
+      <div className="district-header" style={ACCENTS[code] ? { borderBottomColor: ACCENTS[code] } : undefined}>
         {LOGOS[code] && (
           <span className="logo-chip logo-chip-lg">
             <img src={LOGOS[code]} alt={`${entry.label} School District logo`} />

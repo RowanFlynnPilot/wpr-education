@@ -20,3 +20,19 @@ export const LOGOS = {
   '5628': stratford,
   '6223': wausau,
 }
+
+// Brand accent per district, sampled from the logo above (dominant
+// saturated hue, darkened where needed for contrast on cream). Used for
+// page chrome only — card edge, header rule — never for chart data lines,
+// which stay in the WPR palette so series colors mean the same thing on
+// every page.
+export const ACCENTS = {
+  '0196': '#1d3f8f', // Athens Bluejays royal blue
+  '1561': '#0a5c26', // Edgar Wildcats green
+  '3304': '#c33b2f', // Marathon City red
+  '3787': '#552c85', // Mosinee purple
+  '4970': '#26573a', // D.C. Everest evergreen
+  '5467': '#c8102e', // Spencer Rockets red
+  '5628': '#cd4a12', // Stratford tiger orange
+  '6223': '#4a2b52', // Wausau crest purple
+}

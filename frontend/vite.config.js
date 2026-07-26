@@ -1,3 +1,5 @@
+import { copyFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -9,5 +11,18 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/wpr-education/',
   publicDir: '../data',
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      // og:image must live at a stable absolute URL for link scrapers,
+      // so it's copied to the dist root un-hashed.
+      name: 'copy-og-image',
+      closeBundle() {
+        copyFileSync(
+          resolve(__dirname, 'src/assets/og-image.png'),
+          resolve(__dirname, 'dist/og-image.png'),
+        )
+      },
+    },
+  ],
 })

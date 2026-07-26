@@ -1,5 +1,5 @@
 import { fmtValue, fmtYear } from '../lib/meta'
-import { LOGOS } from '../lib/logos'
+import { ACCENTS, LOGOS } from '../lib/logos'
 import Sparkline from './Sparkline'
 
 function latest(doc, topicId, metric) {
@@ -126,7 +126,12 @@ export default function Landing({ index, state, docs }) {
           const actC = latest(doc, 'act', 'composite_avg')
           const gradR = latest(doc, 'graduation', 'grad_rate_4yr')
           return (
-            <a key={d.dpi_code} className="district-card" href={`#/${d.dpi_code}`}>
+            <a
+              key={d.dpi_code}
+              className="district-card"
+              href={`#/${d.dpi_code}`}
+              style={ACCENTS[d.dpi_code] ? { borderLeftColor: ACCENTS[d.dpi_code] } : undefined}
+            >
               <div className="district-card-head">
                 {LOGOS[d.dpi_code] && (
                   <span className="logo-chip">

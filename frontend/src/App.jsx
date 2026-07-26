@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import DistrictPage from './components/DistrictPage'
+import EmbedPage from './components/EmbedPage'
 import Landing from './components/Landing'
 import MethodologyFooter from './components/MethodologyFooter'
 import { loadAll } from './lib/data'
 
-// Routes look like #/6223?peers=4970,0196 — path picks the district,
-// peers preselects comparison lines so charts are shareable.
+// Routes:
+//   #/6223?peers=4970,0196          district page, peers preselected
+//   #/embed/6223/act?metric=...     story mode: one chart, minimal chrome
 function parseHash() {
   const [path, query] = window.location.hash.replace(/^#\/?/, '').split('?')
-  const peers = (new URLSearchParams(query || '').get('peers') || '')
-    .split(',')
-    .filter(Boolean)
-  return { path, peers }
+  const params = new URLSearchParams(query || '')
+  const peers = (params.get('peers') || '').split(',').filter(Boolean)
+  return { path, peers, metric: params.get('metric') || '' }
 }
 
 function useHashRoute() {
@@ -59,7 +60,10 @@ export default function App() {
     loadAll().then(setData, setError)
   }, [])
 
-  const entry = data?.index.districts.find((d) => d.dpi_code === route.path)
+  const segments = route.path.split('/')
+  const isEmbed = segments[0] === 'embed'
+  const districtCode = isEmbed ? segments[1] : route.path
+  const entry = data?.index.districts.find((d) => d.dpi_code === districtCode)
   useEffect(() => {
     document.title = entry
       ? `${entry.label} — Marathon County School Data`
@@ -72,7 +76,23 @@ export default function App() {
   }
 
   const { index, state, docs } = data
-  const validPeers = route.peers.filter((p) => p !== route.path && docs[p])
+  const validPeers = route.peers.filter((p) => p !== districtCode && docs[p])
+
+  if (isEmbed && entry && docs[districtCode]) {
+    return (
+      <div className="app app-embed">
+        <EmbedPage
+          code={districtCode}
+          topicId={segments[2]}
+          metric={route.metric}
+          peers={validPeers}
+          index={index}
+          state={state}
+          docs={docs}
+        />
+      </div>
+    )
+  }
 
   return (
     <div className="app">
@@ -81,7 +101,7 @@ export default function App() {
         <h1>Marathon County School Data</h1>
       </header>
       <main>
-        {entry && docs[route.path] ? (
+        {entry && !isEmbed && docs[route.path] ? (
           <DistrictPage
             code={route.path}
             peers={validPeers}

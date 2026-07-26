@@ -167,6 +167,26 @@ pages. Deep-link a district with `#/{dpi_code}` (codes in
 `#/{dpi_code}?peers={code},{code}` — e.g. `#/6223?peers=4970` embeds
 Wausau vs. D.C. Everest.
 
+**Story mode** — a single chart with minimal chrome, for dropping one
+chart into an article next to the paragraph it illustrates:
+
+```
+#/embed/{dpi_code}/{topic}?metric={metric}&peers={codes}
+```
+
+e.g. `#/embed/6223/act` (Wausau ACT composite),
+`#/embed/6223/enrollment?metric=enrollment_change&peers=4970` (Wausau vs
+DCE enrollment change). Topic ids: act, graduation, dropouts,
+absenteeism, enrollment; metric ids are in `frontend/src/lib/meta.js`
+(omit `metric` for the topic's default). Story embeds auto-size via the
+same height postMessage; static fallback ~750px. They render the chart
+with full year labels and per-point values, plus break notes and a
+source line linking back to the full tool.
+
+A share-card image for social previews lives at `/og-image.png`
+(1200x630, generated with PIL — regenerate via the script in the Phase 9
+commit message if the branding changes).
+
 ## Current status & next tasks
 
 **v1 SHIPPED (2026-07-25).** Pipeline pulls all 88 statewide files (5 topics,
