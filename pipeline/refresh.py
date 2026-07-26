@@ -90,7 +90,8 @@ def build_name_map(frames: dict[str, dict[str, dict[str, pd.DataFrame]]]) -> dic
     return names
 
 
-def write_output(by_district: dict[str, dict], index: dict, state: dict) -> None:
+def write_output(by_district: dict[str, dict], index: dict, state: dict,
+                 subgroup_docs: dict[str, dict]) -> None:
     """Rebuild data/ from scratch, then validate every file before finishing."""
     districts_dir = DATA / "districts"
     if districts_dir.exists():
@@ -105,6 +106,15 @@ def write_output(by_district: dict[str, dict], index: dict, state: dict) -> None
     state_path = DATA / "state.json"
     state_path.write_text(json.dumps(state, indent=2), encoding="utf-8")
     validate.check_output_file(state_path)
+
+    subgroups_dir = DATA / "subgroups"
+    if subgroups_dir.exists():
+        shutil.rmtree(subgroups_dir)
+    subgroups_dir.mkdir(parents=True)
+    for code, doc in subgroup_docs.items():
+        path = subgroups_dir / f"{code}.json"
+        path.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+        validate.check_subgroup_file(path)
 
     (DATA / "index.json").write_text(json.dumps(index, indent=2), encoding="utf-8")
 
@@ -133,6 +143,16 @@ def main() -> None:
     generated = datetime.datetime.now(datetime.timezone.utc).isoformat()
     by_topic = {topic: normalize.BUILDERS[topic](frames) for topic in sources.TOPICS}
 
+    # Subgroups for every config district (included or not, so flipping a
+    # candidate stays a pure config edit) plus statewide. All 507 districts
+    # would grow the repo ~10x for pages nobody can route to.
+    print("Normalizing subgroups...")
+    subgroup_codes = {d["dpi_code"] for d in districts} | {STATEWIDE_CODE}
+    subgroups_by_topic = {
+        topic: normalize.SUBGROUP_BUILDERS[topic](frames, subgroup_codes)
+        for topic in sources.TOPICS
+    }
+
     names = build_name_map(frames)
     all_codes = sorted({code for result in by_topic.values() for code in result}
                        - {STATEWIDE_CODE})
@@ -157,6 +177,23 @@ def main() -> None:
     by_district = {code: assemble(code, names[code]) for code in all_codes}
     state = assemble(STATEWIDE_CODE, "[Statewide]")
 
+    def assemble_subgroups(code: str, name: str) -> dict:
+        topics = {}
+        for topic in sources.TOPICS:
+            years = subgroups_by_topic[topic].get(code)
+            if years:
+                topics[topic] = {y: years[y] for y in sorted(years)}
+        return {
+            "district": {"dpi_code": code, "dpi_name": name},
+            "generated": generated,
+            "topics": topics,
+        }
+
+    subgroup_docs = {
+        code: assemble_subgroups(code, names.get(code, "[Statewide]"))
+        for code in sorted(subgroup_codes)
+    }
+
     included = [d for d in districts if d["included"]]
     missing_docs = [d["label"] for d in included if d["dpi_code"] not in by_district]
     if missing_docs:
@@ -169,8 +206,9 @@ def main() -> None:
         ],
     }
 
-    print(f"Writing {len(by_district)} district files + state.json + index.json ...")
-    write_output(by_district, index, state)
+    print(f"Writing {len(by_district)} district files + {len(subgroup_docs)} "
+          "subgroup files + state.json + index.json ...")
+    write_output(by_district, index, state, subgroup_docs)
     print(f"Done. generated={generated}")
 
 

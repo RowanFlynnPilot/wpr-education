@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { suppressedYears } from '../lib/chartData'
 import { chartCSV, downloadCSV } from '../lib/csv'
+import { loadSubgroups } from '../lib/data'
 import { ACCENTS, LOGOS } from '../lib/logos'
-import { COLORS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
-import { buildSeriesList } from '../lib/series'
+import { COLORS, DIMENSIONS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
+import { buildGroupSeriesList, buildSeriesList } from '../lib/series'
 import ChartModal from './ChartModal'
 import TrendChart from './TrendChart'
 
@@ -30,20 +31,50 @@ function StatBlock({ title, stat, kind }) {
 function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
   const [metric, setMetric] = useState(topic.defaultMetric)
   const [expanded, setExpanded] = useState(false)
+  // null = compare-districts mode; a dimension id = student-group mode.
+  const [dimension, setDimension] = useState(null)
+  const [subDoc, setSubDoc] = useState(null)
   const meta = topic.metrics[metric]
+  const code = doc.district.dpi_code
 
-  const seriesList = buildSeriesList({ topic, metric, doc, stateDoc, peerDocs, peerColorOf })
-  const districtCells = seriesList[seriesList.length - 1].cells
+  useEffect(() => {
+    if (!dimension || subDoc) return
+    let alive = true
+    loadSubgroups(code).then(
+      (d) => alive && setSubDoc(d),
+      (err) => {
+        console.error(err)
+        if (alive) setDimension(null)
+      },
+    )
+    return () => { alive = false }
+  }, [dimension, subDoc, code])
+
+  const groupMode = dimension && subDoc
+  const seriesList = groupMode
+    ? buildGroupSeriesList({ topic, metric, subDoc, dimension })
+    : buildSeriesList({ topic, metric, doc, stateDoc, peerDocs, peerColorOf })
+  // Compare-districts mode draws state -> peers -> district, so the legend
+  // reverses to read district-first; group mode is already in display order.
+  const legendList = groupMode ? seriesList : [...seriesList].reverse()
+  const districtCells = groupMode ? {} : seriesList[seriesList.length - 1].cells
 
   const supYears = suppressedYears(districtCells)
+  const groupSuppression = groupMode
+    ? seriesList
+        .map((s) => ({ label: s.label, years: suppressedYears(s.cells) }))
+        .filter((g) => g.years.length)
+    : []
   const topicBreaks = breaksFor(topic.id)
   const districtStat = latestCell(doc, topic.id, topic.defaultMetric)
   const stateStat = latestCell(stateDoc, topic.id, topic.defaultMetric)
   const defaultMeta = topic.metrics[topic.defaultMetric]
+  const dimLabel = DIMENSIONS.find((d) => d.id === dimension)?.label
 
   const exportCSV = () => {
     const slug = doc.district.dpi_name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-    downloadCSV(`wpr-${slug}-${topic.id}-${metric}.csv`, chartCSV([...seriesList].reverse()))
+    const suffix = groupMode ? `${dimension}-${metric}` : metric
+    downloadCSV(`wpr-${slug}-${topic.id}-${suffix}.csv`, chartCSV(legendList))
   }
 
   return (
@@ -74,16 +105,53 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
         </div>
       )}
 
-      <TrendChart
-        topicId={topic.id}
-        kind={meta.kind}
-        seriesList={seriesList}
-        ariaLabel={`${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}`}
-      />
+      <div className="pill-row dim-row" role="group" aria-label={`${topic.label} student groups`}>
+        <span className="dim-row-label">Break out by:</span>
+        <button
+          className={`pill${dimension === null ? ' active' : ''}`}
+          aria-pressed={dimension === null}
+          onClick={() => setDimension(null)}
+        >
+          All students
+        </button>
+        {DIMENSIONS.map((d) => (
+          <button
+            key={d.id}
+            className={`pill${dimension === d.id ? ' active' : ''}`}
+            aria-pressed={dimension === d.id}
+            onClick={() => setDimension(d.id)}
+          >
+            {d.label}
+          </button>
+        ))}
+      </div>
+
+      {dimension && !subDoc ? (
+        <div className="loading loading-inline">Loading student groups…</div>
+      ) : (
+        <TrendChart
+          topicId={topic.id}
+          kind={meta.kind}
+          seriesList={seriesList}
+          showLabels={!groupMode}
+          ariaLabel={
+            groupMode
+              ? `${topic.label} — ${meta.label} by ${dimLabel} for ${doc.district.dpi_name}`
+              : `${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}`
+          }
+        />
+      )}
+
+      {groupMode && (
+        <p className="derived-note">
+          {doc.district.dpi_name} students only, one line per {dimLabel.toLowerCase()} group
+          as reported by DPI. Statewide and peer comparison apply to the all-students view.
+        </p>
+      )}
 
       <div className="chart-foot">
         <div className="chart-legend">
-          {[...seriesList].reverse().map((s) => (
+          {legendList.map((s) => (
             <span key={s.key} className="legend-item">
               <span
                 className="legend-swatch"
@@ -105,7 +173,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
 
       {expanded && (
         <ChartModal
-          title={`${topic.label} — ${meta.label}`}
+          title={`${topic.label} — ${meta.label}${groupMode ? ` by ${dimLabel.toLowerCase()}` : ''}`}
           subtitle={`${doc.district.dpi_name} School District · ${topic.sublabel}`}
           onClose={() => setExpanded(false)}
         >
@@ -114,10 +182,11 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
             kind={meta.kind}
             seriesList={seriesList}
             size="large"
+            showLabels={!groupMode}
             ariaLabel={`${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}, expanded`}
           />
           <div className="chart-legend">
-            {[...seriesList].reverse().map((s) => (
+            {legendList.map((s) => (
               <span key={s.key} className="legend-item">
                 <span
                   className="legend-swatch"
@@ -141,7 +210,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
             <thead>
               <tr>
                 <th scope="col">School year</th>
-                {[...seriesList].reverse().map((s) => (
+                {legendList.map((s) => (
                   <th key={s.key} scope="col">{s.label}</th>
                 ))}
               </tr>
@@ -150,7 +219,7 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
               {[...new Set(seriesList.flatMap((s) => Object.keys(s.cells)))].sort().map((year) => (
                 <tr key={year}>
                   <th scope="row">{fmtYear(year)}</th>
-                  {[...seriesList].reverse().map((s) => {
+                  {legendList.map((s) => {
                     const cell = s.cells[year]
                     return (
                       <td key={s.key} className={cell?.suppressed ? 'cell-suppressed' : ''}>
@@ -167,16 +236,32 @@ function TopicSection({ topic, doc, stateDoc, peerDocs, peerColorOf }) {
 
       {meta.derivedFrom && (
         <p className="derived-note">
-          Percent change is computed against each district's own first year of
-          data ({fmtYear('2005-06')} for every district shown and the state).
+          {groupMode
+            ? "Percent change is computed against each group's own first year of data."
+            : `Percent change is computed against each district's own first year of data (${fmtYear('2005-06')} for every district shown and the state).`}
         </p>
       )}
 
-      {supYears.length > 0 && (
+      {!groupMode && supYears.length > 0 && (
         <p className="suppression-note">
           {doc.district.dpi_name} {metric === topic.defaultMetric ? '' : `${meta.label.toLowerCase()} `}
           data for {supYears.join(', ')}: <strong>suppressed for student privacy</strong>{' '}
           (DPI redacts results for very small student groups).
+        </p>
+      )}
+
+      {groupMode && groupSuppression.length > 0 && (
+        <p className="suppression-note">
+          <strong>Suppressed for student privacy</strong> (small groups; DPI
+          redacts, we never estimate):{' '}
+          {groupSuppression.map((g, i) => (
+            <span key={g.label}>
+              {i > 0 && '; '}
+              {g.label} ({g.years.length === 1 ? g.years[0] : `${g.years.length} years`})
+            </span>
+          ))}
+          . Suppressed years appear as gaps in the lines and as "Suppressed" in
+          the table above.
         </p>
       )}
 

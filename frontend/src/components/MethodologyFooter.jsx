@@ -42,6 +42,14 @@ export default function MethodologyFooter({ generated }) {
         are the census grade-11 statewide administration (not graduating-class ACT
         averages). Enrollment is the certified third-Friday-of-September headcount.
       </p>
+      <p>
+        <strong>Student groups.</strong> Group breakdowns use DPI's own categories,
+        which changed over time: "Two or more races" and "Pacific Islander" were
+        added as separate categories in later years, so those lines start when DPI's
+        do, and DPI renamed its English-learner category (ELL/LEP, now EL) — we
+        treat it as one group. Small groups are heavily redacted; expect gaps
+        labeled "suppressed for student privacy," especially in smaller districts.
+      </p>
       <p className="credit">
         A <a href="https://wausaupilotandreview.com" target="_blank" rel="noreferrer">Wausau Pilot &amp; Review</a>{' '}
         project. Code and data are public on{' '}

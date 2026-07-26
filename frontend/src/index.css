@@ -292,6 +292,25 @@ a {
   gap: 6px;
   margin: 10px 0 4px;
 }
+.dim-row {
+  align-items: center;
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px dashed var(--line);
+}
+.dim-row-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-right: 2px;
+}
+.dim-row .pill.active {
+  background: var(--rust);
+  border-color: var(--rust);
+}
+.loading-inline {
+  padding: 40px 20px;
+}
 .pill {
   font-family: var(--mono);
   font-size: 11.5px;

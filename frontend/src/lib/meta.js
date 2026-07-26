@@ -96,4 +96,33 @@ export const COLORS = {
   district: '#3A867C',
   state: '#8A8578',
   peers: ['#C2703D', '#7D5BA6', '#B04A5A', '#4A7DB0', '#94742F', '#5A8AA0', '#A0628A'],
+  // Categorical palette for student-group lines (up to 7 race categories).
+  groups: ['#3A867C', '#C2703D', '#7D5BA6', '#4A7DB0', '#B04A5A', '#94742F', '#A0628A', '#5A8AA0', '#4A2B52'],
+}
+
+// Student-group dimensions, as emitted by the pipeline into
+// data/subgroups/{code}.json. Group labels inside are DPI's own
+// (Econ Disadv, SwD, ...), expanded for display via GROUP_LABELS.
+export const DIMENSIONS = [
+  { id: 'race_ethnicity', label: 'Race & ethnicity' },
+  { id: 'econ_status', label: 'Economic status' },
+  { id: 'disability', label: 'Disability' },
+  { id: 'el_status', label: 'English learners' },
+]
+
+// DPI's abbreviations, spelled out for readers.
+export const GROUP_LABELS = {
+  'Econ Disadv': 'Economically disadvantaged',
+  'Not Econ Disadv': 'Not econ. disadvantaged',
+  SwD: 'Students with disabilities',
+  SwoD: 'Students without disabilities',
+  EL: 'English learners',
+  'Eng Prof': 'English proficient',
+  'Amer Indian': 'American Indian',
+  'Pacific Isle': 'Pacific Islander',
+  'Two or More': 'Two or more races',
+}
+
+export function groupLabel(raw) {
+  return GROUP_LABELS[raw] ?? raw
 }

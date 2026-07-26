@@ -16,6 +16,7 @@ import pandas as pd
 SUPPRESSION_MARKERS: set[str] = {"*"}
 
 SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "district.schema.json"
+SUBGROUP_SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "subgroup.schema.json"
 
 
 def check_sources_populated(topics: list[str], files: dict[str, dict[str, str]]) -> None:
@@ -67,3 +68,22 @@ def check_output_file(path: Path) -> None:
                         f"value={cell['value']} suppressed={cell['suppressed']} "
                         "-- value must be null iff suppressed is true."
                     )
+
+
+def check_subgroup_file(path: Path) -> None:
+    """Same contract as check_output_file, one nesting level deeper:
+    topics -> year -> dimension -> group -> metric -> cell."""
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    schema = json.loads(SUBGROUP_SCHEMA_PATH.read_text(encoding="utf-8"))
+    jsonschema.validate(doc, schema)
+    for topic, years in doc["topics"].items():
+        for year, dims in years.items():
+            for dim, groups in dims.items():
+                for group, metrics in groups.items():
+                    for metric, cell in metrics.items():
+                        if (cell["value"] is None) != cell["suppressed"]:
+                            raise ValueError(
+                                f"{path.name}: {topic}/{year}/{dim}/{group}/{metric}: "
+                                f"value={cell['value']} suppressed={cell['suppressed']} "
+                                "-- value must be null iff suppressed is true."
+                            )

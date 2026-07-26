@@ -99,7 +99,7 @@ function shortNum(v, kind) {
 // no data exists for that year yet.
 // size 'large' (the expanded modal / story embeds) adds value labels on the
 // primary series and roomier type; 'normal' labels only the latest point.
-export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size = 'normal' }) {
+export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size = 'normal', showLabels = true }) {
   const { rows, seriesKeys, topicBreaks } = buildChart(topicId, seriesList)
   const large = size === 'large'
 
@@ -165,7 +165,9 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
   }
 
   const valueLabel = (sKey, dataKey) => {
-    if (sKey !== primaryKey) return null
+    // Many-line views (student groups) skip value labels entirely — no
+    // single series is "primary" there, and labels would collide.
+    if (!showLabels || sKey !== primaryKey) return null
     const render = (props) => {
       const { x, y, value, index } = props
       if (value == null || !labelSet.has(index)) return null

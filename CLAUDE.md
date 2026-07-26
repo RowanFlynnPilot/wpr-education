@@ -93,6 +93,21 @@ for exact derivations and `pipeline/sources.py` for source-file recon notes):
 Statewide rows ride through the pipeline as DPI code `0000` and land in
 `data/state.json`.
 
+**Subgroups.** `data/subgroups/{dpi_code}.json` (schema:
+`schemas/subgroup.schema.json`) carries the same metrics broken out by
+student group: `topics -> topic -> year -> dimension -> group -> metric ->
+cell`. Dimensions: `race_ethnicity`, `econ_status`, `disability`
+(SwD/SwoD — the by-condition "Disability" GROUP_BY is deliberately not
+ingested), `el_status` ("ELL Status"/"ELL/LEP" harmonized to "EL" across
+DPI's rename). Group labels are otherwise DPI's verbatim
+(`GROUP_BY_VALUE`); `[Data Suppressed]` bucket rows are skipped. Subgroup
+files exist only for the 12 config districts + statewide (all 507 would
+grow the repo ~10x for districts nobody can route to); flipping a
+candidate to included still needs no pipeline change. ACT participation
+for a group is suppressed when every Composite result row is redacted —
+a missing "No Test" row only means zero non-testers when results are
+actually enumerated.
+
 ## Refresh workflow
 
 ```powershell
@@ -199,9 +214,10 @@ UI for every topic, most recent year — all values match at portal precision
 Known state of the data:
 
 - No suppressed cells exist among the 8 included districts at the
-  all-students level (371 exist statewide; suppression rendering verified
-  against Washington Island 6069). Expect real suppression when subgroup
-  views ship.
+  all-students level (371 exist statewide). Subgroup views shipped
+  2026-07-25 ("Break out by" pills on every topic chart) and carry heavy
+  genuine suppression in the small districts — Athens' ACT race view is
+  the reference case.
 - 2025-26 ACT lands ~fall 2026: add it to `sources.py`, run the refresh, and
   the two 2025-26 breaks already in `config/breaks.json` will annotate it.
 
@@ -213,6 +229,6 @@ Next tasks, in order:
    pipeline change).
 2. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
    DPI errata for the spring-2026 ACT scoring-error revisions.
-3. Stretch (in order): subgroup views with suppression-aware panels;
-   school-level data; per-chart CSV download; Forward Exam v1.5 (extend the
-   2023-24 cut-score break's `topics` to include `forward`).
+3. Stretch (in order): school-level data beneath each district; Forward
+   Exam v1.5 (extend the 2023-24 cut-score break's `topics` to include
+   `forward`). Subgroup views and per-chart CSV download shipped.

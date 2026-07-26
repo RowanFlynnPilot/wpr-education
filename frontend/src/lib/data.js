@@ -28,6 +28,17 @@ export async function loadCore() {
 // fetch.
 const docCache = new Map()
 
+// Subgroup docs exist only for config districts + statewide, and are
+// fetched lazily the first time a student-group view opens.
+const subgroupCache = new Map()
+
+export function loadSubgroups(code) {
+  if (!subgroupCache.has(code)) {
+    subgroupCache.set(code, loadJSON(`subgroups/${code}.json`))
+  }
+  return subgroupCache.get(code)
+}
+
 export async function loadDocs(codes) {
   const unique = [...new Set(codes)]
   for (const code of unique) {
