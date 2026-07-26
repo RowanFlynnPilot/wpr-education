@@ -1,3 +1,4 @@
+import wprBadge from '../assets/wpr-typewriter-badge.png'
 import { suppressedYears } from '../lib/chartData'
 import { ACCENTS } from '../lib/logos'
 import { COLORS, TOPICS, breaksFor, fmtYear } from '../lib/meta'
@@ -36,7 +37,10 @@ export default function EmbedPage({ code, topicId, metric, peers, index, state, 
   return (
     <div className="embed-page">
       <div className="embed-head" style={accent ? { borderBottomColor: accent } : undefined}>
-        <span className="masthead-kicker">Wausau Pilot &amp; Review</span>
+        <div className="embed-brand">
+          <img className="embed-badge" src={wprBadge} alt="" />
+          <span className="masthead-kicker">Wausau Pilot &amp; Review</span>
+        </div>
         <h1 className="embed-title">
           {entry.label}: {topic.label} — {meta.label}
         </h1>

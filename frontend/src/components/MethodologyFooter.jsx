@@ -1,3 +1,4 @@
+import wprBadge from '../assets/wpr-typewriter-badge.png'
 import { BREAKS } from '../lib/meta'
 
 export default function MethodologyFooter({ generated }) {
@@ -68,9 +69,12 @@ export default function MethodologyFooter({ generated }) {
         especially in smaller districts.
       </p>
       <p className="credit">
-        A <a href="https://wausaupilotandreview.com" target="_blank" rel="noreferrer">Wausau Pilot &amp; Review</a>{' '}
-        project. Code and data are public on{' '}
-        <a href="https://github.com/RowanFlynnPilot/wpr-education" target="_blank" rel="noreferrer">GitHub</a>.
+        <img className="credit-badge" src={wprBadge} alt="" />
+        <span>
+          A <a href="https://wausaupilotandreview.com" target="_blank" rel="noreferrer">Wausau Pilot &amp; Review</a>{' '}
+          project — more news, less fluff, all local. Code and data are public on{' '}
+          <a href="https://github.com/RowanFlynnPilot/wpr-education" target="_blank" rel="noreferrer">GitHub</a>.
+        </span>
       </p>
     </footer>
   )

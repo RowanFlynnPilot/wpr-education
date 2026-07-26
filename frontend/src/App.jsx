@@ -1,4 +1,6 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
+import wprBadge from './assets/wpr-typewriter-badge.png'
+import wprWordmark from './assets/wpr-logo.png'
 import Landing from './components/Landing'
 import MethodologyFooter from './components/MethodologyFooter'
 import { loadCore, loadDocs } from './lib/data'
@@ -135,8 +137,19 @@ export default function App() {
   return (
     <div className="app">
       <header className="masthead">
-        <div className="masthead-kicker">Wausau Pilot &amp; Review</div>
-        <h1>Central Wisconsin School Data</h1>
+        <a
+          href="https://wausaupilotandreview.com"
+          target="_blank"
+          rel="noreferrer"
+          className="masthead-badge"
+          aria-label="Wausau Pilot & Review"
+        >
+          <img src={wprBadge} alt="" />
+        </a>
+        <div className="masthead-text">
+          <img className="masthead-wordmark" src={wprWordmark} alt="Wausau Pilot & Review" />
+          <h1>Central Wisconsin School Data</h1>
+        </div>
       </header>
       <main>
         {entry && !isEmbed ? (
