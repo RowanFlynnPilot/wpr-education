@@ -61,6 +61,12 @@ export const TOPICS = [
   },
 ]
 
+// School years in running text use a non-breaking hyphen so "(2024-25)"
+// never wraps to "(2024-" / "25)" on narrow screens.
+export function fmtYear(year) {
+  return year.replace('-', '‑')
+}
+
 export function fmtValue(value, kind) {
   if (value == null) return '—'
   if (kind === 'percent') return `${value.toLocaleString('en-US', { maximumFractionDigits: 1 })}%`

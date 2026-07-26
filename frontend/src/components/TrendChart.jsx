@@ -11,13 +11,14 @@ import {
 import { buildChart } from '../lib/chartData'
 import { fmtValue } from '../lib/meta'
 
-function BreakBadge({ viewBox, n, kind }) {
+function BreakBadge({ viewBox, n, kind, stack }) {
   const x = viewBox?.x ?? 0
+  const cy = 12 + stack * 20
   return (
     <g>
       <circle
         cx={x}
-        cy={12}
+        cy={cy}
         r={8.5}
         fill={kind === 'comparability_break' ? '#8C4A2F' : '#F6F2E9'}
         stroke="#8C4A2F"
@@ -25,7 +26,7 @@ function BreakBadge({ viewBox, n, kind }) {
       />
       <text
         x={x}
-        y={12}
+        y={cy}
         textAnchor="middle"
         dominantBaseline="central"
         fontSize={10}
@@ -77,10 +78,18 @@ function ChartTooltip({ active, label, payload, seriesMeta, kind }) {
 export default function TrendChart({ topicId, kind, seriesList }) {
   const { rows, seriesKeys, topicBreaks } = buildChart(topicId, seriesList)
 
+  // Breaks sharing a school year (e.g. both 2025-26 ACT annotations) stack
+  // their badges vertically instead of drawing on top of each other; the
+  // chart's top margin grows to make room.
+  const stackOf = topicBreaks.map((b, i) =>
+    topicBreaks.slice(0, i).filter((o) => o.school_year === b.school_year).length,
+  )
+  const topMargin = 26 + Math.max(0, ...stackOf) * 20
+
   return (
     <div className="trend-chart">
-      <ResponsiveContainer width="100%" height={260}>
-        <LineChart data={rows} margin={{ top: 26, right: 12, bottom: 4, left: 0 }}>
+      <ResponsiveContainer width="100%" height={260 + topMargin - 26}>
+        <LineChart data={rows} margin={{ top: topMargin, right: 12, bottom: 4, left: 0 }}>
           <CartesianGrid stroke="#E4DECF" strokeDasharray="1 3" vertical={false} />
           <XAxis
             dataKey="year"
@@ -110,7 +119,7 @@ export default function TrendChart({ topicId, kind, seriesList }) {
               stroke="#8C4A2F"
               strokeWidth={b.type === 'comparability_break' ? 1.5 : 1}
               strokeDasharray={b.type === 'comparability_break' ? '6 4' : '2 4'}
-              label={<BreakBadge n={i + 1} kind={b.type} />}
+              label={<BreakBadge n={i + 1} kind={b.type} stack={stackOf[i]} />}
             />
           ))}
           {seriesList.flatMap((s) =>

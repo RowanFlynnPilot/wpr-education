@@ -171,9 +171,11 @@ a {
 
 /* District page */
 .back-link {
+  display: inline-block;
   font-family: var(--mono);
   font-size: 12px;
   text-decoration: none;
+  padding: 8px 0; /* touch target */
 }
 .district-title {
   font-size: clamp(22px, 6vw, 30px);
@@ -208,13 +210,13 @@ a {
 .pill {
   font-family: var(--mono);
   font-size: 11.5px;
-  padding: 5px 10px;
+  padding: 7px 13px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper);
   color: var(--ink);
   cursor: pointer;
-  min-height: 30px;
+  min-height: 38px; /* comfortable touch target in the iframe */
 }
 .pill.active {
   background: var(--teal);

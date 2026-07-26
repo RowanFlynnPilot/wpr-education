@@ -1,4 +1,4 @@
-import { fmtValue } from '../lib/meta'
+import { fmtValue, fmtYear } from '../lib/meta'
 
 function latest(doc, topicId, metric) {
   const years = doc.topics[topicId] ?? {}
@@ -63,27 +63,27 @@ export default function Landing({ index, state, docs }) {
 
       <div className="headline-grid">
         <HeadlineCard
-          title={`Students enrolled (${enrollYear})`}
+          title={`Students enrolled (${fmtYear(enrollYear)})`}
           big={combined.toLocaleString('en-US')}
           sub={`across ${index.districts.length} county districts`}
         />
         {act && (
           <HeadlineCard
-            title={`ACT composite (${act.year})`}
+            title={`ACT composite (${fmtYear(act.year)})`}
             big={`${fmtValue(act.min, 'score')}–${fmtValue(act.max, 'score')}`}
             sub={`county range · statewide ${fmtCell(stateAct, 'score')}`}
           />
         )}
         {grad && (
           <HeadlineCard
-            title={`4-year graduation (${grad.year})`}
+            title={`4-year graduation (${fmtYear(grad.year)})`}
             big={`${fmtValue(grad.min, 'percent')}–${fmtValue(grad.max, 'percent')}`}
             sub={`county range · statewide ${fmtCell(stateGrad, 'percent')}`}
           />
         )}
         {abs && (
           <HeadlineCard
-            title={`Chronically absent (${abs.year})`}
+            title={`Chronically absent (${fmtYear(abs.year)})`}
             big={`${fmtValue(abs.min, 'percent')}–${fmtValue(abs.max, 'percent')}`}
             sub={`county range · statewide ${fmtCell(stateAbs, 'percent')}`}
           />

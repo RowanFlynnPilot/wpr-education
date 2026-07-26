@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { seriesFromDoc, suppressedYears } from '../lib/chartData'
-import { COLORS, TOPICS, breaksFor, fmtValue } from '../lib/meta'
+import { COLORS, TOPICS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
 import TrendChart from './TrendChart'
 
 function latestCell(doc, topicId, metric) {
@@ -15,7 +15,7 @@ function StatBlock({ title, stat, kind }) {
   if (!stat) return null
   return (
     <div className="stat-block">
-      <div className="stat-label">{title} <span className="stat-year">({stat.year})</span></div>
+      <div className="stat-label">{title} <span className="stat-year">({fmtYear(stat.year)})</span></div>
       <div className="stat-value">
         {stat.cell.suppressed ? <span className="suppressed-text">Suppressed</span> : fmtValue(stat.cell.value, kind)}
       </div>
