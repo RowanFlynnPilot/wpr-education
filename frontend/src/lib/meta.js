@@ -100,14 +100,15 @@ export const COLORS = {
   groups: ['#3A867C', '#C2703D', '#7D5BA6', '#4A7DB0', '#B04A5A', '#94742F', '#A0628A', '#5A8AA0', '#4A2B52'],
 }
 
-// Student-group dimensions, as emitted by the pipeline into
-// data/subgroups/{code}.json. Group labels inside are DPI's own
-// (Econ Disadv, SwD, ...), expanded for display via GROUP_LABELS.
+// Student-group dimensions offered in the UI. Editorial decision
+// 2026-07-26: present economic status only. The pipeline still emits
+// race_ethnicity, disability and el_status into data/subgroups/*.json,
+// so re-adding one here is a one-line change:
+//   { id: 'race_ethnicity', label: 'Race & ethnicity' },
+//   { id: 'disability', label: 'Disability' },
+//   { id: 'el_status', label: 'English learners' },
 export const DIMENSIONS = [
-  { id: 'race_ethnicity', label: 'Race & ethnicity' },
   { id: 'econ_status', label: 'Economic status' },
-  { id: 'disability', label: 'Disability' },
-  { id: 'el_status', label: 'English learners' },
 ]
 
 // DPI's abbreviations, spelled out for readers.

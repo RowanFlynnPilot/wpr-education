@@ -62,12 +62,10 @@ export default function MethodologyFooter({ generated }) {
         three years behind DPI's, so the U.S. line ends earlier.
       </p>
       <p>
-        <strong>Student groups.</strong> Group breakdowns use DPI's own categories,
-        which changed over time: "Two or more races" and "Pacific Islander" were
-        added as separate categories in later years, so those lines start when DPI's
-        do, and DPI renamed its English-learner category (ELL/LEP, now EL) — we
-        treat it as one group. Small groups are heavily redacted; expect gaps
-        labeled "suppressed for student privacy," especially in smaller districts.
+        <strong>Student groups.</strong> Group breakdowns use DPI's own categories
+        (here, economically disadvantaged students and their peers). Small groups
+        are heavily redacted; expect gaps labeled "suppressed for student privacy,"
+        especially in smaller districts.
       </p>
       <p className="credit">
         A <a href="https://wausaupilotandreview.com" target="_blank" rel="noreferrer">Wausau Pilot &amp; Review</a>{' '}

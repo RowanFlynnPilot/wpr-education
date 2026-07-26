@@ -171,7 +171,9 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
     const render = (props) => {
       const { x, y, value, index } = props
       if (value == null || !labelSet.has(index)) return null
-      const below = isLocalDip(index)
+      // Dips get their label below the line — unless that would collide
+      // with the x-axis at the bottom of the plot.
+      const below = isLocalDip(index) && y < height - 64
       return (
         <text
           x={x}
@@ -214,7 +216,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
             label={large ? { value: 'School year', position: 'insideBottom', offset: -4, style: { fontSize: 12, fill: '#6B675C', fontFamily: "'Public Sans', sans-serif" } } : undefined}
           />
           <YAxis
-            width={large ? 58 : 44}
+            width={large ? 58 : 50}
             tick={tickStyle}
             tickFormatter={fmtTick}
             tickLine={false}
@@ -224,7 +226,7 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
               value: UNIT_LABEL[kind] ?? '',
               angle: -90,
               position: 'insideLeft',
-              offset: large ? 2 : 8,
+              offset: large ? 2 : 0,
               style: {
                 textAnchor: 'middle',
                 fontSize: large ? 12 : 10.5,
