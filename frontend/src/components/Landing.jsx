@@ -73,13 +73,14 @@ function HeadlineCard({ title, big, sub, spark, onExpand }) {
   )
 }
 
-const scrollToCounty = (county) =>
-  document.getElementById(`county-${county}`)?.scrollIntoView({
-    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-    block: 'start',
-  })
+// The county focus lives in the hash (#/?county=Wood) so a selection
+// survives back-navigation from a district page and can be deep-linked
+// in embeds. Marathon (the flagship) is the clean-hash default.
+const setCountyHash = (county) => {
+  window.location.hash = county === 'Marathon' ? '#/' : `#/?county=${encodeURIComponent(county)}`
+}
 
-export default function Landing({ index, state }) {
+export default function Landing({ index, state, county }) {
   const districts = index.districts
   const [expanded, setExpanded] = useState(null)
 
@@ -96,6 +97,8 @@ export default function Landing({ index, state }) {
   // Marathon leads (the flagship county), the rest alphabetical.
   const counties = [...new Set(districts.map((d) => d.county))]
     .sort((a, b) => (a === 'Marathon' ? -1 : b === 'Marathon' ? 1 : a.localeCompare(b)))
+  const selected = county === 'all' || counties.includes(county) ? county : 'Marathon'
+  const shownCounties = selected === 'all' ? counties : [selected]
 
   const enrollLatests = districts.map((d) => d.summary.latest.total_enrollment)
     .filter((l) => l && !l.suppressed)
@@ -192,22 +195,30 @@ export default function Landing({ index, state }) {
       )}
 
       <h2 className="section-heading">Pick a district</h2>
-      <nav className="county-nav" aria-label="Jump to county">
-        {counties.map((c) => (
-          <button key={c} className="pill topic-chip" onClick={() => scrollToCounty(c)}>
-            {c}
-          </button>
-        ))}
-      </nav>
+      <div className="county-picker">
+        <label htmlFor="county-select">County</label>
+        <select
+          id="county-select"
+          value={selected}
+          onChange={(e) => setCountyHash(e.target.value)}
+        >
+          {counties.map((c) => (
+            <option key={c} value={c}>
+              {c} · {districts.filter((d) => d.county === c).length} districts
+            </option>
+          ))}
+          <option value="all">All {counties.length} counties · {districts.length} districts</option>
+        </select>
+      </div>
 
-      {counties.map((county) => {
+      {shownCounties.map((county) => {
         const local = districts.filter((d) => d.county === county)
         const countyEnroll = local
           .map((d) => d.summary.latest.total_enrollment)
           .filter((l) => l && !l.suppressed && l.year === enrollYear)
           .reduce((sum, l) => sum + l.value, 0)
         return (
-          <section key={county} className="county-section" id={`county-${county}`}>
+          <section key={county} className="county-section">
             <div className="county-head">
               <h3>{county} County</h3>
               <span className="county-meta">

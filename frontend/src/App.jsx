@@ -11,13 +11,14 @@ const DistrictPage = lazy(() => import('./components/DistrictPage'))
 const EmbedPage = lazy(() => import('./components/EmbedPage'))
 
 // Routes:
+//   #/?county=Wood                  landing focused on one county ("all" = every county)
 //   #/6223?peers=4970,0196          district page, peers preselected
 //   #/embed/6223/act?metric=...     story mode: one chart, minimal chrome
 function parseHash() {
   const [path, query] = window.location.hash.replace(/^#\/?/, '').split('?')
   const params = new URLSearchParams(query || '')
   const peers = (params.get('peers') || '').split(',').filter(Boolean)
-  return { path, peers, metric: params.get('metric') || '' }
+  return { path, peers, metric: params.get('metric') || '', county: params.get('county') || '' }
 }
 
 function useHashRoute() {
@@ -163,7 +164,7 @@ export default function App() {
             />
           </Suspense>
         ) : (
-          <Landing index={index} state={state} />
+          <Landing index={index} state={state} county={route.county} />
         )}
       </main>
       <MethodologyFooter generated={index.generated} />

@@ -211,7 +211,10 @@ fallback heights are 1400px for the landing page and 2400px for district
 pages. Deep-link a district with `#/{dpi_code}` (codes in
 `data/index.json`); preselect comparison districts with
 `#/{dpi_code}?peers={code},{code}` — e.g. `#/6223?peers=4970` embeds
-Wausau vs. D.C. Everest.
+Wausau vs. D.C. Everest. The landing page shows one county at a time
+(dropdown; Marathon default) — deep-link a county with
+`#/?county={County}`, or `#/?county=all` for the full 47-district
+roster.
 
 **Story mode** — a single chart with minimal chrome, for dropping one
 chart into an article next to the paragraph it illustrates:
@@ -246,8 +249,10 @@ UI for every topic, most recent year — all values match at portal precision
 County districts to 47 districts across 9 counties (approved by Rowan;
 roster drafted from the enrollment file's COUNTY column, then adopted as
 the editorial list). Branding is now "Central Wisconsin School Data";
-landing page groups districts by county (Marathon first) and renders from
-index.json summaries alone; peer picker shows same-county districts inline
+landing page focuses one county at a time via a dropdown (Marathon
+default; selection lives in the hash as `?county=`, so it survives
+back-navigation and deep-links; `all` shows every county) and renders
+from index.json summaries alone; peer picker shows same-county districts inline
 with the rest of the region behind a disclosure. Logos/accents exist for
 the original 12 districts only — the other 35 degrade gracefully (no logo
 chip, teal accent); collecting them is an open cosmetic task.
