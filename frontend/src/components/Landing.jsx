@@ -83,6 +83,20 @@ const setCountyHash = (county) => {
 export default function Landing({ index, state, county }) {
   const districts = index.districts
   const [expanded, setExpanded] = useState(null)
+  const [query, setQuery] = useState('')
+
+  // Name matches first (starts-with before contains); county matches only
+  // on prefix, so "ath" finds Athens without dragging in all of Marathon.
+  const q = query.trim().toLowerCase()
+  const byLabel = q
+    ? districts
+        .filter((d) => d.label.toLowerCase().includes(q))
+        .sort((a, b) => b.label.toLowerCase().startsWith(q) - a.label.toLowerCase().startsWith(q))
+    : []
+  const byCounty = q
+    ? districts.filter((d) => !byLabel.includes(d) && d.county.toLowerCase().startsWith(q))
+    : []
+  const matches = [...byLabel, ...byCounty].slice(0, 8)
 
   const wiSeries = (topicId, metric) => ({
     key: 'state',
@@ -195,21 +209,41 @@ export default function Landing({ index, state, county }) {
       )}
 
       <h2 className="section-heading">Pick a district</h2>
-      <div className="county-picker">
-        <label htmlFor="county-select">County</label>
-        <select
-          id="county-select"
-          value={selected}
-          onChange={(e) => setCountyHash(e.target.value)}
-        >
-          {counties.map((c) => (
-            <option key={c} value={c}>
-              {c} · {districts.filter((d) => d.county === c).length} districts
-            </option>
-          ))}
-          <option value="all">All {counties.length} counties · {districts.length} districts</option>
-        </select>
+      <div className="picker-row">
+        <div className="county-picker">
+          <label htmlFor="county-select">County</label>
+          <select
+            id="county-select"
+            value={selected}
+            onChange={(e) => setCountyHash(e.target.value)}
+          >
+            {counties.map((c) => (
+              <option key={c} value={c}>
+                {c} · {districts.filter((d) => d.county === c).length} districts
+              </option>
+            ))}
+            <option value="all">All {counties.length} counties · {districts.length} districts</option>
+          </select>
+        </div>
+        <input
+          className="district-search"
+          type="search"
+          placeholder="…or search all 47 districts"
+          aria-label="Search districts by name or county"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
       </div>
+      {q && (
+        <div className="search-results" role="list">
+          {matches.map((d) => (
+            <a key={d.dpi_code} role="listitem" className="pill search-hit" href={`#/${d.dpi_code}`}>
+              {d.label} <span className="search-hit-county">{d.county}</span>
+            </a>
+          ))}
+          {!matches.length && <span className="search-empty">No district matches "{query.trim()}"</span>}
+        </div>
+      )}
 
       {shownCounties.map((county) => {
         const local = districts.filter((d) => d.county === county)

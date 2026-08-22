@@ -62,6 +62,10 @@ export default function MethodologyFooter({ generated }) {
         than Wisconsin's percentage-based rate. National data also runs one to
         three years behind DPI's, so the U.S. line ends earlier.
       </p>
+      <p>
+        <strong>Logos.</strong> School logos are the districts' own marks, shown
+        small for identification only, from each district's official website.
+      </p>
       <p className="credit">
         <img className="credit-badge" src={wprBadge} alt="" />
         <span>

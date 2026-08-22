@@ -130,13 +130,15 @@ a {
 }
 
 /* Logo chips: districts' own marks, boxed on white so wide wordmarks and
-   square crests sit together cleanly. */
+   square crests sit together cleanly. The box hugs the mark's width (up
+   to a cap) so wide wordmark lockups stay legible instead of shrinking
+   into a fixed square. */
 .logo-chip {
   flex: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  min-width: 44px;
   height: 44px;
   background: #fff;
   border: 1px solid var(--line);
@@ -144,15 +146,18 @@ a {
   padding: 4px;
 }
 .logo-chip img {
-  max-width: 100%;
+  max-width: 88px;
   max-height: 100%;
   object-fit: contain;
 }
 .logo-chip-lg {
-  width: 58px;
+  min-width: 58px;
   height: 58px;
   padding: 6px;
   border-radius: 10px;
+}
+.logo-chip-lg img {
+  max-width: 150px;
 }
 
 /* Masthead */
@@ -281,11 +286,55 @@ a {
   font-weight: 600;
   margin: 0 0 12px;
 }
+.picker-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-bottom: 16px;
+}
 .county-picker {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 16px;
+}
+.district-search {
+  flex: 1 1 200px;
+  max-width: 300px;
+  font: 400 14px/1.3 var(--body);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.district-search::placeholder {
+  color: var(--muted);
+}
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: -6px 0 16px;
+}
+.search-hit {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: var(--paper);
+}
+.search-hit:hover {
+  border-color: var(--teal);
+}
+.search-hit-county {
+  color: var(--muted);
+  font-size: 11px;
+  margin-left: 4px;
+}
+.search-empty {
+  font-size: 12.5px;
+  color: var(--muted);
 }
 .county-picker label {
   font-size: 11px;

@@ -310,7 +310,7 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
 
   return (
     <div className="district-page">
-      <a className="back-link" href="#/">← All districts</a>
+      <a className="back-link" href={`#/?county=${encodeURIComponent(entry.county)}`}>← All districts</a>
       <div className="district-header" style={ACCENTS[code] ? { borderBottomColor: ACCENTS[code] } : undefined}>
         {LOGOS[code] && (
           <span className="logo-chip logo-chip-lg">
