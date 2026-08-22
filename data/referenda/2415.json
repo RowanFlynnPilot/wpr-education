@@ -1,0 +1,39 @@
+{
+  "district": {
+    "dpi_code": "2415",
+    "dpi_name": "Gresham"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3200000.0,
+      "brief": "Issue debt for the purpose of expanding academic, athletic, and recreational space at the school including a new gymnasium and locker rooms, replacing soccer field and track and field areas, additional parking.",
+      "yes_votes": 269,
+      "no_votes": 515,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6000000.0,
+      "brief": "Issue debt to replace high school section of facility, raze the current high school, construct additional academic and administrative space in location of razed portion of building, and renovations to remaining facilities and parking improvements.",
+      "yes_votes": 314,
+      "no_votes": 481,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6500000.0,
+      "brief": "Issue debt not to exceed $6,500,000 for the construction, renovation, and demolition of parts of the existing school facility.",
+      "yes_votes": 491,
+      "no_votes": 388,
+      "status": "Passed"
+    }
+  ]
+}

@@ -3,8 +3,28 @@
     "dpi_code": "8147",
     "dpi_name": "Lake Country Classical Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 56.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 49.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 67.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 74.4,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2021-22": {
         "dropout_rate": {

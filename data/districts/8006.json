@@ -3,8 +3,64 @@
     "dpi_code": "8006",
     "dpi_name": "Downtown Montessori Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 59.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 41.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 70.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 84.1,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 68.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 46.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 53.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 65.1,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 75.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 54.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 74.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 87.1,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2022-23": {
         "dropout_rate": {

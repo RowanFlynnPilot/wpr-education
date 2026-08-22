@@ -3,8 +3,64 @@
     "dpi_code": "8022",
     "dpi_name": "Adeline Montessori School Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": 53.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 69.2,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 46.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 37.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 42.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 57.9,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 27.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 22.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 44.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 55.3,
+          "suppressed": false
+        }
+      }
+    },
     "preact": {
       "2022-23": {
         "composite_avg_gr9": {

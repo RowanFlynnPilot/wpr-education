@@ -3,7 +3,7 @@
     "dpi_code": "1078",
     "dpi_name": "Chetek"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "ap": {
       "2006-07": {
@@ -211,6 +211,124 @@
       "2009-10": {
         "total_enrollment": {
           "value": 907.0,
+          "suppressed": false
+        }
+      }
+    },
+    "finance": {
+      "1993-94": {
+        "revenue_limit_per_member": {
+          "value": 5007,
+          "suppressed": false
+        }
+      },
+      "1994-95": {
+        "revenue_limit_per_member": {
+          "value": 5201,
+          "suppressed": false
+        }
+      },
+      "1995-96": {
+        "revenue_limit_per_member": {
+          "value": 5401,
+          "suppressed": false
+        }
+      },
+      "1996-97": {
+        "revenue_limit_per_member": {
+          "value": 5607,
+          "suppressed": false
+        }
+      },
+      "1997-98": {
+        "revenue_limit_per_member": {
+          "value": 5871,
+          "suppressed": false
+        }
+      },
+      "1998-99": {
+        "revenue_limit_per_member": {
+          "value": 6125,
+          "suppressed": false
+        }
+      },
+      "1999-00": {
+        "revenue_limit_per_member": {
+          "value": 6372,
+          "suppressed": false
+        }
+      },
+      "2000-01": {
+        "revenue_limit_per_member": {
+          "value": 6620,
+          "suppressed": false
+        }
+      },
+      "2001-02": {
+        "revenue_limit_per_member": {
+          "value": 6831,
+          "suppressed": false
+        }
+      },
+      "2002-03": {
+        "revenue_limit_per_member": {
+          "value": 7120,
+          "suppressed": false
+        }
+      },
+      "2003-04": {
+        "revenue_limit_per_member": {
+          "value": 7483,
+          "suppressed": false
+        }
+      },
+      "2004-05": {
+        "revenue_limit_per_member": {
+          "value": 7888,
+          "suppressed": false
+        }
+      },
+      "2005-06": {
+        "revenue_limit_per_member": {
+          "value": 8282,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "revenue_limit_per_member": {
+          "value": 8567,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "revenue_limit_per_member": {
+          "value": 8997,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "cost_per_member": {
+          "value": 11881,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 9188,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "cost_per_member": {
+          "value": 12461,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 9445,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "cost_per_member": {
+          "value": 13186,
           "suppressed": false
         }
       }

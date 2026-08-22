@@ -3,7 +3,7 @@
     "dpi_code": "8001",
     "dpi_name": "Seeds of Health Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2016-17": {
@@ -273,6 +273,152 @@
         },
         "participation_pct": {
           "value": 99.5,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 35.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 24.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 33.3,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 30.9,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 24.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 26.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 30.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 30.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 26.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 31.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 30.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 28.6,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 10.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 8.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 12.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 11.8,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 13.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 17.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 36.7,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 14.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 22.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 22.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 38.3,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 20.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 22.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 20.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 38.4,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 30.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 22.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 16.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 45.2,
           "suppressed": false
         }
       }

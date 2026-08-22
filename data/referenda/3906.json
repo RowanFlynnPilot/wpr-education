@@ -1,0 +1,109 @@
+{
+  "district": {
+    "dpi_code": "3906",
+    "dpi_name": "Nekoosa"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1994-05-24",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 9400000.0,
+      "brief": "new120,700 sq ft M.S.",
+      "yes_votes": 1541,
+      "no_votes": 541,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 300000.0,
+      "brief": "improvement of fire flow; purchase math textbooks/material; legal/closing costs",
+      "yes_votes": 1213,
+      "no_votes": 639,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2001-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 13675000.0,
+      "brief": "renovations/construction elementary and high school; technology for the district; fixtures, furnishings",
+      "yes_votes": 1110,
+      "no_votes": 1466,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2001-11-06",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 100000.0,
+      "brief": "recurring purposes",
+      "yes_votes": 889,
+      "no_votes": 1585,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-02-21",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 9900000.0,
+      "brief": "Paying, installing, and servicing technology, for asbestos abatement; for building improvements, remodeling, and additions, and related professional services.",
+      "yes_votes": 1088,
+      "no_votes": 1048,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-02-21",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1269000.0,
+      "brief": "Paying the cost of necessary maintenance, repairs, renovation, and related professional services.",
+      "yes_votes": 1237,
+      "no_votes": 875,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2000000.0,
+      "brief": "Maintain/improve current programs and services, add staff to support struggling families, add teacher and upgrade tech ed equipment, add teacher to help K-5 students who are not meeting grade level math learning targets, add teacher to virtual program.",
+      "yes_votes": 2043,
+      "no_votes": 1154,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2900000.0,
+      "brief": "Replace the track, replace football/soccer field, update the softball field, improve other athletic infrastructure",
+      "yes_votes": 1717,
+      "no_votes": 1441,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2025-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 10000000.0,
+      "brief": "Improving and maintaining district programs.",
+      "yes_votes": 1875,
+      "no_votes": 2126,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 10000000.0,
+      "brief": "Improving and maintaining district programs.",
+      "yes_votes": 1701,
+      "no_votes": 1274,
+      "status": "Passed"
+    }
+  ]
+}

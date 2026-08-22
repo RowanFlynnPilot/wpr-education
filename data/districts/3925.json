@@ -3,7 +3,7 @@
     "dpi_code": "3925",
     "dpi_name": "New Berlin"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -333,6 +333,170 @@
         },
         "participation_pct": {
           "value": 95.7,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 59.6,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 67.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 66.6,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 67.8,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 61.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 68.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 64.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 68.9,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 60.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 69.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 66.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 68.5,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 58.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 67.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 68.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 67.5,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 48.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 59.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 66.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 62.1,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 55.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 63.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 64.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 75.9,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 55.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 64.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 66.3,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 77.8,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 71.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 77.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 73.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 82.5,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 72.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 78.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 69.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 83.2,
           "suppressed": false
         }
       }
@@ -1507,6 +1671,510 @@
       "2025-26": {
         "total_enrollment": {
           "value": 4475.0,
+          "suppressed": false
+        }
+      }
+    },
+    "open_enrollment": {
+      "2016-17": {
+        "pupils_in": {
+          "value": 32.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 104.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -72.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 219651.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 705278.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -485627.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "pupils_in": {
+          "value": 16.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 106.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -90.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 118032.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 729094.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -611062.0,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "pupils_in": {
+          "value": 6.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 123.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -117.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 44274.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 911792.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -867518.0,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "pupils_in": {
+          "value": null,
+          "suppressed": true
+        },
+        "pupils_out": {
+          "value": 140.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -135.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 38855.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 1073744.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -1034889.0,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "pupils_in": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 148.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -123.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 194595.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 1154676.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -960081.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "pupils_in": {
+          "value": 68.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 139.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -71.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 578987.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 1128901.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -549914.0,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "pupils_in": {
+          "value": 83.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 136.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -53.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 682784.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 1100625.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -417841.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "pupils_in": {
+          "value": 81.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 124.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -43.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 742604.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 1061069.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -318465.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "pupils_in": {
+          "value": 88.0,
+          "suppressed": false
+        },
+        "pupils_out": {
+          "value": 140.0,
+          "suppressed": false
+        },
+        "net_pupils": {
+          "value": -52.0,
+          "suppressed": false
+        },
+        "aid_in": {
+          "value": 845635.0,
+          "suppressed": false
+        },
+        "aid_out": {
+          "value": 1270974.0,
+          "suppressed": false
+        },
+        "net_aid": {
+          "value": -425339.0,
+          "suppressed": false
+        }
+      }
+    },
+    "finance": {
+      "1993-94": {
+        "revenue_limit_per_member": {
+          "value": 7857,
+          "suppressed": false
+        }
+      },
+      "1994-95": {
+        "revenue_limit_per_member": {
+          "value": 8049,
+          "suppressed": false
+        }
+      },
+      "1995-96": {
+        "revenue_limit_per_member": {
+          "value": 8249,
+          "suppressed": false
+        }
+      },
+      "1996-97": {
+        "revenue_limit_per_member": {
+          "value": 8455,
+          "suppressed": false
+        }
+      },
+      "1997-98": {
+        "revenue_limit_per_member": {
+          "value": 8660,
+          "suppressed": false
+        }
+      },
+      "1998-99": {
+        "revenue_limit_per_member": {
+          "value": 8869,
+          "suppressed": false
+        }
+      },
+      "1999-00": {
+        "revenue_limit_per_member": {
+          "value": 9075,
+          "suppressed": false
+        }
+      },
+      "2000-01": {
+        "revenue_limit_per_member": {
+          "value": 9296,
+          "suppressed": false
+        }
+      },
+      "2001-02": {
+        "revenue_limit_per_member": {
+          "value": 9522,
+          "suppressed": false
+        }
+      },
+      "2002-03": {
+        "revenue_limit_per_member": {
+          "value": 9763,
+          "suppressed": false
+        }
+      },
+      "2003-04": {
+        "revenue_limit_per_member": {
+          "value": 9989,
+          "suppressed": false
+        }
+      },
+      "2004-05": {
+        "revenue_limit_per_member": {
+          "value": 10230,
+          "suppressed": false
+        }
+      },
+      "2005-06": {
+        "revenue_limit_per_member": {
+          "value": 10490,
+          "suppressed": false
+        }
+      },
+      "2006-07": {
+        "revenue_limit_per_member": {
+          "value": 10736,
+          "suppressed": false
+        }
+      },
+      "2007-08": {
+        "revenue_limit_per_member": {
+          "value": 11000,
+          "suppressed": false
+        }
+      },
+      "2008-09": {
+        "cost_per_member": {
+          "value": 11860,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11270,
+          "suppressed": false
+        }
+      },
+      "2009-10": {
+        "cost_per_member": {
+          "value": 12181,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11497,
+          "suppressed": false
+        }
+      },
+      "2010-11": {
+        "cost_per_member": {
+          "value": 11994,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11696,
+          "suppressed": false
+        }
+      },
+      "2011-12": {
+        "cost_per_member": {
+          "value": 12723,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11078,
+          "suppressed": false
+        }
+      },
+      "2012-13": {
+        "cost_per_member": {
+          "value": 11987,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11123,
+          "suppressed": false
+        }
+      },
+      "2013-14": {
+        "cost_per_member": {
+          "value": 12071,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11217,
+          "suppressed": false
+        }
+      },
+      "2014-15": {
+        "cost_per_member": {
+          "value": 12376,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11406,
+          "suppressed": false
+        }
+      },
+      "2015-16": {
+        "cost_per_member": {
+          "value": 13433,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11540,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "cost_per_member": {
+          "value": 14337,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11815,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "cost_per_member": {
+          "value": 14452,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11799,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "cost_per_member": {
+          "value": 13842,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11773,
+          "suppressed": false
+        }
+      },
+      "2019-20": {
+        "cost_per_member": {
+          "value": 13894,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 11816,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "cost_per_member": {
+          "value": 13320,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 12138,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "cost_per_member": {
+          "value": 13593,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 12551,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "cost_per_member": {
+          "value": 15842,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 12624,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "cost_per_member": {
+          "value": 14776,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 12794,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "cost_per_member": {
+          "value": 16612,
+          "suppressed": false
+        },
+        "revenue_limit_per_member": {
+          "value": 13130,
+          "suppressed": false
+        }
+      },
+      "2025-26": {
+        "revenue_limit_per_member": {
+          "value": 13568,
           "suppressed": false
         }
       }

@@ -1,0 +1,39 @@
+{
+  "district": {
+    "dpi_code": "6692",
+    "dpi_name": "Wittenberg-Birnamwood"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2250000.0,
+      "brief": "School Additions, Bus Garage",
+      "yes_votes": 2179,
+      "no_votes": 803,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 13105000.0,
+      "brief": "Borrowing would be used for the public purpose of paying the cost of a District-wide school building and improvement program consisting of:  safety and security improvements, remodeling and building infrastructure improvements at District facilities, construction of an agricultural and maintenance facility at the High School, and the construction of classroom additions at the Elementary/Middle Schools.",
+      "yes_votes": 1894,
+      "no_votes": 1434,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4420000.0,
+      "brief": "Borrowing would be used to construct and equip a new gymnasium at the High School.",
+      "yes_votes": 1364,
+      "no_votes": 1952,
+      "status": "Failed"
+    }
+  ]
+}

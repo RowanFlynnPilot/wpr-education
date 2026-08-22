@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "1141",
+    "dpi_name": "Clintonville"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1991-11-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2000000.0,
+      "brief": "",
+      "yes_votes": 1097,
+      "no_votes": 613,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1996-03-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2500000.0,
+      "brief": "ADA imprv, dist wide maintenance projects,music add",
+      "yes_votes": 1280,
+      "no_votes": 996,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-09-12",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 650000.0,
+      "brief": "operating/maintenance costs related to new facilities",
+      "yes_votes": 2065,
+      "no_votes": 1067,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-09-12",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 22915000.0,
+      "brief": "construct/equip new H.S.; remodel HS/elem school/MS complex; relocate central office;acquire 49 acres of land",
+      "yes_votes": 2236,
+      "no_votes": 980,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2007-04-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 425000.0,
+      "brief": "maintain instructional services, co-curricular opportunities and the investment in district facilities and technology",
+      "yes_votes": 561,
+      "no_votes": 1185,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2007-04-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 10700000.0,
+      "brief": "building improvments including HVAC upgrades and maintenance projects",
+      "yes_votes": 615,
+      "no_votes": 1148,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2017-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 24900000.0,
+      "brief": "24.9M bond issue to build a new elementary school.",
+      "yes_votes": 733,
+      "no_votes": 1140,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 37000000.0,
+      "brief": "For the purposes of district-wide improvements to all school buildings and grounds including renovations and additions along with safety and traffic flow improvements, upgrades to building systems and acquisition of related furnishings, fixtures, and equipment.",
+      "yes_votes": 2802,
+      "no_votes": 2030,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 9750000.0,
+      "brief": "Non-Recurring Referendum for $1,950,000 per year for 5 years",
+      "yes_votes": 1549,
+      "no_votes": 1046,
+      "status": "Passed"
+    }
+  ]
+}

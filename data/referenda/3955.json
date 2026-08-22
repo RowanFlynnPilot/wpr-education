@@ -1,0 +1,79 @@
+{
+  "district": {
+    "dpi_code": "3955",
+    "dpi_name": "New London"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1680000.0,
+      "brief": "construct and equip auditorium",
+      "yes_votes": 2722,
+      "no_votes": 2376,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1997-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 19415000.0,
+      "brief": "new high school, convert old high sch to middle school",
+      "yes_votes": 2875,
+      "no_votes": 2308,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 210000.0,
+      "brief": "recurring purposes in connection with improved and expanded facilities",
+      "yes_votes": 1340,
+      "no_votes": 2568,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 16700000.0,
+      "brief": "remodel/renovate/addition to/ equip and site improvements at Sugar Bush and Parkview ES; upgrade restroom facilities at Readfield ES, upgrade and replace a/c at MS; acquire/develop property adjacent to Lincoln ES and improvement at HS athletic fields",
+      "yes_votes": 1399,
+      "no_votes": 2526,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-11-04",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "technology",
+      "yes_votes": 3749,
+      "no_votes": 3675,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2014-11-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "Roofs and facilities maintenance, ensuring safe and secure buildings and maximizing student achievement efforts.",
+      "yes_votes": 3263,
+      "no_votes": 2796,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 13000000.0,
+      "brief": "Non-recurring purposes consisting of building maintenance and operations, energy efficiency projects, life safety and security improvements, and debt service for additional functional space at Parkview Elementary and capital improvement projects at all schools.",
+      "yes_votes": 4072,
+      "no_votes": 2570,
+      "status": "Passed"
+    }
+  ]
+}

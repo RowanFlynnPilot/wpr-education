@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "3206",
+    "dpi_name": "Loyal"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-10-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1800000.0,
+      "brief": "building and remodeling",
+      "yes_votes": 355,
+      "no_votes": 164,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 550000.0,
+      "brief": "refinance temporary borrowing incurred to replace roof in the PK-12 facility; pay cost of replacing boiler, electrical upgrades to district building, furnishings, fixtures, equipment",
+      "yes_votes": 651,
+      "no_votes": 238,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2009-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "operating purposes",
+      "yes_votes": 439,
+      "no_votes": 514,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2010-11-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 697000.0,
+      "brief": "To Exceed the Revenue Limit by $697,000 for 4 years for non-recurring expenses.",
+      "yes_votes": 560,
+      "no_votes": 822,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2014-11-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 195000.0,
+      "brief": "Building Maintenance and Operating Expenses",
+      "yes_votes": 668,
+      "no_votes": 535,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 280000.0,
+      "brief": "Exceed Revenue Limit for five years for non-recurring purposes.",
+      "yes_votes": 717,
+      "no_votes": 496,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 11700000.0,
+      "brief": "REFERENDUM TO APPROVE BUILDING IMPROVEMENTS",
+      "yes_votes": 305,
+      "no_votes": 514,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1100000.0,
+      "brief": "Resolution Authorizing the School District Budget to exceed revenue limit for five years for non-recurring purposes.",
+      "yes_votes": 556,
+      "no_votes": 640,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 6700000.0,
+      "brief": "Authorizing the School District budget to exceed revenue limit for five years for non-recurring purposes.",
+      "yes_votes": 600,
+      "no_votes": 495,
+      "status": "Passed"
+    }
+  ]
+}

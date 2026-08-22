@@ -3,7 +3,7 @@
     "dpi_code": "8019",
     "dpi_name": "Milestone Democratic School Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -43,6 +43,44 @@
         },
         "participation_pct": {
           "value": 33.3,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 12.5,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": 66.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 75.0,
           "suppressed": false
         }
       }

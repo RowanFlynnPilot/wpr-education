@@ -73,6 +73,14 @@ Pipeline output, all committed:
 - `data/districts/{dpi_code}.json` — one file per district (ALL Wisconsin
   districts, not just presented ones), all topics, all years.
 - `data/state.json` — statewide totals, same shape as a district file.
+- `data/schools/{dpi_code}.json` — per-school breakdowns for config
+  districts only (schema: `schemas/school.schema.json`): `schools ->
+  school_code -> {name, type, topics}` where `type` is DPI's GRADE_GROUP
+  school-type label. School rows carry their type in GRADE_GROUP instead
+  of `[All]`, so school selection filters on SCHOOL_NAME not starting
+  with `[`. Closed schools stay in the file with their historical years —
+  the frontend dims them. No statewide school file (that would be every
+  school in Wisconsin).
 
 Every metric cell is `{"value": <number|null>, "suppressed": <bool>}`, with
 `value == null` iff `suppressed == true` (enforced by the validator, described
@@ -103,6 +111,50 @@ for exact derivations and `pipeline/sources.py` for source-file recon notes):
   not suppressed).
 - `enrollment` (2005-06+, certified 3rd-Friday-of-September headcount):
   `total_enrollment`.
+- `forward` (2015-16+ EXCEPT 2019-20 — no COVID-year administration;
+  grades 3-8 Forward Exam, `TEST_GROUP == "Forward"`, grades 3-8 only for
+  a stable definition): `ela_prof_pct`, `math_prof_pct`,
+  `science_prof_pct`, `socstudies_prof_pct` — percent in the top two
+  performance categories (Proficient/Advanced through 2022-23,
+  Meeting/Advanced from 2023-24 — a HARD comparability break,
+  `cutscores-2023-24-forward`, separate from the ACT annotation entry so
+  the ACT line stays connected). The files have per-grade rows only; the
+  combined rate is summed from per-grade counts against DPI's own
+  GROUP_COUNT denominators, and suppresses whenever any contributing
+  count is redacted. Forward ZIPs 2020-21+ split one member across two
+  CSVs — refresh.py concatenates same-member CSVs after a column check.
+- `open_enrollment` (2016-17+, NOT a WISEdash file — the Open Enrollment
+  program office's July-final "pupil transfers and aid adjustments" xlsx,
+  registered in `sources.XLSX_FILES` and parsed by
+  `normalize.build_open_enrollment`): `pupils_in`, `pupils_out`,
+  `net_pupils`, `aid_in`, `aid_out`, `net_aid` (whole dollars, never
+  redacted). Counts are FTE-based aid membership, not September
+  headcounts. Counts under 20 are redacted from 2019-20 on
+  (`oe-redaction-2019-20` annotation); cells are used verbatim — DPI
+  sometimes redacts NET while a component is visible, and computing the
+  net would un-redact it. District-level only: no statewide row, no
+  subgroup or school breakdowns.
+- `finance` (SFS longitudinal workbooks, `sources.FINANCE_FILES`, parsed
+  by `normalize.build_finance`; never redacted): `cost_per_member`
+  (2008-09+; audited cost categories summed / resident membership —
+  category composition drifts at DPI's 2023 recalculation, annotated as
+  `compcost-recalc-2023-24`; the workbook carries one year beyond DPI's
+  published audited range, capped via the served filename's `to_NNNN`
+  token) and `revenue_limit_per_member` (1993-94+; statutory cap, set in
+  advance so it runs a year ahead). District-level only. Finance
+  workbooks key districts by UNPADDED numeric code (zero-filled in the
+  builder), have junk header/filler rows, stray whitespace cells, and
+  cached `#DIV/0!` formula errors for zero-membership years — all
+  handled explicitly.
+
+**Referenda** (`data/referenda/{dpi_code}.json`, schema
+`schemas/referenda.schema.json`) — an event list, not metric cells:
+every school-funding ballot question since 1990 from WiSFPR
+(`sources.REFERENDA_ENDPOINT`, a JSON-over-POST app endpoint — always
+send the explicit date range or it silently returns only the current
+year). Config districts only. Upcoming votes ride along with status
+"Before the Vote Date". Rendered as a table on the district page
+(`ReferendaSection`), newest first, with pass rate in the header.
 
 Statewide rows ride through the pipeline as DPI code `0000` and land in
 `data/state.json`.
@@ -148,15 +200,15 @@ years) and extend that file by hand, keeping the per-series citations.
 
 ## Scope
 
-Seven topics: `act`, `preact`, `ap`, `graduation`, `dropouts`,
-`absenteeism`, `enrollment` (AP + PreACT added 2026-07-26).
+Ten topics: `act`, `forward`, `preact`, `ap`, `graduation`, `dropouts`,
+`absenteeism`, `enrollment`, `open_enrollment`, `finance` — plus the
+referenda event tables (AP + PreACT added 2026-07-26; Forward, open
+enrollment, finance, referenda + school-level data added 2026-08-22).
 
-- v1.5: Forward Exam (grades 3-8) — pulls in the elementary-parent audience.
-- Next data candidate: postsecondary enrollment (20 years of files exist,
-  but the file has no rate/denominator — GROUP_COUNT is the count of
-  ENROLLED graduates, verified 2026-07-26 — so the rate needs a careful
-  join against hs_completion completer counts with class-year alignment
-  from the About the Data page; treat as its own project).
+- Parked: postsecondary enrollment (20 years of files exist, but the
+  file has no rate/denominator — GROUP_COUNT is the count of ENROLLED
+  graduates, verified 2026-07-26 — so the rate needs a careful join
+  against hs_completion completer counts; treat as its own project).
 - Not worth it / stale: habitual_truancy downloads end at 2016-17;
   retention rates are ~0.2% everywhere; postgrad_plans is self-reported
   intent; act_graduates is a different population than the census ACT.
@@ -170,6 +222,11 @@ React + Vite in `frontend/`, deployed to GitHub Pages, embedded via iframe.
   Public Sans (body), JetBrains Mono (data).
 - Core view: district page with per-topic trend charts — selected district vs.
   statewide vs. selectable county peers.
+- School pages (`#/{dpi_code}/school/{school_code}`): same topic sections
+  with the school primary and the district as the one comparison line;
+  reached from a "Drill into a school" nav on the district page (closed
+  schools dimmed, kept for history). TopicSection is shared between the
+  two pages; subgroup pills stay district-only.
 - Break annotations from `config/breaks.json` rendered on every applicable
   chart (vertical rule + short label; detail on hover/tap).
 - Subgroup views (race/ethnicity, economic status, disability, EL) where data
@@ -225,9 +282,10 @@ chart into an article next to the paragraph it illustrates:
 
 e.g. `#/embed/6223/act` (Wausau ACT composite),
 `#/embed/6223/enrollment?metric=enrollment_change&peers=4970` (Wausau vs
-DCE enrollment change). Topic ids: act, graduation, dropouts,
-absenteeism, enrollment; metric ids are in `frontend/src/lib/meta.js`
-(omit `metric` for the topic's default). Story embeds auto-size via the
+DCE enrollment change). Topic ids: act, forward, preact, ap, graduation,
+dropouts, absenteeism, enrollment, open_enrollment, finance; metric ids
+are in `frontend/src/lib/meta.js` (omit `metric` for the topic's
+default). Story embeds auto-size via the
 same height postMessage; static fallback ~750px. They render the chart
 with full year labels and per-point values, plus break notes and a
 source line linking back to the full tool.
@@ -262,6 +320,17 @@ sites only offer white-knockout marks). The one exception is White Lake
 `{dpi_code}.png/.svg/.jpg` into `frontend/src/assets/logos/` (LOGOS is
 glob-derived) and add an ACCENTS entry in `frontend/src/lib/logos.js`.
 
+**DATA EXPANSION SHIPPED (2026-08-22).** Forward Exam (grades 3-8,
+2015-16+ minus the 2019-20 COVID gap, hard cut-score break at 2023-24),
+school-level pages beneath every config district (47 school files,
+closed schools kept as dimmed history), open enrollment (2016-17+, the
+first non-WISEdash xlsx source — `sources.XLSX_FILES`), district
+finance (cost per member 2008-09+, revenue limits 1993-94+), and
+referenda tables (1990+, incl. upcoming votes). The refresh pipeline
+now loads frames lazily per topic and prunes the forward files at read
+time (`normalize.LOAD_PRUNES`) because the full corpus no longer fits
+in memory at once.
+
 Known state of the data:
 
 - Small new districts (White Lake, Tigerton, Bowler, Gresham…) carry real
@@ -269,19 +338,19 @@ Known state of the data:
   now shows up outside subgroup views too. Subgroup views ("Break out by"
   pills) carry heavy suppression everywhere small; Athens' ACT race view
   is the reference case.
+- School-level views suppress heavily below district level; open
+  enrollment counts under 20 suppress from 2019-20 on (aid dollars never
+  do).
 - 2025-26 ACT lands ~fall 2026: add it to `sources.py`, run the refresh, and
   the two 2025-26 breaks already in `config/breaks.json` will annotate it.
+  2025-26 Forward lands ~fall 2026 the same way.
 
 Next tasks, in order:
 
 1. Newsroom review of the expanded roster with Shereen (any districts to
    drop or relabel — the config is the editorial surface; also whether
    "Central Wisconsin School Data" is the right name).
-2. Fall 2026 refresh (assessments): 2025-26 act_statewide file, plus check
-   DPI errata for the spring-2026 ACT scoring-error revisions.
-3. Stretch (in order): school-level data beneath each district; Forward
-   Exam v1.5 (extend the 2023-24 cut-score entry's `topics` to include
-   `forward` AND re-type it as a `comparability_break` for the
-   proficiency-category metrics Forward would add — it is currently an
-   `annotation` because the charted ACT metrics are score averages, which
-   the cut-score change does not affect).
+2. Fall 2026 refresh (assessments): 2025-26 act_statewide + forward
+   files, plus check DPI errata for the spring-2026 ACT scoring-error
+   revisions. Finance/referenda refresh alongside (the WiSFPR endpoint
+   and media-ID URLs are re-pulled every run like everything else).

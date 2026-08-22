@@ -1,0 +1,39 @@
+{
+  "district": {
+    "dpi_code": "4508",
+    "dpi_name": "Port Edwards"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "2019-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 600000.0,
+      "brief": "$600,000 Non-Recurring for 5 Years",
+      "yes_votes": 540,
+      "no_votes": 241,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 4250000.0,
+      "brief": "$850,000 Non-Recurring for 5 Years",
+      "yes_votes": 450,
+      "no_votes": 254,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7300000.0,
+      "brief": "$7,300,000 Capital Referendum",
+      "yes_votes": 410,
+      "no_votes": 292,
+      "status": "Passed"
+    }
+  ]
+}

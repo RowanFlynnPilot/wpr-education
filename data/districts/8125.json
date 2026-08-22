@@ -3,8 +3,28 @@
     "dpi_code": "8125",
     "dpi_name": "Urban Day School"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 15.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 10.7,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 9.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 11.8,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2010-11": {
         "dropout_rate": {

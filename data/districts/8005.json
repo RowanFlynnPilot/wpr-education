@@ -3,8 +3,64 @@
     "dpi_code": "8005",
     "dpi_name": "One City Schools Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 8.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 8.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 24.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 28.0,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 23.8,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 23.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 25.6,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 51.3,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 29.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 17.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 18.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 35.9,
+          "suppressed": false
+        }
+      }
+    },
     "graduation": {
       "2024-25": {
         "cohort_count_4yr": {

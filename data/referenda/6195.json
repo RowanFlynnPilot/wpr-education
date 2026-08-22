@@ -1,0 +1,59 @@
+{
+  "district": {
+    "dpi_code": "6195",
+    "dpi_name": "Waupaca"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 170000.0,
+      "brief": "exceed revenue limit for pool operation",
+      "yes_votes": 2269,
+      "no_votes": 2656,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 31840000.0,
+      "brief": "facility remodeling & construction",
+      "yes_votes": 3719,
+      "no_votes": 1335,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1475000.0,
+      "brief": "swimming pool",
+      "yes_votes": 2458,
+      "no_votes": 2513,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3875000.0,
+      "brief": "General Obligation Bonds for the purpose of district-wide safety and security upgrades.",
+      "yes_votes": 4852,
+      "no_votes": 2020,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 5500000.0,
+      "brief": "Two-year Operating referendum for $2.75 million for operations and maintenance expenses.",
+      "yes_votes": 2389,
+      "no_votes": 2126,
+      "status": "Passed"
+    }
+  ]
+}

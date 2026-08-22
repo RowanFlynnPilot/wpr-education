@@ -3,7 +3,7 @@
     "dpi_code": "8008",
     "dpi_name": "Milwaukee Science Education Consortium Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -93,6 +93,62 @@
         },
         "participation_pct": {
           "value": 93.8,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 7.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 10.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 10.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 22.3,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 14.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 15.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 7.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 16.4,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 13.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 14.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 9.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 18.9,
           "suppressed": false
         }
       }

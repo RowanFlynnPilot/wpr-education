@@ -1,0 +1,79 @@
+{
+  "district": {
+    "dpi_code": "3304",
+    "dpi_name": "Marathon City"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1993-11-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 365000.0,
+      "brief": "",
+      "yes_votes": 117,
+      "no_votes": 54,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1996-02-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1710000.0,
+      "brief": "hs remod, ADA",
+      "yes_votes": 272,
+      "no_votes": 162,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2005-02-15",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6900000.0,
+      "brief": "Additions to and remodeling and renovating the high school, acquiring furnishings, fixtures and equipment",
+      "yes_votes": 1004,
+      "no_votes": 920,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2005-02-15",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 345000.0,
+      "brief": "Resolution Authorizing the School District Budget to Exceed Revenue Limit by $345,000 for Recurring Purposes",
+      "yes_votes": 1320,
+      "no_votes": 617,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 685000.0,
+      "brief": "Resolution Authorizing the School District Budget to Exceed Revenue Limit by $685,000 for Recurring Purposes",
+      "yes_votes": 1238,
+      "no_votes": 1046,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4265000.0,
+      "brief": "Renovations and construction of an addition at Marathon Elementary/Marathon Venture Academy, safety & security upgrades and construction of secure entrances, building infrastructure, capital maintenance and site improvements, acquiring furnishings, fixtures and equipment at Marathon Elementary, Marathon Venture Academy and Marathon High School",
+      "yes_votes": 1211,
+      "no_votes": 1066,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "R1",
+      "type": "Recurring Referendum - Type 1",
+      "amount": 1600000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL DISTRICT BUDGET TO EXCEED REVENUE LIMIT BY $1,600,000.00 FOR RECURRING PURPOSES.",
+      "yes_votes": 1532,
+      "no_votes": 1337,
+      "status": "Passed"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "district": {
+    "dpi_code": "5754",
+    "dpi_name": "Tomahawk"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-02-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 8900000.0,
+      "brief": "",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1997-05-10",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 8900000.0,
+      "brief": "building repairs",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-11-02",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 65000.0,
+      "brief": "operation, maintenance, staffing of new bldng additions",
+      "yes_votes": 1350,
+      "no_votes": 1780,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-11-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 15295000.0,
+      "brief": "construct and equip additions to existing buildings",
+      "yes_votes": 1447,
+      "no_votes": 1704,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 10800000.0,
+      "brief": "construct/equip addition to and remodel existing bldng",
+      "yes_votes": 1912,
+      "no_votes": 1687,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2017-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3000000.0,
+      "brief": "$3M/year for 4 years.",
+      "yes_votes": 1033,
+      "no_votes": 907,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3500000.0,
+      "brief": "Beginning 2021-22 school year 3.5M per year non-recurring referendum ending 2024-2025.",
+      "yes_votes": 3061,
+      "no_votes": 3112,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3250000.0,
+      "brief": "Beginning 2021-22 school year 3.25M per year non-recurring referendum ending 2024-2025.",
+      "yes_votes": 1299,
+      "no_votes": 1332,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3250000.0,
+      "brief": "Beginning 2022-23 school year 3.25M per year non-recurring referendum ending 2024-2025",
+      "yes_votes": 2004,
+      "no_votes": 1602,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2025-02-18",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 13000000.0,
+      "brief": "Beginning with the 2025-2026 school year a 3.25M per year non-recurring referendum ending 2028-2029",
+      "yes_votes": 1039,
+      "no_votes": 802,
+      "status": "Passed"
+    }
+  ]
+}

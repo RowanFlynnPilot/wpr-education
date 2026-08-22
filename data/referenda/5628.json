@@ -1,0 +1,109 @@
+{
+  "district": {
+    "dpi_code": "5628",
+    "dpi_name": "Stratford"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1993-02-16",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1693000.0,
+      "brief": "",
+      "yes_votes": 638,
+      "no_votes": 153,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1996-09-10",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2820000.0,
+      "brief": "add classrooms. remodeling and renovate ath. fields",
+      "yes_votes": 2105,
+      "no_votes": 1893,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 150000.0,
+      "brief": "operation & maintenance costs",
+      "yes_votes": 215,
+      "no_votes": 321,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2000-12-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1900000.0,
+      "brief": "school building and improvement program including construct and equip gymnasium and exercise facility, coaching offices, shower facilities and greenhouse at HS",
+      "yes_votes": 318,
+      "no_votes": 461,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2009-05-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3700000.0,
+      "brief": "Paying the cost of constructing an 8 classroom addition to the middle school wing of the 6-12 building; remodeling and improvement projects in all district schools; and acquiring equipment, furnishings and fixtures",
+      "yes_votes": 772,
+      "no_votes": 296,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7995000.0,
+      "brief": "Construct and equip an auditorium, gymnasium, lobby and restrooms.",
+      "yes_votes": 883,
+      "no_votes": 1280,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 15995000.0,
+      "brief": "School improvement program at the High School and Elementary School consisting of renovations, remodeling, infrastructure and capital maintenance improvements, a classroom addition, technology and security upgrades, asbestos abatement and site improvements; and acquiring furnishings, fixtures and equipment.",
+      "yes_votes": 1239,
+      "no_votes": 955,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 400000.0,
+      "brief": "exceed the revenue limit by $400,000 for the 2022-2023 school year; by an additional $400,000 (for a total of $800,000) for the 2023-2024 school year; and by an additional $400,000 (for a total of $1,200,000) for the 2024-2025 school year and thereafter, for recurring purposes consisting of operational\r\r\nexpenses",
+      "yes_votes": 362,
+      "no_votes": 550,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 190000.0,
+      "brief": "exceed the revenue limit specified, by $190,000 for the 2022-2023 school year, by $480,000 for the 2023-2024 school year, by $875,000 for the 2024-2025 school year, and by $1,390,000 for the 2025-2026 school year, for non-recurring purposes consisting of operational expenses",
+      "yes_votes": 1099,
+      "no_votes": 1307,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 990000.0,
+      "brief": "Exceed revenue limit by $990,000 beginning with the 2023-24 school year, for recurring purposes consisting of sustaining educational programming and operational expenses.",
+      "yes_votes": 1079,
+      "no_votes": 887,
+      "status": "Passed"
+    }
+  ]
+}

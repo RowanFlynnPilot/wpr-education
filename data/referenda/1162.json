@@ -1,0 +1,119 @@
+{
+  "district": {
+    "dpi_code": "1162",
+    "dpi_name": "Colby"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1994-09-13",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6800000.0,
+      "brief": "m.s. add to h.s.",
+      "yes_votes": 630,
+      "no_votes": 671,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1994-12-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6800000.0,
+      "brief": "m.s. add to h.s.",
+      "yes_votes": 827,
+      "no_votes": 1266,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1996-04-23",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4400000.0,
+      "brief": "new ms, hs add",
+      "yes_votes": 722,
+      "no_votes": 542,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1400000.0,
+      "brief": "repair, replace, maintenance of bldngs, grounds and athletic facilities",
+      "yes_votes": 713,
+      "no_votes": 569,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-02-21",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "general operations and to maintain existing programs and facilities",
+      "yes_votes": 520,
+      "no_votes": 576,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-06-29",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1000000.0,
+      "brief": "maintenance of existing educational programs and facilities of the district",
+      "yes_votes": 333,
+      "no_votes": 1395,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-09-09",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2550000.0,
+      "brief": "cost of repairing, replacing and maintaining  school district buildings, grounds and facilities and acquiring related equipment",
+      "yes_votes": 691,
+      "no_votes": 266,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-09-09",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1400000.0,
+      "brief": "financing the district's unfunded prior service liability contributions under the WI retirement system",
+      "yes_votes": 728,
+      "no_votes": 215,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7750000.0,
+      "brief": "General obligation bonds in an amount not to exceed $7,750,000 for the public purpose of paying the cost of District-wide building infrastructure improvements/renovations and safety and security upgrades; site and storm water management improvements; and acquisition of related equipment.",
+      "yes_votes": 1700,
+      "no_votes": 827,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 17770000.0,
+      "brief": "Colby Referendum Question #1 - Fall 2024 - monies would focus on maintenance and modernization of school buildings on Colby School District campus.",
+      "yes_votes": 1677,
+      "no_votes": 1086,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7720000.0,
+      "brief": "Question #2 - Fall 2024 Referendum - monies from this question would focus on creating an addition to our Elementary building and allow us to move several grades of students around all levels of our buildings.",
+      "yes_votes": 1666,
+      "no_votes": 1070,
+      "status": "Passed"
+    }
+  ]
+}

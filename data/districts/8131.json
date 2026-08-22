@@ -3,7 +3,7 @@
     "dpi_code": "8131",
     "dpi_name": "Escuela Verde"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -244,6 +244,62 @@
         "participation_pct": {
           "value": 82.1,
           "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "socstudies_prof_pct": {
+          "value": null,
+          "suppressed": true
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": 0.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 0.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "socstudies_prof_pct": {
+          "value": null,
+          "suppressed": true
         }
       }
     },

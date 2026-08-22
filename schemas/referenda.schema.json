@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "wpr-education district referenda file",
+  "description": "Shape of data/referenda/{dpi_code}.json: every school-funding referendum for one district from DPI's WiSFPR database (1990 onward), oldest first. Not cell-shaped data — an event list. status includes 'Before the Vote Date' for scheduled upcoming votes; yes/no votes are 0 until results post. type_code: ID = issue debt (capital), RR/R1/R2 = recurring operating, NR = non-recurring operating.",
+  "type": "object",
+  "required": ["district", "generated", "referenda"],
+  "additionalProperties": false,
+  "properties": {
+    "district": {
+      "type": "object",
+      "required": ["dpi_code", "dpi_name"],
+      "additionalProperties": false,
+      "properties": {
+        "dpi_code": { "type": "string" },
+        "dpi_name": { "type": "string" }
+      }
+    },
+    "generated": { "type": "string" },
+    "referenda": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["vote_date", "type_code", "type", "amount", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "vote_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "type_code": { "type": "string" },
+          "type": { "type": "string" },
+          "amount": { "type": ["number", "null"] },
+          "brief": { "type": "string" },
+          "yes_votes": { "type": ["number", "null"] },
+          "no_votes": { "type": ["number", "null"] },
+          "status": { "type": "string" }
+        }
+      }
+    }
+  }
+}

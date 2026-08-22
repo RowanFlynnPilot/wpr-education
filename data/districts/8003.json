@@ -3,8 +3,64 @@
     "dpi_code": "8003",
     "dpi_name": "United Community Center Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 32.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 32.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 42.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 53.6,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 42.8,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 45.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 42.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 55.2,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 44.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 47.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 37.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 50.6,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2022-23": {
         "dropout_rate": {

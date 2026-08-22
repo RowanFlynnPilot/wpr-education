@@ -1,0 +1,59 @@
+{
+  "district": {
+    "dpi_code": "4795",
+    "dpi_name": "Rib Lake"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-10-22",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 840000.0,
+      "brief": "facility repair",
+      "yes_votes": 405,
+      "no_votes": 258,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-09-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6730000.0,
+      "brief": "add classrooms to high school; K-5 building improvements",
+      "yes_votes": 654,
+      "no_votes": 329,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-04-04",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 275000.0,
+      "brief": "Operational and Maintenance",
+      "yes_votes": 255,
+      "no_votes": 855,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2015-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4000000.0,
+      "brief": "Facilities and operational maintenance costs",
+      "yes_votes": 548,
+      "no_votes": 402,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 19500000.0,
+      "brief": "District-wide building maintenance, building infrastructure and site improvements along with construction of additional connecting the middle and high schools, a safe secure entrance and a replacement gymnasium and renovations in the middle and high schools for academic spaces, band and choir spaces, technical education area, kitchen and cafeteria, office and fitness center.",
+      "yes_votes": 677,
+      "no_votes": 522,
+      "status": "Passed"
+    }
+  ]
+}

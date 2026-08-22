@@ -3,8 +3,28 @@
     "dpi_code": "8121",
     "dpi_name": "Seeds of Health Elementary Program"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 25.8,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 20.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 35.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 34.1,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2009-10": {
         "dropout_rate": {

@@ -1,0 +1,59 @@
+{
+  "district": {
+    "dpi_code": "3318",
+    "dpi_name": "Marion"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2600000.0,
+      "brief": "renovations/additions/technology",
+      "yes_votes": 860,
+      "no_votes": 800,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "Recurring referendum to exceed the revenue cap by $300,000.00 for operational expenses, including to sustain educational programming and services and expand course offerings and staff.",
+      "yes_votes": 654,
+      "no_votes": 487,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6900000.0,
+      "brief": "Capital referendum not to exceed $6,900,000.00 to support safety & security upgrades, capital maintenance, building infrastructure & building systems improvements and furnishings, fixtures & equipment.",
+      "yes_votes": 559,
+      "no_votes": 584,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7380000.0,
+      "brief": "Issue general obligation bonds in an amount not to exceed $7,380,000 for the public purpose of paying the cost of a school facility improvement project consisting of: district-wide capital maintenance, building infrastructure and systems improvements; accessibility updates and remodeling at the Elementary School, including for a secure entrance and office; science, agriculture and technical education upgrades at the High School; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 1268,
+      "no_votes": 838,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7600000.0,
+      "brief": "Issue general obligation bonds in an amount not to exceed $7,600,000 for the public purpose of paying the cost of a school building and facility improvement project consisting of: construction of an addition, renovations and site improvements at the Elementary School to create a combined Elementary/Middle School at the current Elementary School campus; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 1091,
+      "no_votes": 1005,
+      "status": "Passed"
+    }
+  ]
+}

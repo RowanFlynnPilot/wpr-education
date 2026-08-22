@@ -3,8 +3,64 @@
     "dpi_code": "8014",
     "dpi_name": "La Casa De Esperanza Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 20.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 25.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 23.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 41.2,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 33.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 33.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 28.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 43.6,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 21.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 31.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 20.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 41.0,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2022-23": {
         "dropout_rate": {

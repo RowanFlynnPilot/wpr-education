@@ -3,8 +3,64 @@
     "dpi_code": "8009",
     "dpi_name": "Darrell L Hines Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 14.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 11.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 20.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 25.6,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 20.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 17.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 14.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 23.5,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 16.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 12.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 12.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 27.3,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2022-23": {
         "dropout_rate": {

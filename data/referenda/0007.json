@@ -1,0 +1,69 @@
+{
+  "district": {
+    "dpi_code": "0007",
+    "dpi_name": "Abbotsford"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "2002-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 8960000.0,
+      "brief": "improvements at ES; remodeling at MS/HS and new construction; furnishings, fixtures, equipment",
+      "yes_votes": 354,
+      "no_votes": 567,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2002-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 240000.0,
+      "brief": "operating funds",
+      "yes_votes": 338,
+      "no_votes": 608,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2002-11-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "non-recurring purposes",
+      "yes_votes": 295,
+      "no_votes": 347,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2007-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 12000000.0,
+      "brief": "construct grade school addition and remodeling projects at Abbotsford Junior/Senior high school building, furnishings, equipment",
+      "yes_votes": 664,
+      "no_votes": 289,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1500000.0,
+      "brief": "Funds needed to finish FEMA project",
+      "yes_votes": 333,
+      "no_votes": 147,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 17000000.0,
+      "brief": "Debt Referendum",
+      "yes_votes": 328,
+      "no_votes": 241,
+      "status": "Passed"
+    }
+  ]
+}

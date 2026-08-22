@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "3899",
+    "dpi_name": "Neillsville"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-03-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2240000.0,
+      "brief": "Q2: various dist wide imprv, new gym, convt gym to fine arts area",
+      "yes_votes": 793,
+      "no_votes": 933,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1996-03-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2095000.0,
+      "brief": "Q1: ADA, roof maint, asbestos removal,science rm",
+      "yes_votes": 1159,
+      "no_votes": 577,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "exceed rev cap for oper & maint, recurring, 98-99",
+      "yes_votes": 1619,
+      "no_votes": 965,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 429776.0,
+      "brief": "add to ag shop, renovate biology lab, add storage",
+      "yes_votes": 1745,
+      "no_votes": 834,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2766254.0,
+      "brief": "new gymnasium, lobby & locker rooms",
+      "yes_votes": 1470,
+      "no_votes": 1107,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 503920.0,
+      "brief": "convert old gymnasium to multi-purpose room",
+      "yes_votes": 1479,
+      "no_votes": 1057,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-09-12",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "recurring purposes",
+      "yes_votes": 653,
+      "no_votes": 1064,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-09-09",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "ongoing operational and maintenance costs",
+      "yes_votes": 557,
+      "no_votes": 481,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 12500000.0,
+      "brief": "Facility improvement project consisting of:  building, infrastructure, systems and site improvements; building renovations, accessibility upgrades and asbestos abatement; and acquisition of furnishings, fixtures, technology and equipment.",
+      "yes_votes": 1364,
+      "no_votes": 744,
+      "status": "Passed"
+    }
+  ]
+}

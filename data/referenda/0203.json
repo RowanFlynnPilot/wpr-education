@@ -1,0 +1,139 @@
+{
+  "district": {
+    "dpi_code": "0203",
+    "dpi_name": "Auburndale"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-12-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2000000.0,
+      "brief": "add gymnasium and locker room to high school",
+      "yes_votes": 606,
+      "no_votes": 470,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1997-12-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4500000.0,
+      "brief": "add to and remodel elem and high schools. buy land",
+      "yes_votes": 781,
+      "no_votes": 302,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-02-19",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 215000.0,
+      "brief": "Capital Improvements",
+      "yes_votes": 681,
+      "no_votes": 704,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-02-19",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 160000.0,
+      "brief": "For paying ongoing educational and operating expenses of the district",
+      "yes_votes": 607,
+      "no_votes": 765,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-02-19",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "funding unfunded post retirement benefits",
+      "yes_votes": 462,
+      "no_votes": 919,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-11-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "Exceed revenue limit for five years to sustain educational programs and to pay operational and capital expenses",
+      "yes_votes": 1231,
+      "no_votes": 1022,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "Shall the School District of Auburndale be allowed to exceed the revenue limit specified in ? 121.91, Wis. Stats., by up to $500,000 commencing with the 2017-2018 school year on a recurring basis; by up to an additional $200,000 in the 2018-2019 school year on a non-recurring basis, making a total of $700,000; by up to an additional $300,000 in the 2019-2020 school year on a non-recurring basis, making a total of $800,000; and by up to an additional $400,000 in the 2020-2021 school year on a non-recurring basis, making a total of $900,000, all for the purpose of maintaining current levels of educational programming, expenditures and operations?",
+      "yes_votes": 971,
+      "no_votes": 709,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "Shall the School District of Auburndale be allowed to exceed the revenue limit specified in ? 121.91, Wis. Stats., by up to $500,000 commencing with the 2017-2018 school year on a recurring basis; by up to an additional $200,000 in the 2018-2019 school year on a non-recurring basis, making a total of $700,000; by up to an additional $300,000 in the 2019-2020 school year on a non-recurring basis, making a total of $800,000; and by up to an additional $400,000 in the 2020-2021 school year on a non-recurring basis, making a total of $900,000, all for the purpose of maintaining current levels of educational programming, expenditures and operations?",
+      "yes_votes": 971,
+      "no_votes": 709,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "A recurring referendum to exceed the revenue cap by $200,000 beginning with the 2021-22 school year.",
+      "yes_votes": 1517,
+      "no_votes": 966,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6900000.0,
+      "brief": "Issue debt not to exceed $6,900,000 for paying the cost of a district-wide school facility improvement project consisting of:  capital maintenance, building infrastructure, and site improvements at all district facilities; construction of additions and renovations at Auburndale Middle/High School, including for technical education, agriculture, and family and consumer education space and greenhouse replacement; renovations at Auburndale Elementary School, including conversion of the little theater into multipurpose space and upgrades to the playground; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 1394,
+      "no_votes": 1099,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 600000.0,
+      "brief": "For a non-recurring referendum to exceed the revenue cap in the amount of $600,000 for fiscal years 2023-2024 and 2024-2025.",
+      "yes_votes": 754,
+      "no_votes": 775,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2025-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4500000.0,
+      "brief": "Issue debt not to exceed $4,500,000 for the public purpose of paying the cost of a school facility improvement project consisting of:  district-wide renovations, including classroom updates, construction of a safe and secure entrance at the Elementary School and office, roof replacement, capital maintenance and building infrastructure improvements; replacement of the High School track; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 1368,
+      "no_votes": 645,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2025-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 9000000.0,
+      "brief": "Issue debt not to exceed $9,000,000 for the public purpose of paying the cost of a school building and facility improvement project at the Middle/High School consisting of:  construction of a safe and secure entrance, and renovations to the main office; construction of an addition and renovations for cafeteria, multipurpose and auditorium space; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 967,
+      "no_votes": 1011,
+      "status": "Failed"
+    }
+  ]
+}

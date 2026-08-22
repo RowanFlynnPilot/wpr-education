@@ -1,0 +1,109 @@
+{
+  "district": {
+    "dpi_code": "3276",
+    "dpi_name": "Manawa"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1994-10-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 9200000.0,
+      "brief": "new bld & remod",
+      "yes_votes": 500,
+      "no_votes": 357,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-05-19",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 150000.0,
+      "brief": "exceed revenue limit for technology, recurring",
+      "yes_votes": 109,
+      "no_votes": 325,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 225000.0,
+      "brief": "exceed revenue limits, nonrecurring, 99-00 & 00-01",
+      "yes_votes": 364,
+      "no_votes": 461,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 195000.0,
+      "brief": "operation & maint. Costs, including textbooks, bus purchases, bldg/ground maint.",
+      "yes_votes": 780,
+      "no_votes": 536,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 800000.0,
+      "brief": "general operations to maintain educational programs, and to replace, maintain, and/or upgrade school district technology",
+      "yes_votes": 258,
+      "no_votes": 894,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-04-01",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 195000.0,
+      "brief": "paying the cost of operation and maintenance expenses including textbooks, bus purchasing and buildings and grounds maintenance",
+      "yes_votes": 297,
+      "no_votes": 849,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2009-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 600000.0,
+      "brief": "maintain the operation of the School District that is necessary due to decreased funding",
+      "yes_votes": 590,
+      "no_votes": 937,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 365000.0,
+      "brief": "Former Elementary School demolition",
+      "yes_votes": 1046,
+      "no_votes": 943,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 12000000.0,
+      "brief": "Building and Site renovations",
+      "yes_votes": 1188,
+      "no_votes": 859,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2019-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3500000.0,
+      "brief": "To build a new gymnasium and add additional floor space to the fitness center.",
+      "yes_votes": 461,
+      "no_votes": 640,
+      "status": "Failed"
+    }
+  ]
+}

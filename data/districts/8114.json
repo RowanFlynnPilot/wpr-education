@@ -3,8 +3,82 @@
     "dpi_code": "8114",
     "dpi_name": "Capitol West Academy"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 13.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 12.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 12.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 14.3,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 11.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 16.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 9.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 16.7,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 14.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 12.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 11.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 18.3,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 11.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 11.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 17.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 21.9,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2008-09": {
         "dropout_rate": {

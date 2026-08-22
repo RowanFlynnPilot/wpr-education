@@ -3,8 +3,28 @@
     "dpi_code": "8150",
     "dpi_name": "New Leaf Prep Academy"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "socstudies_prof_pct": {
+          "value": null,
+          "suppressed": true
+        }
+      }
+    },
     "dropouts": {
       "2021-22": {
         "dropout_rate": {

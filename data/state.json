@@ -3,7 +3,7 @@
     "dpi_code": "0000",
     "dpi_name": "[Statewide]"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -333,6 +333,170 @@
         },
         "participation_pct": {
           "value": 92.1,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 42.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 42.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 50.6,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 51.3,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 44.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 42.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 49.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 51.1,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 42.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 43.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 49.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 52.9,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 40.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 43.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 53.3,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 51.8,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 33.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 33.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 44.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 42.3,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 37.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 39.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 48.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 57.2,
+          "suppressed": false
+        }
+      },
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 39.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 41.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 49.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 57.6,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 51.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 53.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 49.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 60.2,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 51.6,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 52.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 49.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 61.5,
           "suppressed": false
         }
       }

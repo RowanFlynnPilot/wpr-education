@@ -3,7 +3,7 @@
     "dpi_code": "8023",
     "dpi_name": "The Lincoln Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2023-24": {
@@ -63,6 +63,62 @@
         },
         "participation_pct": {
           "value": 100.0,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 28.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 24.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 37.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 43.5,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 39.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 42.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 33.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 47.4,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 44.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 46.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 21.6,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 37.1,
           "suppressed": false
         }
       }

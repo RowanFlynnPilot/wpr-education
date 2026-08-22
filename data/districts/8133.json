@@ -3,8 +3,46 @@
     "dpi_code": "8133",
     "dpi_name": "Rocketship Southside Community Prep"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 29.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 43.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 24.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 26.7,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 23.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 45.7,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 14.3,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 12.2,
+          "suppressed": false
+        }
+      }
+    },
     "absenteeism": {
       "2013-14": {
         "chronic_absenteeism_rate": {

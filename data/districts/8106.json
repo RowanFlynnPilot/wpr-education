@@ -3,7 +3,7 @@
     "dpi_code": "8106",
     "dpi_name": "Milwaukee Academy of Science"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -243,6 +243,116 @@
         },
         "participation_pct": {
           "value": 98.6,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 5.6,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 10.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 17.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 13.3,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 8.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 14.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 7.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 7.9,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 10.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 12.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 8.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 10.8,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 12.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 13.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 10.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 9.6,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 1.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 1.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 4.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 3.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 5.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 7.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 8.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 17.8,
           "suppressed": false
         }
       }

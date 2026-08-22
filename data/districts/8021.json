@@ -3,7 +3,7 @@
     "dpi_code": "8021",
     "dpi_name": "Lake Country Classical Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2023-24": {
@@ -63,6 +63,62 @@
         },
         "participation_pct": {
           "value": 100.0,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 53.6,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 51.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 61.6,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 79.1,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 65.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 69.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 52.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 77.2,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 65.8,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 65.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 64.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 85.6,
           "suppressed": false
         }
       }

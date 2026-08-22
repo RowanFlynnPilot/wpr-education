@@ -3,8 +3,84 @@
     "dpi_code": "8137",
     "dpi_name": "United Community Center Acosta Middle"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 29.8,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 17.0,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 30.6,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 26.9,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 32.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 28.9,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 35.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 32.1,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 25.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 15.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 27.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 22.2,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 25.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 27.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 37.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 52.3,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2017-18": {
         "dropout_rate": {

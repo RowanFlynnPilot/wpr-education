@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "2639",
+    "dpi_name": "Iola-Scandinavia"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1994-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 950000.0,
+      "brief": "add to H.S.",
+      "yes_votes": 392,
+      "no_votes": 163,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1999-11-02",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "operating costs",
+      "yes_votes": 631,
+      "no_votes": 573,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1999-11-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7000000.0,
+      "brief": "construct addition to & remodel/renovate e.s., aquatic center at h.s.",
+      "yes_votes": 635,
+      "no_votes": 582,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2000000.0,
+      "brief": "Referendum to issue debt for school improvement programs.",
+      "yes_votes": 1889,
+      "no_votes": 716,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 600000.0,
+      "brief": "Revenue Cap Exemption",
+      "yes_votes": 1587,
+      "no_votes": 988,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 6800000.0,
+      "brief": "Non-recurring referendum to exceed revenue limits for educational programming, student opportunities and operations.",
+      "yes_votes": 1677,
+      "no_votes": 1255,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2300000.0,
+      "brief": "Referendum to issue debt for school safety and building updates",
+      "yes_votes": 826,
+      "no_votes": 412,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 7600000.0,
+      "brief": "Non-recurring referendum to exceed revenue limit for education programming, student opportunities and operations.",
+      "yes_votes": 759,
+      "no_votes": 937,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2026-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 5700000.0,
+      "brief": "Non-recurring referendum to exceed revenue limit for education programming, student opportunities and operations.",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Before the Vote Date"
+    }
+  ]
+}

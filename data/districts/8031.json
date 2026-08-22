@@ -3,8 +3,46 @@
     "dpi_code": "8031",
     "dpi_name": "Mill Creek Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 42.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 47.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 53.3,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 60.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 53.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 55.7,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 38.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 55.6,
+          "suppressed": false
+        }
+      }
+    },
     "absenteeism": {
       "2023-24": {
         "chronic_absenteeism_rate": {

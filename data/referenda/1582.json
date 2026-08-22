@@ -1,0 +1,119 @@
+{
+  "district": {
+    "dpi_code": "1582",
+    "dpi_name": "Elcho"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1998-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2995000.0,
+      "brief": "bldg addition. asbestos removal. replace boilers, remodel",
+      "yes_votes": 652,
+      "no_votes": 486,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2002-09-10",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 175000.0,
+      "brief": "remove asbestos, repair roof, replace windows",
+      "yes_votes": 613,
+      "no_votes": 483,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "general operation and maintenance expenses",
+      "yes_votes": 467,
+      "no_votes": 588,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2009-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 820000.0,
+      "brief": "operating expenses and partially for the retirement of district debt in the 2009-10 year",
+      "yes_votes": 800,
+      "no_votes": 637,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2013-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 400000.0,
+      "brief": "General operational expenses.",
+      "yes_votes": 576,
+      "no_votes": 525,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 18000000.0,
+      "brief": "General obligation bonds in an amount not to exceed $18,000,000 to pay the cost of additions, renovations, remodeling and replacement of portions of the existing District building.",
+      "yes_votes": 1132,
+      "no_votes": 864,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "Authorize the School District to exceed revenue limit by $500,000 for four years for non-recurring purposes",
+      "yes_votes": 1100,
+      "no_votes": 869,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1000000.0,
+      "brief": "Non-recurring purposes consisting of operational and maintenance expenses.",
+      "yes_votes": 999,
+      "no_votes": 1206,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1000000.0,
+      "brief": "General Operation and Maintenance expense",
+      "yes_votes": 520,
+      "no_votes": 550,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3000000.0,
+      "brief": "Non-recurring purposes consisting of operational and maintenance expenses.",
+      "yes_votes": 716,
+      "no_votes": 530,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2025-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3000000.0,
+      "brief": "Non-recurring Operational referendum, three years",
+      "yes_votes": 920,
+      "no_votes": 767,
+      "status": "Passed"
+    }
+  ]
+}

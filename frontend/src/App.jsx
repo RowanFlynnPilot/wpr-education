@@ -8,11 +8,13 @@ import { loadCore, loadDocs } from './lib/data'
 // The chart-bearing pages pull in recharts (~2/3 of the bundle); loading
 // them lazily keeps the landing page on the small chunk.
 const DistrictPage = lazy(() => import('./components/DistrictPage'))
+const SchoolPage = lazy(() => import('./components/SchoolPage'))
 const EmbedPage = lazy(() => import('./components/EmbedPage'))
 
 // Routes:
 //   #/?county=Wood                  landing focused on one county ("all" = every county)
 //   #/6223?peers=4970,0196          district page, peers preselected
+//   #/6223/school/0400              one school within a district
 //   #/embed/6223/act?metric=...     story mode: one chart, minimal chrome
 function parseHash() {
   const [path, query] = window.location.hash.replace(/^#\/?/, '').split('?')
@@ -87,7 +89,8 @@ export default function App() {
 
   const segments = route.path.split('/')
   const isEmbed = segments[0] === 'embed'
-  const districtCode = isEmbed ? segments[1] : route.path
+  const isSchool = segments[1] === 'school' && !!segments[2]
+  const districtCode = isEmbed ? segments[1] : segments[0]
   const entry = core?.index.districts.find((d) => d.dpi_code === districtCode)
 
   // Which docs this route draws: the district + its peers. The landing
@@ -153,10 +156,20 @@ export default function App() {
         </div>
       </header>
       <main>
-        {entry && !isEmbed ? (
+        {entry && !isEmbed && isSchool ? (
+          <Suspense fallback={<Loading />}>
+            <SchoolPage
+              districtCode={districtCode}
+              schoolCode={segments[2]}
+              index={index}
+              state={state}
+              docs={docs}
+            />
+          </Suspense>
+        ) : entry && !isEmbed ? (
           <Suspense fallback={<Loading />}>
             <DistrictPage
-              code={route.path}
+              code={districtCode}
               peers={validPeers}
               index={index}
               state={state}

@@ -1,0 +1,139 @@
+{
+  "district": {
+    "dpi_code": "0196",
+    "dpi_name": "Athens"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-10-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6500000.0,
+      "brief": "addition to high school",
+      "yes_votes": 269,
+      "no_votes": 680,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-11-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6965000.0,
+      "brief": "constructing addition to and remodel 6-12 school; acquire equipment/furnishings",
+      "yes_votes": 461,
+      "no_votes": 502,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6975000.0,
+      "brief": "construct addition to & remodel existing 6-12 facility; equip/furnishings/equip",
+      "yes_votes": 542,
+      "no_votes": 557,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2001-02-20",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "recurring purposes",
+      "yes_votes": 339,
+      "no_votes": 646,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-05-09",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "To exceed the Revenue Limit for five years.",
+      "yes_votes": 779,
+      "no_votes": 595,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-05-09",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 300000.0,
+      "brief": "Various maintenance, remodeling, repair, and site improvements.",
+      "yes_votes": 860,
+      "no_votes": 519,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-05-09",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 100000.0,
+      "brief": "Repair and replace asphalt at high school/middle school site.",
+      "yes_votes": 426,
+      "no_votes": 944,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2010-11-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "To exceed revenue limit for 5 years for operational purposes",
+      "yes_votes": 617,
+      "no_votes": 741,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2011-05-17",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 350000.0,
+      "brief": "Resolution providing for a Special Election on the Question of the Approval of a Resolution Authorizing the School District Budget to Exceed Revenue Limit by $350,000 for Recurring Purposes.",
+      "yes_votes": 934,
+      "no_votes": 481,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5525000.0,
+      "brief": "INITIAL RESOLUTION AUTHORIZING GENERAL OBLIGATION BONDS IN AN AMOUNT NOT TO EXCEED $5,525,000",
+      "yes_votes": 792,
+      "no_votes": 1124,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-11-08",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 900000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL DISTRICT BUDGET TO EXCEED REVENUE LIMIT FOR RECURRING PURPOSES",
+      "yes_votes": 816,
+      "no_votes": 1111,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 5270000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL DISTRICT BUDGET TO EXCEED REVENUE LIMIT FOR NON-RECURRING PURPOSES",
+      "yes_votes": 1355,
+      "no_votes": 481,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2400000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL DISTRICT BUDGET TO EXCEED REVENUE LIMIT BY $600,000 PER YEAR FOR FOUR YEARS\r\nFOR NON-RECURRING PURPOSES",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Before the Vote Date"
+    }
+  ]
+}

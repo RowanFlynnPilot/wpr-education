@@ -1,0 +1,79 @@
+{
+  "district": {
+    "dpi_code": "4963",
+    "dpi_name": "Rosholt"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4950000.0,
+      "brief": "classroom additions, gym, auditorium, commons, band room",
+      "yes_votes": 698,
+      "no_votes": 436,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2007-04-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1650000.0,
+      "brief": "maintain present level of programming and operations in the district",
+      "yes_votes": 896,
+      "no_votes": 631,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2017-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 735000.0,
+      "brief": "For the purpose of maintaining the present level of programming and operations in the District.",
+      "yes_votes": 790,
+      "no_votes": 393,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2017-04-04",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 700000.0,
+      "brief": "For the purpose of maintaining the present level of programming and operations in the District.",
+      "yes_votes": 790,
+      "no_votes": 393,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 5300000.0,
+      "brief": "4-year non-recurring for a total of $5,300,000.  Funds will be used for operational expenses with a priority on maintaining current staffing levels.",
+      "yes_votes": 573,
+      "no_votes": 560,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2025-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 9950000.0,
+      "brief": "The Rosholt School District will ask voters to approve $1.99 million (annually), beginning with the 2026-27 school year and running through the 20230-31 school year, for operational purposes.",
+      "yes_votes": 842,
+      "no_votes": 1015,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 7800000.0,
+      "brief": "Rosholt is asking its voters to exceed the revenue limit to sustain facilities, equipment, staffing and programming.",
+      "yes_votes": 802,
+      "no_votes": 677,
+      "status": "Passed"
+    }
+  ]
+}

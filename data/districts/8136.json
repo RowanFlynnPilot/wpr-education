@@ -3,8 +3,56 @@
     "dpi_code": "8136",
     "dpi_name": "Stellar Collegiate Charter School"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 17.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 21.7,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 12.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 5.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 3.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 6.9,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 13.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 14.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 32.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 37.1,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2021-22": {
         "dropout_rate": {

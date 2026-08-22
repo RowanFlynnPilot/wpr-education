@@ -1,0 +1,69 @@
+{
+  "district": {
+    "dpi_code": "2135",
+    "dpi_name": "Gilman"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1998-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5500000.0,
+      "brief": "add to and remodel school; furnishings & equipment",
+      "yes_votes": 556,
+      "no_votes": 417,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2004-02-17",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 855000.0,
+      "brief": "payoff of WRS unfunded prior service liability",
+      "yes_votes": 368,
+      "no_votes": 224,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2014-11-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 325000.0,
+      "brief": "educational programming, expenditures and operations",
+      "yes_votes": 775,
+      "no_votes": 498,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-04-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 875000.0,
+      "brief": "For non-recurring purposes consisting of educational programming, expenditures and operations.",
+      "yes_votes": 377,
+      "no_votes": 225,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3300000.0,
+      "brief": "Non-Recurring purposes consisting of educational programming, expenditures and operations.",
+      "yes_votes": 330,
+      "no_votes": 306,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2800000.0,
+      "brief": "Non-Recurring purposes consisting of educational programming, expenditures and operations.",
+      "yes_votes": 456,
+      "no_votes": 450,
+      "status": "Passed"
+    }
+  ]
+}

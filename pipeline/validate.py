@@ -17,6 +17,8 @@ SUPPRESSION_MARKERS: set[str] = {"*"}
 
 SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "district.schema.json"
 SUBGROUP_SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "subgroup.schema.json"
+SCHOOL_SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "school.schema.json"
+REFERENDA_SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "referenda.schema.json"
 
 
 def check_sources_populated(topics: list[str], files: dict[str, dict[str, str]]) -> None:
@@ -68,6 +70,32 @@ def check_output_file(path: Path) -> None:
                         f"value={cell['value']} suppressed={cell['suppressed']} "
                         "-- value must be null iff suppressed is true."
                     )
+
+
+def check_school_file(path: Path) -> None:
+    """Same cell contract as check_output_file, nested per school:
+    schools -> school code -> topics -> year -> metric -> cell."""
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    schema = json.loads(SCHOOL_SCHEMA_PATH.read_text(encoding="utf-8"))
+    jsonschema.validate(doc, schema)
+    for school, entry in doc["schools"].items():
+        for topic, years in entry["topics"].items():
+            for year, metrics in years.items():
+                for metric, cell in metrics.items():
+                    if (cell["value"] is None) != cell["suppressed"]:
+                        raise ValueError(
+                            f"{path.name}: {school}/{topic}/{year}/{metric}: "
+                            f"value={cell['value']} suppressed={cell['suppressed']} "
+                            "-- value must be null iff suppressed is true."
+                        )
+
+
+def check_referenda_file(path: Path) -> None:
+    """Schema check only — referenda are event lists, not metric cells,
+    so the null-iff-suppressed invariant doesn't apply."""
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    schema = json.loads(REFERENDA_SCHEMA_PATH.read_text(encoding="utf-8"))
+    jsonschema.validate(doc, schema)
 
 
 def check_subgroup_file(path: Path) -> None:

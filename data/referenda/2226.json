@@ -1,0 +1,79 @@
+{
+  "district": {
+    "dpi_code": "2226",
+    "dpi_name": "Granton Area"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1350000.0,
+      "brief": "additions to schools & field house remodeling",
+      "yes_votes": 598,
+      "no_votes": 263,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-11-07",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 30000.0,
+      "brief": "school bus purchases",
+      "yes_votes": 482,
+      "no_votes": 305,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2000-11-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 60000.0,
+      "brief": "school bus purchases",
+      "yes_votes": 482,
+      "no_votes": 305,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2004-05-18",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 350000.0,
+      "brief": "Provide for the operational needs of the district",
+      "yes_votes": 328,
+      "no_votes": 298,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2017-10-10",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2000000.0,
+      "brief": "The Granton Area School District is asking voters to approve renovations to the pool and locker room areas.",
+      "yes_votes": 254,
+      "no_votes": 105,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 6250000.0,
+      "brief": "$1,250,000 Per Year for Five Years for Non-Recurring Purposes",
+      "yes_votes": 148,
+      "no_votes": 543,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2026-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 800000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL  \r\nDISTRICT BUDGET TO EXCEED REVENUE LIMIT  \r\nBY $400,000 PER YEAR FOR TWO YEARS  \r\nFOR NON-RECURRING PURPOSES",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Before the Vote Date"
+    }
+  ]
+}

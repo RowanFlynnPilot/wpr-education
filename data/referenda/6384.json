@@ -1,0 +1,99 @@
+{
+  "district": {
+    "dpi_code": "6384",
+    "dpi_name": "Weyauwega-Fremont"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1997-06-10",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1400000.0,
+      "brief": "building and classroom improvements",
+      "yes_votes": 287,
+      "no_votes": 373,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1997-06-10",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5400000.0,
+      "brief": "building and classroom improvements",
+      "yes_votes": 312,
+      "no_votes": 357,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 11700000.0,
+      "brief": "add to school buildings, including auditorium",
+      "yes_votes": 1102,
+      "no_votes": 1277,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "exceed revenue limit, recurring, o&m and tech, 99-00",
+      "yes_votes": 949,
+      "no_votes": 1402,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-05-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7875000.0,
+      "brief": "add to & remodel school buildings",
+      "yes_votes": 555,
+      "no_votes": 846,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-05-18",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1715000.0,
+      "brief": "new auditorium",
+      "yes_votes": 469,
+      "no_votes": 929,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-05-18",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 100000.0,
+      "brief": "exceed rev cap, nonrecurring; 99-00 thru 03-04",
+      "yes_votes": 497,
+      "no_votes": 893,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2000-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 450000.0,
+      "brief": "non recurring expenses",
+      "yes_votes": 1353,
+      "no_votes": 868,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 21000000.0,
+      "brief": "Capital Improvements not to exceed $21,000,000.00",
+      "yes_votes": 1999,
+      "no_votes": 1716,
+      "status": "Passed"
+    }
+  ]
+}

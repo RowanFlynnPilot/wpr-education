@@ -1,0 +1,119 @@
+{
+  "district": {
+    "dpi_code": "6440",
+    "dpi_name": "White Lake"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "2001-04-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "special education and operational needs of the district",
+      "yes_votes": 316,
+      "no_votes": 307,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4500000.0,
+      "brief": "additions/renovations/major repairs to existing facilities, associated site preparation/improvement, furnishings/equipment, architectural/engineering/bond issuance costs",
+      "yes_votes": 360,
+      "no_votes": 649,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 25000.0,
+      "brief": "maintaining and operating district facilities",
+      "yes_votes": 352,
+      "no_votes": 630,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "Capital improvements, special education,transportation, utilities costs",
+      "yes_votes": 300,
+      "no_votes": 231,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2011-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2995000.0,
+      "brief": "constructing a new community/school recreation addition to and remodeling and site improvement projects at the White Lake School building; and acquiring furnishings, fixtures and equipment",
+      "yes_votes": 404,
+      "no_votes": 260,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2011-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "ONGOING OPERATIONAL EXPENSES",
+      "yes_votes": 424,
+      "no_votes": 231,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2014-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "General Operations",
+      "yes_votes": 177,
+      "no_votes": 179,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2014-11-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "Ongoing operational and maintenance expenses",
+      "yes_votes": 405,
+      "no_votes": 430,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2015-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "Ongoing operational and maintenance expenses.",
+      "yes_votes": 418,
+      "no_votes": 264,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 700000.0,
+      "brief": "For operating expenses and maintenance/building projects and upgrades.",
+      "yes_votes": 340,
+      "no_votes": 211,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 5500000.0,
+      "brief": "Shall the White Lake School District, Langlade County, Wisconsin, be authorized to exceed the revenue limit\r\nspecified in Section 121.91, Wisconsin Statutes, on a nonrecurring basis by $1,100,000 in each of five (5)\r\nconsecutive years, specifically the 2025-2026, 2026-2027, 2027-2028, 2028-2029, and 2029-2030 School\r\nYears. Such additional revenues to be used for the costs associated with maintaining its instructional programming\r\nand to cover operational costs of the White Lake School District?",
+      "yes_votes": 630,
+      "no_votes": 393,
+      "status": "Passed"
+    }
+  ]
+}

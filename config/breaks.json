@@ -1,5 +1,5 @@
 {
-  "_comment": "Methodology breaks and annotations, rendered on every trend chart whose topic matches. type 'comparability_break' = values before/after are not directly comparable (chart draws a hard visual break). type 'annotation' = context the reader needs but the series continues. Classify against the metrics actually charted: cutscores-2023-24 is an annotation because we chart score averages (comparable across a cut-score change), but it MUST become a comparability_break for proficiency-category metrics if those ever ship (Forward Exam v1.5). Add an entry every time DPI changes a definition, cut score, or vendor — check the About the Data pages and master errata before each refresh.",
+  "_comment": "Methodology breaks and annotations, rendered on every trend chart whose topic matches. type 'comparability_break' = values before/after are not directly comparable (chart draws a hard visual break). type 'annotation' = context the reader needs but the series continues. Classify against the metrics actually charted: the 2023-24 cut-score change is TWO entries because it lands differently per topic — an annotation for ACT (we chart score averages, comparable across a cut-score change) but a hard comparability_break for Forward (we chart proficiency-category rates, which the cut scores define). Add an entry every time DPI changes a definition, cut score, or vendor — check the About the Data pages and master errata before each refresh.",
   "breaks": [
     {
       "id": "cutscores-2023-24",
@@ -8,6 +8,38 @@
       "type": "annotation",
       "label": "DPI changed performance cut scores",
       "detail": "Starting with 2023-24 results, DPI changed how ACT (and Forward) performance categories are set — which scores count as 'Meeting' or 'Advanced.' Proficiency-category rates are not comparable across this line, but the ACT score scale itself did not change, so the score averages and participation shown here remain comparable."
+    },
+    {
+      "id": "cutscores-2023-24-forward",
+      "school_year": "2023-24",
+      "topics": ["forward"],
+      "type": "comparability_break",
+      "label": "DPI changed performance cut scores",
+      "detail": "Starting with 2023-24 results, DPI redefined the Forward Exam performance categories — which scores count as 'Meeting' or 'Advanced' — and the new cut scores set a higher bar. Proficiency rates before and after this line measure different standards and are not comparable; the statewide rate dropping at this line reflects the new scoring, not a sudden change in what students know."
+    },
+    {
+      "id": "covid-no-test-2019-20",
+      "school_year": "2020-21",
+      "topics": ["forward"],
+      "type": "annotation",
+      "label": "No 2019-20 test (COVID-19)",
+      "detail": "The spring 2020 Forward Exam was canceled statewide when schools closed for COVID-19, so 2019-20 has no data for any district. 2020-21 results resumed under pandemic conditions with lower participation in some districts — read that year with care."
+    },
+    {
+      "id": "compcost-recalc-2023-24",
+      "school_year": "2023-24",
+      "topics": ["finance"],
+      "type": "annotation",
+      "label": "DPI revised the cost-per-member calculation",
+      "detail": "For 2023-24 and later annual reports, DPI recalculated how spending is split into cost categories. The total cost per member charted here remains broadly comparable, but be careful comparing spending growth across this line — part of any change can reflect the recalculation, and pandemic-era federal aid (ESSER) also inflates 2021-22 through 2023-24 spending."
+    },
+    {
+      "id": "oe-redaction-2019-20",
+      "school_year": "2019-20",
+      "topics": ["open_enrollment"],
+      "type": "annotation",
+      "label": "DPI began redacting small transfer counts",
+      "detail": "Starting with 2019-20 (and systematically from 2020-21), DPI redacts open enrollment pupil counts under 20 for privacy. Earlier files published exact small counts. Redacted values show as suppressed; the aid-dollar figures are never redacted."
     },
     {
       "id": "enhanced-act-2025-26",

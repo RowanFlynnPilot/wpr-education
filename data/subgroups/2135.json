@@ -3,7 +3,7 @@
     "dpi_code": "2135",
     "dpi_name": "Gilman"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2481,6 +2481,1254 @@
             },
             "participation_pct": {
               "value": 83.3,
+              "suppressed": false
+            }
+          }
+        }
+      }
+    },
+    "forward": {
+      "2015-16": {
+        "race_ethnicity": {
+          "White": {
+            "ela_prof_pct": {
+              "value": 38.6,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 41.8,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 72.7,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 61.4,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 33.3,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 33.3,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 71.4,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 57.1,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 44.6,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 50.0,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 76.5,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 76.5,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 38.6,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 41.8,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 72.7,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 61.4,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2016-17": {
+        "race_ethnicity": {
+          "Two or More": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 30.4,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 39.2,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 54.8,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 48.4,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 28.1,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 50.0,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 58.3,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 58.3,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 29.4,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 44.1,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 56.4,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 52.7,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2017-18": {
+        "race_ethnicity": {
+          "Two or More": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": 41.9,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 37.2,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 25.0,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 31.2,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 23.8,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 23.8,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 41.7,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 41.7,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 59.1,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 50.0,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 32.1,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 35.7,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 41.9,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 37.2,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2018-19": {
+        "race_ethnicity": {
+          "Two or More": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 20.3,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 33.9,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 60.0,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 53.3,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 33.3,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 53.3,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 100.0,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 100.0,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 24.2,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 36.4,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 58.5,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 52.8,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2020-21": {
+        "race_ethnicity": {
+          "Black": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Two or More": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 22.4,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 25.4,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 47.5,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 40.0,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2021-22": {
+        "race_ethnicity": {
+          "Hispanic": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": 42.5,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 60.0,
+              "suppressed": false
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": 43.8,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 62.5,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": 41.7,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 58.3,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 30.7,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 37.0,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 42.5,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 60.0,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2022-23": {
+        "race_ethnicity": {
+          "Black": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": 33.3,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 41.7,
+              "suppressed": false
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": 55.0,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 75.0,
+              "suppressed": false
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 22.8,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 32.4,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 50.0,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 67.3,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2023-24": {
+        "race_ethnicity": {
+          "Hispanic": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 27.1,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 35.4,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 39.1,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 34.8,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 49.2,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 61.0,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 58.3,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 58.3,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 37.9,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 50.9,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 48.9,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 46.8,
+              "suppressed": false
+            }
+          }
+        }
+      },
+      "2024-25": {
+        "race_ethnicity": {
+          "Black": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "Hispanic": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "White": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "econ_status": {
+          "Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 27.8,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 29.6,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 29.4,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 41.2,
+              "suppressed": false
+            }
+          },
+          "Not Econ Disadv": {
+            "ela_prof_pct": {
+              "value": 40.0,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 47.1,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 39.1,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 47.8,
+              "suppressed": false
+            }
+          }
+        },
+        "disability": {
+          "SwD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          },
+          "SwoD": {
+            "ela_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "math_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "science_prof_pct": {
+              "value": null,
+              "suppressed": true
+            },
+            "socstudies_prof_pct": {
+              "value": null,
+              "suppressed": true
+            }
+          }
+        },
+        "el_status": {
+          "Eng Prof": {
+            "ela_prof_pct": {
+              "value": 34.7,
+              "suppressed": false
+            },
+            "math_prof_pct": {
+              "value": 39.5,
+              "suppressed": false
+            },
+            "science_prof_pct": {
+              "value": 35.0,
+              "suppressed": false
+            },
+            "socstudies_prof_pct": {
+              "value": 45.0,
               "suppressed": false
             }
           }

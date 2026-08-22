@@ -1,0 +1,39 @@
+{
+  "district": {
+    "dpi_code": "0623",
+    "dpi_name": "Bowler"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1991-10-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1970000.0,
+      "brief": "",
+      "yes_votes": 225,
+      "no_votes": 129,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "To repair infrastructure including but not limited to roofing, parking lots, technology, flooring and general maintenance.  To purchase textbooks and meet limited technology needs which we have been unable to address in Fund 10 spending.",
+      "yes_votes": 243,
+      "no_votes": 111,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2009-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "For non-recurring purposes consisting of operating expenses related to existing District programs.",
+      "yes_votes": 223,
+      "no_votes": 216,
+      "status": "Passed"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "district": {
+    "dpi_code": "6685",
+    "dpi_name": "Wisconsin Rapids"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1994-02-15",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2200000.0,
+      "brief": "8 class elem add, gym, office",
+      "yes_votes": 2947,
+      "no_votes": 840,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-04-07",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 800000.0,
+      "brief": "exceed revenue limit for recurring purposes",
+      "yes_votes": 3830,
+      "no_votes": 3843,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1998-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 25903000.0,
+      "brief": "add to & remodel e.s. jr hi & sr hi facilities; buy technology",
+      "yes_votes": 4658,
+      "no_votes": 3157,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 375000.0,
+      "brief": "exceed rev. limit, n/r, building maintenance projects",
+      "yes_votes": 5311,
+      "no_votes": 7836,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1998-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 425000.0,
+      "brief": "exceed rev. limit, n/r, building maintenance projects",
+      "yes_votes": 4987,
+      "no_votes": 8072,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-04-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1000000.0,
+      "brief": "exceed revenue caps for curriculum acquisition & technology upgrades",
+      "yes_votes": 3803,
+      "no_votes": 4898,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 8266700.0,
+      "brief": "Facility needs",
+      "yes_votes": 4127,
+      "no_votes": 4559,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-11-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1142000.0,
+      "brief": "non-recurring purposes consisting of technology upgrades and curriculum acquisitions.",
+      "yes_votes": 7590,
+      "no_votes": 6453,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-11-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5295000.0,
+      "brief": "paying the cost of capital expenditures",
+      "yes_votes": 8031,
+      "no_votes": 5887,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-11-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2820000.0,
+      "brief": "paying the cost of maintenance projects at schools which qualify for QZAB",
+      "yes_votes": 9008,
+      "no_votes": 5036,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-11-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 960000.0,
+      "brief": "paying the cost of refinancing outstanding District obligations",
+      "yes_votes": 8270,
+      "no_votes": 5589,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 10000000.0,
+      "brief": "To exceed the revenue limit specified in Section 121.91, Wisconsin Statutes, by $2,000,000 per year for five years, beginning with the 2021-2022 school year and ending with the 2025-2026 school year, for non-recurring purposes consisting of technology and curriculum updates.",
+      "yes_votes": 2839,
+      "no_votes": 2451,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 34000000.0,
+      "brief": "To issue pursuant to Chapter 67 of the Wisconsin Statutes, general obligation bonds in an amount not to exceed $34,000,000 for the public purpose of paying the cost of a district-wide school building and facility improvement project consisting of:  construction of secure entrances at all schools; renovations to science classrooms, labs and other areas and construction of an addition for a new Library/Student Resource Center and main office at Lincoln High School; construction of an addition for a new gymnasium and renovations at Rudolph Elementary School (THINK Academy); capital maintenance and building infrastructure improvements; and acquisition of furnishings fixtures and equipment.",
+      "yes_votes": 2854,
+      "no_votes": 2390,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 19000000.0,
+      "brief": "To exceed the revenue limit by $3,800,000 per year for five years for non-recurring purposes.",
+      "yes_votes": 4999,
+      "no_votes": 4799,
+      "status": "Passed"
+    }
+  ]
+}

@@ -75,9 +75,19 @@ function ChartTooltip({ active, label, payload, seriesMeta, kind }) {
 
 // Compact numeric label for on-chart value annotations: unit lives on the
 // axis, so points carry just the number.
+// Compact dollars for ticks and labels: axis space can't fit $1,427,622.
+function dollarShort(v) {
+  const sign = v < 0 ? '−' : ''
+  const a = Math.abs(v)
+  if (a >= 1e6) return `${sign}$${(a / 1e6).toLocaleString('en-US', { maximumFractionDigits: 1 })}M`
+  if (a >= 1e3) return `${sign}$${(a / 1e3).toLocaleString('en-US', { maximumFractionDigits: 0 })}K`
+  return `${sign}$${a.toLocaleString('en-US', { maximumFractionDigits: 0 })}`
+}
+
 function shortNum(v, kind) {
   if (v == null) return ''
   if (kind === 'count') return v.toLocaleString('en-US')
+  if (kind === 'dollars') return dollarShort(v)
   if (kind === 'score') {
     // ACT averages are published to 2 decimals; rounding 18.95 to "19"
     // on the chart would misstate the source.
@@ -119,7 +129,10 @@ export default function TrendChart({ topicId, kind, seriesList, ariaLabel, size 
     fill: '#6B675C',
   }
   const fmtTick = (v) =>
-    kind === 'count' ? v.toLocaleString('en-US') : kind === 'score' ? v : `${v}%`
+    kind === 'count' ? v.toLocaleString('en-US')
+      : kind === 'dollars' ? dollarShort(v)
+      : kind === 'score' ? v
+      : `${v}%`
 
   // Value labels for the primary (district) series. Labeling all ~21 points
   // of a long series collides badly on narrow screens, so large mode labels

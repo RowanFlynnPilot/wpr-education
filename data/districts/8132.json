@@ -3,8 +3,118 @@
     "dpi_code": "8132",
     "dpi_name": "Woodlands School - State Street Campus"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 17.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 6.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 35.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 32.1,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 21.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 6.1,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 24.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 21.2,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 27.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 14.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 28.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 26.3,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 22.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 18.7,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 35.3,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 35.3,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 11.9,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 9.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 15.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 19.0,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 32.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 25.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 40.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 49.6,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2018-19": {
         "dropout_rate": {

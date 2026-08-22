@@ -1,0 +1,129 @@
+{
+  "district": {
+    "dpi_code": "5467",
+    "dpi_name": "Spencer"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1994-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 225000.0,
+      "brief": "new fine arts cntr, gift of $450,000 added",
+      "yes_votes": 888,
+      "no_votes": 339,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1997-02-18",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 62485.0,
+      "brief": "debt service on state trust fund loan incurred to pay cost of building retrofit including HVAC, lighting and a fire alarm system",
+      "yes_votes": 244,
+      "no_votes": 38,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1999-04-06",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "exceed rev limits, 99-00, recurring",
+      "yes_votes": 516,
+      "no_votes": 288,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1999-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 750000.0,
+      "brief": "repair and renovate playgrounds and athletic fields",
+      "yes_votes": 379,
+      "no_votes": 410,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 500000.0,
+      "brief": "renovate school facilities",
+      "yes_votes": 509,
+      "no_votes": 263,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2005-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 425000.0,
+      "brief": "non-recurring purposes",
+      "yes_votes": 525,
+      "no_votes": 229,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2010-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "non-recurring purposes",
+      "yes_votes": 346,
+      "no_votes": 451,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2011-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 675000.0,
+      "brief": "Authorize School District Budget to Exceed Revenue Limit by $675,000 for five years for non-recurring purposes",
+      "yes_votes": 899,
+      "no_votes": 683,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 975000.0,
+      "brief": "Authorize School District Budget to Exceed Revenue Limit by $975,000 for five years for non-recurring purposes",
+      "yes_votes": 805,
+      "no_votes": 649,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2019-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5980000.0,
+      "brief": "renovating school building to improve safety and security; maintaining, upgrading, equipping facilities; constructing and equipping addition to building for education, music, and athletics",
+      "yes_votes": 781,
+      "no_votes": 598,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 975000.0,
+      "brief": "Resolution Authorizing the School District Budget to Exceed Revenue Limit by $975,000 for the 2021-2022 School Year for Non-Recurring Purposes",
+      "yes_votes": 293,
+      "no_votes": 452,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 925000.0,
+      "brief": "Authorizing the School District Budget to Exceed Revenue Limit for Recurring Purposes",
+      "yes_votes": 597,
+      "no_votes": 553,
+      "status": "Passed"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
     "dpi_code": "8018",
     "dpi_name": "Isthmus Montessori Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -94,6 +94,62 @@
         "tested_count": {
           "value": null,
           "suppressed": true
+        }
+      }
+    },
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 34.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 22.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 71.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 92.9,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 45.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 35.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 44.1,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 50.0,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 48.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 48.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 68.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 73.3,
+          "suppressed": false
         }
       }
     },

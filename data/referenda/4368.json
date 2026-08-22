@@ -1,0 +1,69 @@
+{
+  "district": {
+    "dpi_code": "4368",
+    "dpi_name": "Pittsville"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1993-05-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3000000.0,
+      "brief": "",
+      "yes_votes": 210,
+      "no_votes": 630,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1999-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1600000.0,
+      "brief": "auditorium",
+      "yes_votes": 868,
+      "no_votes": 573,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1999-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3350000.0,
+      "brief": "gym; music rooms; locker rooms; offices",
+      "yes_votes": 918,
+      "no_votes": 548,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-11-04",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 175000.0,
+      "brief": "operation and maintenance expenses",
+      "yes_votes": 1031,
+      "no_votes": 1013,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 6700000.0,
+      "brief": "Acquisition of land for and the construction of a new CTE facility, replacement of portion of Elementary School roof and replacement of backup boiler at High School.",
+      "yes_votes": 746,
+      "no_votes": 623,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 6020000.0,
+      "brief": "Four year non-recurring operational referendum",
+      "yes_votes": 1269,
+      "no_votes": 1011,
+      "status": "Passed"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "district": {
+    "dpi_code": "5726",
+    "dpi_name": "Thorp"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "2006-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1420000.0,
+      "brief": "For the public purpose of paying the cost of constructing and equipping an addition to the high school; and renovating, improving and upgrading other buildings and gounds in the district.",
+      "yes_votes": 207,
+      "no_votes": 525,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2007-04-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 225000.0,
+      "brief": "COST OF UNIVENT REPLACEMENT",
+      "yes_votes": 450,
+      "no_votes": 354,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2007-04-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 450000.0,
+      "brief": "BUILD TECH ED AND AG SHOP AND RELATED EQUIPMENT",
+      "yes_votes": 403,
+      "no_votes": 405,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-02-19",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 490000.0,
+      "brief": "AG/TECH ED SHOP BUILDING ADDITION",
+      "yes_votes": 661,
+      "no_votes": 494,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2017-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3200000.0,
+      "brief": "Construction of activity center for fine arts performances and youth athletic practices.",
+      "yes_votes": 230,
+      "no_votes": 456,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2017-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 4500000.0,
+      "brief": "Operation and maintenance of existing building and construction of three building additions.",
+      "yes_votes": 404,
+      "no_votes": 290,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3600000.0,
+      "brief": "Operational costs that will include programming needs, resources, staffing and low cost maintenance needs.",
+      "yes_votes": 299,
+      "no_votes": 528,
+      "status": "Failed"
+    }
+  ]
+}

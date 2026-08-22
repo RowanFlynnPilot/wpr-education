@@ -39,6 +39,28 @@ export function loadSubgroups(code) {
   return subgroupCache.get(code)
 }
 
+// School docs (data/schools/{district_code}.json) exist only for config
+// districts; fetched lazily when a district page (schools nav) or school
+// page needs them.
+const schoolCache = new Map()
+
+export function loadSchools(code) {
+  if (!schoolCache.has(code)) {
+    schoolCache.set(code, loadJSON(`schools/${code}.json`))
+  }
+  return schoolCache.get(code)
+}
+
+// Referenda history (data/referenda/{code}.json), config districts only.
+const referendaCache = new Map()
+
+export function loadReferenda(code) {
+  if (!referendaCache.has(code)) {
+    referendaCache.set(code, loadJSON(`referenda/${code}.json`))
+  }
+  return referendaCache.get(code)
+}
+
 export async function loadDocs(codes) {
   const unique = [...new Set(codes)]
   for (const code of unique) {

@@ -1,0 +1,179 @@
+{
+  "district": {
+    "dpi_code": "1561",
+    "dpi_name": "Edgar"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1993-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1500000.0,
+      "brief": "",
+      "yes_votes": 540,
+      "no_votes": 630,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1994-02-15",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1800000.0,
+      "brief": "add classrooms to K-12, new gym & shop",
+      "yes_votes": 586,
+      "no_votes": 469,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1997-02-19",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1997-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 230000.0,
+      "brief": "",
+      "yes_votes": 375,
+      "no_votes": 552,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1997-06-17",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 230000.0,
+      "brief": "revenue limit",
+      "yes_votes": 552,
+      "no_votes": 646,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1998-09-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 175000.0,
+      "brief": "exceed revenue limits, 3 years, start 1998-99",
+      "yes_votes": 541,
+      "no_votes": 584,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2001-04-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2315000.0,
+      "brief": "additing and auditorium; remodel gym entrance and acquire and improve land for baseball field",
+      "yes_votes": 473,
+      "no_votes": 833,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2001-04-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1920000.0,
+      "brief": "adding classrooms; remodeling; renovate/improve facilities including football fields and track facilities; expand lunchroom related furnishings",
+      "yes_votes": 633,
+      "no_votes": 676,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2001-04-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 150000.0,
+      "brief": "recurring purposes",
+      "yes_votes": 691,
+      "no_votes": 642,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2002-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1400000.0,
+      "brief": "adding band room, art room, choir room, remodel cafeteria, install wheelchair lift",
+      "yes_votes": 472,
+      "no_votes": 735,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2002-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 300000.0,
+      "brief": "improve athletic facilities including adding restrooms, concession stand, press box, bleachers, upgrade to track/football field",
+      "yes_votes": 508,
+      "no_votes": 702,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2005-07-27",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 200000.0,
+      "brief": "",
+      "yes_votes": 759,
+      "no_votes": 453,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2010-02-16",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7600000.0,
+      "brief": "cost of remodeling existing physical education facilities for use as performance center/auditorium, constructing replacement physical education facilities, adding additional elementary classrooms, renovating and remodeling food service and music facilities, and acquiring equipment",
+      "yes_votes": 705,
+      "no_votes": 629,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-02-18",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 150000.0,
+      "brief": "three-year for recurring purposes consisting of sustaining educational programming, operational and maintenance expenses.",
+      "yes_votes": 453,
+      "no_votes": 530,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 350000.0,
+      "brief": "three-year for recurring purposes consisting of facility maintenance and operational expenses",
+      "yes_votes": 532,
+      "no_votes": 568,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 4750000.0,
+      "brief": "$950,000 for 5 years for non-recurring purposes consisting of facility maintenance and operational expenses",
+      "yes_votes": 755,
+      "no_votes": 436,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2026-11-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 0.0,
+      "brief": "Resolution Authorizing the School District Budget to Exceed Revenue Limit by $1,400,000     Per Year for Five Years for Non-Recurring Purposes",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Before the Vote Date"
+    }
+  ]
+}

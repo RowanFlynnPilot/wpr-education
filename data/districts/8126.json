@@ -3,8 +3,28 @@
     "dpi_code": "8126",
     "dpi_name": "King's Academy"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 16.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 6.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 12.2,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 17.1,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2010-11": {
         "dropout_rate": {

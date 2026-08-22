@@ -3,7 +3,7 @@
     "dpi_code": "8007",
     "dpi_name": "Central City Cyberschool of Milwaukee Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -93,6 +93,62 @@
         },
         "participation_pct": {
           "value": 83.3,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": 9.3,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 7.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 13.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 24.1,
+          "suppressed": false
+        }
+      },
+      "2023-24": {
+        "ela_prof_pct": {
+          "value": 19.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 14.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 8.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 30.4,
+          "suppressed": false
+        }
+      },
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 20.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 17.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 5.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 15.0,
           "suppressed": false
         }
       }

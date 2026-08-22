@@ -1,0 +1,129 @@
+{
+  "district": {
+    "dpi_code": "0140",
+    "dpi_name": "Antigo Unified"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-10-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 13500000.0,
+      "brief": "add renov to all 10 dist elem schls, athl field, new pool",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1997-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5200000.0,
+      "brief": "",
+      "yes_votes": 2685,
+      "no_votes": 2520,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2001-12-11",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1040000.0,
+      "brief": "maintaining and improving district buildings, sites, instructional programs",
+      "yes_votes": 1696,
+      "no_votes": 1686,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2006-09-12",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1040000.0,
+      "brief": "To Exceed the Revenue Limit for 4 years",
+      "yes_votes": 1961,
+      "no_votes": 2274,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2006-09-12",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 21500000.0,
+      "brief": "To Construct an Elementary Building",
+      "yes_votes": 1743,
+      "no_votes": 2525,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2007-04-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1200000.0,
+      "brief": "Operational Expenses",
+      "yes_votes": 1810,
+      "no_votes": 2399,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2011-11-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 24000000.0,
+      "brief": "Issue Debt for $24 million to Build an Elementary School",
+      "yes_votes": 2081,
+      "no_votes": 2137,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2012-04-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 24000000.0,
+      "brief": "ELECTION CANCELLED\r\r\n\r\r\nIssue Debt for $24,000,000 to build a elementary school",
+      "yes_votes": 0,
+      "no_votes": 0,
+      "status": "Election Cancelled"
+    },
+    {
+      "vote_date": "2012-11-06",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 1500000.0,
+      "brief": "Exceed Revenue Cap - Recurring for Maintenance and  Operating Expenses",
+      "yes_votes": 3293,
+      "no_votes": 5214,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2012-11-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 24500000.0,
+      "brief": "Issue Debt for $24,500,000 to build an elementary school",
+      "yes_votes": 3574,
+      "no_votes": 5065,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 25900000.0,
+      "brief": "Issue Debt in an amount not to exceed $25,900,000 to build an new elementary school and additions and remodeling at the remaining two elementary schools.",
+      "yes_votes": 2617,
+      "no_votes": 3879,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 54000000.0,
+      "brief": "Issue debt in an amount not to exceed $54,000,000 for the public purpose of paying the cost of a school building and facility improvement project consisting of: construction of a new elementary school, related site improvements and possible land acquisition; improvements for the relocation of the district offices; capital maintenance and building infrastructure improvements at the Middle and High Schools; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 5149,
+      "no_votes": 4316,
+      "status": "Passed"
+    }
+  ]
+}

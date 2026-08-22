@@ -3,8 +3,100 @@
     "dpi_code": "8123",
     "dpi_name": "Bruce Guadalupe"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2015-16": {
+        "ela_prof_pct": {
+          "value": 35.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 36.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 41.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 50.0,
+          "suppressed": false
+        }
+      },
+      "2016-17": {
+        "ela_prof_pct": {
+          "value": 38.4,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 37.8,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 42.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 47.6,
+          "suppressed": false
+        }
+      },
+      "2017-18": {
+        "ela_prof_pct": {
+          "value": 35.1,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 41.5,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 37.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 50.4,
+          "suppressed": false
+        }
+      },
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 32.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 39.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 40.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 45.4,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 22.5,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 17.4,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 27.4,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 26.6,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2009-10": {
         "dropout_rate": {

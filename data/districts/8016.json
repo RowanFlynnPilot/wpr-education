@@ -3,8 +3,28 @@
     "dpi_code": "8016",
     "dpi_name": "Penfield Montessori Academy, Inc."
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2022-23": {
+        "ela_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "math_prof_pct": {
+          "value": null,
+          "suppressed": true
+        },
+        "science_prof_pct": {
+          "value": 41.7,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 25.0,
+          "suppressed": false
+        }
+      }
+    },
     "absenteeism": {
       "2022-23": {
         "chronic_absenteeism_rate": {

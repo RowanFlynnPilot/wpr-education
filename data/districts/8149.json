@@ -3,8 +3,28 @@
     "dpi_code": "8149",
     "dpi_name": "The Lincoln Academy"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 24.8,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 19.0,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 23.9,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 45.7,
+          "suppressed": false
+        }
+      }
+    },
     "dropouts": {
       "2021-22": {
         "dropout_rate": {

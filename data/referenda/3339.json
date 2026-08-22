@@ -1,0 +1,109 @@
+{
+  "district": {
+    "dpi_code": "3339",
+    "dpi_name": "Marshfield Unified"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "2002-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1000000.0,
+      "brief": "sustatin educational programs, replace technology equipment and perform building and site maintenance",
+      "yes_votes": 4825,
+      "no_votes": 3009,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 31400000.0,
+      "brief": "demolish Madison Elementary School and construct new facility; construct addition to/remodel/renovate Lincoln and Washington Elem Schools; improvement projects at Grant Elem School; demolish Marshfield Junior High and construct new Middle School; addition to and improvement projects at Marshfield High School, furniture,fixtures and equipment",
+      "yes_votes": 3484,
+      "no_votes": 4339,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2004-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 25610000.0,
+      "brief": "acquire land, demolition costs, construct 2 new elementary schools, construct additions to and remodel/maintenance/improvement projects at Lincoln ES, Marshfield Junior High and Marshfield High Schools, equipment/furnishings/fixtures",
+      "yes_votes": 3764,
+      "no_votes": 4044,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2005-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 21300000.0,
+      "brief": "Repair/Replace School Buildings",
+      "yes_votes": 5211,
+      "no_votes": 3529,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-02-19",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2000000.0,
+      "brief": "Resolution Authorizing the School District Budget to Exceed Revenue Limit for Five Years for Non-Recurring Purposes",
+      "yes_votes": 5892,
+      "no_votes": 4760,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2012-11-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2500000.0,
+      "brief": "non-recurring purposes consisting of sustaining educational programs",
+      "yes_votes": 7807,
+      "no_votes": 6076,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3000000.0,
+      "brief": "RESOLUTION\r\r\nAUTHORIZING THE SCHOOL DISTRICT BUDGET TO\r\r\nEXCEED REVENUE LIMIT BY $3,000,000 FOR\r\r\nFOUR YEARS FOR NON-RECURRING PURPOSES",
+      "yes_votes": 8494,
+      "no_votes": 5655,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 3500000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL DISTRICT BUDGET TO EXCEED REVENUE LIMIT BY $3,500,000 FOR RECURRING PURPOSES",
+      "yes_votes": 8818,
+      "no_votes": 6376,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2023-04-04",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 99500000.0,
+      "brief": "Shall the Unified School District of Marshfield, Wood, Marathon and Clark Counties, Wisconsin be authorized to issue pursuant to Chapter 67 of the Wisconsin Statutes, general obligation bonds in an amount not to exceed $99,500,000 for the public purpose of paying the cost of a district-wide school building and facility improvement project consisting of:  construction of additions, including for a secure entrance, career and tech ed space, classrooms, student services, and cafeteria/commons and fitness areas, renovations and capital maintenance, building systems, infrastructure and site improvements at Marshfield High School; capital maintenance and building systems improvements at Marshfield Middle School; renovations and building systems, infrastructure, safety and site improvements at the elementary schools; and acquisition of furnishings, fixtures and equipment?",
+      "yes_votes": 3952,
+      "no_votes": 5425,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 71575000.0,
+      "brief": "Shall the Unified School District of Marshfield, Wood, Marathon and Clark Counties, Wisconsin that there shall be issued pursuant to Chapter 67 of the Wisconsin Statutes, general obligation bonds in an amount not to exceed $71,575,000 for the public purpose of paying the cost of a school building and facility improvement project consisting of:  construction of additions, renovations, and capital maintenance, safety, security, physical education, building infrastructure, systems and site improvements at the High School and Grant Elementary School; and acquisition of furnishings, fixtures and equipment?",
+      "yes_votes": 7820,
+      "no_votes": 7617,
+      "status": "Passed"
+    }
+  ]
+}

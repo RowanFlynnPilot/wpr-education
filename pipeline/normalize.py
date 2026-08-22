@@ -24,6 +24,7 @@ subgroup rows use the GROUP_BY labels in DIMENSIONS (drift across years:
 harmonized via GROUP_VALUE_ALIASES with a methodology note frontend-side).
 """
 
+import openpyxl
 import pandas as pd
 
 from validate import SUPPRESSION_MARKERS
@@ -231,6 +232,65 @@ def _ap_metrics(grp, ctx, strict):
     }
 
 
+# TEST_SUBJECT -> metric name. 2024-25 adds Reading/Writing (ELA subscore)
+# subjects we deliberately ignore; ELA itself exists in every year.
+_FORWARD_SUBJECTS = {
+    "ELA": "ela_prof_pct",
+    "Mathematics": "math_prof_pct",
+    "Science": "science_prof_pct",
+    "Social Studies": "socstudies_prof_pct",
+}
+
+# Top-two performance categories under both cut-score regimes: 2015-16
+# through 2022-23 use Proficient/Advanced, 2023-24 onward use
+# Meeting/Advanced. One union set works because no year mixes regimes.
+# The regimes themselves are NOT comparable — that's the
+# cutscores-2023-24-forward comparability break in config/breaks.json.
+_FORWARD_PROFICIENT = {"Proficient", "Advanced", "Meeting"}
+
+
+def _forward_metrics(grp, ctx, strict):
+    """Percent of students scoring in the top two performance categories,
+    grades 3-8 combined per subject. The files carry per-grade rows only
+    (no all-grades rollup), so the combined rate is summed from per-grade
+    counts against DPI's own denominators (GROUP_COUNT, which includes
+    No Test / No Score rows — matching DPI's published PERCENT_OF_GROUP
+    semantics). If any contributing count is redacted the combined rate is
+    unknowable and the metric is suppressed — never approximated."""
+    metrics: dict[str, Cell] = {}
+    for subject, metric in _FORWARD_SUBJECTS.items():
+        srows = grp[grp["TEST_SUBJECT"] == subject]
+        if srows.empty:
+            continue  # subject not offered that year / for that group
+        # A literal '*' TEST_RESULT row means the category breakdown itself
+        # is redacted for that grade.
+        breakdown_redacted = bool(srows["TEST_RESULT"].eq("*").any())
+        prof_rows = srows[srows["TEST_RESULT"].isin(_FORWARD_PROFICIENT)]
+        numerator_redacted = bool(prof_rows["STUDENT_COUNT"].map(_is_suppressed).any())
+
+        denominator = 0.0
+        denominator_redacted = False
+        for grade, grows in srows.groupby("GRADE_LEVEL"):
+            graws = {v for v in grows["GROUP_COUNT"].dropna()}
+            if len(graws) != 1:
+                raise ValueError(f"{ctx} {subject} grade {grade}: conflicting "
+                                 f"GROUP_COUNT {sorted(graws)}")
+            graw = graws.pop()
+            if _is_suppressed(graw):
+                denominator_redacted = True
+            else:
+                denominator += _num(graw, ctx)
+
+        if breakdown_redacted or numerator_redacted or denominator_redacted:
+            metrics[metric] = dict(SUPPRESSED)
+        elif denominator > 0:
+            numerator = sum(_num(v, ctx) for v in prof_rows["STUDENT_COUNT"])
+            metrics[metric] = {"value": round(100.0 * numerator / denominator, 1),
+                               "suppressed": False}
+        # denominator 0 with nothing redacted: no students, omit.
+    return metrics or None
+
+
 def _preact_metrics(grp, ctx, strict):
     """PreACT Secure composite averages, one metric per grade level (9/10).
     Same AVERAGE_SCORE semantics as the ACT files."""
@@ -349,11 +409,314 @@ _TOPIC_SOURCES = {
         lambda df: df[df["TEST_GROUP"] == "PreACT"],
         _preact_metrics,
     )],
+    # Grades 3-8 only (Science/Social Studies also carry grade-10 rows in
+    # some years) for a stable definition across the whole series.
+    "forward": [(
+        "forward", "forward",
+        lambda df: df[(df["TEST_GROUP"] == "Forward")
+                      & (df["GRADE_LEVEL"].isin(["3", "4", "5", "6", "7", "8"]))],
+        _forward_metrics,
+    )],
     "ap": [(
         "ap", "ap",
         lambda df: df[df["AP_EXAM"] == "[All]"],
         _ap_metrics,
     )],
+}
+
+
+def _select_schools(df: pd.DataFrame, year: str, topic: str, codes: set[str]) -> pd.DataFrame:
+    """Per-school rows for the given districts, all-students only. School
+    rows carry their school type in GRADE_GROUP (Elementary School, High
+    School, ...) rather than '[All]', so no GRADE_GROUP filter applies;
+    bracket pseudo-schools ([Districtwide], [Statewide], any future ones)
+    are excluded wholesale."""
+    for col in ("DISTRICT_CODE", "SCHOOL_CODE", "SCHOOL_NAME", "GROUP_BY"):
+        if col not in df.columns:
+            raise ValueError(f"{topic} {year}: expected column {col} missing "
+                             f"from {list(df.columns)}")
+    mask = ((df["GROUP_BY"] == "All Students")
+            & df["DISTRICT_CODE"].isin(codes)
+            & ~df["SCHOOL_NAME"].str.startswith("["))
+    return df[mask]
+
+
+def _build_schools(topic: str, frames: dict, codes: set[str]) -> dict:
+    """{district_code: {school_code: {"name", "type", "years": {year:
+    {metric: cell}}}}} — the district-file metrics per school. strict=False
+    like subgroups: schools legitimately lack subjects, timeframes, and
+    whole topics (no ACT rows in an elementary school)."""
+    out: dict[str, dict] = {}
+    for src_topic, member, prep, metrics_fn, *rest in _TOPIC_SOURCES[topic]:
+        member_frames = _get_member(frames, src_topic, member)
+        for year in sorted(member_frames):
+            df = member_frames[year]
+            sel = _select_schools(prep(df) if prep else df, year, topic, codes)
+            for (dcode, scode), grp in sel.groupby(["DISTRICT_CODE", "SCHOOL_CODE"]):
+                ctx = f"{topic} {year} district {dcode} school {scode}"
+                metrics = metrics_fn(grp, ctx, strict=False)
+                if not metrics:
+                    continue
+                school = out.setdefault(dcode, {}).setdefault(
+                    scode, {"name": None, "type": None, "years": {}})
+                # Years iterate sorted, so the newest name/type win —
+                # school names drift across years like district names do.
+                school["name"] = grp.iloc[0]["SCHOOL_NAME"]
+                school["type"] = grp.iloc[0]["GRADE_GROUP"]
+                school["years"].setdefault(year, {}).update(metrics)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Non-WISEdash xlsx builders. These parse DPI program-office spreadsheets
+# (see sources.XLSX_FILES) instead of the WISEdash frame machinery, but
+# emit the exact same {code: {year: {metric: cell}}} shape.
+# ---------------------------------------------------------------------------
+
+# Expected column headers after YEAR/DIST NO/DISTRICT NAME, in file order.
+_OE_COLUMNS = ["PUPIL TRANSFERS IN", "PUPIL TRANSFERS OUT", "NET PUPIL TRANSFERS",
+               "AID TRANSFERS IN", "AID TRANSFERS OUT", "NET AID TRANSFERS"]
+_OE_METRICS = ["pupils_in", "pupils_out", "net_pupils",
+               "aid_in", "aid_out", "net_aid"]
+
+
+def build_open_enrollment(xlsx_paths: dict[str, "object"]) -> dict:
+    """Open enrollment pupil/aid transfers per district-year from the
+    program office's annual xlsx. Cells are used verbatim: DPI sometimes
+    redacts the NET column while leaving a component visible — computing
+    the net ourselves would un-redact what DPI redacted, so we never do.
+    Rows are matched by a 4-digit DISTRICT NO; the Totals row and footnote
+    rows lack one and fall away. No statewide row exists in these files."""
+    out: dict[str, dict] = {}
+    for year, path in sorted(xlsx_paths.items()):
+        wb = openpyxl.load_workbook(path, data_only=True)
+        ws = wb[wb.sheetnames[0]]
+        rows = list(ws.iter_rows(values_only=True))
+        header_idx = next(
+            (i for i, r in enumerate(rows)
+             # 2018-19 titles the column 'Year' instead of 'YEAR'.
+             if str(r[0]).strip().upper() == "YEAR"
+             and isinstance(r[1], str) and r[1].startswith("DIST")),
+            None)
+        if header_idx is None:
+            raise ValueError(f"open_enrollment {year}: no header row (YEAR / DIST* NO) "
+                             f"found in {path}")
+        header = [str(c).strip() if c else "" for c in rows[header_idx]]
+        if header[3:9] != _OE_COLUMNS:
+            raise ValueError(f"open_enrollment {year}: unexpected columns {header[3:9]} "
+                             f"(expected {_OE_COLUMNS}) — DPI changed the layout.")
+        seen = 0
+        for r in rows[header_idx + 1:]:
+            code = r[1]
+            if not (isinstance(code, str) and len(code) == 4 and code.isdigit()):
+                continue  # Totals row, footnote, blank tail
+            # A district with no open enrollment activity gets an all-blank
+            # row (Washington Island 2016-17: five blanks + a 0 net aid).
+            # Blank is not zero and not suppression — omit the year.
+            if all(v is None for v in r[3:8]):
+                seen += 1
+                continue
+            metrics = {}
+            for metric, raw in zip(_OE_METRICS, r[3:9]):
+                metrics[metric] = to_cell(raw)
+            out.setdefault(code, {})[year] = metrics
+            seen += 1
+        if seen < 400:
+            raise ValueError(f"open_enrollment {year}: only {seen} district rows "
+                             "parsed — expected ~421; the file layout likely moved.")
+    return out
+
+
+def _fiscal_label(y: int) -> str:
+    return f"{y}-{str(y + 1)[-2:]}"
+
+
+def _fin_num(v, ctx: str):
+    """Finance workbook cell -> float, None for blank-ish (None / ''),
+    error otherwise — these workbooks have stray whitespace-only cells
+    but are never privacy-redacted."""
+    if v is None:
+        return None
+    if isinstance(v, str):
+        v = v.strip()
+        # '' = blank; '#DIV/0!' etc. = the workbook's own formula failed
+        # (zero-membership years) — no value exists, same as blank.
+        if not v or v.startswith("#"):
+            return None
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        raise ValueError(f"{ctx}: unparseable finance cell {v!r}")
+
+
+def build_finance(paths: dict[str, "object"], compcost_end: str) -> dict:
+    """cost_per_member + revenue_limit_per_member per district-year from
+    the two SFS longitudinal workbooks. Both key districts by UNPADDED
+    numeric code — zero-filled here to match the repo's codes. Finance
+    data is never redacted, so any unparseable cell is an error, not
+    suppression. compcost_end (e.g. '2024-25', parsed from the served
+    filename by refresh.py) caps the cost series: the workbook carries a
+    year group beyond DPI's published audited range — current-year
+    unaudited figures we refuse to ship.
+
+    Returns (data, names): the finance history reaches back before the
+    WISEdash files start (1993-94 vs 2005-06), so districts dissolved
+    before 2005 appear ONLY here — their names come from these workbooks
+    (used as lowest-priority entries in the refresh name map)."""
+    out: dict[str, dict] = {}
+    names: dict[str, str] = {}
+
+    # --- Comparative cost per member (2008-09+). DATA sheet: header row
+    # with DISTRICT_NAME then repeating groups starting at each
+    # FISCAL_YEAR column: member + cost-category dollar columns (category
+    # count drifts at DPI's 2023 recalculation; we sum whatever
+    # categories each group carries and divide by member).
+    wb = openpyxl.load_workbook(paths["compcost"], data_only=True, read_only=True)
+    try:
+        ws = wb["DATA"]
+        rows = list(ws.iter_rows(values_only=True))
+    finally:
+        wb.close()
+    header = [str(c).strip() if c is not None else "" for c in rows[0]]
+    groups = []  # (year_col, member_col, [cost_cols])
+    for i, name in enumerate(header):
+        # Header case drifts mid-file: 'FISCAL_YEAR' for the early year
+        # groups, 'fiscal_year' for later ones.
+        if name.upper() == "FISCAL_YEAR":
+            groups.append({"year": i, "member": None, "costs": []})
+        elif groups:
+            if name.lower() == "member":
+                groups[-1]["member"] = i
+            elif name:
+                groups[-1]["costs"].append(i)
+    if not groups or any(g["member"] is None or not g["costs"] for g in groups):
+        raise ValueError("finance compcost: FISCAL_YEAR/member/cost header "
+                         f"groups not found in {header[:12]}...")
+    for r in rows[1:]:
+        code_raw = r[0]
+        if not (isinstance(code_raw, (int, float)) and int(code_raw) > 0):
+            continue  # header filler rows / footers
+        code = str(int(code_raw)).zfill(4)
+        if isinstance(r[1], str) and r[1].strip():
+            names[code] = r[1].strip()
+        for g in groups:
+            ctx = f"finance compcost district {code}"
+            year_raw = _fin_num(r[g["year"]], ctx)
+            member = _fin_num(r[g["member"]], ctx)
+            if year_raw is None or not member:
+                continue  # district didn't exist / no membership that year
+            costs = [_fin_num(r[i], ctx) for i in g["costs"]]
+            if any(c is None for c in costs):
+                continue  # year group not yet populated for this district
+            year = _fiscal_label(int(year_raw))
+            if year > compcost_end:
+                continue  # beyond DPI's published audited range
+            cell = {"value": round(sum(costs) / member), "suppressed": False}
+            out.setdefault(code, {}).setdefault(year, {})["cost_per_member"] = cell
+
+    # --- Revenue limit per member (1993-94+). Data sheet: row0 = year
+    # labels like '93-94' (each spanning a 3-column group), row1 =
+    # sub-headers ending in the per-member column, row2 = junk, data
+    # after. The per-member value is the 3rd column of each triple.
+    wb = openpyxl.load_workbook(paths["revenue_limit"], data_only=True, read_only=True)
+    try:
+        ws = next(wb[s] for s in wb.sheetnames if s.strip().lower() == "data")
+        rows = list(ws.iter_rows(values_only=True))
+    finally:
+        wb.close()
+    year_row = rows[0]
+    triples = []  # (year_label, per_member_col)
+    col = 2
+    while col + 2 < len(year_row):
+        label = str(year_row[col]).strip() if year_row[col] is not None else ""
+        if not label or "-" not in label:
+            break
+        start, _end = label.split("-")
+        start_i = int(start)
+        full = 1900 + start_i if start_i >= 50 else 2000 + start_i
+        triples.append((_fiscal_label(full), col + 2))
+        col += 3
+    if len(triples) < 25:
+        raise ValueError(f"finance revenue_limit: only {len(triples)} year triples "
+                         "parsed from the Data sheet header — layout moved.")
+    for r in rows[3:]:
+        code_raw = r[0]
+        if not (isinstance(code_raw, (int, float)) and int(code_raw) > 0):
+            continue  # State Totals / filler rows
+        code = str(int(code_raw)).zfill(4)
+        if code not in names and isinstance(r[1], str) and r[1].strip():
+            names[code] = r[1].strip()
+        for year, pcol in triples:
+            v = _fin_num(r[pcol] if pcol < len(r) else None,
+                         f"finance revenue_limit district {code} {year}")
+            if not v:
+                continue  # merged/closed district years carry blanks or 0
+            cell = {"value": round(v), "suppressed": False}
+            out.setdefault(code, {}).setdefault(year, {})["revenue_limit_per_member"] = cell
+
+    if len(out) < 400:
+        raise ValueError(f"finance: only {len(out)} districts parsed — expected ~430.")
+    return out, names
+
+
+# Referendum event fields kept from the WiSFPR payload. Not cell-shaped
+# data (an event list, not year->metric), so it ships as its own file
+# family (data/referenda/) with its own schema.
+def build_referenda(payload: dict, codes: set[str]) -> dict:
+    """{code: [event, ...]} for the given districts, oldest first. Every
+    event must carry the fields the frontend renders — fail fast on any
+    reshape of the endpoint's JSON."""
+    rows = payload.get("Data")
+    if not isinstance(rows, list) or len(rows) < 3000:
+        raise ValueError("referenda: endpoint payload missing Data or "
+                         f"implausibly small ({type(rows)} / {len(rows) if isinstance(rows, list) else 'n/a'}) "
+                         "— did the date-range default kick in?")
+    out: dict[str, list] = {}
+    for r in rows:
+        code = r.get("AgencyCode")
+        if code not in codes:
+            continue
+        for field in ("VoteDate", "ReferendumType", "ReferendumTypeCode",
+                      "Amount", "ReferendumStatus"):
+            if field not in r:
+                raise ValueError(f"referenda: row missing {field}: {sorted(r)}")
+        out.setdefault(code, []).append({
+            "vote_date": r["VoteDate"][:10],
+            "type_code": r["ReferendumTypeCode"],
+            "type": r["ReferendumType"],
+            "amount": r["Amount"],
+            "brief": (r.get("BriefDescription") or "").strip(),
+            "yes_votes": r.get("YesVotes"),
+            "no_votes": r.get("NoVotes"),
+            "status": r["ReferendumStatus"],
+        })
+    for events in out.values():
+        events.sort(key=lambda e: e["vote_date"])
+    return out
+
+
+def source_topics(topic: str) -> set[str]:
+    """Which source topics' frames a topic's builders read (absenteeism
+    reads the dropouts ZIP's attendance member). Lets refresh.py load
+    frames lazily and release them once no later topic needs them."""
+    return {src for src, *_ in _TOPIC_SOURCES[topic]}
+
+
+# Row prunes applied at CSV-load time purely to keep peak memory sane —
+# the forward files run ~1M rows per year and the full corpus no longer
+# fits in memory unpruned. A prune MUST keep a superset of every row any
+# builder (all-students, subgroup, school-level) selects; dropping a row
+# a builder would use corrupts output silently. Only provably-unused rows
+# go: alternate-assessment DLM, grades outside 3-8, ELA subscore subjects,
+# and GROUP_BY dimensions we deliberately don't ingest (Gender, Migrant).
+LOAD_PRUNES = {
+    "forward": lambda df: df[
+        (df["TEST_GROUP"] == "Forward")
+        & df["GRADE_LEVEL"].isin(["3", "4", "5", "6", "7", "8"])
+        & df["TEST_SUBJECT"].isin(list(_FORWARD_SUBJECTS))
+        & df["GROUP_BY"].isin(
+            ["All Students"] + [l for ls in DIMENSIONS.values() for l in ls])
+    ],
 }
 
 
@@ -437,6 +800,12 @@ def build_preact(frames):
     return _build_all_students("preact", frames)
 
 
+def build_forward(frames):
+    """Grades 3-8 Forward Exam: percent in the top two performance
+    categories per subject, grades combined (TEST_GROUP == 'Forward')."""
+    return _build_all_students("forward", frames)
+
+
 def build_ap(frames):
     """AP participation and results from the AP_EXAM == '[All]' rollup."""
     return _build_all_students("ap", frames)
@@ -444,6 +813,7 @@ def build_ap(frames):
 
 BUILDERS = {
     "act": build_act,
+    "forward": build_forward,
     "preact": build_preact,
     "ap": build_ap,
     "graduation": build_graduation,
@@ -454,5 +824,10 @@ BUILDERS = {
 
 SUBGROUP_BUILDERS = {
     topic: (lambda frames, codes, _t=topic: _build_subgroups(_t, frames, codes))
+    for topic in _TOPIC_SOURCES
+}
+
+SCHOOL_BUILDERS = {
+    topic: (lambda frames, codes, _t=topic: _build_schools(_t, frames, codes))
     for topic in _TOPIC_SOURCES
 }

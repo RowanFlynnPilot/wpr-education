@@ -6,10 +6,6 @@ const SUP = { value: null, suppressed: true }
 
 describe('buildChart', () => {
   it('splits series at a comparability break — no key spans it', () => {
-    // Mechanism test with a synthetic break: no configured break currently
-    // uses comparability_break (the 2023-24 ACT cut-score entry is an
-    // annotation because charted ACT metrics are averages), but Forward
-    // proficiency metrics would revive it.
     const cells = {}
     for (const y of ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25']) {
       cells[y] = cell(19)
@@ -31,6 +27,19 @@ describe('buildChart', () => {
     const { seriesKeys, topicBreaks } = buildChart('act', [{ key: 'd', cells }])
     expect(seriesKeys.d).toHaveLength(1)
     expect(topicBreaks.find((b) => b.id === 'cutscores-2023-24').type).toBe('annotation')
+  })
+
+  it('hard-splits Forward at the 2023-24 cut-score break while ACT stays whole', () => {
+    // The same DPI decision is two config entries: proficiency-category
+    // rates (forward) break, score averages (act) do not. Guards against
+    // ever re-merging them into one entry with one type.
+    const cells = {}
+    for (const y of ['2021-22', '2022-23', '2023-24', '2024-25']) cells[y] = cell(50)
+    const fw = buildChart('forward', [{ key: 'd', cells }])
+    expect(fw.seriesKeys.d).toHaveLength(2)
+    expect(fw.topicBreaks.find((b) => b.id === 'cutscores-2023-24-forward').type)
+      .toBe('comparability_break')
+    expect(buildChart('act', [{ key: 'd', cells }]).seriesKeys.d).toHaveLength(1)
   })
 
   it('extends the x-domain to annotation years with no data (2025-26 ACT)', () => {

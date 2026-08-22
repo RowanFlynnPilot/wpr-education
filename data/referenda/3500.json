@@ -1,0 +1,119 @@
+{
+  "district": {
+    "dpi_code": "3500",
+    "dpi_name": "Merrill Area"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1993-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 14200000.0,
+      "brief": "",
+      "yes_votes": 2167,
+      "no_votes": 3795,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1994-09-13",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 2700000.0,
+      "brief": "basically a maintenance referndum, includes 2 elev at m.s.",
+      "yes_votes": 1230,
+      "no_votes": 901,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1995-02-21",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 7600000.0,
+      "brief": "new elem, hs renov",
+      "yes_votes": 1161,
+      "no_votes": 3812,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "1996-09-10",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 29700000.0,
+      "brief": "new elementary, remodel & additions to ms & hs",
+      "yes_votes": 3333,
+      "no_votes": 1957,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2001-11-13",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 8500000.0,
+      "brief": "construct addition, remodeling, maintaining, equipping elementary schools  including updating existing facilities and replace and add new classrooms, computer labs, IMCs, provide handicapped access, demolish portions of existing facilities and improve sites",
+      "yes_votes": 825,
+      "no_votes": 1783,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2008-02-19",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 930000.0,
+      "brief": "General Operations",
+      "yes_votes": 2049,
+      "no_votes": 5116,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2009-04-07",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 760000.0,
+      "brief": "General Operations",
+      "yes_votes": 1836,
+      "no_votes": 3153,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2018-04-03",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2500000.0,
+      "brief": "Referendum to Exceed revenue limits by $2.5 million per year for four years on a non-recurring basis.",
+      "yes_votes": 2891,
+      "no_votes": 1730,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2500000.0,
+      "brief": "This referendum is a continuation of the prior non-recurring referendum passed four years ago for the purpose of operations and maintenance in the amount of $2,500,000 annually.",
+      "yes_votes": 1786,
+      "no_votes": 2359,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2022-11-08",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2500000.0,
+      "brief": "Four Year Non-Recurring referendum in the amount of $2,500,000 per year beginning with the 23-24 school year.",
+      "yes_votes": 4095,
+      "no_votes": 4479,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 16000000.0,
+      "brief": "District wide school building and facility improvement",
+      "yes_votes": 2245,
+      "no_votes": 2626,
+      "status": "Failed"
+    }
+  ]
+}

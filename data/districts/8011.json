@@ -3,7 +3,7 @@
     "dpi_code": "8011",
     "dpi_name": "Dr Howard Fuller Collegiate Academy Inc"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
     "act": {
       "2022-23": {
@@ -93,6 +93,26 @@
         },
         "participation_pct": {
           "value": 94.4,
+          "suppressed": false
+        }
+      }
+    },
+    "forward": {
+      "2024-25": {
+        "ela_prof_pct": {
+          "value": 24.0,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 18.3,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 6.5,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 16.1,
           "suppressed": false
         }
       }

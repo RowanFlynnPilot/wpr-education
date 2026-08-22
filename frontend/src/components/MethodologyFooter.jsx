@@ -63,6 +63,31 @@ export default function MethodologyFooter({ generated }) {
         three years behind DPI's, so the U.S. line ends earlier.
       </p>
       <p>
+        <strong>Open enrollment.</strong> Transfer figures come from DPI's July
+        final aid-payment file (
+        <a href="https://dpi.wi.gov/open-enrollment/data/aid-adjustments" target="_blank" rel="noreferrer">
+          pupil transfers and aid adjustments
+        </a>
+        ). They count full-time-equivalent aid membership, not September
+        headcounts, so they won't match enrollment exactly. A district's
+        transfers aren't necessarily to or from its neighbors — statewide
+        virtual charter schools draw students from anywhere in Wisconsin.
+      </p>
+      <p>
+        <strong>Finance.</strong> Cost per member sums the audited cost categories
+        in DPI's{' '}
+        <a href="https://dpi.wi.gov/sfs/statistical/cost-revenue/section-d" target="_blank" rel="noreferrer">
+          comparative cost data
+        </a>{' '}
+        and divides by resident membership; revenue limit per member is the
+        statutory cap from DPI's longitudinal survey (set in advance, so it runs a
+        year ahead of audited costs). Referenda come from DPI's{' '}
+        <a href="https://sfs.dpi.wi.gov/wisfpr/SchoolDistrictReferendaReport?moduleId=11" target="_blank" rel="noreferrer">
+          school district referenda database
+        </a>
+        . Membership counts differ from enrollment headcounts — don't mix the two.
+      </p>
+      <p>
         <strong>Logos.</strong> School logos are the districts' own marks, shown
         small for identification only, from each district's official website.
       </p>

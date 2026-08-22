@@ -1,0 +1,89 @@
+{
+  "district": {
+    "dpi_code": "4207",
+    "dpi_name": "Owen-Withee"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1999-10-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 985000.0,
+      "brief": "add to IMC, move distance learning, replace roof & heating system",
+      "yes_votes": 395,
+      "no_votes": 148,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2004-11-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 150000.0,
+      "brief": "For operational needs of the district including maintaining and upgrading technology and maintenance of the buildings and gronds.",
+      "yes_votes": 838,
+      "no_votes": 752,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2013-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 8000000.0,
+      "brief": "Improvement projects at the District building and site including projects to improve Tech Ed/Ag Ed facilities and the gymnasium; addition of cafeteria/auditorium and science facilities; and acquiring furniture, fixtures and equipment.",
+      "yes_votes": 324,
+      "no_votes": 737,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2014-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 300000.0,
+      "brief": "To exceed the revenue limit for operational and maintenance expenses",
+      "yes_votes": 512,
+      "no_votes": 233,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2019-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 400000.0,
+      "brief": "Exceed Revenue Cap for 5 years at $400,000 per year.",
+      "yes_votes": 555,
+      "no_votes": 313,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 3150000.0,
+      "brief": "$3,150,000 referendum to build a kitchen/cafeteria/community multipurpose room and add on to ag/tech area.",
+      "yes_votes": 954,
+      "no_votes": 755,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 3200000.0,
+      "brief": "Exceed Revenue Cap for 4 years at $800,000 per year.",
+      "yes_votes": 333,
+      "no_votes": 483,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 1500000.0,
+      "brief": "Exceed Revenue Cap for 3 years at $500,000 per year.",
+      "yes_votes": 1026,
+      "no_votes": 706,
+      "status": "Passed"
+    }
+  ]
+}

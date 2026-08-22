@@ -21,7 +21,7 @@
     },
     "topics": {
       "type": "object",
-      "description": "Keyed by topic id (act, graduation, dropouts, absenteeism, enrollment). Each topic maps school years to metric objects. Metric names per topic are defined during normalization (CLAUDE.md task 3) and documented in CLAUDE.md's Data model section.",
+      "description": "Keyed by topic id (act, forward, preact, ap, graduation, dropouts, absenteeism, enrollment). Each topic maps school years to metric objects. Metric names per topic are defined during normalization and documented in CLAUDE.md's Data model section.",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": {

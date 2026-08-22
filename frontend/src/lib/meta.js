@@ -20,6 +20,21 @@ export const TOPICS = [
     },
   },
   {
+    id: 'forward',
+    label: 'Forward Exam',
+    sublabel: 'Grades 3–8 state assessment',
+    defaultMetric: 'ela_prof_pct',
+    // Percent of students in the top two performance categories
+    // (Proficient/Advanced through 2022-23, Meeting/Advanced from 2023-24 —
+    // a hard comparability break; see config/breaks.json).
+    metrics: {
+      ela_prof_pct: { label: 'ELA proficient', kind: 'percent' },
+      math_prof_pct: { label: 'Math proficient', kind: 'percent' },
+      science_prof_pct: { label: 'Science proficient', kind: 'percent' },
+      socstudies_prof_pct: { label: 'Social studies proficient', kind: 'percent' },
+    },
+  },
+  {
     id: 'preact',
     label: 'PreACT',
     sublabel: 'Grades 9–10, first offered 2022-23',
@@ -93,6 +108,34 @@ export const TOPICS = [
       },
     },
   },
+  {
+    id: 'finance',
+    label: 'Finance',
+    sublabel: 'Spending & revenue limits per member',
+    defaultMetric: 'cost_per_member',
+    // cost_per_member: audited annual-report cost categories summed and
+    // divided by resident membership (2008-09+). revenue_limit_per_member:
+    // the statutory cap (1993-94+) — set in advance, so it runs a year
+    // ahead of the audited cost series.
+    metrics: {
+      cost_per_member: { label: 'Cost per member', kind: 'dollars' },
+      revenue_limit_per_member: { label: 'Revenue limit per member', kind: 'dollars' },
+    },
+  },
+  {
+    id: 'open_enrollment',
+    label: 'Open enrollment',
+    sublabel: 'Students transferring in & out',
+    defaultMetric: 'net_pupils',
+    // FTE-based aid-membership transfers at the July final aid payment —
+    // not September headcounts; caveats in the methodology footer.
+    metrics: {
+      net_pupils: { label: 'Net transfers', kind: 'count' },
+      pupils_in: { label: 'Transfers in', kind: 'count' },
+      pupils_out: { label: 'Transfers out', kind: 'count' },
+      net_aid: { label: 'Net aid impact', kind: 'dollars' },
+    },
+  },
 ]
 
 // School years in running text use a non-breaking hyphen so "(2024-25)"
@@ -104,6 +147,9 @@ export function fmtYear(year) {
 export function fmtValue(value, kind) {
   if (value == null) return '—'
   if (kind === 'percent') return `${value.toLocaleString('en-US', { maximumFractionDigits: 1 })}%`
+  if (kind === 'dollars') {
+    return `${value < 0 ? '−' : ''}$${Math.abs(value).toLocaleString('en-US', { maximumFractionDigits: 0 })}`
+  }
   if (kind === 'percent-change') {
     const s = value.toLocaleString('en-US', { maximumFractionDigits: 1 })
     return `${value > 0 ? '+' : ''}${s}%`

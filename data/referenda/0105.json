@@ -1,0 +1,69 @@
+{
+  "district": {
+    "dpi_code": "0105",
+    "dpi_name": "Almond-Bancroft"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1998-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5251000.0,
+      "brief": "buy land; add to & remodel schools and improve facilities",
+      "yes_votes": 393,
+      "no_votes": 391,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1998-04-07",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 100000.0,
+      "brief": "exceed revenue limits, recurring, 1999-00",
+      "yes_votes": 281,
+      "no_votes": 479,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2002-11-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "non-recurring purposes",
+      "yes_votes": 317,
+      "no_votes": 580,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2003-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 250000.0,
+      "brief": "non-recurring purposes",
+      "yes_votes": 252,
+      "no_votes": 464,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2013-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 75000.0,
+      "brief": "Update/Maintain Technology",
+      "yes_votes": 252,
+      "no_votes": 224,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2018-04-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 525000.0,
+      "brief": "To exceed revenue limits and calling a referendum to submit the revenue limit resolution to the electors",
+      "yes_votes": 356,
+      "no_votes": 211,
+      "status": "Passed"
+    }
+  ]
+}

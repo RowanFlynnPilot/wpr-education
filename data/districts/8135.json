@@ -3,8 +3,56 @@
     "dpi_code": "8135",
     "dpi_name": "La Casa de Esperanza Charter School"
   },
-  "generated": "2026-07-26T16:09:02.063817+00:00",
+  "generated": "2026-08-22T16:12:13.959514+00:00",
   "topics": {
+    "forward": {
+      "2018-19": {
+        "ela_prof_pct": {
+          "value": 5.6,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 11.1,
+          "suppressed": false
+        }
+      },
+      "2020-21": {
+        "ela_prof_pct": {
+          "value": 19.7,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 24.6,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 36.8,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 42.1,
+          "suppressed": false
+        }
+      },
+      "2021-22": {
+        "ela_prof_pct": {
+          "value": 16.2,
+          "suppressed": false
+        },
+        "math_prof_pct": {
+          "value": 13.2,
+          "suppressed": false
+        },
+        "science_prof_pct": {
+          "value": 35.0,
+          "suppressed": false
+        },
+        "socstudies_prof_pct": {
+          "value": 25.0,
+          "suppressed": false
+        }
+      }
+    },
     "absenteeism": {
       "2015-16": {
         "chronic_absenteeism_rate": {

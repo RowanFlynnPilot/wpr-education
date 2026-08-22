@@ -1,0 +1,119 @@
+{
+  "district": {
+    "dpi_code": "6223",
+    "dpi_name": "Wausau"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1991-10-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 14895000.0,
+      "brief": "",
+      "yes_votes": 6103,
+      "no_votes": 5169,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1995-12-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 11000000.0,
+      "brief": "$14 million for 2 new elem & elem add",
+      "yes_votes": 2865,
+      "no_votes": 2855,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1999-02-16",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 65383000.0,
+      "brief": "new East H.S; new el. Sch; improve West H.S & 4 e.s.",
+      "yes_votes": 7260,
+      "no_votes": 4459,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2015-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 2000000.0,
+      "brief": "Exceed revenue limit on a non-recurring basis by $2,000,000 per year for five years to support district technology plan.",
+      "yes_votes": 5080,
+      "no_votes": 5235,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2015-04-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 29565000.0,
+      "brief": "Issue $29,565,000 in debt to expand four existing elementary schools and two high schools, also address district-wide deferred maintenance.",
+      "yes_votes": 5502,
+      "no_votes": 4633,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 155000000.0,
+      "brief": "Borrow $155,000,000 for building a new elementary school on the current Grant Elem site, building an Environmental Learning Center at the school forest and for modernization, improvements, and upgrades to buildings district wide.",
+      "yes_votes": 12698,
+      "no_votes": 15228,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2020-11-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 3000000.0,
+      "brief": "To exceed the revenue limit by $3,000,000 beginning in 2021-2022 school year on a recurring basis to fund full pupil services teams at each elementary school and to fund other operational and maintenance expenses.",
+      "yes_votes": 13809,
+      "no_votes": 14183,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 148800000.0,
+      "brief": "Issue debt in the amount of $148,800,000 for district-wide safety and security, school modernization, building infrastructure, capital maintenance and site improvements; remodeling at the elementary, middle and high schools; construction of additions at Horace Mann and John Muir Middle Schools, West High School and Grant, Lincoln, Hawthorn Hills, Maine, Rib Mountain, Riverview, South Mountain and Stettin Elementary Schools; construction of a new School Forest Environmental Center; and acquisition of furnishings, fixtures and equipment?",
+      "yes_votes": 5676,
+      "no_votes": 5749,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2021-04-06",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 4000000.0,
+      "brief": "To exceed the revenue limit by $4,000,000 beginning with the 2021-2022 school year, for recurring purposes consisting of expenses related to maintaining educational programs and staffing, providing full pupil services teams at each elementary school, and other safety, operational, and maintenance expenses?",
+      "yes_votes": 6002,
+      "no_votes": 5445,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2022-04-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 119800000.0,
+      "brief": "Borrow $119,800,000 to fund district-wide safety and security, school updates, building infrastructure, capital maintenance and site improvements; remodeling at all middle and high schools; construction of additions at Horace Mann and John Muir Middle Schools, West and East High Schools and Grant, Riverview, South Mountain and Stettin Elementary Schools; construction of a new School Forest Environmental Learning Center; and acquisition of furnishings, fixtures and equipment.",
+      "yes_votes": 6412,
+      "no_votes": 4360,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2025-04-01",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 40000000.0,
+      "brief": "To exceed the revenue limit by $8,000,000 beginning with the 2025-2026 school year for non-recurring purposes.",
+      "yes_votes": 9701,
+      "no_votes": 10051,
+      "status": "Failed"
+    }
+  ]
+}

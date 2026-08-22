@@ -1,0 +1,89 @@
+{
+  "district": {
+    "dpi_code": "2394",
+    "dpi_name": "Greenwood"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1996-10-08",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 5300000.0,
+      "brief": "addition and remodel junior and senior high",
+      "yes_votes": 803,
+      "no_votes": 187,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2001-04-03",
+      "type_code": "RR",
+      "type": "Recurring Referendum",
+      "amount": 325000.0,
+      "brief": "maintain current levels of expenditures and operations",
+      "yes_votes": 617,
+      "no_votes": 661,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2002-03-04",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 325000.0,
+      "brief": "non-recurring purposes",
+      "yes_votes": 462,
+      "no_votes": 626,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2005-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "non recurring purposes consisting of costs of educational programs and operations",
+      "yes_votes": 935,
+      "no_votes": 450,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2010-04-06",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 500000.0,
+      "brief": "non recurring purposes",
+      "yes_votes": 568,
+      "no_votes": 396,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2016-04-05",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 850000.0,
+      "brief": "For non-recurring purposes to maintain academic, co-curricular and athletic programs for students, upgrade technology education equipment, and continued maintenance of district facilities.",
+      "yes_votes": 605,
+      "no_votes": 435,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2020-04-07",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 150000.0,
+      "brief": "RESOLUTION AUTHORIZING THE SCHOOL DISTRICT BUDGET TO EXCEED REVENUE LIMIT FOR FIVE YEARS FOR NON-RECURRING PURPOSES",
+      "yes_votes": 530,
+      "no_votes": 340,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "NR",
+      "type": "Non-Recurring Referendum",
+      "amount": 5100000.0,
+      "brief": "a 4 year operational referendum for non-recurring purposes",
+      "yes_votes": 470,
+      "no_votes": 323,
+      "status": "Passed"
+    }
+  ]
+}

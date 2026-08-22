@@ -1,0 +1,69 @@
+{
+  "district": {
+    "dpi_code": "5264",
+    "dpi_name": "Shawano"
+  },
+  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "referenda": [
+    {
+      "vote_date": "1995-11-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 1250000.0,
+      "brief": "Q 2:  pool at new hs",
+      "yes_votes": 2707,
+      "no_votes": 2471,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "1995-11-07",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 18400000.0,
+      "brief": "Q 1:  new 250000 sq ft hs, remod",
+      "yes_votes": 3486,
+      "no_votes": 1793,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2008-09-09",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 24900000.0,
+      "brief": "construction project",
+      "yes_votes": 2181,
+      "no_votes": 1821,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2015-11-03",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 9250000.0,
+      "brief": "MS Remodel Project",
+      "yes_votes": 1340,
+      "no_votes": 717,
+      "status": "Passed"
+    },
+    {
+      "vote_date": "2024-04-02",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 54500000.0,
+      "brief": "Facilities Improvement Project",
+      "yes_votes": 1762,
+      "no_votes": 1837,
+      "status": "Failed"
+    },
+    {
+      "vote_date": "2024-11-05",
+      "type_code": "ID",
+      "type": "Issue Debt",
+      "amount": 51230000.0,
+      "brief": "School Facilities Improvement Project",
+      "yes_votes": 5565,
+      "no_votes": 3739,
+      "status": "Passed"
+    }
+  ]
+}
