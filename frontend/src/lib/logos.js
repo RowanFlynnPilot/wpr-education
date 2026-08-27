@@ -15,8 +15,18 @@ const files = import.meta.glob('../assets/logos/*.{png,svg,jpg}', {
   query: '?url',
 })
 
+// Only {4-digit dpi_code}.{ext} filenames become entries; anything else
+// in the folder is ignored (with a console warning) rather than throwing
+// at module init and taking down every page.
 export const LOGOS = Object.fromEntries(
-  Object.entries(files).map(([path, url]) => [path.match(/(\d{4})\.\w+$/)[1], url]),
+  Object.entries(files).flatMap(([path, url]) => {
+    const m = path.match(/(\d{4})\.\w+$/)
+    if (!m) {
+      console.warn(`logos: ignoring ${path} — filename must be {dpi_code}.{ext}`)
+      return []
+    }
+    return [[m[1], url]]
+  }),
 )
 
 // Brand accent per district, sampled from the logo above (dominant

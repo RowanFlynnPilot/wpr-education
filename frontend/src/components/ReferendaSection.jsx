@@ -24,9 +24,15 @@ function Result({ e }) {
   if (e.status === 'Before the Vote Date') {
     return <span className="ref-upcoming">Vote scheduled</span>
   }
-  const total = (e.yes_votes ?? 0) + (e.no_votes ?? 0)
+  // Only Passed/Failed get outcome styling — other statuses (Election
+  // Cancelled, ...) are not voter decisions. The yes-% renders only when
+  // BOTH counts are real numbers; the schema allows nulls.
+  const cls = e.status === 'Passed' ? 'ref-passed'
+    : e.status === 'Failed' ? 'ref-failed'
+    : 'ref-upcoming'
+  const total = e.yes_votes != null && e.no_votes != null ? e.yes_votes + e.no_votes : 0
   return (
-    <span className={e.status === 'Passed' ? 'ref-passed' : 'ref-failed'}>
+    <span className={cls}>
       {e.status}
       {total > 0 && (
         <span className="ref-votes">

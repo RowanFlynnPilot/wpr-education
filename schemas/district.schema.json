@@ -21,12 +21,26 @@
     },
     "topics": {
       "type": "object",
-      "description": "Keyed by topic id (act, forward, preact, ap, graduation, dropouts, absenteeism, enrollment). Each topic maps school years to metric objects. Metric names per topic are defined during normalization and documented in CLAUDE.md's Data model section.",
+      "description": "Keyed by topic id (act, forward, preact, ap, graduation, dropouts, absenteeism, enrollment, open_enrollment, finance). Each topic maps school years to metric objects. Metric names per topic are defined during normalization and documented in CLAUDE.md's Data model section.",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "object",
           "additionalProperties": { "$ref": "#/$defs/cell" }
+        }
+      }
+    },
+    "schools": {
+      "type": "object",
+      "description": "School roster, config districts only: school code -> {name, type, last_year}. A lightweight nav index so the district page never fetches the full data/schools file; the full per-school metrics stay in data/schools/{dpi_code}.json.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "type", "last_year"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "last_year": { "type": "string" }
         }
       }
     }

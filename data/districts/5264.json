@@ -3,7 +3,7 @@
     "dpi_code": "5264",
     "dpi_name": "Shawano"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2178,6 +2178,53 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0280": {
+      "name": "Shawano High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0070": {
+      "name": "Shawano Community Middle",
+      "type": "Middle School",
+      "last_year": "2025-26"
+    },
+    "0230": {
+      "name": "Brener Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0100": {
+      "name": "Gresham Elementary",
+      "type": "Elementary School",
+      "last_year": "2006-07"
+    },
+    "0120": {
+      "name": "Gresham High",
+      "type": "High School",
+      "last_year": "2006-07"
+    },
+    "0200": {
+      "name": "Lincoln Elementary",
+      "type": "Elementary School",
+      "last_year": "2009-10"
+    },
+    "0150": {
+      "name": "Hillcrest Primary School",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0110": {
+      "name": "LEADS Primary Charter School",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "9100": {
+      "name": "Rural Virtual Academy",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
     }
   }
 }

@@ -1,7 +1,7 @@
 import wprBadge from '../assets/wpr-typewriter-badge.png'
 import { suppressedYears } from '../lib/chartData'
 import { ACCENTS } from '../lib/logos'
-import { COLORS, TOPICS, breaksFor, fmtYear } from '../lib/meta'
+import { COLORS, TOPICS, breaksFor, fmtYear, sourceFor } from '../lib/meta'
 import { buildSeriesList } from '../lib/series'
 import ChartLegend from './ChartLegend'
 import TrendChart from './TrendChart'
@@ -75,7 +75,7 @@ export default function EmbedPage({ code, topicId, metric, peers, index, state, 
       )}
 
       <p className="embed-source">
-        Source: Wisconsin DPI, WISEdash certified files ·{' '}
+        Source: {sourceFor(topic)}{' '}·{' '}
         <a href={`${window.location.pathname}#/${code}`} target="_blank" rel="noreferrer">
           Explore all districts &amp; topics →
         </a>

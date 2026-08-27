@@ -3,7 +3,7 @@
     "dpi_code": "6692",
     "dpi_name": "Wittenberg-Birnamwood"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2178,6 +2178,33 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0140": {
+      "name": "Wittenberg-Birnamwood High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "9100": {
+      "name": "Rural Virtual Academy",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
+    },
+    "0020": {
+      "name": "Birnamwood Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0120": {
+      "name": "Wittenberg Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0080": {
+      "name": "Elderon Elementary",
+      "type": "Elementary School",
+      "last_year": "2009-10"
     }
   }
 }

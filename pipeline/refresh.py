@@ -445,6 +445,20 @@ def main() -> None:
         if any(code in schools_by_topic[t] for t in sources.TOPICS)
     }
 
+    # Lightweight school roster inside each config district's own doc, so
+    # the district page can render its schools nav without fetching the
+    # full (metric-laden) data/schools file.
+    for code, sdoc in school_docs.items():
+        if code in by_district:
+            by_district[code]["schools"] = {
+                scode: {
+                    "name": s["name"],
+                    "type": s["type"],
+                    "last_year": max(y for years in s["topics"].values() for y in years),
+                }
+                for scode, s in sdoc["schools"].items()
+            }
+
     referenda_docs = {
         code: {
             "district": {"dpi_code": code, "dpi_name": names[code]},

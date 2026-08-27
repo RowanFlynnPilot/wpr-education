@@ -108,10 +108,13 @@ export default function App() {
   }, [core, neededKey])
 
   useEffect(() => {
+    // Re-runs on every path change (not just entry identity): school pages
+    // set their own refined title after their data loads, and navigating
+    // school -> district must reset it even though `entry` is unchanged.
     document.title = entry
       ? `${entry.label} — Central Wisconsin School Data`
       : 'Central Wisconsin School Data — Wausau Pilot & Review'
-  }, [entry])
+  }, [entry, route.path])
 
   if (error) return <div className="app"><ErrorPanel error={error} /></div>
   const ready = core && needed.every((code) => docs[code])

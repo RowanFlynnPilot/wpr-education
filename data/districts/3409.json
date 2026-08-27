@@ -3,7 +3,7 @@
     "dpi_code": "3409",
     "dpi_name": "Medford Area Public"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2178,6 +2178,33 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0220": {
+      "name": "Medford High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "9100": {
+      "name": "Rural Virtual Academy",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
+    },
+    "0180": {
+      "name": "Medford Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0240": {
+      "name": "Medford Middle",
+      "type": "Middle School",
+      "last_year": "2025-26"
+    },
+    "0320": {
+      "name": "Stetsonville Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
     }
   }
 }

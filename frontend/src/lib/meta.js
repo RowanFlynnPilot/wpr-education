@@ -112,6 +112,9 @@ export const TOPICS = [
     id: 'finance',
     label: 'Finance',
     sublabel: 'Spending & revenue limits per member',
+    // Non-WISEdash source: rendered in chart source lines instead of the
+    // default WISEdash attribution (DEFAULT_SOURCE below).
+    source: 'Wisconsin DPI, School Financial Services longitudinal data.',
     defaultMetric: 'cost_per_member',
     // cost_per_member: audited annual-report cost categories summed and
     // divided by resident membership (2008-09+). revenue_limit_per_member:
@@ -126,6 +129,7 @@ export const TOPICS = [
     id: 'open_enrollment',
     label: 'Open enrollment',
     sublabel: 'Students transferring in & out',
+    source: 'Wisconsin DPI, Open Enrollment pupil transfer and aid adjustment files.',
     defaultMetric: 'net_pupils',
     // FTE-based aid-membership transfers at the July final aid payment —
     // not September headcounts; caveats in the methodology footer.
@@ -137,6 +141,14 @@ export const TOPICS = [
     },
   },
 ]
+
+// Chart source attribution: per-topic `source` overrides this default
+// (finance and open enrollment are not WISEdash files).
+export const DEFAULT_SOURCE = 'Wisconsin DPI, WISEdash certified download files.'
+
+export function sourceFor(topic) {
+  return topic.source ?? DEFAULT_SOURCE
+}
 
 // School years in running text use a non-breaking hyphen so "(2024-25)"
 // never wraps to "(2024-" / "25)" on narrow screens.

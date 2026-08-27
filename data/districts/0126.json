@@ -3,7 +3,7 @@
     "dpi_code": "0126",
     "dpi_name": "Tomorrow River"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2150,6 +2150,43 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0060": {
+      "name": "Amherst High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0020": {
+      "name": "Amherst Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0080": {
+      "name": "Amherst Middle",
+      "type": "Middle School",
+      "last_year": "2025-26"
+    },
+    "0100": {
+      "name": "Tomorrow River Community Charter",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0140": {
+      "name": "Tomorrow River Virtual Charter School (TRVCS)",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0200": {
+      "name": "Tomorrow River Community Middle (TRCMS)",
+      "type": "Middle School",
+      "last_year": "2022-23"
+    },
+    "0850": {
+      "name": "Central Wisconsin Virtual School",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2014-15"
     }
   }
 }

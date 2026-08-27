@@ -3,7 +3,7 @@
     "dpi_code": "3500",
     "dpi_name": "Merrill Area"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2178,6 +2178,78 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0140": {
+      "name": "Merrill High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0400": {
+      "name": "Merrill Adult Diploma Academy",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0800": {
+      "name": "Bridges Virtual Academy",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
+    },
+    "0060": {
+      "name": "Jefferson Elementary",
+      "type": "Elementary School",
+      "last_year": "2020-21"
+    },
+    "0110": {
+      "name": "Maple Grove School",
+      "type": "Elementary School",
+      "last_year": "2020-21"
+    },
+    "0190": {
+      "name": "Kate Goodrich Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0220": {
+      "name": "Washington Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0260": {
+      "name": "Prairie River Middle",
+      "type": "Middle School",
+      "last_year": "2025-26"
+    },
+    "9100": {
+      "name": "Rural Virtual Academy",
+      "type": "Elementary School",
+      "last_year": "2013-14"
+    },
+    "0100": {
+      "name": "Maple Grove Elementary",
+      "type": "Elementary School",
+      "last_year": "2011-12"
+    },
+    "0160": {
+      "name": "Midway Elementary",
+      "type": "Elementary School",
+      "last_year": "2006-07"
+    },
+    "0180": {
+      "name": "Pine River Elementary",
+      "type": "Elementary School",
+      "last_year": "2011-12"
+    },
+    "0200": {
+      "name": "Scott Elementary",
+      "type": "Elementary School",
+      "last_year": "2005-06"
+    },
+    "0240": {
+      "name": "Pine River School for Young Learners (PRSYL)",
+      "type": "Elementary School",
+      "last_year": "2025-26"
     }
   }
 }

@@ -82,16 +82,21 @@ export function buildSeriesList({ topic, metric, doc, stateDoc, peerDocs, peerCo
       cells: nationCells,
     },
   ] : []
-  const stateSeries = meta.kind === 'count' ? [] : [
+  // Statewide overlay only where the state doc actually carries the topic
+  // — finance and open_enrollment are district-only (no statewide row in
+  // their source files), and an empty series would still paint a legend
+  // entry and a blank table/CSV column.
+  const stateCells = meta.kind === 'count' ? {} : metricSeries(stateDoc, topic.id, metric, meta)
+  const stateSeries = Object.keys(stateCells).length ? [
     {
       key: 'state',
       label: 'Wisconsin',
       color: COLORS.state,
       dash: '6 4',
       width: 1.6,
-      cells: metricSeries(stateDoc, topic.id, metric, meta),
+      cells: stateCells,
     },
-  ]
+  ] : []
   return [
     ...nationSeries,
     ...stateSeries,

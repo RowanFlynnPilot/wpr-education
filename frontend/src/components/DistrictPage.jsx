@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-import { loadSchools } from '../lib/data'
 import { ACCENTS, LOGOS } from '../lib/logos'
 import { COLORS, TOPICS } from '../lib/meta'
 import ReferendaSection from './ReferendaSection'
@@ -21,23 +19,13 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
   // AP exams, and K-8 districts have no PreACT/graduation rows at all.
   const visibleTopics = TOPICS.filter((t) => Object.keys(doc.topics[t.id] ?? {}).length > 0)
 
-  // Schools nav: lazy so the landing page never pays for school files.
-  // A load failure just hides the nav (the district page is complete
-  // without it); the school page itself surfaces errors properly.
-  const [schoolsDoc, setSchoolsDoc] = useState(null)
-  useEffect(() => {
-    let alive = true
-    setSchoolsDoc(null)
-    loadSchools(code).then((d) => alive && setSchoolsDoc(d), console.error)
-    return () => { alive = false }
-  }, [code])
-  const schools = Object.entries(schoolsDoc?.schools ?? {})
+  // Schools nav renders from the roster embedded in the district doc —
+  // no extra fetch; the full per-school metrics load only on school pages.
+  const schools = Object.entries(doc.schools ?? {})
     .sort(([, a], [, b]) => typeRank(a.type) - typeRank(b.type) || a.name.localeCompare(b.name))
   // Schools whose data ends before the district's newest year are closed
   // (or renamed) — kept browsable as history, but visually parked.
-  const lastYearOf = (s) =>
-    Object.values(s.topics).flatMap((years) => Object.keys(years)).sort().at(-1)
-  const newestYear = schools.map(([, s]) => lastYearOf(s)).sort().at(-1)
+  const newestYear = schools.map(([, s]) => s.last_year).sort().at(-1)
 
   // Peer selection lives in the hash (#/6223?peers=4970,0196) so a specific
   // comparison is shareable and embeddable. Assigning location.hash fires
@@ -124,7 +112,7 @@ export default function DistrictPage({ code, peers, index, state, docs }) {
         <div className="peer-select school-nav">
           <span className="peer-select-label">Drill into a school:</span>
           {schools.map(([scode, s]) => {
-            const last = lastYearOf(s)
+            const last = s.last_year
             const stale = last < newestYear
             return (
               <a

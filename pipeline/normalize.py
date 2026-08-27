@@ -578,6 +578,15 @@ def build_finance(paths: dict[str, "object"], compcost_end: str) -> dict:
     finally:
         wb.close()
     header = [str(c).strip() if c is not None else "" for c in rows[0]]
+    # Every cost-category header DPI has used, both naming eras (long names
+    # through 2022, short names at the 2023 recalculation). An unknown
+    # column in a year group throws rather than silently joining the sum —
+    # a future TOTAL/subtotal column would otherwise inflate every rate.
+    known_costs = {"instruction", "instruct", "pupil_staff_support", "support",
+                   "operation_admin_other", "operation_other", "operations",
+                   "admin", "transportation_cost", "trans",
+                   "facility_cost", "facility",
+                   "food_comm_service_cost", "food"}
     groups = []  # (year_col, member_col, [cost_cols])
     for i, name in enumerate(header):
         # Header case drifts mid-file: 'FISCAL_YEAR' for the early year
@@ -588,6 +597,12 @@ def build_finance(paths: dict[str, "object"], compcost_end: str) -> dict:
             if name.lower() == "member":
                 groups[-1]["member"] = i
             elif name:
+                if name.lower() not in known_costs:
+                    raise ValueError(
+                        f"finance compcost: unknown column {name!r} inside a "
+                        "year group — verify it is a cost category (add it to "
+                        "known_costs) or exclude it; summing blindly would "
+                        "corrupt cost_per_member.")
                 groups[-1]["costs"].append(i)
     if not groups or any(g["member"] is None or not g["costs"] for g in groups):
         raise ValueError("finance compcost: FISCAL_YEAR/member/cost header "
@@ -606,8 +621,14 @@ def build_finance(paths: dict[str, "object"], compcost_end: str) -> dict:
             if year_raw is None or not member:
                 continue  # district didn't exist / no membership that year
             costs = [_fin_num(r[i], ctx) for i in g["costs"]]
+            if all(c is None for c in costs):
+                continue  # year group genuinely not populated for this district
             if any(c is None for c in costs):
-                continue  # year group not yet populated for this district
+                # A PARTIAL blank is an anomaly, not absence — silently
+                # dropping the year would hide it from the data-diff review.
+                raise ValueError(
+                    f"{ctx} year {int(year_raw)}: some cost categories blank "
+                    "while others are populated — inspect the workbook.")
             year = _fiscal_label(int(year_raw))
             if year > compcost_end:
                 continue  # beyond DPI's published audited range
@@ -673,7 +694,11 @@ def build_referenda(payload: dict, codes: set[str]) -> dict:
                          "— did the date-range default kick in?")
     out: dict[str, list] = {}
     for r in rows:
-        code = r.get("AgencyCode")
+        if "AgencyCode" not in r:
+            # Fail loudly on a field rename — silently skipping every row
+            # would ship zero referenda files with no error.
+            raise ValueError(f"referenda: row missing AgencyCode: {sorted(r)}")
+        code = r["AgencyCode"]
         if code not in codes:
             continue
         for field in ("VoteDate", "ReferendumType", "ReferendumTypeCode",
@@ -690,6 +715,11 @@ def build_referenda(payload: dict, codes: set[str]) -> dict:
             "no_votes": r.get("NoVotes"),
             "status": r["ReferendumStatus"],
         })
+    if not out:
+        raise ValueError(
+            "referenda: no events matched any config district — every config "
+            "district has had at least one referendum since 1990, so an empty "
+            "result means the endpoint's code field or format changed.")
     for events in out.values():
         events.sort(key=lambda e: e["vote_date"])
     return out

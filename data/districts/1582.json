@@ -3,7 +3,7 @@
     "dpi_code": "1582",
     "dpi_name": "Elcho"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2010,6 +2010,28 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0040": {
+      "name": "Elcho High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "9100": {
+      "name": "Rural Virtual Academy",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
+    },
+    "0020": {
+      "name": "Elcho Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0250": {
+      "name": "Elcho Middle",
+      "type": "Middle School",
+      "last_year": "2025-26"
     }
   }
 }

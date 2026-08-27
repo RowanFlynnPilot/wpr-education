@@ -3,7 +3,7 @@
     "dpi_code": "3906",
     "dpi_name": "Nekoosa"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2178,6 +2178,53 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0060": {
+      "name": "Nekoosa High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0400": {
+      "name": "Nekoosa Academy",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0800": {
+      "name": "WISE Academy",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
+    },
+    "0020": {
+      "name": "Alexander Middle",
+      "type": "Combined Elementary/Secondary School",
+      "last_year": "2025-26"
+    },
+    "0040": {
+      "name": "Humke Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0100": {
+      "name": "Central Wisconsin STEM Academy",
+      "type": "Middle School",
+      "last_year": "2025-26"
+    },
+    "0200": {
+      "name": "Niikuusra Community School",
+      "type": "Middle School",
+      "last_year": "2016-17"
+    },
+    "0150": {
+      "name": "Nekoosa 4K",
+      "type": "Elementary School",
+      "last_year": "2019-20"
+    },
+    "9416": {
+      "name": "Central Cities Health Institute",
+      "type": "High School",
+      "last_year": "2012-13"
     }
   }
 }

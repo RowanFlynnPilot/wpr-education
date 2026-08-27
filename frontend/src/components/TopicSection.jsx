@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { suppressedYears } from '../lib/chartData'
 import { chartCSV, downloadCSV } from '../lib/csv'
 import { loadSubgroups } from '../lib/data'
-import { DIMENSIONS, breaksFor, fmtValue, fmtYear } from '../lib/meta'
+import { DIMENSIONS, breaksFor, fmtValue, fmtYear, sourceFor } from '../lib/meta'
 import { buildGroupSeriesList, buildSeriesList } from '../lib/series'
 import ChartLegend from './ChartLegend'
 import ChartModal from './ChartModal'
@@ -201,7 +201,7 @@ export default function TopicSection({ topic, doc, stateDoc, peerDocs, peerColor
             ariaLabel={`${topic.label} — ${meta.label} trend for ${doc.district.dpi_name}, expanded`}
           />
           <ChartLegend series={legendList} onFocus={setFocusKey} />
-          <p className="chart-modal-source">Source: Wisconsin DPI, WISEdash certified download files.</p>
+          <p className="chart-modal-source">Source: {sourceFor(topic)}</p>
         </ChartModal>
       )}
 

@@ -3,7 +3,7 @@
     "dpi_code": "0105",
     "dpi_name": "Almond-Bancroft"
   },
-  "generated": "2026-08-22T16:12:13.959514+00:00",
+  "generated": "2026-08-27T01:22:16.054579+00:00",
   "topics": {
     "act": {
       "2014-15": {
@@ -2136,6 +2136,28 @@
           "suppressed": false
         }
       }
+    }
+  },
+  "schools": {
+    "0040": {
+      "name": "Almond-Bancroft High",
+      "type": "High School",
+      "last_year": "2025-26"
+    },
+    "0020": {
+      "name": "Almond-Bancroft Elementary",
+      "type": "Elementary School",
+      "last_year": "2025-26"
+    },
+    "0250": {
+      "name": "Almond-Bancroft Middle",
+      "type": "Middle School",
+      "last_year": "2025-26"
+    },
+    "0060": {
+      "name": "Bancroft Elementary",
+      "type": "Elementary School",
+      "last_year": "2016-17"
     }
   }
 }

@@ -55,63 +55,49 @@ def check_district_codes_against_data(districts: list[dict], frame: pd.DataFrame
             )
 
 
-def check_output_file(path: Path) -> None:
-    """Validate one output file against the schema, then enforce the
-    value-null-iff-suppressed invariant the schema can't express."""
+def _walk_cells(path: Path, node, trail: str = "") -> None:
+    """Recursively enforce the value-null-iff-suppressed invariant on every
+    metric cell in a document, wherever it nests (district: 3 levels deep,
+    subgroup and school: 5). ONE walker so the project's #1 invariant can't
+    drift between file families."""
+    if not isinstance(node, dict):
+        return
+    if set(node) == {"value", "suppressed"}:
+        if (node["value"] is None) != node["suppressed"]:
+            raise ValueError(
+                f"{path.name}: {trail}: value={node['value']} "
+                f"suppressed={node['suppressed']} "
+                "-- value must be null iff suppressed is true."
+            )
+        return
+    for key, child in node.items():
+        _walk_cells(path, child, f"{trail}/{key}" if trail else str(key))
+
+
+def _check_file(path: Path, schema_path: Path, walk: bool = True) -> None:
     doc = json.loads(path.read_text(encoding="utf-8"))
-    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    schema = json.loads(schema_path.read_text(encoding="utf-8"))
     jsonschema.validate(doc, schema)
-    for topic, years in doc["topics"].items():
-        for year, metrics in years.items():
-            for metric, cell in metrics.items():
-                if (cell["value"] is None) != cell["suppressed"]:
-                    raise ValueError(
-                        f"{path.name}: {topic}/{year}/{metric}: "
-                        f"value={cell['value']} suppressed={cell['suppressed']} "
-                        "-- value must be null iff suppressed is true."
-                    )
+    if walk:
+        _walk_cells(path, doc)
+
+
+def check_output_file(path: Path) -> None:
+    """District/state file: schema + the cell invariant."""
+    _check_file(path, SCHEMA_PATH)
 
 
 def check_school_file(path: Path) -> None:
-    """Same cell contract as check_output_file, nested per school:
-    schools -> school code -> topics -> year -> metric -> cell."""
-    doc = json.loads(path.read_text(encoding="utf-8"))
-    schema = json.loads(SCHOOL_SCHEMA_PATH.read_text(encoding="utf-8"))
-    jsonschema.validate(doc, schema)
-    for school, entry in doc["schools"].items():
-        for topic, years in entry["topics"].items():
-            for year, metrics in years.items():
-                for metric, cell in metrics.items():
-                    if (cell["value"] is None) != cell["suppressed"]:
-                        raise ValueError(
-                            f"{path.name}: {school}/{topic}/{year}/{metric}: "
-                            f"value={cell['value']} suppressed={cell['suppressed']} "
-                            "-- value must be null iff suppressed is true."
-                        )
+    """School file: same cell contract, nested per school -- same walker."""
+    _check_file(path, SCHOOL_SCHEMA_PATH)
 
 
 def check_referenda_file(path: Path) -> None:
-    """Schema check only — referenda are event lists, not metric cells,
+    """Schema check only -- referenda are event lists, not metric cells,
     so the null-iff-suppressed invariant doesn't apply."""
-    doc = json.loads(path.read_text(encoding="utf-8"))
-    schema = json.loads(REFERENDA_SCHEMA_PATH.read_text(encoding="utf-8"))
-    jsonschema.validate(doc, schema)
+    _check_file(path, REFERENDA_SCHEMA_PATH, walk=False)
 
 
 def check_subgroup_file(path: Path) -> None:
-    """Same contract as check_output_file, one nesting level deeper:
-    topics -> year -> dimension -> group -> metric -> cell."""
-    doc = json.loads(path.read_text(encoding="utf-8"))
-    schema = json.loads(SUBGROUP_SCHEMA_PATH.read_text(encoding="utf-8"))
-    jsonschema.validate(doc, schema)
-    for topic, years in doc["topics"].items():
-        for year, dims in years.items():
-            for dim, groups in dims.items():
-                for group, metrics in groups.items():
-                    for metric, cell in metrics.items():
-                        if (cell["value"] is None) != cell["suppressed"]:
-                            raise ValueError(
-                                f"{path.name}: {topic}/{year}/{dim}/{group}/{metric}: "
-                                f"value={cell['value']} suppressed={cell['suppressed']} "
-                                "-- value must be null iff suppressed is true."
-                            )
+    """Subgroup file: same cell contract, deeper nesting -- same walker."""
+    _check_file(path, SUBGROUP_SCHEMA_PATH)
